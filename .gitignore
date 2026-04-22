@@ -1,0 +1,17 @@
+#archivos csv carpeta ppal
+*.csv
+
+# ignora notebooks SOLO en la raíz (ficheros antiguos que no quiero subir)
+/*.ipynb
+
+# pero permite los de Codigos
+!Codigos/*.ipynb
+
+#archivo npz de una de las pruebas
+*.npz
+
+#la carpeta entera de datos ecg
+Datos/
+
+#dentro de la carpeta de codigos no quiero nada de los que guardamos al ejercutar el notebook
+Codigos/*.npy
