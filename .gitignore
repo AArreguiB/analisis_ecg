@@ -1,5 +1,7 @@
 #archivos csv carpeta ppal
 *.csv
+#documentos word de la carpeta ppal
+*.docx
 
 # ignora notebooks SOLO en la raíz (ficheros antiguos que no quiero subir)
 /*.ipynb
