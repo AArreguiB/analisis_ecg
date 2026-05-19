@@ -1,0 +1,277 @@
+
+\documentclass[12pt,a4paper]{book}
+
+% -------------------------------------------------
+% PAQUETES
+% -------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{comment}
+
+
+\begin{comment}
+\geometry{
+    left=3cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
+\end{comment}
+
+% -------------------------------------------------
+% INICIO DOCUMENTO
+% -------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------------------
+% PORTADA
+% -------------------------------------------------
+
+\begin{titlepage}
+		%Poner imagen del logo de comillas
+		\centering
+		\Large GRADO EN INGENIERÍA EN TECNOLOGÍAS DE TELECOMUNICACIÓN \\ % Modify accordingly
+		\vspace*{2.5em} 
+		\centering
+		TRABAJO FIN DE GRADO\\ 
+		\vspace*{1em}
+		TITULO DEL TFG 
+		\\ \large
+		\vspace*{3em}
+		Autor \\ Ana Arregui Beltrán \\ 
+		\vspace*{1em}
+		Director \\ Lucas Novales Peleato \\
+		\vfill
+		Madrid \\
+		Junio 2026
+\end{titlepage}
+
+\section*{Agradecimientos}
+
+\newpage
+
+% -------------------------------------------------
+% RESUMEN Y ABSTRACT
+% -------------------------------------------------
+\section*{Título del TFG (español)}
+\section*{Resumen}
+
+\newpage
+
+\section*{Título del TFG (inglés)}
+\section*{Abstract}
+
+\newpage
+
+% -------------------------------------------------
+% ÍNDICES
+% -------------------------------------------------
+
+\tableofcontents
+\newpage
+
+\listoffigures
+\newpage
+
+\listoftables
+\newpage
+
+% -------------------------------------------------
+% CAPÍTULO 1
+% -------------------------------------------------
+
+\chapter{Introducción}
+
+\section{Contexto del problema}
+
+
+\section{Motivación}
+
+
+\section{Problema a resolver}
+
+
+\section{Objetivos}
+
+\section{Alcance del proyecto}
+
+Que hace, que no hace y limitaciones
+
+\section{Estructura de la memoria}
+
+
+% -------------------------------------------------
+% CAPÍTULO 2
+% -------------------------------------------------
+
+\chapter{Fundamentos Teóricos y Tecnologías}
+
+\section{Anatomía eléctrica del corazón}
+
+Explicar la anatomía basica del corazon??
+
+
+\section{Electrocardiograma}
+
+Que es, derivaciones, ondas, alteraciones
+
+
+
+\section{Patologías estudiadas}
+
+Explicar las 5 patologias grandes
+
+\section{Machine Learning}
+
+
+
+\section{Clasificación multilabel}
+
+
+
+\section{Métricas de evaluación}
+
+Todas las metricas Accuracy, precision recall etc
+
+\section{Tecnologías y librerías utilizadas}
+
+% -------------------------------------------------
+% CAPÍTULO 3
+% -------------------------------------------------
+
+\chapter{Estado del Arte}
+
+Ampliar considerablemente el estado del arte del anexo B
+
+IA aplicada al diagnostico cardiaco
+
+Trabajos relacionados
+
+Limitaciones de los trabajos relacionados
+
+Justificacion del proyecto-> O lo pongo en el capitulo 4?
+
+
+% -------------------------------------------------
+% CAPÍTULO 4
+% -------------------------------------------------
+
+\chapter{Definición del Trabajo}
+
+\section{Justificación del proyecto}
+
+Aqui o en el 3?
+
+\section{Base de datos utilizada}
+
+\subsection{Origen del dataset}
+
+
+\subsection{Estructura del dataset}
+
+
+\subsection{Etiquetado original}
+
+
+\subsection{Problemas del dataset}
+
+
+
+\section{Agrupación de patologías}
+
+
+\section{Escenarios experimentales}
+
+\subsection{Enfoque 1}
+
+1 derivacion + 5 clases + binario
+
+\subsection{Enfoque 2}
+
+12 derivaciones + 5 clases + binario
+
+\subsection{Enfoque 3}
+
+12 derivaciones + 71 clases + probabilidad
+
+\section{Objetivos técnicos}
+
+Thresholds, datos normales vs caracterisiticas, derivaciones
+
+\section{Metodología general}
+
+
+
+% -------------------------------------------------
+% CAPÍTULO 5
+% -------------------------------------------------
+
+\chapter{Modelo Desarrollado}
+
+\section{Arquitectura general del sistema}
+
+Entradas, salidas, procesado de datos
+
+\section{Análisis exploratorio de datos}
+
+Distribución de clases, balanceo, correlaciones, etc
+
+\section{Preprocesado de datos}
+
+Limpieza, picos R, transformadas 
+
+\section{Selección y extracción de características}
+
+Justificar porque se han seleccionado esas características
+
+\section{Desarrollo experimental y optimización del sistema}
+
+Hablar aqui de todo: los modelos que he usado, los tres enfoques distintos 
+
+
+% -------------------------------------------------
+% CAPÍTULO 6
+% -------------------------------------------------
+
+\chapter{Análisis de Resultados}
+
+Resultados globales, comparacion entre enfoques, resultados por enfermedad (matrices de confusion), thresholds personalizados, analisis clinicos, limitaciones
+
+% -------------------------------------------------
+% CAPÍTULO 7
+% -------------------------------------------------
+
+\chapter{Conclusiones y Trabajos Futuros}
+
+Conclusiones y posibles mejoras y trabajos futuros
+
+% -------------------------------------------------
+% BIBLIOGRAFÍA
+% -------------------------------------------------
+
+\chapter{Bibliografía}
+
+
+% -------------------------------------------------
+% ANEXOS
+% -------------------------------------------------
+% Añadir anexos pertinentes
+\end{document}
