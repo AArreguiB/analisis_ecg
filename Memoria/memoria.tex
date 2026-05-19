@@ -22,8 +22,11 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{xcolor}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{comment}
+\usepackage{url}
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{bibliografia.bib}
 
 
 \begin{comment}
@@ -126,7 +129,14 @@ Que hace, que no hace y limitaciones
 
 \section{Anatomía eléctrica del corazón}
 
-Explicar la anatomía basica del corazon??
+El corazón es un órgano muscular que funciona como una bomba para impulsar la sangre a través del sistema circulatorio. Esta acción de bombeo está regulada por un sistema eléctrico, encargado de coordinar las contracciones de las distintas cavidades del corazón.
+
+El latido se genera en la aurícula derecha, donde se encuentra el nodo sinoauricular (SA) que actúa como marcapasos natural del corazón. El nodo SA envía pulsos eléctricos que se propagan a través de las aurículas derecha e izquierda, llegando al nodo auriculoventricular (AV). En este nodo, el impulso disminuye brevemente, permitiendo que las aurículas se contraigan antes que los ventrículos. Así, la sangre se vacía de la aurículas a los ventrículos antes de su contracción.
+
+Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz de His hasta los ventrículos. Esta vía se divide en dos ramas, derecha e izquierda, conocidas como ramas de His. Estas ramas estimulan electricamente los ventrículos derecho e izquierdo, provocando su contracción y el bombeo de la sangre hacia el exterior del corazón. \cite{stanford_electrical_system}
+
+
+\textbf{Explicar la anatomía basica del corazon??}
 
 
 \section{Electrocardiograma}
@@ -267,9 +277,11 @@ Conclusiones y posibles mejoras y trabajos futuros
 % BIBLIOGRAFÍA
 % -------------------------------------------------
 
-\chapter{Bibliografía}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografía}
 
-
+\nocite{*}
+\printbibliography
 % -------------------------------------------------
 % ANEXOS
 % -------------------------------------------------
