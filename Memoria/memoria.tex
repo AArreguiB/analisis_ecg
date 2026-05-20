@@ -1,5 +1,5 @@
 
-\documentclass[12pt,a4paper]{book}
+\documentclass[12pt,a4paper,twoside]{book}
 
 % -------------------------------------------------
 % PAQUETES
@@ -26,7 +26,38 @@
 \usepackage{comment}
 \usepackage{url}
 \usepackage[style=apa,backend=biber]{biblatex}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{xcolor}
+
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\raggedbottom
 \addbibresource{bibliografia.bib}
+
+% -------------------------------------------------
+% CONFIGURACIÓN DE PÁGINA
+% -------------------------------------------------
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+% Limpia cabecera y pie
+\fancyhf{}
+
+% Número de página en el exterior inferior (tipo libro)
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Estilo para páginas de inicio de capítulo (IMPORTANTE)
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LE,RO]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
 
 
 \begin{comment}
@@ -66,6 +97,8 @@
 		Madrid \\
 		Junio 2026
 \end{titlepage}
+
+\cleardoublepage
 
 \section*{Agradecimientos}
 
@@ -133,15 +166,87 @@ El corazón es un órgano muscular que funciona como una bomba para impulsar la 
 
 El latido se genera en la aurícula derecha, donde se encuentra el nodo sinoauricular (SA) que actúa como marcapasos natural del corazón. El nodo SA envía pulsos eléctricos que se propagan a través de las aurículas derecha e izquierda, llegando al nodo auriculoventricular (AV). En este nodo, el impulso disminuye brevemente, permitiendo que las aurículas se contraigan antes que los ventrículos. Así, la sangre se vacía de la aurículas a los ventrículos antes de su contracción.
 
-Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz de His hasta los ventrículos. Esta vía se divide en dos ramas, derecha e izquierda, conocidas como ramas de His. Estas ramas estimulan electricamente los ventrículos derecho e izquierdo, provocando su contracción y el bombeo de la sangre hacia el exterior del corazón. \cite{stanford_electrical_system}
+Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz de His hasta los ventrículos. Esta vía se divide en dos ramas, derecha e izquierda, conocidas como ramas de His. Estas ramas estimulan electricamente los ventrículos derecho e izquierdo, provocando su contracción y el bombeo de la sangre hacia el exterior del corazón. (\cite{stanford_electrical_system})
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/sistema-electrico-corazon.png}
+    \caption{Anatomía eléctrica del corazón.}
+    \label{fig:sistema-electrico-corazon}
+\end{figure}
 
-\textbf{Explicar la anatomía basica del corazon??}
+\footnote{\cite{cigna_corazon_electrico}}
+
+\todo{Explicar la anatomía basica del corazon??}
 
 
 \section{Electrocardiograma}
 
-Que es, derivaciones, ondas, alteraciones
+\subsection{¿Que es un ECG?}
+
+El electrocardiograma (ECG) es la representación gráfica de la actividad eléctrica del corazón a lo largo del tiempo. Se trata de una prueba no invasiva, de bajo coste y fácil de realizar. Esta representación se utiliza para buscar actividad cardíaca anormal, que pueda indicar la presencia de patologías cardíacas. 
+
+No solo se utiliza para diagnosticar enfermedades, sino que el ECG puede evaluar el ritmo cardíaco, si este es regular o irregular y la fuerza y sincronización de las señales eléctricas. Además, se puede medir el tamaño y la posición de las cavidades del corazón. (\cite{medlineplus_ecg_es}) 
+
+El ECG es una herramienta fundamental en la práctica clínica, ya que permite la interpretación del ritmo cardíaco y la detección de alteraciones del sistema eléctrico. Aporta información relevante en la evaluación de patologías cardiovasculares, como valvulopatías, miocardiopatías, pericarditis, isquemia miocárdica o enfermedades hipertensivas. Por otro lado, el ECG se puede utilizar para monitorizar la respuesta a tratamientos farmacológicos, especialmente antiarritmicos, así como en la detección de alteraciones metabólicas. (\cite{prutkin_ecg_uptodate})
+
+\subsection{Derivaciones \todo{CAMBIAR NOMBRE DE SECCIÓN}}
+
+Para medir la actividad eléctrica del corazón, se colocan electrodos en cada una de las extremidades y en el pecho, formando un sistema de 12 derivaciones. Cada derivación mide la diferencia de potencial eléctrico entre un punto del cuerpo y una referencia. El electrodo conectado en la pierna derecha sirve como electrodo de referencia a tierra. (\cite{cvphysiology_ecg_leads})
+
+Existen dos tipos de derivaciones: las derivaciones bipolares y las derivaciones unipolares. Las derivaciones bipolares utiliza un electrodo positivo y otro negativo para medir la diferencia de potencial, mientras que las derivaciones unipolares utilizan un unico electrodo positivo y una combinación de otros electrodos como electrodo de referencia.
+
+Las doce derivaciones se agrupan en tres categorías según su ubicación: las derivaciones de las extremidades (I, II, III), las derivaciones aumentadas de las extremidades (aVR, aVL, aVF) y las derivaciones precordiales (V1-V6).
+
+\begin{itemize}
+	\item \textbf{Derivaciones de las extremidades}
+	
+	Son las únicas derivaciones bipolares y se colocan en brazos y piernas. Miden la actividad eléctrica del corazón en el plano frontal. 
+	
+	\begin{itemize}
+		\item \underline{Derivación I}: tiene el electrodo positivo en el brazo izquierdo y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos brazos.
+		\item \underline{Derivación II}: tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos puntos.
+		\item \underline{Derivación III}: tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo izquierdo, midiendo la diferencia de potencial entre ambos puntos.
+	\end{itemize}
+	Estas tres derivaciones forman un triángulo equilátero, conocido como el \textit{triángulo de Einthoven}, que representa la relación entre las derivaciones de las extremidades. Esta relación es tal que la suma de los impulsos eléctricos registrados en las derivaciones I y III es equivalente a la suma de los impulsos registrados en la derivación II. Esta ley se conoce como \textit{Ley de Einthoven} y constituye una base fundamental para la interpretación vectorial de la actividad eléctrica cardíaca y permite verificar la coherencia de las señales registradas. (\cite{myekg_derivaciones_cardiacas})
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{imagenes/einthoven-triangle.png}
+		\caption{Triángulo de Einthoven.}
+		\label{fig:einthoven-triangle}
+	\end{figure}
+
+	\todo{hablar de los angulos de las derivaciones?}
+	\item \textbf{Derivaciones aumentadas de las extremidades}
+	
+	Se trata de derivaciones unipolares, con un electrodo positivo y una combinación de otros electrodos como referencia. Al igual que las derivaciones de las extremidades, miden la actividad eléctrica del corazón en el plano frontal, y junto con ellas componen las seis derivaciones de las extremidades del ECG.
+	
+	\begin{itemize}
+		\item \underline{Derivación aVR}: El electrodo positivo está en el brazo derecho y mide la diferencia de potencial entre el brazo derecho y el centro del corazón.
+		\item \underline{Derivación aVL}: El electrodo positivo está en el brazo izquierdo y mide la diferencia de potencial entre el brazo izquierdo y el centro del corazón.
+		\item \underline{Derivación aVF}: El electrodo positivo está en la pierna izquierda y mide la diferencia de potencial entre la pierna izquierda y el centro del corazón.	
+	\end{itemize}
+
+	\todo{Explicar los ángulos para hablar de los ejes del corazón?}
+
+	\item \textbf{Derivaciones precordiales}
+	
+	Estas seis derivaciones unipolares se colocan en el pecho, en diferentes regiones del corazón, y miden la actividad eléctrica en un plano perpendicular al plano frontal. Cada una de las derivaciones precordiales observa una región específica del ventrículo.
+	
+	\todo{revisar bien las partes del corazón que observa cada derivación y los nombres de las regiones por si es su versión en inglés}
+	\begin{itemize}
+		\item \underline{Derivaciones V1-V2}: se colocan en la region anteroseptal del corazón, observando la parte frontal y el septo interventricular.
+		\item \underline{Derivaciones V3-V4}: se colocan en la región anteroapical del corazón, observando la parte anterior y la punta del corazón.
+		\item \underline{Derivaciones V5-V6}: se colocan en la región anterolateral del corazón, observando la parte anterior lateral izquierda.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Partes del ECG}
+
+\subsection{}
+
+derivaciones, ondas, alteraciones
 
 
 

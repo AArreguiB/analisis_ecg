@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  20 MAY 2026 00:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  21 MAY 2026 00:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -644,7 +644,24 @@ Package biblatex Info: ... and expl3
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) Excluding 'comment' comment.
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip81
+\f@nch@offset@elh=\skip82
+\f@nch@offset@erh=\skip83
+\f@nch@offset@olh=\skip84
+\f@nch@offset@orh=\skip85
+\f@nch@offset@elf=\skip86
+\f@nch@offset@erf=\skip87
+\f@nch@offset@olf=\skip88
+\f@nch@offset@orf=\skip89
+\f@nch@height=\skip90
+\f@nch@footalignment=\skip91
+\f@nch@widthL=\skip92
+\f@nch@widthC=\skip93
+\f@nch@widthR=\skip94
+\@temptokenb=\toks31
+) Excluding 'comment' comment.
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
@@ -659,26 +676,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count471
@@ -686,12 +703,12 @@ LaTeX Info: Redefining \% on input line 45.
 \scratchbox=\box61
 \nofMPsegments=\count472
 \nofMParguments=\count473
-\everyMPshowfont=\toks31
+\everyMPshowfont=\toks32
 \MPscratchCnt=\count474
 \MPscratchDim=\dimen258
 \MPnumerator=\count475
 \makeMPintoPDFobject=\count476
-\everyMPtoPDFconversion=\toks32
+\everyMPtoPDFconversion=\toks33
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -738,7 +755,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count477
-Package hyperref Info: Link coloring OFF on input line 45.
+Package hyperref Info: Link coloring OFF on input line 76.
 (memoria.out) (memoria.out)
 \@outlinefile=\write5
 \openout5 = `memoria.out'.
@@ -765,12 +782,16 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'memoria.bbl' found.
  (memoria.bbl)
-Package biblatex Info: Reference section=0 on input line 45.
-Package biblatex Info: Reference segment=0 on input line 45.
+Package biblatex Info: Reference section=0 on input line 76.
+Package biblatex Info: Reference segment=0 on input line 76.
  [1
 
 
-{C:/Users/Ana/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4] (memoria.toc
+{C:/Users/Ana/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2
+
+] [3] [4] [5] [6
+
+] (memoria.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -781,17 +802,11 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [5
-
-])
+) [7])
 \tf@toc=\write6
 \openout6 = `memoria.toc'.
 
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 92.
- [6] (memoria.lof
+ [8] (memoria.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -799,12 +814,9 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write7
 \openout7 = `memoria.lof'.
 
- [7
+ [9
 
-]
-LaTeX Info: Redefining \. on input line 97.
-LaTeX Info: Redefining \% on input line 97.
- [8
+] [10
 
 ] (memoria.lot
 LaTeX Info: Redefining \sptext on input line 1.
@@ -814,71 +826,63 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write8
 \openout8 = `memoria.lot'.
 
- [9]
-LaTeX Info: Redefining \. on input line 104.
-LaTeX Info: Redefining \% on input line 104.
- [10
+ [11] [12
 
 ]
 Cap\'{\i }tulo 1.
-[11]
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
- [12
+[13] [14
 
 ]
 Cap\'{\i }tulo 2.
-[13]
-LaTeX Info: Redefining \. on input line 170.
-LaTeX Info: Redefining \% on input line 170.
- [14]
-Cap\'{\i }tulo 3.
-[15
+<imagenes/sistema-electrico-corazon.png, id=295, 127.677pt x 127.677pt>
+File: imagenes/sistema-electrico-corazon.png Graphic file (type png)
+<use imagenes/sistema-electrico-corazon.png>
+Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 173.
+(pdftex.def)             Requested size: 209.12683pt x 209.13446pt.
+[15] [16 <./imagenes/sistema-electrico-corazon.png>]
+<imagenes/einthoven-triangle.png, id=320, 1074.0125pt x 1202.4925pt>
+File: imagenes/einthoven-triangle.png Graphic file (type png)
+<use imagenes/einthoven-triangle.png>
+Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 215.
+(pdftex.def)             Requested size: 125.47737pt x 140.47638pt.
+ [17] [18 <./imagenes/einthoven-triangle.png>] [19] [20
 
 ]
-LaTeX Info: Redefining \. on input line 187.
-LaTeX Info: Redefining \% on input line 187.
- [16
+Cap\'{\i }tulo 3.
+[21] [22
 
 ]
 Cap\'{\i }tulo 4.
-[17]
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
- [18]
+[23] [24]
 Cap\'{\i }tulo 5.
 
-Overfull \hbox (2.97147pt too wide) in paragraph at lines 255--255
+Overfull \hbox (2.97147pt too wide) in paragraph at lines 360--360
 []\T1/cmr/bx/n/17.28 Desarrollo ex-pe-ri-men-tal y op-ti-mi-za-ción del sis-
  []
 
-[19
+[25
 
-]
-LaTeX Info: Redefining \. on input line 264.
-LaTeX Info: Redefining \% on input line 264.
- [20
+] [26
 
 ]
 Cap\'{\i }tulo 6.
-[21]
-LaTeX Info: Redefining \. on input line 272.
-LaTeX Info: Redefining \% on input line 272.
- [22
+[27] [28
 
 ]
 Cap\'{\i }tulo 7.
-[23]
-LaTeX Info: Redefining \. on input line 280.
-LaTeX Info: Redefining \% on input line 280.
- [24
+[29] [30
 
 ]
-Overfull \hbox (17.38951pt too wide) in paragraph at lines 289--289
-\T1/cmr/m/n/12 cal Sys-tem [Ac-ce-di-do: 2026-05-20]. []$%5Curl % 7Bhttps : / / www . stanfordchildrens .
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 394--394
+[][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
-[25
+
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 394--394
+\T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
+ []
+
+[31
 
 ] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -890,23 +894,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 151945725D908AD9D402CA94C5801D6E;6640.
+(rerunfilecheck)             Checksum: 5696DF69F9D653F971C7879990E17A50;7258.
 Package logreq Info: Writing requests to 'memoria.run.xml'.
 \openout1 = `memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23411 strings out of 467871
- 405255 string characters out of 5419344
- 1337588 words of memory out of 5000000
- 51952 multiletter control sequences out of 15000+600000
- 639361 words of font info for 67 fonts, out of 8000000 for 9000
+ 23852 strings out of 467871
+ 414114 string characters out of 5419344
+ 1344600 words of memory out of 5000000
+ 52366 multiletter control sequences out of 15000+600000
+ 643555 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,761b,2813s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
-Output written on memoria.pdf (25 pages, 177952 bytes).
+ 75i,12n,79p,766b,2813s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
+Output written on memoria.pdf (31 pages, 386186 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 355 words of extra memory for PDF output out of 10000 (max. 10000000)
 

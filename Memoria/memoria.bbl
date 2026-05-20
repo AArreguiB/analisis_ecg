@@ -35,21 +35,148 @@
       \strng{authorfullhashraw}{001f86414b79058a6ab09340d8f86dfe}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-01-15}
+      \field{title}{El corazón y su sistema eléctrico}
+      \verb{urlraw}
+      \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
+      \endverb
+      \verb{url}
+      \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
+      \endverb
+    \endentry
+    \entry{cvphysiology_ecg_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d319fe3c43ce8251b47c49666f0fb611}{%
+           family={{Klabunde, Richard E.}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{fullhash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{fullhashraw}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{bibnamehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authorbibnamehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authornamehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authorfullhash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authorfullhashraw}{d319fe3c43ce8251b47c49666f0fb611}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
-      \field{title}{El corazón y su sistema eléctrico}
-      \field{year}{2024}
-      \true{nocite}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Leads}
+      \field{year}{2023}
       \verb{urlraw}
-      \verb \url{https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272}
+      \verb https://cvphysiology.com/arrhythmias/a013
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272%7D
+      \verb https://cvphysiology.com/arrhythmias/a013
       \endverb
+    \endentry
+    \entry{medlineplus_ecg_es}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
+           family={{MedlinePlus}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{fullhash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{fullhashraw}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{bibnamehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authorbibnamehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authornamehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authorfullhash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authorfullhashraw}{0b70da9e55c985ffa772ce858b23840a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-11-06}
+      \field{title}{Electrocardiograma}
+      \verb{urlraw}
+      \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
+      \endverb
+      \verb{url}
+      \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
+      \endverb
+    \endentry
+    \entry{myekg_derivaciones_cardiacas}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b737a2f5f65d96ea9f66220801e97ae5}{%
+           family={{My-EKG}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{bibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorbibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authornamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Derivaciones cardíacas}
+      \verb{urlraw}
+      \verb https://www.my-ekg.com/generalidades-ekg/derivaciones-cardiacas.php
+      \endverb
+      \verb{url}
+      \verb https://www.my-ekg.com/generalidades-ekg/derivaciones-cardiacas.php
+      \endverb
+    \endentry
+    \entry{prutkin_ecg_uptodate}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=483c343e0e18809254224720554864bc}{%
+           family={Prutkin},
+           familyi={P\bibinitperiod},
+           given={Jordan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c99be12ffae540b5ba4cb3a23ee3ec0a}{%
+           family={Goldberger},
+           familyi={G\bibinitperiod},
+           given={Ary\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=906f97ba4033f551096b7f63f873ed87}{%
+           family={Botkin},
+           familyi={B\bibinitperiod},
+           given={Naomi\bibnamedelima F.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f86731437cb87746bc4bd26414737288}
+      \strng{fullhash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{fullhashraw}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{bibnamehash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{authorbibnamehash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{authornamehash}{f86731437cb87746bc4bd26414737288}
+      \strng{authorfullhash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{authorfullhashraw}{b50484840c1a6dd468aa88eeb3aee322}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{UpToDate, Wolters Kluwer}
+      \field{note}{Topic 2115, Version 36.0. Accedido: 2025-11-21}
+      \field{title}{ECG tutorial: Basic principles of ECG analysis}
+      \field{year}{2025}
     \endentry
     \entry{sadec_arritmia}{misc}{}{}
       \name{author}{1}{}{%
@@ -67,20 +194,18 @@
       \strng{authorfullhashraw}{1bdd5da9f8f8bcad64c5ac1a300a0bd0}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
+      \field{note}{Accedido: 2026-01-15}
       \field{title}{El sistema eléctrico del corazón y qué es una arritmia}
-      \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
-      \verb \url{https://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/}
+      \verb https://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/%7D
+      \verb https://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/
       \endverb
     \endentry
     \entry{stanford_electrical_system}{misc}{}{}
@@ -101,19 +226,17 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
+      \field{note}{Accedido: 2026-01-15}
       \field{title}{Anatomy and Function of the Electrical System}
-      \field{year}{2024}
       \verb{urlraw}
-      \verb \url{https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865}
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865%7D
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865
       \endverb
     \endentry
     \entry{stanford_hearts_electrical_system}{misc}{}{}
@@ -134,20 +257,18 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
+      \field{note}{Accedido: 2026-01-15}
       \field{title}{Anatomy and Function of the Heart's Electrical System}
-      \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
-      \verb \url{https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337}
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337%7D
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
       \endverb
     \endentry
   \enddatalist
@@ -168,21 +289,148 @@
       \strng{authorfullhashraw}{001f86414b79058a6ab09340d8f86dfe}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-01-15}
+      \field{title}{El corazón y su sistema eléctrico}
+      \verb{urlraw}
+      \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
+      \endverb
+      \verb{url}
+      \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
+      \endverb
+    \endentry
+    \entry{cvphysiology_ecg_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d319fe3c43ce8251b47c49666f0fb611}{%
+           family={{Klabunde, Richard E.}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{fullhash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{fullhashraw}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{bibnamehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authorbibnamehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authornamehash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authorfullhash}{d319fe3c43ce8251b47c49666f0fb611}
+      \strng{authorfullhashraw}{d319fe3c43ce8251b47c49666f0fb611}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
-      \field{title}{El corazón y su sistema eléctrico}
-      \field{year}{2024}
-      \true{nocite}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Leads}
+      \field{year}{2023}
       \verb{urlraw}
-      \verb \url{https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272}
+      \verb https://cvphysiology.com/arrhythmias/a013
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272%7D
+      \verb https://cvphysiology.com/arrhythmias/a013
       \endverb
+    \endentry
+    \entry{medlineplus_ecg_es}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
+           family={{MedlinePlus}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{fullhash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{fullhashraw}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{bibnamehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authorbibnamehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authornamehash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authorfullhash}{0b70da9e55c985ffa772ce858b23840a}
+      \strng{authorfullhashraw}{0b70da9e55c985ffa772ce858b23840a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-11-06}
+      \field{title}{Electrocardiograma}
+      \verb{urlraw}
+      \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
+      \endverb
+      \verb{url}
+      \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
+      \endverb
+    \endentry
+    \entry{myekg_derivaciones_cardiacas}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b737a2f5f65d96ea9f66220801e97ae5}{%
+           family={{My-EKG}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{bibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorbibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authornamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Derivaciones cardíacas}
+      \verb{urlraw}
+      \verb https://www.my-ekg.com/generalidades-ekg/derivaciones-cardiacas.php
+      \endverb
+      \verb{url}
+      \verb https://www.my-ekg.com/generalidades-ekg/derivaciones-cardiacas.php
+      \endverb
+    \endentry
+    \entry{prutkin_ecg_uptodate}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=483c343e0e18809254224720554864bc}{%
+           family={Prutkin},
+           familyi={P\bibinitperiod},
+           given={Jordan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c99be12ffae540b5ba4cb3a23ee3ec0a}{%
+           family={Goldberger},
+           familyi={G\bibinitperiod},
+           given={Ary\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=906f97ba4033f551096b7f63f873ed87}{%
+           family={Botkin},
+           familyi={B\bibinitperiod},
+           given={Naomi\bibnamedelima F.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f86731437cb87746bc4bd26414737288}
+      \strng{fullhash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{fullhashraw}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{bibnamehash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{authorbibnamehash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{authornamehash}{f86731437cb87746bc4bd26414737288}
+      \strng{authorfullhash}{b50484840c1a6dd468aa88eeb3aee322}
+      \strng{authorfullhashraw}{b50484840c1a6dd468aa88eeb3aee322}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{UpToDate, Wolters Kluwer}
+      \field{note}{Topic 2115, Version 36.0. Accedido: 2025-11-21}
+      \field{title}{ECG tutorial: Basic principles of ECG analysis}
+      \field{year}{2025}
     \endentry
     \entry{sadec_arritmia}{misc}{}{}
       \name{author}{1}{}{%
@@ -200,20 +448,18 @@
       \strng{authorfullhashraw}{1bdd5da9f8f8bcad64c5ac1a300a0bd0}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
+      \field{note}{Accedido: 2026-01-15}
       \field{title}{El sistema eléctrico del corazón y qué es una arritmia}
-      \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
-      \verb \url{https://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/}
+      \verb https://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/%7D
+      \verb https://www.sociedadsadec.org.ar/el-sistema-electrico-del-corazon-que-es-una-arritmia/
       \endverb
     \endentry
     \entry{stanford_electrical_system}{misc}{}{}
@@ -234,19 +480,17 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
+      \field{note}{Accedido: 2026-01-15}
       \field{title}{Anatomy and Function of the Electrical System}
-      \field{year}{2024}
       \verb{urlraw}
-      \verb \url{https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865}
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865%7D
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-electrical-system-90-P04865
       \endverb
     \endentry
     \entry{stanford_hearts_electrical_system}{misc}{}{}
@@ -267,20 +511,18 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-20}
+      \field{note}{Accedido: 2026-01-15}
       \field{title}{Anatomy and Function of the Heart's Electrical System}
-      \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
-      \verb \url{https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337}
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337%7D
+      \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
       \endverb
     \endentry
   \enddatalist
