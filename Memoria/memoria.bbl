@@ -48,6 +48,22 @@
       \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
       \endverb
     \endentry
+    \entry{cardioteca_eje_cardiaco}{misc}{}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-10}
+      \field{title}{Eje cardíaco en el ECG: cálculo e interpretación}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
+      \endverb
+      \verb{url}
+      \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
+      \endverb
+    \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d319fe3c43ce8251b47c49666f0fb611}{%
@@ -300,6 +316,22 @@
       \endverb
       \verb{url}
       \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
+      \endverb
+    \endentry
+    \entry{cardioteca_eje_cardiaco}{misc}{}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-10}
+      \field{title}{Eje cardíaco en el ECG: cálculo e interpretación}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
+      \endverb
+      \verb{url}
+      \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
       \endverb
     \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}

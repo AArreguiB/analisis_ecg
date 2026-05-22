@@ -31,6 +31,10 @@
 
 \usepackage{xcolor}
 
+\addto\captionsspanish{
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listtablename}{Índice de tablas}}
+
 \newcommand{\todo}[1]{\textcolor{red}{[#1]}}
 
 \raggedbottom
@@ -170,7 +174,7 @@ Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{imagenes/sistema-electrico-corazon.png}
+    \includegraphics[width=0.4\textwidth]{imagenes/sistema-electrico-corazon.png}
     \caption{Anatomía eléctrica del corazón.}
     \label{fig:sistema-electrico-corazon}
 \end{figure}
@@ -190,9 +194,9 @@ No solo se utiliza para diagnosticar enfermedades, sino que el ECG puede evaluar
 
 El ECG es una herramienta fundamental en la práctica clínica, ya que permite la interpretación del ritmo cardíaco y la detección de alteraciones del sistema eléctrico. Aporta información relevante en la evaluación de patologías cardiovasculares, como valvulopatías, miocardiopatías, pericarditis, isquemia miocárdica o enfermedades hipertensivas. Por otro lado, el ECG se puede utilizar para monitorizar la respuesta a tratamientos farmacológicos, especialmente antiarritmicos, así como en la detección de alteraciones metabólicas. (\cite{prutkin_ecg_uptodate})
 
-\subsection{Derivaciones \todo{CAMBIAR NOMBRE DE SECCIÓN}}
+\subsection{Sistema de derivaciones del ECG}
 
-Para medir la actividad eléctrica del corazón, se colocan electrodos en cada una de las extremidades y en el pecho, formando un sistema de 12 derivaciones. Cada derivación mide la diferencia de potencial eléctrico entre un punto del cuerpo y una referencia. El electrodo conectado en la pierna derecha sirve como electrodo de referencia a tierra. (\cite{cvphysiology_ecg_leads})
+Para medir la actividad eléctrica del corazón, se colocan electrodos en cada una de las extremidades y en el pecho, formando un sistema de 12 derivaciones. Cada derivación mide la diferencia de potencial eléctrico entre dos puntos o un punto del cuerpo y una referencia. El electrodo conectado en la pierna derecha sirve como electrodo de referencia a tierra. (\cite{cvphysiology_ecg_leads})
 
 Existen dos tipos de derivaciones: las derivaciones bipolares y las derivaciones unipolares. Las derivaciones bipolares utiliza un electrodo positivo y otro negativo para medir la diferencia de potencial, mientras que las derivaciones unipolares utilizan un unico electrodo positivo y una combinación de otros electrodos como electrodo de referencia.
 
@@ -204,11 +208,17 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	Son las únicas derivaciones bipolares y se colocan en brazos y piernas. Miden la actividad eléctrica del corazón en el plano frontal. 
 	
 	\begin{itemize}
-		\item \underline{Derivación I}: tiene el electrodo positivo en el brazo izquierdo y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos brazos.
-		\item \underline{Derivación II}: tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos puntos.
-		\item \underline{Derivación III}: tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo izquierdo, midiendo la diferencia de potencial entre ambos puntos.
+		\item \underline{Derivación I}: Tiene el electrodo positivo en el brazo izquierdo y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos brazos.
+		\item \underline{Derivación II}: Tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos puntos.
+		\item \underline{Derivación III}: Tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo izquierdo, midiendo la diferencia de potencial entre ambos puntos.
 	\end{itemize}
-	Estas tres derivaciones forman un triángulo equilátero, conocido como el \textit{triángulo de Einthoven}, que representa la relación entre las derivaciones de las extremidades. Esta relación es tal que la suma de los impulsos eléctricos registrados en las derivaciones I y III es equivalente a la suma de los impulsos registrados en la derivación II. Esta ley se conoce como \textit{Ley de Einthoven} y constituye una base fundamental para la interpretación vectorial de la actividad eléctrica cardíaca y permite verificar la coherencia de las señales registradas. (\cite{myekg_derivaciones_cardiacas})
+	Estas tres derivaciones forman un triángulo equilátero, conocido como el \textit{triángulo de Einthoven}, que representa la relación entre las derivaciones de las extremidades. Esta relación es tal que la suma de los impulsos eléctricos registrados en las derivaciones I y III es equivalente a la suma de los impulsos registrados en la derivación II:
+	
+	\begin{equation*}
+		DII = DI + DIII
+	\end{equation*}
+	
+	Esta ley se conoce como \textit{Ley de Einthoven} y constituye una base fundamental para la interpretación vectorial de la actividad eléctrica cardíaca y permite verificar la coherencia de las señales registradas. (\cite{myekg_derivaciones_cardiacas})
 
 	\begin{figure}[H]
 		\centering
@@ -217,10 +227,10 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 		\label{fig:einthoven-triangle}
 	\end{figure}
 
-	\todo{hablar de los angulos de las derivaciones?}
+	
 	\item \textbf{Derivaciones aumentadas de las extremidades}
 	
-	Se trata de derivaciones unipolares, con un electrodo positivo y una combinación de otros electrodos como referencia. Al igual que las derivaciones de las extremidades, miden la actividad eléctrica del corazón en el plano frontal, y junto con ellas componen las seis derivaciones de las extremidades del ECG.
+	Se trata de derivaciones unipolares, que utilizan como referencia, una combinación de los electrodos de las extremidades. Al igual que estas, analizan la actividad eléctrica del corazón en el plano frontal.
 	
 	\begin{itemize}
 		\item \underline{Derivación aVR}: El electrodo positivo está en el brazo derecho y mide la diferencia de potencial entre el brazo derecho y el centro del corazón.
@@ -228,21 +238,111 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 		\item \underline{Derivación aVF}: El electrodo positivo está en la pierna izquierda y mide la diferencia de potencial entre la pierna izquierda y el centro del corazón.	
 	\end{itemize}
 
-	\todo{Explicar los ángulos para hablar de los ejes del corazón?}
+	Estas derivaciones, complementan a las bipolares y permiten una visión más completa del plano frontal del corazón.
+
+	\subsection*{Sistema hexaxial y eje del corazón}
+
+	Si el triángulo de Einthoven se despliega y se superpone sobre el centro cardíaco, se puede definir un sistema de referencia angular que permite definir la dirección de la actividad eléctrica del plano frontal.
+
+	Como se observa en la Figura \ref{fig:bipolar-limb-lead-axis} cada derivación bipolar tiene una orientación espacial:
+	\begin{itemize}
+		\item La derivación I se sitúa a 0º, correspondiente al eje horizontal entre el brazo derecho y el brazo izquierdo.
+		\item La derivación II tiene una orientación aproximada de +60º con respecto a este eje horizontal, entre el brazo derecho y la pierna izquierda.
+		\item La derivación III se orienta a +120º, entre el brazo izquierdo y la pierna izquierda.
+	\end{itemize}
+
+	Estas direcciones permiten interpretar la actividad eléctrica cardíaca como la proyección de un vector sobre distintos ejes espaciales. De este modo, el electrocardiograma no solo representa amplitudes eléctricas, sino también información direccional de la despolarización cardíaca. 
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{imagenes/ecg-bipolar-limb-lead-axis.png}
+		\caption{Eje de las derivaciones bipolares en el plano frontal}
+		\label{fig:bipolar-limb-lead-axis}
+	\end{figure}
+
+	A partir de este sistema de derivaciones se incorporan las derivaciones aumentadas de las extremidades, que completan la cobertura del plano frontal y permiten una explicación más precisa del vector eléctrico. Estas derivaciones se sitúan en los siguiente ángulos:
+
+	\begin{itemize}
+		\item Derivación aVL: -30º sobre la horizontal
+		\item Derivación aVR: -150º sobre el eje horizontal
+		\item Derivación aVF: +90º sobre el plano horizontal
+	\end{itemize}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{imagenes/ecg-augmented-lead-axis.png}
+		\caption{Eje de las derivaciones aumentadas de las extremidades en el plano frontal}
+		\label{fig:augmented-limb-lead-axis}
+	\end{figure}
+
+	El conjunto de estas seis derivaciones constituye el sistema hexaxial completo, que permite analizar la dirección del vector eléctrico cardíaco en el plano frontal y constituye la base para la determinación del eje eléctrico del corazón.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{imagenes/ecg-6-limb-lead-axis.png}
+		\caption{Sistema hexaxial}
+		\label{fig:sistema-hexaxial}
+	\end{figure}
+	
+	Este eje se determina a partir del complejo QRS (ver apartado \ref{sec:partes_ecg}), que representa la suma vectorial de todos los vectores eléctricos generados por la despolarización ventricular. Analizando la polaridad del QRS en las derivaciones del plano frontal, es posible determinar la dirección estimada de la actividad eléctrica cardíaca.
+	En la práctica clínica, las derivaciones I y aVF son las más utilizadas para hacer una estimación rápida del eje eléctrico. 
+
+	La determinación del eje se basa en la polaridad del complejo QRS en estas derivaciones. Cuando el vector de despolarización se dirige hacia el polo positivo de una derivación, la deflexión del complejo QRS es positiva; por el contrario, si el vector se aleja, la deflexión es negativa. (\cite{cardioteca_eje_cardiaco})
+
+	El eje cardíaco en condiciones normales se encuentra entre -30º y 90º, haciendo que el vector resultante apunte abajo y a la izquierda. En este caso, el complejo QRS es positivo tanto en DI como en aVF. 
+
+	
+	
+	En la tabla \ref{tab:eje_cardiaco} se resume la interpretación del eje cardíaco en función de la polaridad del complejo QRS en las derivaciones I y aVF.
+
+
+	\begin{table}[H]
+	\centering
+	\caption{Interpretación del eje cardíaco según las derivaciones DI y aVF (\cite{prutkin_ecg_uptodate})}
+	\label{tab:eje_cardiaco}
+
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{DI} & \textbf{aVF} & \textbf{Cuadrante} & \textbf{Rango del eje} & \textbf{Interpretación} \\ \hline
+
+	+ & + & Inferior izquierdo & $-30^\circ$ a $+90^\circ$ & Eje normal \\ \hline
+
+	+ & - & Superior izquierdo & $-30^\circ$ a $-90^\circ$ & Desviación izquierda del eje \\ \hline
+
+	- & + & Inferior derecho & $+90^\circ$ a $+180^\circ$ & Desviación derecha del eje \\ \hline
+
+	- & + & Superior derecho & $-90^\circ$ a $-180^\circ$ & Eje extremo derecho o izquierdo \\ \hline
+
+	\end{tabular}
+	\end{table}
 
 	\item \textbf{Derivaciones precordiales}
 	
 	Estas seis derivaciones unipolares se colocan en el pecho, en diferentes regiones del corazón, y miden la actividad eléctrica en un plano perpendicular al plano frontal. Cada una de las derivaciones precordiales observa una región específica del ventrículo.
 	
-	\todo{revisar bien las partes del corazón que observa cada derivación y los nombres de las regiones por si es su versión en inglés}
 	\begin{itemize}
-		\item \underline{Derivaciones V1-V2}: se colocan en la region anteroseptal del corazón, observando la parte frontal y el septo interventricular.
-		\item \underline{Derivaciones V3-V4}: se colocan en la región anteroapical del corazón, observando la parte anterior y la punta del corazón.
-		\item \underline{Derivaciones V5-V6}: se colocan en la región anterolateral del corazón, observando la parte anterior lateral izquierda.
+		\item \underline{Derivaciones V1-V2}: Exploran la region septal y anteroseptal del corazón, observando principalmente el septo interventricular.
+		\item \underline{Derivaciones V3-V4}: Exploran la región anterior del corazón y el apex cardíaco, observando principalmente la pared anterior del ventrículo izquierdo.
+		\item \underline{Derivaciones V5-V6}: Exploran en la región lateral y anterolateral izquierda del corazón, observando principalmente la pared lateral del ventrículo izquierdo.
 	\end{itemize}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{imagenes/ecg-chest-leads.png}
+		\caption{Derivaciones precordiales.\todo{poner pie de pagina con la fuente}}
+		\label{fig:chest_leads}
+	\end{figure}
+
 \end{itemize}
 
 \subsection{Partes del ECG}
+\label{sec:partes_ecg}
+
+Un ciclo cardíaco típico en el ECG está compuesto por varias ondas y segmentos característicos, cada uno de los cuales se asocia a una fase concreta del proceso eléctrico del corazón.
+
+\subsubsection{Onda P}
+
+La onda P representa la despolarización de las auriculas. En la mayoría de las derivaciones es positiva, salvo en aVR
 
 \subsection{}
 

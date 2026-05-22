@@ -10,35 +10,36 @@
 \contentsline {section}{\numberline {2.1}Anatomía eléctrica del corazón}{15}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Electrocardiograma}{16}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}¿Que es un ECG?}{16}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Derivaciones \textcolor {red}{[CAMBIAR NOMBRE DE SECCIÓN]}}{17}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Partes del ECG}{19}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}}{19}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Patologías estudiadas}{19}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Machine Learning}{19}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Clasificación multilabel}{19}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Métricas de evaluación}{19}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Tecnologías y librerías utilizadas}{19}{section.2.7}%
-\contentsline {chapter}{\numberline {3}Estado del Arte}{21}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Definición del Trabajo}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Justificación del proyecto}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Base de datos utilizada}{23}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Origen del dataset}{23}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Estructura del dataset}{23}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Etiquetado original}{23}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Problemas del dataset}{23}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Agrupación de patologías}{23}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Escenarios experimentales}{23}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Enfoque 1}{23}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Enfoque 2}{23}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Enfoque 3}{24}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Objetivos técnicos}{24}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Metodología general}{24}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Modelo Desarrollado}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{25}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{25}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Preprocesado de datos}{25}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Selección y extracción de características}{25}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{25}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{27}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{29}{chapter.7}%
-\contentsline {chapter}{Bibliografía}{31}{chapter.7}%
+\contentsline {subsection}{\numberline {2.2.2}Sistema de derivaciones del ECG}{17}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Partes del ECG}{22}{subsection.2.2.3}%
+\contentsline {subsubsection}{Onda P}{22}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.4}}{22}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Patologías estudiadas}{22}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Machine Learning}{22}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Clasificación multilabel}{22}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Métricas de evaluación}{22}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Tecnologías y librerías utilizadas}{23}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Estado del Arte}{25}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Definición del Trabajo}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Justificación del proyecto}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Base de datos utilizada}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Origen del dataset}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Estructura del dataset}{27}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Etiquetado original}{27}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Problemas del dataset}{27}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Agrupación de patologías}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Escenarios experimentales}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Enfoque 1}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Enfoque 2}{27}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Enfoque 3}{28}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Objetivos técnicos}{28}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Metodología general}{28}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Modelo Desarrollado}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Preprocesado de datos}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Selección y extracción de características}{29}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{29}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{31}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{33}{chapter.7}%
+\contentsline {chapter}{Bibliografía}{35}{chapter.7}%

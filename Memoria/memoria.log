@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  21 MAY 2026 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  22 MAY 2026 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,26 +676,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count471
@@ -755,7 +755,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count477
-Package hyperref Info: Link coloring OFF on input line 76.
+Package hyperref Info: Link coloring OFF on input line 80.
 (memoria.out) (memoria.out)
 \@outlinefile=\write5
 \openout5 = `memoria.out'.
@@ -782,8 +782,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'memoria.bbl' found.
  (memoria.bbl)
-Package biblatex Info: Reference section=0 on input line 76.
-Package biblatex Info: Reference segment=0 on input line 76.
+Package biblatex Info: Reference section=0 on input line 80.
+Package biblatex Info: Reference segment=0 on input line 80.
  [1
 
 
@@ -834,55 +834,82 @@ Cap\'{\i }tulo 1.
 
 ]
 Cap\'{\i }tulo 2.
-<imagenes/sistema-electrico-corazon.png, id=295, 127.677pt x 127.677pt>
+<imagenes/sistema-electrico-corazon.png, id=309, 127.677pt x 127.677pt>
 File: imagenes/sistema-electrico-corazon.png Graphic file (type png)
 <use imagenes/sistema-electrico-corazon.png>
-Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 173.
-(pdftex.def)             Requested size: 209.12683pt x 209.13446pt.
+Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 177.
+(pdftex.def)             Requested size: 167.2989pt x 167.30484pt.
 [15] [16 <./imagenes/sistema-electrico-corazon.png>]
-<imagenes/einthoven-triangle.png, id=320, 1074.0125pt x 1202.4925pt>
+<imagenes/einthoven-triangle.png, id=333, 1074.0125pt x 1202.4925pt>
 File: imagenes/einthoven-triangle.png Graphic file (type png)
 <use imagenes/einthoven-triangle.png>
-Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 215.
+Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 225.
 (pdftex.def)             Requested size: 125.47737pt x 140.47638pt.
- [17] [18 <./imagenes/einthoven-triangle.png>] [19] [20
+ [17] [18 <./imagenes/einthoven-triangle.png>]
+<imagenes/ecg-bipolar-limb-lead-axis.png, id=352, 1088.065pt x 1218.5525pt>
+File: imagenes/ecg-bipolar-limb-lead-axis.png Graphic file (type png)
+<use imagenes/ecg-bipolar-limb-lead-axis.png>
+Package pdftex.def Info: imagenes/ecg-bipolar-limb-lead-axis.png  used on input line 258.
+(pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
+<imagenes/ecg-augmented-lead-axis.png, id=353, 1088.065pt x 1218.5525pt>
+File: imagenes/ecg-augmented-lead-axis.png Graphic file (type png)
+<use imagenes/ecg-augmented-lead-axis.png>
+Package pdftex.def Info: imagenes/ecg-augmented-lead-axis.png  used on input line 273.
+(pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
+ [19 <./imagenes/ecg-bipolar-limb-lead-axis.png>]
+<imagenes/ecg-6-limb-lead-axis.png, id=360, 992.70876pt x 794.97pt>
+File: imagenes/ecg-6-limb-lead-axis.png Graphic file (type png)
+<use imagenes/ecg-6-limb-lead-axis.png>
+Package pdftex.def Info: imagenes/ecg-6-limb-lead-axis.png  used on input line 282.
+(pdftex.def)             Requested size: 125.47737pt x 100.47485pt.
+ [20 <./imagenes/ecg-augmented-lead-axis.png> <./imagenes/ecg-6-limb-lead-axis.png>]
+Overfull \hbox (24.47142pt too wide) in paragraph at lines 304--317
+ [][] 
+ []
+
+<imagenes/ecg-chest-leads.png, id=373, 468.24937pt x 602.25pt>
+File: imagenes/ecg-chest-leads.png Graphic file (type png)
+<use imagenes/ecg-chest-leads.png>
+Package pdftex.def Info: imagenes/ecg-chest-leads.png  used on input line 331.
+(pdftex.def)             Requested size: 125.47737pt x 161.38745pt.
+[21] [22 <./imagenes/ecg-chest-leads.png>] [23] [24
 
 ]
 Cap\'{\i }tulo 3.
-[21] [22
+[25] [26
 
 ]
 Cap\'{\i }tulo 4.
-[23] [24]
+[27] [28]
 Cap\'{\i }tulo 5.
 
-Overfull \hbox (2.97147pt too wide) in paragraph at lines 360--360
+Overfull \hbox (2.97147pt too wide) in paragraph at lines 460--460
 []\T1/cmr/bx/n/17.28 Desarrollo ex-pe-ri-men-tal y op-ti-mi-za-ción del sis-
  []
 
-[25
+[29
 
-] [26
+] [30
 
 ]
 Cap\'{\i }tulo 6.
-[27] [28
+[31] [32
 
 ]
 Cap\'{\i }tulo 7.
-[29] [30
+[33] [34
 
 ]
-Overfull \hbox (8.51064pt too wide) in paragraph at lines 394--394
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 494--494
 [][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
 
-Overfull \hbox (9.72339pt too wide) in paragraph at lines 394--394
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 494--494
 \T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
  []
 
-[31
+[35
 
 ] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -894,23 +921,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 5696DF69F9D653F971C7879990E17A50;7258.
+(rerunfilecheck)             Checksum: 54EB007BD3A62415954462DBDF2BEDFC;7210.
 Package logreq Info: Writing requests to 'memoria.run.xml'.
 \openout1 = `memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23852 strings out of 467871
- 414114 string characters out of 5419344
- 1344600 words of memory out of 5000000
- 52366 multiletter control sequences out of 15000+600000
+ 23914 strings out of 467871
+ 416059 string characters out of 5419344
+ 1345263 words of memory out of 5000000
+ 52416 multiletter control sequences out of 15000+600000
  643555 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,766b,2813s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
-Output written on memoria.pdf (31 pages, 386186 bytes).
+ 75i,12n,79p,761b,3155s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on memoria.pdf (35 pages, 908693 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 355 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 375 words of extra memory for PDF output out of 10000 (max. 10000000)
 
