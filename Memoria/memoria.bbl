@@ -19,6 +19,40 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{encord_f1_score_ml}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7efdf003133efb47c7786e8ab110cfba}{%
+           family={Buhl},
+           familyi={B\bibinitperiod},
+           given={Nikolaj},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{fullhash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{fullhashraw}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{bibnamehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authorbibnamehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authornamehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authorfullhash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authorfullhashraw}{7efdf003133efb47c7786e8ab110cfba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{F1 Score in Machine Learning}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://encord.com/blog/f1-score-in-machine-learning/
+      \endverb
+      \verb{url}
+      \verb https://encord.com/blog/f1-score-in-machine-learning/
+      \endverb
+    \endentry
     \entry{cigna_corazon_electrico}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=001f86414b79058a6ab09340d8f86dfe}{%
@@ -424,6 +458,40 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
+    \entry{encord_f1_score_ml}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7efdf003133efb47c7786e8ab110cfba}{%
+           family={Buhl},
+           familyi={B\bibinitperiod},
+           given={Nikolaj},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{fullhash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{fullhashraw}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{bibnamehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authorbibnamehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authornamehash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authorfullhash}{7efdf003133efb47c7786e8ab110cfba}
+      \strng{authorfullhashraw}{7efdf003133efb47c7786e8ab110cfba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{F1 Score in Machine Learning}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://encord.com/blog/f1-score-in-machine-learning/
+      \endverb
+      \verb{url}
+      \verb https://encord.com/blog/f1-score-in-machine-learning/
+      \endverb
+    \endentry
     \entry{cigna_corazon_electrico}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=001f86414b79058a6ab09340d8f86dfe}{%
