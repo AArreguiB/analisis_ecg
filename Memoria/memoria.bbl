@@ -64,6 +64,37 @@
       \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
       \endverb
     \endentry
+    \entry{evidently_accuracy_precision_recall}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bb2873d2d9ce984751cf961fcaabd78}{%
+           family={{Evidently AI}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{fullhash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{fullhashraw}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{bibnamehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authorbibnamehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authornamehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authorfullhash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authorfullhashraw}{4bb2873d2d9ce984751cf961fcaabd78}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Accuracy, precision, recall and related classification metrics}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall
+      \endverb
+      \verb{url}
+      \verb https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall
+      \endverb
+    \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d319fe3c43ce8251b47c49666f0fb611}{%
@@ -124,6 +155,45 @@
       \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
       \endverb
     \endentry
+    \entry{ibm_confusion_matrix}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=28036c3883d75a8886c3ff73a4b2dde1}{%
+           family={Murel},
+           familyi={M\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b0ee043c5d5ce373995f25c08671606}{%
+           family={Kavlakoglu},
+           familyi={K\bibinitperiod},
+           given={Eda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{bibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorbibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authornamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{¿Qué es una matriz de confusión?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/confusion-matrix
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/confusion-matrix
+      \endverb
+    \endentry
     \entry{myekg_derivaciones_cardiacas}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b737a2f5f65d96ea9f66220801e97ae5}{%
@@ -138,8 +208,10 @@
       \strng{authornamehash}{b737a2f5f65d96ea9f66220801e97ae5}
       \strng{authorfullhash}{b737a2f5f65d96ea9f66220801e97ae5}
       \strng{authorfullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -151,6 +223,38 @@
       \endverb
       \verb{url}
       \verb https://www.my-ekg.com/generalidades-ekg/derivaciones-cardiacas.php
+      \endverb
+    \endentry
+    \entry{myekg_dilatacion_auricula_izquierda}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b737a2f5f65d96ea9f66220801e97ae5}{%
+           family={{My-EKG}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{bibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorbibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authornamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Dilatación de aurícula izquierda}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.my-ekg.com/hipertrofia-dilatacion/dilatacion-auricula-izquierda.php
+      \endverb
+      \verb{url}
+      \verb https://www.my-ekg.com/hipertrofia-dilatacion/dilatacion-auricula-izquierda.php
       \endverb
     \endentry
     \entry{prutkin_ecg_uptodate}{misc}{}{}
@@ -193,6 +297,37 @@
       \field{note}{Topic 2115, Version 36.0. Accedido: 2025-11-21}
       \field{title}{ECG tutorial: Basic principles of ECG analysis}
       \field{year}{2025}
+    \endentry
+    \entry{repsol_machine_learning}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1c4169e68fa93846dda807b46179989e}{%
+           family={{Repsol}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{fullhash}{1c4169e68fa93846dda807b46179989e}
+      \strng{fullhashraw}{1c4169e68fa93846dda807b46179989e}
+      \strng{bibnamehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authorbibnamehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authornamehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authorfullhash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authorfullhashraw}{1c4169e68fa93846dda807b46179989e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Machine Learning: innovación y aplicaciones}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.repsol.com/es/energia-avanzar/innovacion/machine-learning/index.cshtml
+      \endverb
+      \verb{url}
+      \verb https://www.repsol.com/es/energia-avanzar/innovacion/machine-learning/index.cshtml
+      \endverb
     \endentry
     \entry{sadec_arritmia}{misc}{}{}
       \name{author}{1}{}{%
@@ -334,6 +469,37 @@
       \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
       \endverb
     \endentry
+    \entry{evidently_accuracy_precision_recall}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bb2873d2d9ce984751cf961fcaabd78}{%
+           family={{Evidently AI}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{fullhash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{fullhashraw}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{bibnamehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authorbibnamehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authornamehash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authorfullhash}{4bb2873d2d9ce984751cf961fcaabd78}
+      \strng{authorfullhashraw}{4bb2873d2d9ce984751cf961fcaabd78}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Accuracy, precision, recall and related classification metrics}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall
+      \endverb
+      \verb{url}
+      \verb https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall
+      \endverb
+    \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d319fe3c43ce8251b47c49666f0fb611}{%
@@ -394,6 +560,45 @@
       \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
       \endverb
     \endentry
+    \entry{ibm_confusion_matrix}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=28036c3883d75a8886c3ff73a4b2dde1}{%
+           family={Murel},
+           familyi={M\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b0ee043c5d5ce373995f25c08671606}{%
+           family={Kavlakoglu},
+           familyi={K\bibinitperiod},
+           given={Eda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{bibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorbibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authornamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{¿Qué es una matriz de confusión?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/confusion-matrix
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/confusion-matrix
+      \endverb
+    \endentry
     \entry{myekg_derivaciones_cardiacas}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b737a2f5f65d96ea9f66220801e97ae5}{%
@@ -408,8 +613,10 @@
       \strng{authornamehash}{b737a2f5f65d96ea9f66220801e97ae5}
       \strng{authorfullhash}{b737a2f5f65d96ea9f66220801e97ae5}
       \strng{authorfullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -421,6 +628,38 @@
       \endverb
       \verb{url}
       \verb https://www.my-ekg.com/generalidades-ekg/derivaciones-cardiacas.php
+      \endverb
+    \endentry
+    \entry{myekg_dilatacion_auricula_izquierda}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b737a2f5f65d96ea9f66220801e97ae5}{%
+           family={{My-EKG}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{fullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{bibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorbibnamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authornamehash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhash}{b737a2f5f65d96ea9f66220801e97ae5}
+      \strng{authorfullhashraw}{b737a2f5f65d96ea9f66220801e97ae5}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Dilatación de aurícula izquierda}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.my-ekg.com/hipertrofia-dilatacion/dilatacion-auricula-izquierda.php
+      \endverb
+      \verb{url}
+      \verb https://www.my-ekg.com/hipertrofia-dilatacion/dilatacion-auricula-izquierda.php
       \endverb
     \endentry
     \entry{prutkin_ecg_uptodate}{misc}{}{}
@@ -463,6 +702,37 @@
       \field{note}{Topic 2115, Version 36.0. Accedido: 2025-11-21}
       \field{title}{ECG tutorial: Basic principles of ECG analysis}
       \field{year}{2025}
+    \endentry
+    \entry{repsol_machine_learning}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1c4169e68fa93846dda807b46179989e}{%
+           family={{Repsol}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{fullhash}{1c4169e68fa93846dda807b46179989e}
+      \strng{fullhashraw}{1c4169e68fa93846dda807b46179989e}
+      \strng{bibnamehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authorbibnamehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authornamehash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authorfullhash}{1c4169e68fa93846dda807b46179989e}
+      \strng{authorfullhashraw}{1c4169e68fa93846dda807b46179989e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Machine Learning: innovación y aplicaciones}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.repsol.com/es/energia-avanzar/innovacion/machine-learning/index.cshtml
+      \endverb
+      \verb{url}
+      \verb https://www.repsol.com/es/energia-avanzar/innovacion/machine-learning/index.cshtml
+      \endverb
     \endentry
     \entry{sadec_arritmia}{misc}{}{}
       \name{author}{1}{}{%

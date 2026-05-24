@@ -3080,7 +3080,13 @@
     <bcf:citekey order="8" intorder="1">cardioteca_eje_cardiaco</bcf:citekey>
     <bcf:citekey order="9" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
     <bcf:citekey order="10" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
-    <bcf:citekey order="11" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">repsol_machine_learning</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">ibm_confusion_matrix</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">ibm_confusion_matrix</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
+    <bcf:citekey order="17" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
