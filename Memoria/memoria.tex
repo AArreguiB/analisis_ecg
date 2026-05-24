@@ -560,10 +560,41 @@ Se calcula como la media armónica de la precisión y el recall:
 Esta métrica es especialmente útil en problemas con clases desbalanceadas, ya que penaliza de forma significativa los casos en los que una de las dos métricas es baja.
 En un contexto médico, el F1-score permite evaluar de manera más equilibrada el rendimiento del modelo cuando es importante minimizar tanto los falsos positivos como los falsos negativos.
 
+\subsubsection{Hamming Loss y Hamming Accuracy}
+
+En problemas de clasificación multilabel, cada muestra puede pertenecer a varias clases simultáneamente, lo que hace necesario utilizar métricas específicas para evaluar el rendimiento del modelo en este contexto.
+
+El Hamming Loss es una métrica que mide la proporción de etiquetas incorrectamente predichas por el modelo respecto al total de etiquetas evaluadas. (\cite{amit_classification_metrics})
+Se define como:
+\begin{equation*}
+	\text{Hamming Loss} = \frac{1}{N \cdot L} \sum_{i=1}^{N} \sum_{j=1}^{L} \mathbb{I}(y_{ij} \neq \hat{y}_{ij})
+\end{equation*}
+donde $N$ es el número de muestras, $L$ es el número de clases, $y_{ij}$ es la etiqueta real de la muestra $i$ para la clase $j$, $\hat{y}_{ij}$ es la etiqueta predicha por el modelo, y $\mathbb{I}$ es la función indicadora que devuelve 1 si las etiquetas son diferentes y 0 si son iguales.
+
+Un valor de Hamming Loss cercano a 0 indica un buen rendimiento del modelo ya que implica un menor número de errores a nivel de etiqueta individual. 
+
+De forma complementaria, el Hamming Accuracy se define como la proporcion de etiquetas correctamente clasificadas respecto al total.
+\begin{equation*}
+	\text{Hamming Accuracy} = 1 - \text{Hamming Loss}
+\end{equation*}
+
+Es especialemnte útil en problemas multilabel, ya que evalúa el rendimiento del modelo considerando cada etiqueta de forma individual, en lugar de considerar únicamente la predicción global de cada muestra.
+
 \section{Tecnologías y librerías utilizadas}
 
+En este trabajo se ha empleado principalmente Pyhton como lenguaje de programación, debido a su amplio número de librerías orientadas al análisis de datos, el procesamiento de señales y el desarrollo de modelos de Machine Learning.
 
+En el procesamiento y manipulación de datos se han utilizado las librerias Pandas y NumPy. 
+NumPy ha permitido trabajar con arrays multidimensionales de forma eficiente, mientras que Pandas ha facilitado la gestión de datos tabulares, permitiendo realizar operaciones de limpieza, transformación y análisis de manera sencilla, especialmente en lo relativo a las etiquetas y características de los pacientes.
 
+Para el procesamiento de señales y análisis de señales se ha empleado SciPy, que proporciona herramientas específicas para el tratamiento de señales digitales, siendo especialemente relevante en el contexto de electrocardiogramas.
+
+Por otro lado, la lectura y manipulación de los registros de electrocardiogramas se ha realizado mediante la librería WFDB, muy utlizada en el ámbito biomédico para el manejo de bases de datod de señales fisiológicas.
+
+La implementación y validación de los modelos de aprendizaje automático se ha llevado a cabo utilizando Scikit-learn, que incluye una amplia variedad de algoritmos de clasificación, así como herramientas para la evaluación del rendimiento de los modelos y la validación de los resultados.
+
+Finalmente, para la visualización de datos y la creación de una interfaz interactiva se han utilizado la librerías Matplotlib, Dash y Plotly, que permiten generar gráficos y visualizaciones dinámicas, facilitando la interpretación de los resultados y la exploración de los datos.
+\todo{Revisar esto, porque ha día 24 de mayo está sin hacer el dashboard}
 \section{Problemas en clasificación médica - \todo{OPCIONAL}}
 
 % -------------------------------------------------

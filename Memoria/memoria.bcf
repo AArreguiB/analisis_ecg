@@ -3087,7 +3087,8 @@
     <bcf:citekey order="15" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
     <bcf:citekey order="16" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
     <bcf:citekey order="17" intorder="1">encord_f1_score_ml</bcf:citekey>
-    <bcf:citekey order="18" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">amit_classification_metrics</bcf:citekey>
+    <bcf:citekey order="19" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

@@ -19,6 +19,40 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{amit_classification_metrics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26ec69d10805df92ebbfcd7e57ed8a46}{%
+           family={Amit},
+           familyi={A\bibinitperiod},
+           given={Hey},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{fullhash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{fullhashraw}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{bibnamehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authorbibnamehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authornamehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authorfullhash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authorfullhashraw}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Evaluation metrics for classification models}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
+      \endverb
+      \verb{url}
+      \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
+      \endverb
+    \endentry
     \entry{encord_f1_score_ml}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7efdf003133efb47c7786e8ab110cfba}{%
@@ -458,6 +492,40 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
+    \entry{amit_classification_metrics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26ec69d10805df92ebbfcd7e57ed8a46}{%
+           family={Amit},
+           familyi={A\bibinitperiod},
+           given={Hey},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{fullhash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{fullhashraw}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{bibnamehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authorbibnamehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authornamehash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authorfullhash}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \strng{authorfullhashraw}{26ec69d10805df92ebbfcd7e57ed8a46}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Evaluation metrics for classification models}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
+      \endverb
+      \verb{url}
+      \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
+      \endverb
+    \endentry
     \entry{encord_f1_score_ml}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7efdf003133efb47c7786e8ab110cfba}{%

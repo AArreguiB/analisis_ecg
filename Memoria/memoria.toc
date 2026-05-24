@@ -32,29 +32,30 @@
 \contentsline {subsubsection}{Precision}{29}{section*.31}%
 \contentsline {subsubsection}{Recall}{29}{section*.32}%
 \contentsline {subsubsection}{F1-score}{30}{section*.33}%
-\contentsline {section}{\numberline {2.7}Tecnologías y librerías utilizadas}{30}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Problemas en clasificación médica - \textcolor {red}{[OPCIONAL]}}{30}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Estado del Arte}{31}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Definición del Trabajo}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Justificación del proyecto}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Base de datos utilizada}{33}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Origen del dataset}{33}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Estructura del dataset}{33}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Etiquetado original}{33}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Problemas del dataset}{33}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Agrupación de patologías}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Escenarios experimentales}{33}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Enfoque 1}{33}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Enfoque 2}{33}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Enfoque 3}{34}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Objetivos técnicos}{34}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Metodología general}{34}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Modelo Desarrollado}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{35}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Preprocesado de datos}{35}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Selección y extracción de características}{35}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{35}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{37}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{39}{chapter.7}%
-\contentsline {chapter}{Bibliografía}{41}{chapter.7}%
+\contentsline {subsubsection}{Hamming Loss y Hamming Accuracy}{30}{section*.34}%
+\contentsline {section}{\numberline {2.7}Tecnologías y librerías utilizadas}{31}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Problemas en clasificación médica - \textcolor {red}{[OPCIONAL]}}{31}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Estado del Arte}{33}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Definición del Trabajo}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Justificación del proyecto}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Base de datos utilizada}{35}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Origen del dataset}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Estructura del dataset}{35}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Etiquetado original}{35}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Problemas del dataset}{35}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Agrupación de patologías}{35}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Escenarios experimentales}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Enfoque 1}{35}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Enfoque 2}{35}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Enfoque 3}{36}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Objetivos técnicos}{36}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Metodología general}{36}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Modelo Desarrollado}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{37}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Preprocesado de datos}{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Selección y extracción de características}{37}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{37}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{39}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{41}{chapter.7}%
+\contentsline {chapter}{Bibliografía}{43}{chapter.7}%
