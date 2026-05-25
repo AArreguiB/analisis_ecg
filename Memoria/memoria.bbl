@@ -53,6 +53,167 @@
       \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
       \endverb
     \endentry
+    \entry{ayano2022ecg_ml_review}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=78f1b14091f192e969a87f4d2f65c78d}{%
+           family={Ayano},
+           familyi={A\bibinitperiod},
+           given={Yehualashet\bibnamedelima Megersa},
+           giveni={Y\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e680f73e719a14e933cd7335948b156}{%
+           family={Schwenker},
+           familyi={S\bibinitperiod},
+           given={Friedhelm},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38e6946fe93d1ab00e49a54fa8257c2b}{%
+           family={Dufera},
+           familyi={D\bibinitperiod},
+           given={Bisrat\bibnamedelima Derebssa},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e5ff183030b74cd144ca7b5a751d354}{%
+           family={Debelee},
+           familyi={D\bibinitperiod},
+           given={Taye\bibnamedelima Girma},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f87e5a0fee6ba4f7926117cbf0a4acd4}
+      \strng{fullhash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{fullhashraw}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{bibnamehash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{authorbibnamehash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{authornamehash}{f87e5a0fee6ba4f7926117cbf0a4acd4}
+      \strng{authorfullhash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{authorfullhashraw}{1ab9f602311f4e27b5ef61d5edc86117}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Diagnostics (Basel)}
+      \field{note}{Accedido: 2026-04-17}
+      \field{number}{1}
+      \field{title}{Interpretable Machine Learning Techniques in ECG-Based Heart Disease Classification: A Systematic Review}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{111}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/diagnostics13010111
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3390/diagnostics13010111
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3390/diagnostics13010111
+      \endverb
+    \endentry
+    \entry{bergquist2023ecg_leads}{article}{}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=b3ca358d2b60b88732b4b4863523ca97}{%
+           family={Bergquist},
+           familyi={B\bibinitperiod},
+           given={Jake\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1748af874e63233ef802a927afc43c2}{%
+           family={Zenger},
+           familyi={Z\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62a8358de6eae8d1c73f5a480f45caa8}{%
+           family={Brundage},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76801024a290e565ab47b3d01236efed}{%
+           family={MacLeod},
+           familyi={M\bibinitperiod},
+           given={Rob\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e58d965f8ae3e345f0bee8617286f41}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Rashmee},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a357129e391f19838bb0c0d9906eb596}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Xiangyang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=929700cdb019bfeaca64c1d527e0354f}{%
+           family={Lyones},
+           familyi={L\bibinitperiod},
+           given={Ann},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcb373c32b50bccf57e37af46c838b1d}{%
+           family={Ranjan},
+           familyi={R\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9422f55365c856ea9b5efca5adcf764a}{%
+           family={Tasdizen},
+           familyi={T\bibinitperiod},
+           given={Tolga},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88b6dc6d6307f4765f9b3aad07ba0d99}{%
+           family={Bunch},
+           familyi={B\bibinitperiod},
+           given={T.\bibnamedelimi Jared},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8164fa06fade0eb36547517eda8a8bfb}{%
+           family={Steinberg},
+           familyi={S\bibinitperiod},
+           given={Benjamin\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01dbea2a8edf8bc2b4f46f3a0c410b8e}
+      \strng{fullhash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{fullhashraw}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{bibnamehash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{authorbibnamehash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{authornamehash}{01dbea2a8edf8bc2b4f46f3a0c410b8e}
+      \strng{authorfullhash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{authorfullhashraw}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Cardiology}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Comparison of Machine Learning Detection of Low Left Ventricular Ejection Fraction Using Individual ECG Leads}
+      \field{volume}{50}
+      \field{year}{2023}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.22489/CinC.2023.047
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.22489/CinC.2023.047
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.22489/CinC.2023.047
+      \endverb
+    \endentry
     \entry{encord_f1_score_ml}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7efdf003133efb47c7786e8ab110cfba}{%
@@ -132,6 +293,37 @@
       \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
       \endverb
     \endentry
+    \entry{esc_ai_ecg_diagnostics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7dbc2f608e26743f32281ea083e2903}{%
+           family={{European Society of Cardiology}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{fullhash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{fullhashraw}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{bibnamehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authorbibnamehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authornamehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authorfullhash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authorfullhashraw}{b7dbc2f608e26743f32281ea083e2903}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Artificial intelligence in ECG diagnostics - where are we now?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/artificial-intelligence-in-ecg-diagnostics-where-are-we-now/
+      \endverb
+      \verb{url}
+      \verb https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/artificial-intelligence-in-ecg-diagnostics-where-are-we-now/
+      \endverb
+    \endentry
     \entry{evidently_accuracy_precision_recall}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4bb2873d2d9ce984751cf961fcaabd78}{%
@@ -161,6 +353,191 @@
       \endverb
       \verb{url}
       \verb https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall
+      \endverb
+    \endentry
+    \entry{hannun2019arrhythmia}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=3e29af5ce90816dbed44c91293b21c10}{%
+           family={Hannun},
+           familyi={H\bibinitperiod},
+           given={A.\bibnamedelimi Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=813440e326af181ed4e642af98a3cd89}{%
+           family={Rajpurkar},
+           familyi={R\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17d16d63212ead010929e0bcb105956f}{%
+           family={Haghpanahi},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62eb8e1820220f71551327398aa4f052}{%
+           family={Tison},
+           familyi={T\bibinitperiod},
+           given={G.\bibnamedelimi H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08f477eb3c3887075efa173e86edbbdd}{%
+           family={Bourn},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be7b06970216348190620235d8a3b56f}{%
+           family={Turakhia},
+           familyi={T\bibinitperiod},
+           given={M.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922445c7b7144202e47b129b54ac5621}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={A.\bibnamedelimi Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{78cc3917e91c231ce1bdcb71cbf4d6e5}
+      \strng{fullhash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{fullhashraw}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{bibnamehash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{authorbibnamehash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{authornamehash}{78cc3917e91c231ce1bdcb71cbf4d6e5}
+      \strng{authorfullhash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{authorfullhashraw}{1030abd63ce8e096b0aeb4d9f372f877}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Medicine}
+      \field{note}{Accedido: 2026-04-17}
+      \field{number}{1}
+      \field{title}{Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{65\bibrangedash 69}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1038/s41591-018-0268-3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41591-018-0268-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41591-018-0268-3
+      \endverb
+    \endentry
+    \entry{kalmady2024ecg_cv}{article}{}{}
+      \name{author}{12}{}{%
+        {{un=0,uniquepart=base,hash=d66bdd70c870c10959e3bce9b6ef6391}{%
+           family={Kalmady},
+           familyi={K\bibinitperiod},
+           given={Sunil\bibnamedelima Vasu},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf9f58338a7a2a08dd22535dfac4fa1a}{%
+           family={Salimi},
+           familyi={S\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52be7dfbaba24373003f2d2c11a0bdc9}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Weijie},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=543f47f41967fd4798bedd1f4d36e913}{%
+           family={Sepehrvand},
+           familyi={S\bibinitperiod},
+           given={Nariman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7ed22b5d444030607f8df16ee07c4035}{%
+           family={Nademi},
+           familyi={N\bibinitperiod},
+           given={Yousef},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa7cf2c788821e6cb2a60c31c2dc1eb1}{%
+           family={Bainey},
+           familyi={B\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e95deb386c6e9c4abca3ddbdd98c04c7}{%
+           family={Ezekowitz},
+           familyi={E\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1c3b1c7ade656b4f3b8d9faf9e8608e}{%
+           family={Hindle},
+           familyi={H\bibinitperiod},
+           given={Abram},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=400527481692fa82bc1909f5373f9bde}{%
+           family={McAlister},
+           familyi={M\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a770d3fea9e460171ec3bbb23b8fceb}{%
+           family={Greiner},
+           familyi={G\bibinitperiod},
+           given={Russell},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b42d5f6e1ecf71f62c15af0c1b9dff0}{%
+           family={Sandhu},
+           familyi={S\bibinitperiod},
+           given={Roopinder},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39ef36971fb843b87befc293f6e8e629}{%
+           family={Kaul},
+           familyi={K\bibinitperiod},
+           given={Padma},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b8621bbdc5ae0473fdc761ab89d44f9}
+      \strng{fullhash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{fullhashraw}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{bibnamehash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{authorbibnamehash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{authornamehash}{0b8621bbdc5ae0473fdc761ab89d44f9}
+      \strng{authorfullhash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{authorfullhashraw}{869c0b03052bbc92eff42ac9465b0d60}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Digital Medicine}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Development and validation of machine learning algorithms based on electrocardiograms for cardiovascular diagnoses at the population level}
+      \field{volume}{7}
+      \field{year}{2024}
+      \field{pages}{133}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41746-024-01133-?
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41746-024-01133-?
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41746-024-01133-?
       \endverb
     \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
@@ -323,6 +700,100 @@
       \endverb
       \verb{url}
       \verb https://www.my-ekg.com/hipertrofia-dilatacion/dilatacion-auricula-izquierda.php
+      \endverb
+    \endentry
+    \entry{mitdb_physionet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=37260b685eb0a36689a3f58322f5adab}{%
+           family={{PhysioNet}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{fullhash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{fullhashraw}{37260b685eb0a36689a3f58322f5adab}
+      \strng{bibnamehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authorbibnamehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authornamehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authorfullhash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authorfullhashraw}{37260b685eb0a36689a3f58322f5adab}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dataset disponible en PhysioNet. Accedido: 2026-04-17}
+      \field{title}{MIT-BIH Arrhythmia Database}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://physionet.org/content/mitdb/1.0.0/
+      \endverb
+      \verb{url}
+      \verb https://physionet.org/content/mitdb/1.0.0/
+      \endverb
+    \endentry
+    \entry{prakash2025ecg_review}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=fceba5f72353a8a41772ddb5d74270d8}{%
+           family={Prakash},
+           familyi={P\bibinitperiod},
+           given={Allam\bibnamedelima Jaya},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25bf7b284bc40c773f666e05243b39d0}{%
+           family={Belkacem},
+           familyi={B\bibinitperiod},
+           given={Abdelkader\bibnamedelima Nasreddine},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59b9046a896b1896ab1a8f641e541aeb}{%
+           family={Elfadel},
+           familyi={E\bibinitperiod},
+           given={Ibrahim\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec55898351778c584f790335bc21df86}{%
+           family={Jelinek},
+           familyi={J\bibinitperiod},
+           given={Herbert\bibnamedelima F.},
+           giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa0daeae7a89237225bab5347d404b40}{%
+           family={Atef},
+           familyi={A\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b1f689966900c0c11953a5892f7c27e}
+      \strng{fullhash}{b5e707228464626a956bb7f38740dccf}
+      \strng{fullhashraw}{b5e707228464626a956bb7f38740dccf}
+      \strng{bibnamehash}{b5e707228464626a956bb7f38740dccf}
+      \strng{authorbibnamehash}{b5e707228464626a956bb7f38740dccf}
+      \strng{authornamehash}{1b1f689966900c0c11953a5892f7c27e}
+      \strng{authorfullhash}{b5e707228464626a956bb7f38740dccf}
+      \strng{authorfullhashraw}{b5e707228464626a956bb7f38740dccf}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Digital Health}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Advances in machine and deep learning for ECG beat classification: a systematic review}
+      \field{volume}{7}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.3389/fdgth.2025.1649923
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3389/fdgth.2025.1649923
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3389/fdgth.2025.1649923
       \endverb
     \endentry
     \entry{prutkin_ecg_uptodate}{misc}{}{}
@@ -488,6 +959,178 @@
       \endverb
       \verb{url}
       \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
+      \endverb
+    \endentry
+    \entry{utah_ceg_machine_learning}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6bc2a17bdf4c9f41dd798eb1f6bc17f1}{%
+           family={{University of Utah - CEG}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{fullhash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{fullhashraw}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{bibnamehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authorbibnamehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authornamehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authorfullhash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authorfullhashraw}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Machine Learning Research Area}
+      \verb{urlraw}
+      \verb https://ceg.sci.utah.edu/research-areas/machine-learning/
+      \endverb
+      \verb{url}
+      \verb https://ceg.sci.utah.edu/research-areas/machine-learning/
+      \endverb
+    \endentry
+    \entry{vimal_sathish_ecg_rf}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7895f1576be7ed656bd29437cc4e9624}{%
+           family={Vimal},
+           familyi={V\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5b3fbe89bdc8cab9d76a57d10b57a61}{%
+           family={Sathish},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{fullhash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{fullhashraw}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{bibnamehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authorbibnamehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authornamehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authorfullhash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authorfullhashraw}{160af6f5523e2baa10c5d4c75637c319}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of E-Health and Medical Communications (IGI Global)}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Random Forest Classifier Based ECG Arrhythmia Classification}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://www.igi-global.com/article/random-forest-classifier-based-ecg/42992
+      \endverb
+      \verb{url}
+      \verb https://www.igi-global.com/article/random-forest-classifier-based-ecg/42992
+      \endverb
+    \endentry
+    \entry{wysokinski2024pe_ecg}{article}{}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=3d21af77bbb4f95e0341d8cc58719cd1}{%
+           family={Wysokinski},
+           familyi={W\bibinitperiod},
+           given={Waldemar\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a3dcba3ca153077e91aa280307a4e07}{%
+           family={Meverden},
+           familyi={M\bibinitperiod},
+           given={Ryan\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fcb9fc5698f38fcd1b564a4caca31967}{%
+           family={Lopez-Jimenez},
+           familyi={L\bibinithyphendelim J\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ed21fd390a9632ac41ba52a722c9816}{%
+           family={Harmon},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10fb4da4657baa0df0ed12b0d50ef612}{%
+           family={Medina\bibnamedelima Inojosa},
+           familyi={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Betsy\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5d9b424ff4d1b3baa761b42b233c02d}{%
+           family={Baez\bibnamedelima Suarez},
+           familyi={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Abraham},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa65a228b2be56cb876f0b2e1ef98a3e}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Kan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85b6edb3295c7279deadc002ce90b41a}{%
+           family={Medina\bibnamedelima Inojosa},
+           familyi={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Jose\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b0c2eea598ec4b06364e4e6b0035f78}{%
+           family={Casanegra},
+           familyi={C\bibinitperiod},
+           given={Ana\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa2dad2bbd1b943ef1c557ae74438276}{%
+           family={McBane},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31c1106f56e30cae8ecdc9a3477ac322}{%
+           family={Houghton},
+           familyi={H\bibinitperiod},
+           given={Damon\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c752563a89fee6e4fda8524eb9880ddb}
+      \strng{fullhash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{fullhashraw}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{bibnamehash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{authorbibnamehash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{authornamehash}{c752563a89fee6e4fda8524eb9880ddb}
+      \strng{authorfullhash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{authorfullhashraw}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mayo Clinic Proceedings: Digital Health}
+      \field{note}{Accedido: 2026-04-17}
+      \field{number}{3}
+      \field{title}{Electrocardiogram Signal Analysis With a Machine Learning Model Predicts the Presence of Pulmonary Embolism With Accuracy Dependent on Embolism Burden}
+      \field{volume}{2}
+      \field{year}{2024}
+      \field{pages}{453\bibrangedash 462}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.mcpdig.2024.03.009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.mcpdig.2024.03.009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.mcpdig.2024.03.009
       \endverb
     \endentry
   \enddatalist
@@ -526,6 +1169,167 @@
       \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
       \endverb
     \endentry
+    \entry{ayano2022ecg_ml_review}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=78f1b14091f192e969a87f4d2f65c78d}{%
+           family={Ayano},
+           familyi={A\bibinitperiod},
+           given={Yehualashet\bibnamedelima Megersa},
+           giveni={Y\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e680f73e719a14e933cd7335948b156}{%
+           family={Schwenker},
+           familyi={S\bibinitperiod},
+           given={Friedhelm},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38e6946fe93d1ab00e49a54fa8257c2b}{%
+           family={Dufera},
+           familyi={D\bibinitperiod},
+           given={Bisrat\bibnamedelima Derebssa},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e5ff183030b74cd144ca7b5a751d354}{%
+           family={Debelee},
+           familyi={D\bibinitperiod},
+           given={Taye\bibnamedelima Girma},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f87e5a0fee6ba4f7926117cbf0a4acd4}
+      \strng{fullhash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{fullhashraw}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{bibnamehash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{authorbibnamehash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{authornamehash}{f87e5a0fee6ba4f7926117cbf0a4acd4}
+      \strng{authorfullhash}{1ab9f602311f4e27b5ef61d5edc86117}
+      \strng{authorfullhashraw}{1ab9f602311f4e27b5ef61d5edc86117}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Diagnostics (Basel)}
+      \field{note}{Accedido: 2026-04-17}
+      \field{number}{1}
+      \field{title}{Interpretable Machine Learning Techniques in ECG-Based Heart Disease Classification: A Systematic Review}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{111}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/diagnostics13010111
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3390/diagnostics13010111
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3390/diagnostics13010111
+      \endverb
+    \endentry
+    \entry{bergquist2023ecg_leads}{article}{}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=b3ca358d2b60b88732b4b4863523ca97}{%
+           family={Bergquist},
+           familyi={B\bibinitperiod},
+           given={Jake\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1748af874e63233ef802a927afc43c2}{%
+           family={Zenger},
+           familyi={Z\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62a8358de6eae8d1c73f5a480f45caa8}{%
+           family={Brundage},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76801024a290e565ab47b3d01236efed}{%
+           family={MacLeod},
+           familyi={M\bibinitperiod},
+           given={Rob\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e58d965f8ae3e345f0bee8617286f41}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Rashmee},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a357129e391f19838bb0c0d9906eb596}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Xiangyang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=929700cdb019bfeaca64c1d527e0354f}{%
+           family={Lyones},
+           familyi={L\bibinitperiod},
+           given={Ann},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcb373c32b50bccf57e37af46c838b1d}{%
+           family={Ranjan},
+           familyi={R\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9422f55365c856ea9b5efca5adcf764a}{%
+           family={Tasdizen},
+           familyi={T\bibinitperiod},
+           given={Tolga},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88b6dc6d6307f4765f9b3aad07ba0d99}{%
+           family={Bunch},
+           familyi={B\bibinitperiod},
+           given={T.\bibnamedelimi Jared},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8164fa06fade0eb36547517eda8a8bfb}{%
+           family={Steinberg},
+           familyi={S\bibinitperiod},
+           given={Benjamin\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01dbea2a8edf8bc2b4f46f3a0c410b8e}
+      \strng{fullhash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{fullhashraw}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{bibnamehash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{authorbibnamehash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{authornamehash}{01dbea2a8edf8bc2b4f46f3a0c410b8e}
+      \strng{authorfullhash}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \strng{authorfullhashraw}{adce25a85e7e67f74d598b5fd69dbcbe}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Cardiology}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Comparison of Machine Learning Detection of Low Left Ventricular Ejection Fraction Using Individual ECG Leads}
+      \field{volume}{50}
+      \field{year}{2023}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.22489/CinC.2023.047
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.22489/CinC.2023.047
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.22489/CinC.2023.047
+      \endverb
+    \endentry
     \entry{encord_f1_score_ml}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7efdf003133efb47c7786e8ab110cfba}{%
@@ -605,6 +1409,37 @@
       \verb https://www.cardioteca.com/imagen/8008-eje-cardiaco-ecg-calculo.html
       \endverb
     \endentry
+    \entry{esc_ai_ecg_diagnostics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7dbc2f608e26743f32281ea083e2903}{%
+           family={{European Society of Cardiology}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{fullhash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{fullhashraw}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{bibnamehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authorbibnamehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authornamehash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authorfullhash}{b7dbc2f608e26743f32281ea083e2903}
+      \strng{authorfullhashraw}{b7dbc2f608e26743f32281ea083e2903}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Artificial intelligence in ECG diagnostics - where are we now?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/artificial-intelligence-in-ecg-diagnostics-where-are-we-now/
+      \endverb
+      \verb{url}
+      \verb https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/artificial-intelligence-in-ecg-diagnostics-where-are-we-now/
+      \endverb
+    \endentry
     \entry{evidently_accuracy_precision_recall}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4bb2873d2d9ce984751cf961fcaabd78}{%
@@ -634,6 +1469,191 @@
       \endverb
       \verb{url}
       \verb https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall
+      \endverb
+    \endentry
+    \entry{hannun2019arrhythmia}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=3e29af5ce90816dbed44c91293b21c10}{%
+           family={Hannun},
+           familyi={H\bibinitperiod},
+           given={A.\bibnamedelimi Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=813440e326af181ed4e642af98a3cd89}{%
+           family={Rajpurkar},
+           familyi={R\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17d16d63212ead010929e0bcb105956f}{%
+           family={Haghpanahi},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62eb8e1820220f71551327398aa4f052}{%
+           family={Tison},
+           familyi={T\bibinitperiod},
+           given={G.\bibnamedelimi H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08f477eb3c3887075efa173e86edbbdd}{%
+           family={Bourn},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be7b06970216348190620235d8a3b56f}{%
+           family={Turakhia},
+           familyi={T\bibinitperiod},
+           given={M.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922445c7b7144202e47b129b54ac5621}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={A.\bibnamedelimi Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{78cc3917e91c231ce1bdcb71cbf4d6e5}
+      \strng{fullhash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{fullhashraw}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{bibnamehash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{authorbibnamehash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{authornamehash}{78cc3917e91c231ce1bdcb71cbf4d6e5}
+      \strng{authorfullhash}{1030abd63ce8e096b0aeb4d9f372f877}
+      \strng{authorfullhashraw}{1030abd63ce8e096b0aeb4d9f372f877}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Medicine}
+      \field{note}{Accedido: 2026-04-17}
+      \field{number}{1}
+      \field{title}{Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{65\bibrangedash 69}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1038/s41591-018-0268-3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41591-018-0268-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41591-018-0268-3
+      \endverb
+    \endentry
+    \entry{kalmady2024ecg_cv}{article}{}{}
+      \name{author}{12}{}{%
+        {{un=0,uniquepart=base,hash=d66bdd70c870c10959e3bce9b6ef6391}{%
+           family={Kalmady},
+           familyi={K\bibinitperiod},
+           given={Sunil\bibnamedelima Vasu},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf9f58338a7a2a08dd22535dfac4fa1a}{%
+           family={Salimi},
+           familyi={S\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52be7dfbaba24373003f2d2c11a0bdc9}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Weijie},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=543f47f41967fd4798bedd1f4d36e913}{%
+           family={Sepehrvand},
+           familyi={S\bibinitperiod},
+           given={Nariman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7ed22b5d444030607f8df16ee07c4035}{%
+           family={Nademi},
+           familyi={N\bibinitperiod},
+           given={Yousef},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa7cf2c788821e6cb2a60c31c2dc1eb1}{%
+           family={Bainey},
+           familyi={B\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e95deb386c6e9c4abca3ddbdd98c04c7}{%
+           family={Ezekowitz},
+           familyi={E\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1c3b1c7ade656b4f3b8d9faf9e8608e}{%
+           family={Hindle},
+           familyi={H\bibinitperiod},
+           given={Abram},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=400527481692fa82bc1909f5373f9bde}{%
+           family={McAlister},
+           familyi={M\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a770d3fea9e460171ec3bbb23b8fceb}{%
+           family={Greiner},
+           familyi={G\bibinitperiod},
+           given={Russell},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b42d5f6e1ecf71f62c15af0c1b9dff0}{%
+           family={Sandhu},
+           familyi={S\bibinitperiod},
+           given={Roopinder},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39ef36971fb843b87befc293f6e8e629}{%
+           family={Kaul},
+           familyi={K\bibinitperiod},
+           given={Padma},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b8621bbdc5ae0473fdc761ab89d44f9}
+      \strng{fullhash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{fullhashraw}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{bibnamehash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{authorbibnamehash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{authornamehash}{0b8621bbdc5ae0473fdc761ab89d44f9}
+      \strng{authorfullhash}{869c0b03052bbc92eff42ac9465b0d60}
+      \strng{authorfullhashraw}{869c0b03052bbc92eff42ac9465b0d60}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Digital Medicine}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Development and validation of machine learning algorithms based on electrocardiograms for cardiovascular diagnoses at the population level}
+      \field{volume}{7}
+      \field{year}{2024}
+      \field{pages}{133}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41746-024-01133-?
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41746-024-01133-?
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41746-024-01133-?
       \endverb
     \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
@@ -796,6 +1816,100 @@
       \endverb
       \verb{url}
       \verb https://www.my-ekg.com/hipertrofia-dilatacion/dilatacion-auricula-izquierda.php
+      \endverb
+    \endentry
+    \entry{mitdb_physionet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=37260b685eb0a36689a3f58322f5adab}{%
+           family={{PhysioNet}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{fullhash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{fullhashraw}{37260b685eb0a36689a3f58322f5adab}
+      \strng{bibnamehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authorbibnamehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authornamehash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authorfullhash}{37260b685eb0a36689a3f58322f5adab}
+      \strng{authorfullhashraw}{37260b685eb0a36689a3f58322f5adab}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dataset disponible en PhysioNet. Accedido: 2026-04-17}
+      \field{title}{MIT-BIH Arrhythmia Database}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://physionet.org/content/mitdb/1.0.0/
+      \endverb
+      \verb{url}
+      \verb https://physionet.org/content/mitdb/1.0.0/
+      \endverb
+    \endentry
+    \entry{prakash2025ecg_review}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=fceba5f72353a8a41772ddb5d74270d8}{%
+           family={Prakash},
+           familyi={P\bibinitperiod},
+           given={Allam\bibnamedelima Jaya},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25bf7b284bc40c773f666e05243b39d0}{%
+           family={Belkacem},
+           familyi={B\bibinitperiod},
+           given={Abdelkader\bibnamedelima Nasreddine},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59b9046a896b1896ab1a8f641e541aeb}{%
+           family={Elfadel},
+           familyi={E\bibinitperiod},
+           given={Ibrahim\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec55898351778c584f790335bc21df86}{%
+           family={Jelinek},
+           familyi={J\bibinitperiod},
+           given={Herbert\bibnamedelima F.},
+           giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa0daeae7a89237225bab5347d404b40}{%
+           family={Atef},
+           familyi={A\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b1f689966900c0c11953a5892f7c27e}
+      \strng{fullhash}{b5e707228464626a956bb7f38740dccf}
+      \strng{fullhashraw}{b5e707228464626a956bb7f38740dccf}
+      \strng{bibnamehash}{b5e707228464626a956bb7f38740dccf}
+      \strng{authorbibnamehash}{b5e707228464626a956bb7f38740dccf}
+      \strng{authornamehash}{1b1f689966900c0c11953a5892f7c27e}
+      \strng{authorfullhash}{b5e707228464626a956bb7f38740dccf}
+      \strng{authorfullhashraw}{b5e707228464626a956bb7f38740dccf}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Digital Health}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Advances in machine and deep learning for ECG beat classification: a systematic review}
+      \field{volume}{7}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.3389/fdgth.2025.1649923
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3389/fdgth.2025.1649923
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3389/fdgth.2025.1649923
       \endverb
     \endentry
     \entry{prutkin_ecg_uptodate}{misc}{}{}
@@ -961,6 +2075,178 @@
       \endverb
       \verb{url}
       \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
+      \endverb
+    \endentry
+    \entry{utah_ceg_machine_learning}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6bc2a17bdf4c9f41dd798eb1f6bc17f1}{%
+           family={{University of Utah - CEG}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{fullhash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{fullhashraw}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{bibnamehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authorbibnamehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authornamehash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authorfullhash}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \strng{authorfullhashraw}{6bc2a17bdf4c9f41dd798eb1f6bc17f1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Machine Learning Research Area}
+      \verb{urlraw}
+      \verb https://ceg.sci.utah.edu/research-areas/machine-learning/
+      \endverb
+      \verb{url}
+      \verb https://ceg.sci.utah.edu/research-areas/machine-learning/
+      \endverb
+    \endentry
+    \entry{vimal_sathish_ecg_rf}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7895f1576be7ed656bd29437cc4e9624}{%
+           family={Vimal},
+           familyi={V\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5b3fbe89bdc8cab9d76a57d10b57a61}{%
+           family={Sathish},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{fullhash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{fullhashraw}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{bibnamehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authorbibnamehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authornamehash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authorfullhash}{160af6f5523e2baa10c5d4c75637c319}
+      \strng{authorfullhashraw}{160af6f5523e2baa10c5d4c75637c319}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of E-Health and Medical Communications (IGI Global)}
+      \field{note}{Accedido: 2026-04-17}
+      \field{title}{Random Forest Classifier Based ECG Arrhythmia Classification}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://www.igi-global.com/article/random-forest-classifier-based-ecg/42992
+      \endverb
+      \verb{url}
+      \verb https://www.igi-global.com/article/random-forest-classifier-based-ecg/42992
+      \endverb
+    \endentry
+    \entry{wysokinski2024pe_ecg}{article}{}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=3d21af77bbb4f95e0341d8cc58719cd1}{%
+           family={Wysokinski},
+           familyi={W\bibinitperiod},
+           given={Waldemar\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a3dcba3ca153077e91aa280307a4e07}{%
+           family={Meverden},
+           familyi={M\bibinitperiod},
+           given={Ryan\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fcb9fc5698f38fcd1b564a4caca31967}{%
+           family={Lopez-Jimenez},
+           familyi={L\bibinithyphendelim J\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ed21fd390a9632ac41ba52a722c9816}{%
+           family={Harmon},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10fb4da4657baa0df0ed12b0d50ef612}{%
+           family={Medina\bibnamedelima Inojosa},
+           familyi={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Betsy\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5d9b424ff4d1b3baa761b42b233c02d}{%
+           family={Baez\bibnamedelima Suarez},
+           familyi={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Abraham},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa65a228b2be56cb876f0b2e1ef98a3e}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Kan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85b6edb3295c7279deadc002ce90b41a}{%
+           family={Medina\bibnamedelima Inojosa},
+           familyi={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Jose\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b0c2eea598ec4b06364e4e6b0035f78}{%
+           family={Casanegra},
+           familyi={C\bibinitperiod},
+           given={Ana\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa2dad2bbd1b943ef1c557ae74438276}{%
+           family={McBane},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31c1106f56e30cae8ecdc9a3477ac322}{%
+           family={Houghton},
+           familyi={H\bibinitperiod},
+           given={Damon\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c752563a89fee6e4fda8524eb9880ddb}
+      \strng{fullhash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{fullhashraw}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{bibnamehash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{authorbibnamehash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{authornamehash}{c752563a89fee6e4fda8524eb9880ddb}
+      \strng{authorfullhash}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \strng{authorfullhashraw}{bdb6852422f5b6fdb2c9e5e367e7c3d0}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mayo Clinic Proceedings: Digital Health}
+      \field{note}{Accedido: 2026-04-17}
+      \field{number}{3}
+      \field{title}{Electrocardiogram Signal Analysis With a Machine Learning Model Predicts the Presence of Pulmonary Embolism With Accuracy Dependent on Embolism Burden}
+      \field{volume}{2}
+      \field{year}{2024}
+      \field{pages}{453\bibrangedash 462}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.mcpdig.2024.03.009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.mcpdig.2024.03.009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.mcpdig.2024.03.009
       \endverb
     \endentry
   \enddatalist

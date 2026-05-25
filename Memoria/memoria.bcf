@@ -3088,7 +3088,17 @@
     <bcf:citekey order="16" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
     <bcf:citekey order="17" intorder="1">encord_f1_score_ml</bcf:citekey>
     <bcf:citekey order="18" intorder="1">amit_classification_metrics</bcf:citekey>
-    <bcf:citekey order="19" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">vimal_sathish_ecg_rf</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">mitdb_physionet</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">hannun2019arrhythmia</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">wysokinski2024pe_ecg</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">esc_ai_ecg_diagnostics</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">bergquist2023ecg_leads</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">kalmady2024ecg_cv</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">ayano2022ecg_ml_review</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">prakash2025ecg_review</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">utah_ceg_machine_learning</bcf:citekey>
+    <bcf:citekey order="29" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
