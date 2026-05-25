@@ -438,11 +438,13 @@ Correponden a cambios en la forma de las ondas, segmentos o intervalos del ECG.
 Destacan las alteraciones del segmento ST, que pueden aparecer elevado o deprimido y se asocian frecuentemente a procesos isquémicos. También es relevante la inversión de la onda T, relacionada con alteraciones en la repolarización ventricular, así como las modificaciones del intervalo QT, que pueden indicar cambios en la duración global de la actividad eléctrica ventricular.
 
 \section{Patologías estudiadas}
+\label{sec:patologias_estudiadas}
 
-En el presente trabajo se consideran distintas patologías cardíacas, agrupadas en cinco superclases principales que permiten simplificar el análisis y facilitar su tratamiento. 
+Las  alteraciones detectadas en el ECG pueden afectar a la generación, propagación o recuperación del impulso eléctrico, reflejándose en cambios característicos en la señal.
 
-Estas clases recogen los principales tipos de alteraciones electrocardiográficas y abarcan un conjunto amplio de patologías cardíacas:
-\todo{Repensar bien esto porque no se como ponerlo}
+Entre las principales categorías clínicas relevantes en el análisis del ECG se encuentran distintas patologías que afectan a la morfología de las ondas, los intervalos y la conducción cardíaca. 
+
+A continuación, se describen las más representativas en el contexto de este estudio:
 
 \begin{itemize}
 	\item Normal (NORM)
@@ -737,45 +739,156 @@ A partir de las limitaciones analizadas en el estado del arte, el presente traba
 Se analiza la influencia del número de derivaciones utilizadas, comparando los resultados obtenidos con una sola derivación frente a los obtenidos utilizando el ECG completo de 12 derivaciones.
 Del mismo modo, se comparan distintos formas de representar la información, desde la señal ECG en bruto hasta la extracción de características manuales o estadísticas, con el objetivo de evaluar su impacto en el rendimiento de los modelos. 
 
+El trabajo utiliza distintos enfoques del problema de clasificación. Se considera un enfoque binario que detecta grupos generales de patologías y otro enfoque más complejo basado en múltiples enfermedades y salidas probabilísticas. 
+Permite analizar escenarios más próximos a la realidad clínica, donde un mismo registro puede puede presentar varias alteraciones simultáneamente y donde el nivel de confianza asociado a cada predicción puede resultar relevante desde el punto de vista médico.
+
+Además, el trabajo no se limita únicamente al estudio del rendimiento global de los modelos, sino que también analiza el comportamiento de distintas métricas de evaluación adaptadas a problemas con clases desbalanceadas y escenarios multilabel. 
+De esta forma, se busca obtener una evaluación más representativa del comportamiento real de los clasificadores en tareas de diagnóstico automático.
+
+En conjunto, el objetivo del trabajo es estudiar distintas estrategias de clasificación sobre registros electrocardiográficos reales, analizando las ventajas y limitaciones de cada configuración experimental y explorando enfoques más flexibles y representativos de situaciones clínicas reales.
+
 \section{Base de datos utilizada}
+
+Para el desarrollo del presente trabajo se ha utilizado una base de datos de registros electrocardiográficos ampliamente utilizada en investigación biomédica. 
+La selección de una base de datos adecuada resulta especialmente relevante en problemas de clasificación automática de ECG, ya que las características de los registros, el etiquetado clínico y la diversidad de patologías condicionan de forma directa el rendimiento y la capacidad de generalización de los modelos desarrollados.
+
+En este trabajo se emplea la base de datos PTB-XL, disponible públicamente a través de la plataforma PhysioNet.  (\cite{ptbxl_dataset})
+Esta base de datos ha sido diseñada específicamente para facilitar tareas de investigación relacionadas con el análisis automático de señales ECG y el desarrollo de modelos de aprendizaje automático aplicados al diagnóstico cardiovascular.
 
 \subsection{Origen del dataset}
 
+La base de datos PTB-XL fue desarrollada con el objetivo de proporcionar un conjunto de datos electrocardiográficos de gran tamaño y alta calidad, que permita el entrenamiento y la evaluación de modelos de inteligencia artificial en tareas de clasificación de patologías cardíacas.
+
+El dataset cuenta con más de 21000 registros de ECG de 12 derivaciones, obtenidos de aproximadamente 19000 pacientes diferentes.
+Proceden de práctica clínica real, y fueron anotados por especialistas médicos, lo que garantiza la calidad y relevancia de las etiquetas asociadas a cada registro.
 
 \subsection{Estructura del dataset}
 
+Cada registro de la base de datos corresponde a un ECG de 12 derivaciones con una duración aproximada de 10 segundos. 
+Las señales incluyen las derivaciones estándar (I, II, III, aVR, aVL, aVF) y las precordiales (V1-V6).
+
+Los registros se encuentran almacenados en formato WFDB, muy utilizado en bases de datos biomédicas y compatible con herramientas de procesamiento de señales ECG en Python. 
+Además de las señales electrocardiográficas, el dataset incorpora información adicional asociada a cada registro, incluyendo identificadores de paciente, características demográficas y anotaciones diagnósticas.
+
+PTB-XL proporciona dos versiones de las señales ECG con distintas frecuencias de muestreo: una versión de 100 Hz y otra de 500 Hz. 
+Esta característica permite adaptar el procesamiento de las señales a distintos tipos de aplicaciones y modelos de aprendizaje automático.
+En este trabajo se ha utilizado la versión de 500 Hz, ya que proporciona una mayor resolución temporal, lo que puede ser beneficioso para la detección de patrones sutiles en la señal ECG.
+Es por esto que la señal se presenta como una matriz de 12 x 5000, donde las 12 filas corresponden a las derivaciones y las 5000 columnas representan las muestras de la señal a lo largo del tiempo.
+
+La estructura del dataset permite trabajar tanto con las señales originales completas como con características extraídas posteriormente mediante técnicas de procesamiento y análisis de señal.
 
 \subsection{Etiquetado original}
 
+El sistema de etiquetado de la base de datos se basa en un enfoque multilabel, en el que cada registro electrocardiográfico puede estar asociado simultáneamente a múltiples patologías. 
+A diferencia de un esquema de clasificación convencional con una única clase por muestra, este tipo de anotación permite representar escenarios clínicos más realistas, en los que pueden coexistir distintas alteraciones cardíacas en un mismo paciente.
+
+En este trabajo, las etiquetas se encuentran estructuradas en forma de diccionario, donde cada clave corresponde a una de las 71 patologías consideradas en la base de datos. 
+El valor asociado a cada clave representa una probabilidad (expresada en escala de 0 a 100) que indica el grado de presencia o compatibilidad de dicha patología en el registro ECG correspondiente.
+
+Esta representación transforma el problema en un escenario de clasificación multilabel con salidas probabilísticas, lo que permite desarrollar modelos capaces de predecir no solo la presencia o ausencia de cada patología, sino también el nivel de confianza asociado a cada predicción.
+
+A partir de este etiquetado original, el trabajo plantea posteriormente distintos escenarios de clasificación, incluyendo formulaciones binarias y agrupaciones de patologías en clases más generales, con el objetivo de analizar el comportamiento de los modelos bajo diferentes niveles de complejidad.
 
 \subsection{Problemas del dataset}
 
+A pesar de tratarse de una base de datos ampliamente utilizada en investigación y de gran valor para el desarrollo de modelos de aprendizaje automático, el conjunto de datos presenta diversas limitaciones que condicionan el diseño de los modelos y la interpretación de los resultados.
 
+En primer lugar, se observa un desbalanceo significativo entre patologías. 
+Algunas enfermedades aparecen con una frecuencia elevada dentro del conjunto de registros, mientras que otras están representadas por un número reducido de casos. 
+Esta distribución desigual puede influir en el proceso de aprendizaje, favoreciendo la detección de las clases mayoritarias y dificultando la identificación de patologías menos representadas.
+
+En segundo lugar, la propia naturaleza del etiquetado introduce complejidad adicional. 
+Al tratarse de un sistema multilabel probabilístico, en el que cada patología se asocia a un valor de probabilidad entre 0 y 100, existe una dependencia directa del criterio del umbral que se utilice posteriormente para transformar estas probabilidades en decisiones discretas. 
+Este aspecto puede afectar de forma relevante al rendimiento final del sistema.
+
+Otro factor importante es la coexistencia de múltiples patologías en un mismo registro, lo que incrementa la complejidad del problema respecto a enfoques de clasificación tradicional. 
+Esta situación refleja mejor la realidad clínica, pero dificulta el aprendizaje de fronteras de decisión claras entre clases.
+
+Además, la variabilidad intrínseca de las señales electrocardiográficas, derivada de diferencias entre pacientes, condiciones de adquisición y posibles artefactos en la señal, introduce ruido que puede afectar a la robustez de los modelos.
+
+Finalmente, aunque la base de datos es un referente en el ámbito del análisis automático de ECG, los modelos entrenados sobre este conjunto pueden no generalizar de forma directa a otros entornos clínicos o poblaciones distintas, lo que pone de manifiesto la necesidad de validaciones adicionales en escenarios externos.
 
 \section{Agrupación de patologías}
 
+La base de datos utilizada en este trabajo contiene un total de 71 patologías diferentes, definidas mediante el sistema de anotación SCP-ECG. 
+Este nivel de precisión introduce una elevada complejidad en el problema de clasificación, especialmente en escenarios multilabel y con distribución desbalanceada de clases.
+
+Con el objetivo de simplificar el problema y estructurar el análisis, en este trabajo se emplea una agrupación de las patologías en cinco superclases clínicas generales, previamente definidas en el apartado \ref{sec:patologias_estudiadas}. 
+Esta agrupación permite reducir la complejidad del espacio de salida y facilita la interpretación de los resultados obtenidos por los modelos.
+
+Este enfoque permite trabajar simultáneamente con dos niveles de análisis: por un lado, el nivel detallado basado en las 71 patologías originales, y por otro, un nivel más general basado en las cinco superclases. 
+Esta dualidad resulta especialmente útil para evaluar el impacto del nivel de detalle en el rendimiento de los modelos de clasificación.
+
+Además, esta estructura facilita la definición de distintos escenarios experimentales, permitiendo comparar el comportamiento de los modelos bajo formulaciones más complejas frente a aproximaciones más simplificadas.
 
 \section{Escenarios experimentales}
 
-\subsection{Enfoque 1}
+Con el objetivo de analizar el impacto de distintos factores en el rendimiento de los modelos de clasificación automática de ECG, se plantean tres enfoques experimentales diferentes, que varían en función del número de derivaciones utilizadas, el nivel de detalle en la representación de las patologías y el tipo de salida generada por el modelo.
 
-1 derivacion + 5 clases + binario
+\subsection{Configuración 1: señal reducida y clasificación binaria}
 
-\subsection{Enfoque 2}
+En este primer escenario plantea un enfoque simplificado, en el que se utiliza únicamente la derivación I del ECG, y se agrupan las patologías en las cincos superclases definidas previamente.
+El objetivo de esta configuración es evaluar el rendimiento de los modelos en condiciones de información reducida, simulando escenarios en los que solo se dispone de dispositivos de monitorización con capacidad limitada.
 
-12 derivaciones + 5 clases + binario
+Este modelo se entrena para realizar una clasificación binaria, en la que el objetivo es detectar la presencia o ausencia de cada una de las cinco superclases de patologías.
 
-\subsection{Enfoque 3}
+\subsection{Configuración 2: señal completa y clasificación binaria}
 
-12 derivaciones + 71 clases + probabilidad
+En el segundo escenario se utiliza la señal completa de 12 derivaciones pero manteniendo la misma agrupación de patologías en cinco superclases.
+
+De esta forma, este escenario permite aislar el efecto del aumento en la información de entrada, manteniendo constante la complejidad del problema de clasificación.
+
+\subsection{Configuración 3: señal completa y clasificación multilabel probabilística}
+
+En este tercer escenario se plantea el enfoque más complejo, en el que se utiliza la señal completa de 12 derivaciones y se trabaja con las 71 patologías originales, sin realizar agrupaciones.
+
+Además, en este caso se mantiene la naturaleza multilabel y probabilística del etiquetado original, lo que implica que el modelo debe ser capaz de predecir simultáneamente la presencia o ausencia de cada patología, así como el nivel de confianza asociado a cada predicción.
+
+Este escenario permite evaluar el comportamiento de los modelos en condiciones lo más cercanas posible a la complejidad clínica real, donde pueden coexistir múltiples patologías simultáneamente y donde la salida no se limita a una decisión binaria.
 
 \section{Objetivos técnicos}
 
-Thresholds, datos normales vs caracterisiticas, derivaciones
+A partir de los escenarios experimentales definidos anteriormente, este trabajo plantea una serie de objetivos técnicos orientados a analizar el impacto de diferentes decisiones de modelado en el rendimiento de los sistemas de clasificación de señales electrocardiográficas.
+
+En primer lugar, se estudia el efecto del número de derivaciones utilizadas en la entrada del modelo. 
+Se compara el rendimiento obtenido al emplear una única derivación frente al uso completo de las 12 derivaciones disponibles, con el objetivo de evaluar hasta qué punto la información espacial del electrocardiograma influye en la capacidad de discriminación de las distintas patologías.
+
+En segundo lugar, se analiza la influencia de la formulación del problema de clasificación. 
+En particular, se comparan enfoques binarios basados en la detección simplificada de presencia o ausencia de patología con un enfoque multilabel probabilístico, en el que cada salida del modelo representa la probabilidad de pertenencia a una determinada clase.
+
+Otro objetivo consiste en el análisis del nivel de detalle considerado en las etiquetas. 
+Para ello, se contraponen escenarios basados en un conjunto reducido de 5 clases frente al uso completo de 71 patologías. 
+Esta comparación permite evaluar cómo afecta la complejidad del espacio de salida al rendimiento global del modelo.
+
+Por otro lado, se aborda la transformación de las probabilidades asociadas a las etiquetas en decisiones discretas en los escenarios binarios. 
+Para ello, se emplean umbrales óptimos, determinados de forma empírica con el objetivo de maximizar el rendimiento del modelo en cada caso. 
+El análisis de estos umbrales resulta clave para equilibrar la sensibilidad frente a distintas clases y mejorar la capacidad de generalización.
+
+Finalmente, se pretende estudiar la interacción entre todos estos factores, evaluando cómo la combinación de la representación de la señal, la formulación del problema y la estructura de las etiquetas condiciona el comportamiento de los modelos de clasificación automática de ECG.
 
 \section{Metodología general}
 
+A partir de los escenarios experimentales y objetivos definidos anteriormente, se presenta a continuación la metodología general empleada en este trabajo, que integra el procesamiento de los datos, el diseño de los modelos y la evaluación de los resultados.
 
+Cada registro de la base de datos es una matriz de 12 x 5000, donde las filas corresponden a las derivaciones del ECG y las columnas representan las muestras de la señal a lo largo del tiempo.
+También incluye información demográfica como la edad y el sexo del paciente, así como un sistema de etiquetado basado en un diccionario que asocia cada patología a una probabilidad de presencia.
+En función del escenario experimental considerado, se ha transformado la etiqueta original para adaptarla a cada caso.
+
+Antes de comenzar con la limpieza y preprocesado de las señales se eliminaron todos los registros de aquellos pacientes con menos de 18 años y más de 89, con el objetivo de enfocar el análisis en la población adulta.
+
+Posteriormente, las señales pasan por un proceso de preprocesado con el objetivo de detectar los ciclos cardíacos principales, identificando los picos R como referencia dentro del ECG. 
+A partir de esta información, se eliminan los registros que contienen menos de 10 latidos, y de los restantes se seleccionan únicamente los 10 primeros latidos para cada paciente.
+Se segmenta la señal en latidos individuales, lo que permite estrucutrar los datos de forma homogénea. 
+
+A partir de esta representación, se consideran distintas formas de entrada para los modelos. 
+En un primer enfoque, se construye un megavector concatenando los latidos de cada paciente, de manera que el modelo pueda analizar la señal completa de forma global.
+En un segundo enfoque, se extraen características temporales, morfológicas y estadísticas de cada latido, con el objetivo de proporcionar a los modelos una representación más compacta y representativa de la señal.
+
+Una vez preparados los datos, se procede al entrenamiento de los distintos modelos de aprendizaje automático definidos en el estudio, evaluando su comportamiento bajo las diferentes configuraciones experimentales.
+
+Finalmente, la evaluación de los resultados se realiza mediante métricas adecuadas a cada escenario experimental, permitiendo comparar de forma consistente el rendimiento de los modelos. 
+Adicionalmente, se ha desarrollado una herramienta de visualización tipo dashboard con el objetivo de facilitar el análisis de los resultados obtenidos. 
+Esta herramienta permite explorar las predicciones de los modelos y la información asociada a los registros electrocardiográficos de forma más intuitiva, contribuyendo a la interpretación global del comportamiento del sistema.
 
 % -------------------------------------------------
 % CAPÍTULO 5

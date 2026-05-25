@@ -1031,6 +1031,64 @@
       \verb https://www.igi-global.com/article/random-forest-classifier-based-ecg/42992
       \endverb
     \endentry
+    \entry{ptbxl_dataset}{misc}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2b4d1481056664d032d804bbca79e198}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86e8654d73aa7e40baa360ab51edaba7}{%
+           family={Strodthoff},
+           familyi={S\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4cc7f6fa610f2864fa426994bd43437}{%
+           family={Bousseljot},
+           familyi={B\bibinitperiod},
+           given={Ralf-Dieter},
+           giveni={R\bibinithyphendelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f49b6382ab4ca917a2aa2249f875f79}{%
+           family={Samek},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fb5adf3ab59a7a8538e387ad47591c2}{%
+           family={Schaeffter},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e849f58d862402ae2c37e0a4e3329cd4}
+      \strng{fullhash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{fullhashraw}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{bibnamehash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{authorbibnamehash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{authornamehash}{e849f58d862402ae2c37e0a4e3329cd4}
+      \strng{authorfullhash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{authorfullhashraw}{c5931e7341676ca853ed686a5d8d7f9f}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{PhysioNet dataset}
+      \field{title}{PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3)}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://doi.org/10.13026/kfzx-aw45
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.13026/kfzx-aw45
+      \endverb
+    \endentry
     \entry{wysokinski2024pe_ecg}{article}{}{}
       \name{author}{11}{}{%
         {{un=0,uniquepart=base,hash=3d21af77bbb4f95e0341d8cc58719cd1}{%
@@ -2145,6 +2203,64 @@
       \endverb
       \verb{url}
       \verb https://www.igi-global.com/article/random-forest-classifier-based-ecg/42992
+      \endverb
+    \endentry
+    \entry{ptbxl_dataset}{misc}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2b4d1481056664d032d804bbca79e198}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86e8654d73aa7e40baa360ab51edaba7}{%
+           family={Strodthoff},
+           familyi={S\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4cc7f6fa610f2864fa426994bd43437}{%
+           family={Bousseljot},
+           familyi={B\bibinitperiod},
+           given={Ralf-Dieter},
+           giveni={R\bibinithyphendelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f49b6382ab4ca917a2aa2249f875f79}{%
+           family={Samek},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fb5adf3ab59a7a8538e387ad47591c2}{%
+           family={Schaeffter},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e849f58d862402ae2c37e0a4e3329cd4}
+      \strng{fullhash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{fullhashraw}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{bibnamehash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{authorbibnamehash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{authornamehash}{e849f58d862402ae2c37e0a4e3329cd4}
+      \strng{authorfullhash}{c5931e7341676ca853ed686a5d8d7f9f}
+      \strng{authorfullhashraw}{c5931e7341676ca853ed686a5d8d7f9f}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{PhysioNet dataset}
+      \field{title}{PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3)}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://doi.org/10.13026/kfzx-aw45
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.13026/kfzx-aw45
       \endverb
     \endentry
     \entry{wysokinski2024pe_ecg}{article}{}{}
