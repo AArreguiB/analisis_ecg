@@ -868,6 +868,37 @@
       \verb https://www.repsol.com/es/energia-avanzar/innovacion/machine-learning/index.cshtml
       \endverb
     \endentry
+    \entry{salvavidas_genero_cardiopatias}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e56bf9ae7608a89614dd6ec004a7fe6b}{%
+           family={{Salvavidas}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{fullhash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{fullhashraw}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{bibnamehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authorbibnamehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authornamehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authorfullhash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authorfullhashraw}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{Diferencias de género en enfermedades cardíacas}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://salvavidas.com/blog/diferencias-de-genero-en-enfermedades-cardiacas/
+      \endverb
+      \verb{url}
+      \verb https://salvavidas.com/blog/diferencias-de-genero-en-enfermedades-cardiacas/
+      \endverb
+    \endentry
     \entry{sadec_arritmia}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1bdd5da9f8f8bcad64c5ac1a300a0bd0}{%
@@ -2040,6 +2071,37 @@
       \endverb
       \verb{url}
       \verb https://www.repsol.com/es/energia-avanzar/innovacion/machine-learning/index.cshtml
+      \endverb
+    \endentry
+    \entry{salvavidas_genero_cardiopatias}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e56bf9ae7608a89614dd6ec004a7fe6b}{%
+           family={{Salvavidas}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{fullhash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{fullhashraw}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{bibnamehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authorbibnamehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authornamehash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authorfullhash}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \strng{authorfullhashraw}{e56bf9ae7608a89614dd6ec004a7fe6b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{Diferencias de género en enfermedades cardíacas}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://salvavidas.com/blog/diferencias-de-genero-en-enfermedades-cardiacas/
+      \endverb
+      \verb{url}
+      \verb https://salvavidas.com/blog/diferencias-de-genero-en-enfermedades-cardiacas/
       \endverb
     \endentry
     \entry{sadec_arritmia}{misc}{}{}

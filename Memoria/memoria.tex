@@ -31,6 +31,10 @@
 
 \usepackage{xcolor}
 
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta}
+\usetikzlibrary{positioning}
+
 \addto\captionsspanish{
   \renewcommand{\tablename}{Tabla}
   \renewcommand{\listtablename}{Índice de tablas}}
@@ -832,11 +836,15 @@ El objetivo de esta configuración es evaluar el rendimiento de los modelos en c
 
 Este modelo se entrena para realizar una clasificación binaria, en la que el objetivo es detectar la presencia o ausencia de cada una de las cinco superclases de patologías.
 
+Esta configuración se entrenará tanto con la señal ECG en bruto como con características extraídas, lo que permitirá analizar el impacto de la representación de los datos en el rendimiento del modelo.
+
 \subsection{Configuración 2: señal completa y clasificación binaria}
 
 En el segundo escenario se utiliza la señal completa de 12 derivaciones pero manteniendo la misma agrupación de patologías en cinco superclases.
 
 De esta forma, este escenario permite aislar el efecto del aumento en la información de entrada, manteniendo constante la complejidad del problema de clasificación.
+
+En este caso, debido a la enorme cantidad de datos, el modelo se entrenará únicamente con las características extraídas de la señal, lo que permitirá evaluar el impacto de la representación de los datos en un escenario con información completa.
 
 \subsection{Configuración 3: señal completa y clasificación multilabel probabilística}
 
@@ -845,6 +853,8 @@ En este tercer escenario se plantea el enfoque más complejo, en el que se utili
 Además, en este caso se mantiene la naturaleza multilabel y probabilística del etiquetado original, lo que implica que el modelo debe ser capaz de predecir simultáneamente la presencia o ausencia de cada patología, así como el nivel de confianza asociado a cada predicción.
 
 Este escenario permite evaluar el comportamiento de los modelos en condiciones lo más cercanas posible a la complejidad clínica real, donde pueden coexistir múltiples patologías simultáneamente y donde la salida no se limita a una decisión binaria.
+
+Al igual que en el escenario anterior, debido a la gran cantidad de datos y la complejidad del problema, el modelo se entrenará únicamente con características extraídas de la señal ECG.
 
 \section{Objetivos técnicos}
 
@@ -905,11 +915,182 @@ Finalmente, se describen los distintos enfoques experimentales planteados y la m
 
 \section{Arquitectura general del sistema}
 
+El sistema desarrollado en este trabajo se basa en un pipeline de aprendizaje automático aplicado al análisis de señales ECG, cuyo objetivo es la detección y clasificación automática de patologías cardíacas a partir de registros electrocardiográficos.
+
+Está compuesto por varias etapas secuenciales que permiten transformar la señal original en predicciones clínicas relevantes.
+El flujo completo empieza con la entrada de los registros electrocardiográficos, junto con la información asociada a cada paciente, y las etiquetas diagnósticas correspondientes.
+
+A continuación, las señales pasan por una etapa de preprocesado, donde los datos se limpian y se preparan con el objetivo de mejorar la representación para el posterior análisis.
+Esta fase permite homogeneizar los registros y eliminar posibles problemas derivados de la variabilidad intrínseca de las señales ECG.
+
+Posteriormente, los datos procesados son transformados para su utilización en los modelos de aprendizaje automático. 
+Dependiendo del escenario experimental considerado, esta transformación puede realizarse mediante un megavector que concatena los latidos de cada paciente o mediante la extracción de características representativas de la señal ECG.
+
+Una vez obtenida la representación adecuada de los datos, se procede al entrenamiento de los modelos de aprendizaje automático definidos en el estudio, evaluando su rendimiento bajo las distintas configuraciones experimentales planteadas.
+La salida del sistema puede representarse de forma binaria o probabilística, dependiendo del enfoque utilizado en cada caso.
+
+Finalmente, las predicciones obtenidas son evaluadas mediante distintas métricas de rendimiento, permitiendo comparar el comportamiento de los modelos en los diferentes escenarios planteados.
+
+En la Figura \ref{fig:arquitectura_sistema} se muestra un diagrama general del pipeline de procesamiento desarrollado en este trabajo, que ilustra las distintas etapas y su interconexión dentro del sistema global.
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[node distance=3cm]
+
+% Estilos
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=2cm, minimum height=1cm, text centered, draw=black]
+\tikzset{
+  arrow/.style={thick, -{Stealth}}
+}
+
+% Nodos en horizontal
+\node (start) [startstop] {Inicio};
+\node (data) [process, right=1cm of start] {Preprocesado};
+
+% Bifurcación
+\node (megavector) [process, right=4.5cm of start, yshift=1.5cm] {Megavector};
+\node (ctas) [process, right=4.5cm of start, yshift=-1.5cm, align=center] {Extracción \\ características};
+
+% Unión
+\node (modelos) [process, right=8.5cm of start] {Modelos ML};
+
+\node (output) [startstop, right=12cm of start,align=center] {Evaluación \\ final};
+
+% Flechas
+\draw [arrow] (start) -- (data);
+\draw [arrow] (data) -- (megavector);
+\draw [arrow] (data) -- (ctas);
+\draw [arrow] (megavector) -- (modelos);
+\draw [arrow] (ctas) -- (modelos);
+\draw [arrow] (modelos) -- (output);
+
+\end{tikzpicture}
+
+\caption{Pipeline general del sistema. Elaboración propia.}
+\label{fig:arquitectura_sistema}
+
+\end{figure}
 
 
 \section{Análisis exploratorio de datos}
 
-Distribución de clases, balanceo, correlaciones, etc
+En este apartado se realiza un análisis exploratorio de los datos de la bases de datos utilizada, con el objetivo de comprender la estructura del conjunto utilizado, así como las caracterísitcas demográficas de la población estudiada.
+Este análisis permite contextualizar los datos antes de su utilización en los modelos de aprendizaje automático y detectar posibles patrones relevantes o desbalances en la población.
+
+En primer lugar, se analiza la distribución de los pacientes por edad en el conjunto de datos. La Figura \ref{fig:distribucion-edad} muetra el histograma de edades correspondiente, que revela una distribución relativamente equilibrada entre los distintos grupos de edad, con una ligera predominancia de pacientes en el rango de 50 a 70 años, lo que es consistente con la prevalencia de patologías cardiovasculares en la población adulta.
+Como se ha mencionado anteriormente, se han eliminado los registros de pacientes menores de 18 años y mayores de 89 años, por lo que en el gráfico solo se muestran los pacientes comprendidos en este rango de edad.
+
+\todo{cambiar colores de graficas?}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{imagenes/distribucion_edad.png}
+		\caption{Distribución de los pacientes por edad}
+		\label{fig:distribucion-edad}
+\end{figure}
+
+A continuación, se analiza la distribución de los pacientes por sexo. La Figura \ref{fig:distribucion-sexo} muestra que existe una ligera predominancia de pacientes masculinos en el conjunto de datos, con aproximadamente un 55\% de hombres frente a un 45\% de mujeres.
+Esta distribución es coherente con la epidemiología de las enfermedades cardiovasculares, que suelen presentar una mayor prevalencia en hombres (\cite{salvavidas_genero_cardiopatias}), aunque también es importante destacar la presencia significativa de mujeres en el conjunto de datos, lo que permite desarrollar modelos que puedan generalizar a ambos sexos.
+El 0 en el gráfico corresponde a pacientes masculinos y el 1 a pacientes femeninos.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{imagenes/distribucion_sexo.png}
+		\caption{Distribución de los pacientes por sexo}
+		\label{fig:distribucion-sexo}
+\end{figure}
+
+De forma complementaria, se analiza la relación entre edad y sexo, con el fin de obtener una visión más detallada de la composición de la población.
+Este análisis permite observar cómo se distribuyen ambas variables de forma conjunta y si existen diferencias relevantes entre grupos. La Figura \ref{fig:distribucion-edad-sexo} representa esta relación mediante una visualización combinada de ambas variables.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/distribucion_edad_sexo.png}
+		\caption{Distribución de los pacientes por edad y sexo}
+		\label{fig:distribucion-edad-sexo}
+\end{figure}
+
+En conjunto, este análisis proporciona una visión general de la estructura demográfica del conjunto de datos, lo cual resulta fundamental para interpretar adecuadamente los resultados obtenidos en las etapas posteriores del estudio.
+
+Una vez analizada la distribución demográfica del conjunto de datos, se estudia la distribución de las etiquetas diagnósticas con el objetivo de evaluar el balance entre las distintas patologías presentes en el estudio.
+
+En primer lugar, se analiza la distribución de las clases originales del conjunto de datos. 
+La Figura \ref{fig:distribucion-clases} muestra la frecuencia de aparición de cada una de las patologías consideradas. 
+Como puede observarse, existe un claro desbalance entre clases, con un reducido número de patologías muy representadas frente a un gran número de clases con baja frecuencia de aparición.
+
+
+\todo{pongo este gráfico? No se ve nada, no se distingue nada, no aporta nada, es un gráfico de barras con 71 clases}
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.1\textwidth]{imagenes/distribucion_clases}
+		\caption{Distribución de las patologías en el conjunto de datos.}
+		\label{fig:distribucion-clases}
+\end{figure}
+
+Dado el elevado número de categorías (71 patologías), se presenta adicionalmente una visualización alternativa basada en las 10 clases más frecuentes, agrupando el resto en una categoría adicional. 
+Esta representación, mostrada en la Figura \ref{fig:distribucion-clases-top10}, permite observar de forma más clara las patologías predominantes en el conjunto de datos y facilita la interpretación del desbalance existente.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/distribucion_clases_top10.png}
+		\caption{Distribución de las patologías más frecuentes en el conjunto de datos.}
+		\label{fig:distribucion-clases-top10}
+\end{figure}
+
+Además, se analiza la distribución del conjunto de datos en función de las superclases en las que se agrupan las patologías. 
+La Figura \ref{fig:distribucion-superclases} muestra esta agrupación, en la que se observa una reducción de la especificidad del problema original, permitiendo una visión más general del tipo de patologías presentes en el dataset.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/distribucion_superclases.png}
+		\caption{Distribución de las patologías por superclases.}
+		\label{fig:distribucion-superclases}
+\end{figure}
+
+En conjunto, este análisis evidencia la existencia de un importante desbalance en las etiquetas, tanto a nivel de clases individuales como en su agrupación por superclases, lo cual constituye un aspecto relevante a tener en cuenta en el desarrollo de los modelos de clasificación.
+
+Cabe destacar que, en todos los casos analizados, la clase "NORM", correspondiente a registros electrocardiográficos normales, se mantiene como la clase mayoritaria. 
+Esta predominancia es consistente tanto en la distribución de clases individuales como en las representaciones agrupadas, lo que refuerza el carácter desbalanceado del conjunto de datos y la importancia de considerar este efecto en el diseño y evaluación de los modelos.
+
+Por otro lado, se analiza la coexistencia de patologías mediante una matriz de co-ocurrencia entre las 20 clases más frecuentes, ya que representar las 71 enfermedades dificulta la interpretación visual.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/co-ocurrencia_top20.png}
+		\caption{Matriz de co-ocurrencia de las 20 clases más frecuentes.}
+		\label{fig:co-ocurrencia-top20}
+\end{figure}
+
+En la Figura \ref{fig:co-ocurrencia-top20} se observa que existen ciertas patologías que tienden a coexistir con mayor frecuencia.
+Destaca especialmente la relación entre infartos como IMI (infarto inferior), ASMI (infarto anteroseptal) y ALMI (infarto lateral alto) con alteraciones de conducción como LAFB (bloqueo fascicular anterior izquierdo), CRBBB (bloqueo de rama derecha completo) e IRBBB (bloqueo de rama derecha incompleto). 
+Estas asociaciones reflejan la frecuente coexistencia entre alteraciones estructurales del corazón y trastornos del sistema de conducción.
+
+De igual forma, se observan co-ocurrencias relevantes entre patologías isquémicas como ISC\_ (isquemia general), ISCAL (isquemia anterolateral) e ISCIN (isquemia inferior) y eventos como IMI, lo que pone de manifiesto la superposición de manifestaciones electrocardiográficas en distintos estadios de enfermedad coronaria.
+
+\todo{poner en negrita las enfermedades?}
+
+Por otro lado, patologías como LVH (hipertrofia ventricular izquierda) presentan múltiples asociaciones con distintas clases, especialmente con ISC\_ y con alteraciones de conducción como IVCD (trastorno inespecífico de conducción intraventricular), lo que sugiere su papel como condición frecuentemente concomitante dentro del conjunto de datos.
+
+También se identifican combinaciones poco frecuentes entre determinadas patologías, especialmente en el caso de arritmias aisladas, lo que refleja la heterogeneidad del dataset y el marcado desbalance entre clases.
+
+Estos factores justifican la necesidad de enfoques de modelado capaces de manejar múltiples etiquetas y capturar relaciones entre clases, aspectos que se abordarán en las siguientes secciones del trabajo.
+
+Además de analizar la frecuencia individual de cada patología, es interesante analizar cuantas patologías diferentes aparecen asociadas a un mismo registro ECG.
+Este análisis permite evaluar la complejidad de la base de datos y calcular la frecuencia con la que varias alteraciones cardíacas coexisten en un mismo paciente.
+
+Como se observa en la Figura \ref{fig:num-patologias}, la mayoría de los registros presentan una o ninguna patología asociada, lo que indica una predominancia de electrocardiogramas normales.
+Sin embargo, también existe una proporción significativa de registros que presentan múltiples patologías simultáneamente, lo que refleja la complejidad clínica del conjunto de datos y la necesidad de desarrollar modelos capaces de manejar escenarios multilabel en los que coexisten múltiples alteraciones.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/num_patologias.png}
+		\caption{Distribución del número de patologías por paciente.}
+		\label{fig:num-patologias}
+\end{figure}
+
+Para la elaboración de este gráfico se ha considerado que un paciente tuviese 0 patologías si como único elemento en la etiqueta fuese de la categoría ``NORM''  con una probabilidad mayor que 0, mientras que si presentaban esta categoría y otra más con una probabilidad mayor que 0 se consideraba que el paciente presentaba 1 patología, y así sucesivamente.
+\todo{revisar redacción}
 
 \section{Preprocesado de datos}
 

@@ -37,13 +37,13 @@
 \contentsline {subsection}{\numberline {4.4.2}Configuración 2: señal completa y clasificación binaria}{43}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Configuración 3: señal completa y clasificación multilabel probabilística}{43}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Objetivos técnicos}{44}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Metodología general}{44}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Metodología general}{45}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Modelo Desarrollado}{47}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{47}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{47}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Preprocesado de datos}{47}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Selección y extracción de características}{47}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{48}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{49}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{51}{chapter.7}%
-\contentsline {chapter}{Bibliografía}{53}{chapter.7}%
+\contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{48}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Preprocesado de datos}{54}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Selección y extracción de características}{54}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{54}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{55}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{57}{chapter.7}%
+\contentsline {chapter}{Bibliografía}{59}{chapter.7}%

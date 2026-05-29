@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  26 MAY 2026 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  30 MAY 2026 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -644,7 +644,196 @@ Package biblatex Info: ... and expl3
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen257
+\pgfutil@tempdimb=\dimen258
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box61
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen259
+\pgf@y=\dimen260
+\pgf@xa=\dimen261
+\pgf@ya=\dimen262
+\pgf@xb=\dimen263
+\pgf@yb=\dimen264
+\pgf@xc=\dimen265
+\pgf@yc=\dimen266
+\pgf@xd=\dimen267
+\pgf@yd=\dimen268
+\w@pgf@writea=\write5
+\r@pgf@reada=\read4
+\c@pgf@counta=\count469
+\c@pgf@countb=\count470
+\c@pgf@countc=\count471
+\c@pgf@countd=\count472
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count473
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count474
+\pgfsyssoftpath@bigbuffer@items=\count475
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen269
+\pgfmath@count=\count476
+\pgfmath@box=\box62
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count477
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen270
+\pgf@picmaxx=\dimen271
+\pgf@picminy=\dimen272
+\pgf@picmaxy=\dimen273
+\pgf@pathminx=\dimen274
+\pgf@pathmaxx=\dimen275
+\pgf@pathminy=\dimen276
+\pgf@pathmaxy=\dimen277
+\pgf@xx=\dimen278
+\pgf@xy=\dimen279
+\pgf@yx=\dimen280
+\pgf@yy=\dimen281
+\pgf@zx=\dimen282
+\pgf@zy=\dimen283
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen284
+\pgf@path@lasty=\dimen285
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen286
+\pgf@shorten@start@additional=\dimen287
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box63
+\pgf@hbox=\box64
+\pgf@layerbox@main=\box65
+\pgf@picture@serial@count=\count478
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen288
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen289
+\pgf@pt@y=\dimen290
+\pgf@pt@temp=\dimen291
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen292
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen293
+\pgf@sys@shading@range@num=\count479
+\pgf@shadingcount=\count480
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box66
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box67
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen294
+\pgf@nodesepend=\dimen295
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen296
+\pgffor@skip=\dimen297
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count481
+\pgfplotmarksize=\dimen298
+)
+\tikz@lastx=\dimen299
+\tikz@lasty=\dimen300
+\tikz@lastxsaved=\dimen301
+\tikz@lastysaved=\dimen302
+\tikz@lastmovetox=\dimen303
+\tikz@lastmovetoy=\dimen304
+\tikzleveldistance=\dimen305
+\tikzsiblingdistance=\dimen306
+\tikz@figbox=\box68
+\tikz@figbox@bg=\box69
+\tikz@tempbox=\box70
+\tikz@tempbox@bg=\box71
+\tikztreelevel=\count482
+\tikznumberofchildren=\count483
+\tikznumberofcurrentchild=\count484
+\tikz@fig@count=\count485
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count486
+\pgfmatrixcurrentcolumn=\count487
+\pgf@matrix@numberofcolumns=\count488
+)
+\tikz@expandcount=\count489
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen307
+\pgfarrowlength=\dimen308
+\pgfarrowwidth=\dimen309
+\pgfarrowlinewidth=\dimen310
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip81
 \f@nch@offset@elh=\skip82
@@ -660,14 +849,14 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip92
 \f@nch@widthC=\skip93
 \f@nch@widthR=\skip94
-\@temptokenb=\toks31
+\@temptokenb=\toks43
 ) Excluding 'comment' comment.
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count469
-\@quotereset=\count470
+\@quotelevel=\count490
+\@quotereset=\count491
 (memoria.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -676,39 +865,39 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count471
-\scratchdimen=\dimen257
-\scratchbox=\box61
-\nofMPsegments=\count472
-\nofMParguments=\count473
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count474
-\MPscratchDim=\dimen258
-\MPnumerator=\count475
-\makeMPintoPDFobject=\count476
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count492
+\scratchdimen=\dimen311
+\scratchbox=\box72
+\nofMPsegments=\count493
+\nofMParguments=\count494
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count495
+\MPscratchDim=\dimen312
+\MPnumerator=\count496
+\makeMPintoPDFobject=\count497
+\everyMPtoPDFconversion=\toks45
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -754,11 +943,11 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count477
-Package hyperref Info: Link coloring OFF on input line 83.
+\c@lstlisting=\count498
+Package hyperref Info: Link coloring OFF on input line 87.
 (memoria.out) (memoria.out)
-\@outlinefile=\write5
-\openout5 = `memoria.out'.
+\@outlinefile=\write6
+\openout6 = `memoria.out'.
 
 Package biblatex Info: Trying to load language 'spanish' -> 'spanish-apa'...
 Package biblatex Info: ... file 'spanish-apa.lbx' found.
@@ -782,8 +971,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'memoria.bbl' found.
  (memoria.bbl)
-Package biblatex Info: Reference section=0 on input line 83.
-Package biblatex Info: Reference segment=0 on input line 83.
+Package biblatex Info: Reference section=0 on input line 87.
+Package biblatex Info: Reference segment=0 on input line 87.
  [1
 
 
@@ -803,16 +992,16 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [7])
-\tf@toc=\write6
-\openout6 = `memoria.toc'.
+\tf@toc=\write7
+\openout7 = `memoria.toc'.
 
  [8] (memoria.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@lof=\write7
-\openout7 = `memoria.lof'.
+\tf@lof=\write8
+\openout8 = `memoria.lof'.
 
  [9
 
@@ -823,8 +1012,8 @@ LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@lot=\write8
-\openout8 = `memoria.lot'.
+\tf@lot=\write9
+\openout9 = `memoria.lot'.
 
  [11] [12
 
@@ -834,55 +1023,55 @@ Cap\'{\i }tulo 1.
 
 ]
 Cap\'{\i }tulo 2.
-<imagenes/sistema-electrico-corazon.png, id=339, 127.677pt x 127.677pt>
+<imagenes/sistema-electrico-corazon.png, id=360, 127.677pt x 127.677pt>
 File: imagenes/sistema-electrico-corazon.png Graphic file (type png)
 <use imagenes/sistema-electrico-corazon.png>
-Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 180.
+Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 184.
 (pdftex.def)             Requested size: 167.2989pt x 167.30484pt.
 [15] [16 <./imagenes/sistema-electrico-corazon.png>]
-<imagenes/einthoven-triangle.png, id=363, 1074.0125pt x 1202.4925pt>
+<imagenes/einthoven-triangle.png, id=384, 1074.0125pt x 1202.4925pt>
 File: imagenes/einthoven-triangle.png Graphic file (type png)
 <use imagenes/einthoven-triangle.png>
-Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 228.
+Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 232.
 (pdftex.def)             Requested size: 125.47737pt x 140.47638pt.
  [17] [18 <./imagenes/einthoven-triangle.png>]
-<imagenes/ecg-bipolar-limb-lead-axis.png, id=382, 1088.065pt x 1218.5525pt>
+<imagenes/ecg-bipolar-limb-lead-axis.png, id=403, 1088.065pt x 1218.5525pt>
 File: imagenes/ecg-bipolar-limb-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-bipolar-limb-lead-axis.png>
-Package pdftex.def Info: imagenes/ecg-bipolar-limb-lead-axis.png  used on input line 261.
+Package pdftex.def Info: imagenes/ecg-bipolar-limb-lead-axis.png  used on input line 265.
 (pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
-<imagenes/ecg-augmented-lead-axis.png, id=383, 1088.065pt x 1218.5525pt>
+<imagenes/ecg-augmented-lead-axis.png, id=404, 1088.065pt x 1218.5525pt>
 File: imagenes/ecg-augmented-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-augmented-lead-axis.png>
-Package pdftex.def Info: imagenes/ecg-augmented-lead-axis.png  used on input line 276.
+Package pdftex.def Info: imagenes/ecg-augmented-lead-axis.png  used on input line 280.
 (pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
  [19 <./imagenes/ecg-bipolar-limb-lead-axis.png>]
-<imagenes/ecg-6-limb-lead-axis.png, id=390, 992.70876pt x 794.97pt>
+<imagenes/ecg-6-limb-lead-axis.png, id=411, 992.70876pt x 794.97pt>
 File: imagenes/ecg-6-limb-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-6-limb-lead-axis.png>
-Package pdftex.def Info: imagenes/ecg-6-limb-lead-axis.png  used on input line 285.
+Package pdftex.def Info: imagenes/ecg-6-limb-lead-axis.png  used on input line 289.
 (pdftex.def)             Requested size: 125.47737pt x 100.47485pt.
  [20 <./imagenes/ecg-augmented-lead-axis.png> <./imagenes/ecg-6-limb-lead-axis.png>]
-Overfull \hbox (24.47142pt too wide) in paragraph at lines 307--320
+Overfull \hbox (24.47142pt too wide) in paragraph at lines 311--324
  [][] 
  []
 
-<imagenes/ecg-chest-leads.png, id=403, 468.24937pt x 602.25pt>
+<imagenes/ecg-chest-leads.png, id=424, 468.24937pt x 602.25pt>
 File: imagenes/ecg-chest-leads.png Graphic file (type png)
 <use imagenes/ecg-chest-leads.png>
-Package pdftex.def Info: imagenes/ecg-chest-leads.png  used on input line 334.
+Package pdftex.def Info: imagenes/ecg-chest-leads.png  used on input line 338.
 (pdftex.def)             Requested size: 125.47737pt x 161.38745pt.
 [21] [22 <./imagenes/ecg-chest-leads.png>] [23] [24]
-<imagenes/partes_ecg.png, id=432, 501.875pt x 306.14375pt>
+<imagenes/partes_ecg.png, id=453, 501.875pt x 306.14375pt>
 File: imagenes/partes_ecg.png Graphic file (type png)
 <use imagenes/partes_ecg.png>
-Package pdftex.def Info: imagenes/partes_ecg.png  used on input line 412.
+Package pdftex.def Info: imagenes/partes_ecg.png  used on input line 416.
 (pdftex.def)             Requested size: 209.12683pt x 127.57047pt.
  [25 <./imagenes/partes_ecg.png>] [26] [27]
-<imagenes/confusion_matrix.png, id=454, 474.77374pt x 342.27875pt>
+<imagenes/confusion_matrix.png, id=475, 474.77374pt x 342.27875pt>
 File: imagenes/confusion_matrix.png Graphic file (type png)
 <use imagenes/confusion_matrix.png>
-Package pdftex.def Info: imagenes/confusion_matrix.png  used on input line 516.
+Package pdftex.def Info: imagenes/confusion_matrix.png  used on input line 520.
 (pdftex.def)             Requested size: 209.12683pt x 150.765pt.
  [28] [29 <./imagenes/confusion_matrix.png>] [30] [31] [32]
 Cap\'{\i }tulo 3.
@@ -892,38 +1081,93 @@ Cap\'{\i }tulo 3.
 Cap\'{\i }tulo 4.
 [39
 
-] [40] [41] [42] [43] [44] [45] [46
+] [40] [41] [42] [43] [44] [45] [46]
+Cap\'{\i }tulo 5.
+[47
 
 ]
-Cap\'{\i }tulo 5.
+Overfull \hbox (44.6753pt too wide) in paragraph at lines 969--970
+ [][] 
+ []
 
-Overfull \hbox (2.97147pt too wide) in paragraph at lines 922--922
+[48]
+<imagenes/distribucion_edad.png, id=609, 508.7808pt x 340.3917pt>
+File: imagenes/distribucion_edad.png Graphic file (type png)
+<use imagenes/distribucion_edad.png>
+Package pdftex.def Info: imagenes/distribucion_edad.png  used on input line 988.
+(pdftex.def)             Requested size: 209.12683pt x 139.91467pt.
+<imagenes/distribucion_sexo.png, id=612, 403.2666pt x 280.4076pt>
+File: imagenes/distribucion_sexo.png Graphic file (type png)
+<use imagenes/distribucion_sexo.png>
+Package pdftex.def Info: imagenes/distribucion_sexo.png  used on input line 999.
+(pdftex.def)             Requested size: 209.12683pt x 145.41914pt.
+ [49 <./imagenes/distribucion_edad.png> <./imagenes/distribucion_sexo.png>]
+<imagenes/distribucion_edad_sexo.png, id=622, 715.473pt x 286.1892pt>
+File: imagenes/distribucion_edad_sexo.png Graphic file (type png)
+<use imagenes/distribucion_edad_sexo.png>
+Package pdftex.def Info: imagenes/distribucion_edad_sexo.png  used on input line 1009.
+(pdftex.def)             Requested size: 292.77629pt x 117.10687pt.
+<imagenes/distribucion_clases.png, id=624, 1293.633pt x 426.393pt>
+File: imagenes/distribucion_clases.png Graphic file (type png)
+<use imagenes/distribucion_clases.png>
+Package pdftex.def Info: imagenes/distribucion_clases.png  used on input line 1026.
+(pdftex.def)             Requested size: 460.08159pt x 151.64708pt.
+
+Overfull \hbox (41.82791pt too wide) in paragraph at lines 1026--1027
+ [][] 
+ []
+
+[50 <./imagenes/distribucion_edad_sexo.png> <./imagenes/distribucion_clases.png>]
+<imagenes/distribucion_clases_top10.png, id=632, 714.7503pt x 354.123pt>
+File: imagenes/distribucion_clases_top10.png Graphic file (type png)
+<use imagenes/distribucion_clases_top10.png>
+Package pdftex.def Info: imagenes/distribucion_clases_top10.png  used on input line 1036.
+(pdftex.def)             Requested size: 292.77629pt x 145.06168pt.
+<imagenes/distribucion_superclases.png, id=634, 570.933pt x 354.123pt>
+File: imagenes/distribucion_superclases.png Graphic file (type png)
+<use imagenes/distribucion_superclases.png>
+Package pdftex.def Info: imagenes/distribucion_superclases.png  used on input line 1046.
+(pdftex.def)             Requested size: 292.77629pt x 181.59998pt.
+ [51 <./imagenes/distribucion_clases_top10.png> <./imagenes/distribucion_superclases.png>]
+<imagenes/co-ocurrencia_top20.png, id=641, 655.4889pt x 570.933pt>
+File: imagenes/co-ocurrencia_top20.png Graphic file (type png)
+<use imagenes/co-ocurrencia_top20.png>
+Package pdftex.def Info: imagenes/co-ocurrencia_top20.png  used on input line 1060.
+(pdftex.def)             Requested size: 292.77629pt x 255.0096pt.
+ [52 <./imagenes/co-ocurrencia_top20.png>]
+<imagenes/num_patologias.png, id=649, 570.933pt x 354.123pt>
+File: imagenes/num_patologias.png Graphic file (type png)
+<use imagenes/num_patologias.png>
+Package pdftex.def Info: imagenes/num_patologias.png  used on input line 1087.
+(pdftex.def)             Requested size: 292.77629pt x 181.59998pt.
+ [53 <./imagenes/num_patologias.png>]
+Overfull \hbox (2.97147pt too wide) in paragraph at lines 1103--1103
 []\T1/cmr/bx/n/17.28 Desarrollo ex-pe-ri-men-tal y op-ti-mi-za-ción del sis-
  []
 
-[47] [48]
+[54]
 Cap\'{\i }tulo 6.
-[49
+[55
 
-] [50
+] [56
 
 ]
 Cap\'{\i }tulo 7.
-[51] [52
+[57] [58
 
-] [53
+] [59
 
 ]
-Overfull \hbox (8.51064pt too wide) in paragraph at lines 956--956
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 1137--1137
 [][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
 
-Overfull \hbox (9.72339pt too wide) in paragraph at lines 956--956
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 1137--1137
 \T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
  []
 
-[54] [55] (memoria.aux
+[60] [61] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -939,17 +1183,17 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24099 strings out of 467871
- 422036 string characters out of 5419344
- 1352919 words of memory out of 5000000
- 52541 multiletter control sequences out of 15000+600000
+ 35122 strings out of 467871
+ 670055 string characters out of 5419344
+ 1572194 words of memory out of 5000000
+ 63331 multiletter control sequences out of 15000+600000
  644321 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,761b,3155s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,94p,761b,3155s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on memoria.pdf (55 pages, 1123053 bytes).
+Output written on memoria.pdf (61 pages, 1354610 bytes).
 PDF statistics:
- 1181 PDF objects out of 1200 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
- 425 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1263 PDF objects out of 1440 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
+ 477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
