@@ -950,7 +950,7 @@ En la Figura \ref{fig:arquitectura_sistema} se muestra un diagrama general del p
 \node (data) [process, right=1cm of start] {Preprocesado};
 
 % Bifurcación
-\node (megavector) [process, right=4.5cm of start, yshift=1.5cm] {Megavector};
+\node (megavector) [process, right=4.7cm of start, yshift=1.5cm] {Megavector};
 \node (ctas) [process, right=4.5cm of start, yshift=-1.5cm, align=center] {Extracción \\ características};
 
 % Unión
@@ -1094,11 +1094,210 @@ Para la elaboración de este gráfico se ha considerado que un paciente tuviese 
 
 \section{Preprocesado de datos}
 
-Limpieza, picos R, transformadas 
+El preprocesado de datos es esencial para mejorar la calidad de las señales ECG y facilitar el aprendizaje de los modelos de clasificación.
+Permite reducir la influencia de registros poco representativos, homogeneizar las entradas del sistema y facilitar la extracción de patrones relevantes para el diagnóstico automático de patologías cardíacas.
+
+En este trabajo, el preprocesado de las señales se centra en la detección de los ciclo cardíacos principales, utilizando los picos R como referencia para segmentar la señal en latidos individuales.
+
+Antes de proceder a la detección de los picos R, se aplican distintas etapas de procesamiento sobre la señal ECG con el objetivo de resaltar las características asociadas a los complejos QRS y facilitar su identificación. 
+Estas operaciones permiten reducir la influencia del ruido y mejorar la precisión del algoritmo de detección, especialmente en registros con variaciones de amplitud o interferencias.
+
+En primer lugar, se realiza una descomposición de la señal mediante una transformada wavelet discreta, que permite separar la señal en diferentes bandas de frecuencia. (\cite{talebi2025_fourier_wavelet})
+Se utiliza la transformada wavelet de Daubechies de orden 6 (db6) como base para la descomposición de la señal.
+Las wavelets de esta familia presentan una forma similar a los complejos QRS y ofrecen un buen equilibrio entre resolución temporal y frecuencial, lo que las hace especialmente adecuadas para el análisis de señales electrocardiográficas.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{imagenes/wavelet-db6.png}
+		\caption{Morfología de la wavelet db6. \todo{lo pongo?}}
+		\label{fig:wavelet-db6}
+\end{figure}
+
+La señal se descompone en 8 niveles, permitiendo dividir el espectro en distintas bandas de frecuencia.
+Esta profundidad es adecuada para la frecuencia de muestreo utilizada (500 Hz) y permite aislar con mayor precisión las componentes asociadas a las distintas ondas del ECG. 
+Los coeficientes d4 y d5 contienen la información correspondiente al rango de frecuencias típico del complejo QRS (aproximadamente entre 5 y 25 Hz).
+Por este motivo, serán estos coeficientes lo que se utilicen para reconstruir la señal que se utilizará para detectar los latidos.
+
+En la Figura \ref{fig:wavelet-reconstruida} se muestra la señal original junto con la señal reconstruida a partir de los coeficientes d4 y d5 de la transformada wavelet de la derivación I del registro 00010.
+Es importante señalar que la transformada wavelet discreta implica un proceso de submuestreo en cada nivel de descomposición, lo que modifica la representación de la señal en el dominio transformado. 
+Sin embargo, en este trabajo el objetivo no es preservar la amplitud de la señal filtrada, sino la correcta localización temporal de los picos R. 
+Por este motivo, las posibles variaciones en la escala de la señal no afectan al propósito principal del algoritmo, ya que la detección se basa en la posición de los máximos y no en su valor absoluto. 
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/wavelet-recostruida-pac10.png}
+		\caption{Señal original y señal reconstruida a partir de los coeficientes d4 y d5 \todo{cambiar pie de foto?}}
+		\label{fig:wavelet-reconstruida}
+\end{figure}
+
+Después de reconstruir la señal a partir de los coeficientes d4 y d5, se aplica la transformada Hilbert para obtener la envolvente de la señal.
+Esta envolvente es una versión suavizada que sigue la amplitud de la señal original, destancando sus máximos locales.
+De este modo, los picos R pueden identificarse de forma más precisa como lo máximos de dicha envolvente, reduciendo el impacto del ruido y de posibles variaciones en la forma de la señal.
+
+En la Figura \ref{fig:envolvente} se muestra la envolvente de la señal reconstruida  la derivación I del registro 00010, donde se pueden observar claramente los picos correspondientes a los latidos cardíacos, lo que facilita su detección y posterior segmentación de la señal en latidos individuales.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/envolvente-pac10.png}
+		\caption{Envolvente de la señal reconstruida a partir de los coeficientes d4 y d5.}
+		\label{fig:envolvente}
+\end{figure}
+
+La detección de los picos R se realiza mediante un algoritmo de búsqueda de máximos locales en la envolvente obtenida.
+Para ello, se utiliza un umbral adaptativo que permite identificar los latidos incluso en registros con variaciones de amplitud o presencia de ruido.
+Se define como la suma de la media de la envolvente y su desviación estándar, lo que permite ajustar el umbral de detección en función de las características específicas de cada registro.
+Este enfoque evita la necesidad de un umbral fijo y mejora la robustez frente a la variabilidad entre pacientes y niveles de ruido. 
+Adicionalmente, se impone una distancia mínima entre picos consecutivos con el fin de evitar la detección múltiple de un mismo latido y garantizar la coherencia fisiológica de los resultados. (\cite{chauhan2021multilead_qrs})\todo{esta referencia explica toda la deteccion de picos R. Donde la pongo?}
+
+Como se observa en la Figura \ref{fig:picosR}, los picos R detectados se corresponden con los máximos de la envolvente, lo que confirma la eficacia del proceso de preprocesado para resaltar las características relevantes de la señal ECG y facilitar la identificación de los latidos cardíacos.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/picosR-pac10.png}
+		\caption{Picos R detectados en la envolvente.}
+		\label{fig:picosR}
+\end{figure}
+
+Una vez detectados los picos R, se segmenta la señal ECG en latidos individuales, utilizando cada pico como referencia para definir el inicio y el final de cada latido.
+Se extrae un segmento de 600 ms, comprendido entre 200 ms antes y 400 ms después del pico R.
+
+Esta elección se fundamenta en la morfología temporal del ECG, en el que el complejo QRS se localiza en torno al pico R y actúa como referencia estable para la alineación de los latidos. 
+La inclusión de una ventana previa al pico R permite incorporar la transición desde la onda P y asegurar la captura completa del inicio del complejo QRS, teniendo en cuenta posibles variaciones en la detección del pico. 
+Por otro lado, la extensión posterior al pico R garantiza la inclusión del segmento ST y de la onda T, que presentan una duración mayor y contienen información relevante sobre la repolarización ventricular.
+
+De este modo, la ventana definida permite capturar la morfología completa del latido, asegurando un equilibrio entre información fisiológica y consistencia en la segmentación, lo que resulta adecuado para su posterior análisis y clasificación mediante técnicas de aprendizaje automático.
+
+En la Figura \ref{fig:latidos} se muestran superpuestos los latidos segmentados a partir de la derivación I del registro 00010, lo que permite visualizar la consistencia en la segmentación y la variabilidad morfológica entre los distintos latidos del mismo paciente. 
+Los latidos están correctamente alineados en torno al pico R, lo que confirma la fiabilidad del método de detección y segmentación empleado.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagenes/latidos_pac10.png}
+		\caption{Latidos cardíacos segmentados.}
+		\label{fig:latidos}
+\end{figure}
+
+Para mantener la homogeneidad en la representación de los datos, a la vez que se detectan los picos R, se eliminan aquellos registros que contengan menos de 10 latidos detectados, ya que se considera que no proporcionan información suficiente para el análisis.
+De los registros restantes, se seleccionan únicamente los 10 primeros latidos para cada paciente, con el objetivo de limitar la cantidad de datos y evitar un posible sesgo derivado de la variabilidad en el número de latidos entre pacientes.
+
+Por último, en función del escenario experimental considerado, se procede a la construcción de las entradas del modelo. 
+En el caso de utilizar únicamente la derivación I, se genera un megavector mediante la concatenación de los latidos segmentados de cada paciente. 
+Alternativamente, se extraen características temporales, morfológicas y estadísticas de cada latido, con el objetivo de obtener una representación más compacta y discriminativa de la señal.
+
+También se adapta la etiqueta asociada a cada paciente en función del escenario experimental. 
+Para ello, la formulación original del problema se transforma, ya sea mediante la agrupación de patologías en superclases o mediante el mantenimiento del enfoque multilabel probabilístico, en el que cada patología se representa mediante su probabilidad de ocurrencia.
 
 \section{Selección y extracción de características}
 
-Justificar porque se han seleccionado esas características
+Aunque la señal ECG contiene una gran cantidad de información fisiológica, no toda resulta igualmente relevante para la tarea de clasificación. 
+Además, trabajar directamente con la señal completa implica manejar vectores de gran dimensionalidad, lo que puede incrementar la complejidad computacional y dificultar el aprendizaje de determinados modelos.
+
+Por este motivo, en uno de los enfoques planteados se realiza una extracción explícita de características sobre los latidos previamente segmentados. 
+El objetivo es obtener una representación compacta de la señal que preserve la información más relevante para la identificación de patologías cardíacas.
+
+Las características seleccionadas pueden agruparse en cuatro categorías principales: temporales, morfológicas, estadísticas y frecuenciales.
+\begin{itemize}
+	\item \textbf{Características temporales:} incluyen medidas relacionadas con la variabilidad de los intervalos cardíacos.
+	\item \textbf{Características morfológicas:} asociadas a la forma y estructura de los latidos.
+	\item \textbf{Características estadísticas:} derivadas de la distribución de los valores de la señal.
+	\item \textbf{Características de frecuencia:} derivadas de la descomposición wavelet.
+\end{itemize}
+
+Adicionalmente, se incluye una estimación del eje eléctrico del corazón como variable global del paciente.
+
+\subsection{Características temporales}
+
+Las caracteristicas temporales se obtienen a partir de los intervalos RR, definidos como el tiempo transcurrido entre dos picos R consecutivos.
+Constituyen una de las medidas fundamentales en el análisis del ritmo cardíaco, ya que reflejan directamente la regularidad de los latidos y permiten caracterizar su comportamiento a lo largo del tiempo.
+
+Los intervalos RR se calculan a partir de la secuencia de picos R detectados previamente en cada registro.
+A partir de esta secuencia se construyen diferentes medidas que permiten resumir tanto el comportamiento global del ritmo cardíaco como su variabilidad.
+Esta característica resulta útil como indicador general del estado del sistema cardíaco.
+
+En primer lugar, se calcula la media de los intervalos RR, que proporciona una estimación global de la duración media de los ciclos cardíacos del paciente. 
+Esta medida es especialmente relevante ya que está directamente relacionada con la frecuencia cardíaca media, que se obtiene posteriormente mediante la transformación de los intervalos RR a latidos por minuto. 
+Esta variable es uno de los indicadores fisiológicos más utilizados en cardiología, ya que permite una interpretación directa del ritmo cardíaco.
+
+De forma complementaria, se calcula la desviación estándar de los intervalos RR, que cuantifica la variabilidad global del ritmo. 
+Esta medida permite evaluar hasta qué punto los intervalos entre latidos se mantienen constantes o presentan fluctuaciones significativas, lo cual puede ser indicativo de alteraciones en la regulación del ritmo cardíaco.
+
+Además de estas medidas globales, se incorporan también los valores extremos de la distribución de intervalos RR, es decir, el intervalo RR mínimo y el intervalo RR máximo observados en cada registro. 
+Estas medidas permiten capturar episodios puntuales de aceleración o desaceleración del ritmo cardíaco, que podrían no ser reflejados adecuadamente por medidas promedio.
+
+A partir de estos valores se calcula el rango de los intervalos RR, definido como la diferencia entre el valor máximo y el valor mínimo. 
+Esta característica proporciona una medida directa de la amplitud total de variación del ritmo cardíaco durante el registro.
+
+Por último, se incluye el índice RMSSD (Root Mean Square of Successive Differences), que se calcula como la raíz cuadrada de la media de las diferencias al cuadrado entre intervalos RR consecutivos. 
+Esta métrica es ampliamente utilizada en estudios de variabilidad cardíaca, ya que es especialmente sensible a variaciones de corto plazo entre latidos consecutivos y permite caracterizar de forma más fina la irregularidad del ritmo.
+
+\begin{equation*}
+RMSSD = \sqrt{\frac{1}{N-1} \sum_{i=1}^{N-1} (RR_{i+1} - RR_i)^2}
+\end{equation*}
+
+En conjunto, estas características permiten describir tanto el ritmo cardíaco medio como su variabilidad temporal, proporcionando una representación robusta del comportamiento dinámico del corazón.
+
+\subsection{Características morfológicas}
+
+Las características morfológicas tienen como objetivo describir la forma de cada latido cardíaco, capturando información relacionada con la estructura de las distintas ondas que componen el ciclo cardíaco. 
+Este tipo de información es especialmente relevante en electrocardiografía, ya que muchas patologías no se reflejan únicamente en cambios del ritmo, sino también en deformaciones de la forma del latido.
+Permiten analizar cómo es cada latido de forma individual, evaluando posibles alteraciones en la despolarización y repolarización ventricular.
+
+En primer lugar, se considera la amplitud del pico R, que representa el punto de máxima activación ventricular. 
+Esta medida está relacionada con la intensidad de la despolarización del ventrículo, y puede verse alterada en presencia de cambios estructurales o eléctricos en el corazón.
+
+Asimismo, se calcula la amplitud de la onda T, asociada al proceso de repolarización ventricular. 
+Variaciones en esta onda pueden estar relacionadas con alteraciones en la recuperación eléctrica del miocardio o con procesos isquémicos.
+
+De forma complementaria, se estima la amplitud mínima previa al pico R, utilizada como aproximación a la onda Q. 
+Esta componente permite analizar la fase inicial del complejo ventricular, siendo relevante en la detección de posibles alteraciones asociadas a daño previo en el tejido cardíaco.
+
+El complejo QRS se caracteriza además mediante su área, que representa la energía total del latido dentro de esa ventana, y mediante su duración, que aproxima el tiempo de activación ventricular. 
+Ambas medidas son especialmente relevantes, ya que alteraciones en la conducción eléctrica del corazón suelen reflejarse directamente en el ensanchamiento o modificación del complejo QRS.
+
+Finalmente, se calcula el nivel medio del segmento ST, una región clave del ciclo cardíaco situada entre la despolarización y la repolarización ventricular. 
+Variaciones en este segmento están directamente asociadas a procesos isquémicos y constituyen uno de los indicadores clínicos más importantes en cardiología.
+
+Para todas estas características, se calculan posteriormente la media y la desviación estándar a nivel de paciente, para capturar tanto el valor típico de cada medida como su variabilidad entre latidos, obteniendo así una representación más robusta de la morfología cardíaca.
+
+\subsection{Características estadísticas}
+
+Las características estadísticas permiten describir la señal desde una perspectiva global, sin depender explícitamente de su interpretación fisiológica. 
+Complementan la información temporal y morfológica, aportando una representación más general del comportamiento de la señal ECG.
+
+En este bloque se calculan, para cada latido, la media y la desviación estándar de la señal, que permiten caracterizar el nivel medio de amplitud y su dispersión. 
+Se incluyen la amplitud máxima y mínima, que permiten identificar los valores extremos de la señal dentro de cada latido.
+
+Adicionalmente, se incorporan medidas estadísticas de orden superior como la asimetría (skewness) y la curtosis (kurtosis). 
+La asimetría permite evaluar si la distribución de la señal está desplazada hacia valores positivos o negativos, mientras que la curtosis mide el grado de concentración de la señal alrededor de su media, permitiendo detectar distribuciones más o menos “picudas”.
+
+Dado que cada paciente dispone de múltiples latidos, todas estas medidas se agregan posteriormente mediante su media y desviación estándar, lo que permite obtener una representación global estable y menos sensible a variaciones puntuales entre latidos.
+
+\subsection{Características de frecuencia}
+
+Las características frecuenciales permiten analizar la señal en el dominio tiempo-frecuencia, capturando información que no es directamente observable en el dominio temporal. 
+Se emplea la transformada wavelet discreta, que resulta especialmente adecuada para señales no estacionarias como el ECG.
+
+A partir de la descomposición de la señal mediante la transformada wavelet, se calcula la energía de distintos coeficientes de detalle, en concreto d4, d5 y d6, que se corresponden con diferentes rangos de frecuencia asociados a la actividad eléctrica cardíaca. 
+La energía se calcula como la suma del cuadrado de los coeficientes, lo que proporciona una medida de la potencia de la señal en cada banda frecuencial.
+
+Estas energías permiten caracterizar la distribución espectral de la señal y detectar posibles alteraciones en la actividad eléctrica del corazón. 
+Posteriormente, se agregan a nivel de paciente mediante la media y la desviación estándar de cada banda, con el objetivo de capturar tanto el comportamiento global como su variabilidad entre latidos.
+
+Adicionalmente, se calcula un ratio entre bandas de frecuencia baja y alta, que resume la relación entre distintas componentes espectrales de la señal en una única variable, aportando información complementaria sobre la distribución de la energía en el dominio frecuencial.
+
+\subsection{Estimación del eje eléctrico}
+
+Finalmente, se incluye una estimación del eje eléctrico cardíaco, obtenido a partir de las derivaciones I y aVF del electrocardiograma. 
+Este eje representa la dirección predominante de la actividad eléctrica durante la despolarización ventricular y constituye un indicador clínico relevante en la evaluación de patologías cardíacas.
+
+Para su estimación, se calcula la amplitud media del complejo QRS en ambas derivaciones, considerando la diferencia entre los valores máximos y mínimos en la región del complejo. 
+A partir de estas amplitudes se obtiene el ángulo del eje eléctrico mediante una relación trigonométrica basada en la función arctan2, lo que permite determinar la dirección del vector eléctrico resultante.
+
+Desviaciones significativas del eje eléctrico pueden estar asociadas a alteraciones estructurales del corazón, bloqueos de conducción o hipertrofias ventriculares, por lo que esta variable aporta información global complementaria a las características previamente descritas.
+
+
+El conjunto de características extraídas permite construir una representación multidimensional de la señal electrocardiográfica, integrando información temporal, morfológica, estadística y frecuencial. 
+Esta combinación es fundamental para proporcionar a los modelos de clasificación una base informativa capaz de capturar patrones complejos asociados a diferentes patologías cardiovasculares.
 
 \section{Desarrollo experimental y optimización del sistema}
 

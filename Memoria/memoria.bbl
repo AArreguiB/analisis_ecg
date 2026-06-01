@@ -248,6 +248,53 @@
       \verb https://encord.com/blog/f1-score-in-machine-learning/
       \endverb
     \endentry
+    \entry{chauhan2021multilead_qrs}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9e33bcce226e58241cf9beb62ea57fcd}{%
+           family={Chauhan},
+           familyi={C\bibinitperiod},
+           given={Chhaviraj},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=394c3eabb43661d95d12b92bea8079be}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Monika},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d723d00b2a761e9c36df7c86fcae187}{%
+           family={Shabherwal},
+           familyi={S\bibinitperiod},
+           given={Pooja},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{22686ca3f65cf70bdaf99db41ba9f6d1}
+      \strng{fullhash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{fullhashraw}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{bibnamehash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{authorbibnamehash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{authornamehash}{22686ca3f65cf70bdaf99db41ba9f6d1}
+      \strng{authorfullhash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{authorfullhashraw}{2f47638c5f4e7895b8febc9a589d4e56}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2107.05469}
+      \field{note}{Accedido: 2025-12-28}
+      \field{title}{A Multi-Lead Fusion Method for the Accurate Delineation of QRS Complex Location in 12 Lead ECG Signal}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2107.05469
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2107.05469
+      \endverb
+    \endentry
     \entry{cigna_corazon_electrico}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=001f86414b79058a6ab09340d8f86dfe}{%
@@ -990,6 +1037,40 @@
       \endverb
       \verb{url}
       \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
+      \endverb
+    \endentry
+    \entry{talebi2025_fourier_wavelet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3ba231412c5e51144e89bf333ac7c6d4}{%
+           family={Talebi},
+           familyi={T\bibinitperiod},
+           given={Shawhin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{fullhash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{fullhashraw}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{bibnamehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authorbibnamehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authornamehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authorfullhash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authorfullhashraw}{3ba231412c5e51144e89bf333ac7c6d4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-12-28}
+      \field{title}{Fourier vs. Wavelet Transform: What's the Difference?}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://builtin.com/data-science/wavelet-transform
+      \endverb
+      \verb{url}
+      \verb https://builtin.com/data-science/wavelet-transform
       \endverb
     \endentry
     \entry{utah_ceg_machine_learning}{misc}{}{}
@@ -1453,6 +1534,53 @@
       \verb https://encord.com/blog/f1-score-in-machine-learning/
       \endverb
     \endentry
+    \entry{chauhan2021multilead_qrs}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9e33bcce226e58241cf9beb62ea57fcd}{%
+           family={Chauhan},
+           familyi={C\bibinitperiod},
+           given={Chhaviraj},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=394c3eabb43661d95d12b92bea8079be}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Monika},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d723d00b2a761e9c36df7c86fcae187}{%
+           family={Shabherwal},
+           familyi={S\bibinitperiod},
+           given={Pooja},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{22686ca3f65cf70bdaf99db41ba9f6d1}
+      \strng{fullhash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{fullhashraw}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{bibnamehash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{authorbibnamehash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{authornamehash}{22686ca3f65cf70bdaf99db41ba9f6d1}
+      \strng{authorfullhash}{2f47638c5f4e7895b8febc9a589d4e56}
+      \strng{authorfullhashraw}{2f47638c5f4e7895b8febc9a589d4e56}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2107.05469}
+      \field{note}{Accedido: 2025-12-28}
+      \field{title}{A Multi-Lead Fusion Method for the Accurate Delineation of QRS Complex Location in 12 Lead ECG Signal}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2107.05469
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2107.05469
+      \endverb
+    \endentry
     \entry{cigna_corazon_electrico}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=001f86414b79058a6ab09340d8f86dfe}{%
@@ -2195,6 +2323,40 @@
       \endverb
       \verb{url}
       \verb https://www.stanfordchildrens.org/es/topic/default?id=anatomy-and-function-of-the-hearts-electrical-system-85-P03337
+      \endverb
+    \endentry
+    \entry{talebi2025_fourier_wavelet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3ba231412c5e51144e89bf333ac7c6d4}{%
+           family={Talebi},
+           familyi={T\bibinitperiod},
+           given={Shawhin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{fullhash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{fullhashraw}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{bibnamehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authorbibnamehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authornamehash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authorfullhash}{3ba231412c5e51144e89bf333ac7c6d4}
+      \strng{authorfullhashraw}{3ba231412c5e51144e89bf333ac7c6d4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2025-12-28}
+      \field{title}{Fourier vs. Wavelet Transform: What's the Difference?}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://builtin.com/data-science/wavelet-transform
+      \endverb
+      \verb{url}
+      \verb https://builtin.com/data-science/wavelet-transform
       \endverb
     \endentry
     \entry{utah_ceg_machine_learning}{misc}{}{}

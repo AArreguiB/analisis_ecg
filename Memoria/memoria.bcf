@@ -3100,7 +3100,9 @@
     <bcf:citekey order="28" intorder="1">utah_ceg_machine_learning</bcf:citekey>
     <bcf:citekey order="29" intorder="1">ptbxl_dataset</bcf:citekey>
     <bcf:citekey order="30" intorder="1">salvavidas_genero_cardiopatias</bcf:citekey>
-    <bcf:citekey order="31" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">talebi2025_fourier_wavelet</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">chauhan2021multilead_qrs</bcf:citekey>
+    <bcf:citekey order="33" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

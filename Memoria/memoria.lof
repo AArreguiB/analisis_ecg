@@ -21,5 +21,10 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Distribución de las patologías por superclases.}}{51}{figure.caption.41}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Matriz de co-ocurrencia de las 20 clases más frecuentes.}}{52}{figure.caption.42}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Distribución del número de patologías por paciente.}}{53}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Morfología de la wavelet db6. \textcolor {red}{[lo pongo?]}}}{54}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Señal original y señal reconstruida a partir de los coeficientes d4 y d5 \textcolor {red}{[cambiar pie de foto?]}}}{55}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Envolvente de la señal reconstruida a partir de los coeficientes d4 y d5.}}{56}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Picos R detectados en la envolvente.}}{56}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Latidos cardíacos segmentados.}}{57}{figure.caption.48}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

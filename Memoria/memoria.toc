@@ -42,8 +42,13 @@
 \contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{47}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Análisis exploratorio de datos}{48}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Preprocesado de datos}{54}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Selección y extracción de características}{54}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{54}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{55}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{57}{chapter.7}%
-\contentsline {chapter}{Bibliografía}{59}{chapter.7}%
+\contentsline {section}{\numberline {5.4}Selección y extracción de características}{58}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Características temporales}{59}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Características morfológicas}{60}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Características estadísticas}{61}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Características de frecuencia}{61}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Estimación del eje eléctrico}{62}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{62}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{63}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{65}{chapter.7}%
+\contentsline {chapter}{Bibliografía}{67}{chapter.7}%
