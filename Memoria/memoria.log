@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  2 JUN 2026 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  4 JUN 2026 00:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1023,30 +1023,30 @@ Cap\'{\i }tulo 1.
 
 ]
 Cap\'{\i }tulo 2.
-<imagenes/sistema-electrico-corazon.png, id=397, 127.677pt x 127.677pt>
+<imagenes/sistema-electrico-corazon.png, id=427, 127.677pt x 127.677pt>
 File: imagenes/sistema-electrico-corazon.png Graphic file (type png)
 <use imagenes/sistema-electrico-corazon.png>
 Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 184.
 (pdftex.def)             Requested size: 167.2989pt x 167.30484pt.
 [15] [16 <./imagenes/sistema-electrico-corazon.png>]
-<imagenes/einthoven-triangle.png, id=421, 1074.0125pt x 1202.4925pt>
+<imagenes/einthoven-triangle.png, id=451, 1074.0125pt x 1202.4925pt>
 File: imagenes/einthoven-triangle.png Graphic file (type png)
 <use imagenes/einthoven-triangle.png>
 Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 232.
 (pdftex.def)             Requested size: 125.47737pt x 140.47638pt.
  [17] [18 <./imagenes/einthoven-triangle.png>]
-<imagenes/ecg-bipolar-limb-lead-axis.png, id=440, 1088.065pt x 1218.5525pt>
+<imagenes/ecg-bipolar-limb-lead-axis.png, id=470, 1088.065pt x 1218.5525pt>
 File: imagenes/ecg-bipolar-limb-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-bipolar-limb-lead-axis.png>
 Package pdftex.def Info: imagenes/ecg-bipolar-limb-lead-axis.png  used on input line 265.
 (pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
-<imagenes/ecg-augmented-lead-axis.png, id=441, 1088.065pt x 1218.5525pt>
+<imagenes/ecg-augmented-lead-axis.png, id=471, 1088.065pt x 1218.5525pt>
 File: imagenes/ecg-augmented-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-augmented-lead-axis.png>
 Package pdftex.def Info: imagenes/ecg-augmented-lead-axis.png  used on input line 280.
 (pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
  [19 <./imagenes/ecg-bipolar-limb-lead-axis.png>]
-<imagenes/ecg-6-limb-lead-axis.png, id=448, 992.70876pt x 794.97pt>
+<imagenes/ecg-6-limb-lead-axis.png, id=478, 992.70876pt x 794.97pt>
 File: imagenes/ecg-6-limb-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-6-limb-lead-axis.png>
 Package pdftex.def Info: imagenes/ecg-6-limb-lead-axis.png  used on input line 289.
@@ -1056,19 +1056,19 @@ Overfull \hbox (24.47142pt too wide) in paragraph at lines 311--324
  [][] 
  []
 
-<imagenes/ecg-chest-leads.png, id=461, 468.24937pt x 602.25pt>
+<imagenes/ecg-chest-leads.png, id=491, 468.24937pt x 602.25pt>
 File: imagenes/ecg-chest-leads.png Graphic file (type png)
 <use imagenes/ecg-chest-leads.png>
 Package pdftex.def Info: imagenes/ecg-chest-leads.png  used on input line 338.
 (pdftex.def)             Requested size: 125.47737pt x 161.38745pt.
 [21] [22 <./imagenes/ecg-chest-leads.png>] [23] [24]
-<imagenes/partes_ecg.png, id=490, 501.875pt x 306.14375pt>
+<imagenes/partes_ecg.png, id=520, 501.875pt x 306.14375pt>
 File: imagenes/partes_ecg.png Graphic file (type png)
 <use imagenes/partes_ecg.png>
 Package pdftex.def Info: imagenes/partes_ecg.png  used on input line 416.
 (pdftex.def)             Requested size: 209.12683pt x 127.57047pt.
  [25 <./imagenes/partes_ecg.png>] [26] [27]
-<imagenes/confusion_matrix.png, id=512, 474.77374pt x 342.27875pt>
+<imagenes/confusion_matrix.png, id=542, 474.77374pt x 342.27875pt>
 File: imagenes/confusion_matrix.png Graphic file (type png)
 <use imagenes/confusion_matrix.png>
 Package pdftex.def Info: imagenes/confusion_matrix.png  used on input line 520.
@@ -1091,23 +1091,23 @@ Overfull \hbox (44.6753pt too wide) in paragraph at lines 969--970
  []
 
 [48]
-<imagenes/distribucion_edad.png, id=646, 508.7808pt x 340.3917pt>
+<imagenes/distribucion_edad.png, id=676, 508.7808pt x 340.3917pt>
 File: imagenes/distribucion_edad.png Graphic file (type png)
 <use imagenes/distribucion_edad.png>
 Package pdftex.def Info: imagenes/distribucion_edad.png  used on input line 988.
 (pdftex.def)             Requested size: 209.12683pt x 139.91467pt.
-<imagenes/distribucion_sexo.png, id=649, 403.2666pt x 280.4076pt>
+<imagenes/distribucion_sexo.png, id=679, 403.2666pt x 280.4076pt>
 File: imagenes/distribucion_sexo.png Graphic file (type png)
 <use imagenes/distribucion_sexo.png>
 Package pdftex.def Info: imagenes/distribucion_sexo.png  used on input line 999.
 (pdftex.def)             Requested size: 209.12683pt x 145.41914pt.
  [49 <./imagenes/distribucion_edad.png> <./imagenes/distribucion_sexo.png>]
-<imagenes/distribucion_edad_sexo.png, id=659, 715.473pt x 286.1892pt>
+<imagenes/distribucion_edad_sexo.png, id=689, 715.473pt x 286.1892pt>
 File: imagenes/distribucion_edad_sexo.png Graphic file (type png)
 <use imagenes/distribucion_edad_sexo.png>
 Package pdftex.def Info: imagenes/distribucion_edad_sexo.png  used on input line 1009.
 (pdftex.def)             Requested size: 292.77629pt x 117.10687pt.
-<imagenes/distribucion_clases.png, id=661, 1293.633pt x 426.393pt>
+<imagenes/distribucion_clases.png, id=691, 1293.633pt x 426.393pt>
 File: imagenes/distribucion_clases.png Graphic file (type png)
 <use imagenes/distribucion_clases.png>
 Package pdftex.def Info: imagenes/distribucion_clases.png  used on input line 1026.
@@ -1118,90 +1118,110 @@ Overfull \hbox (41.82791pt too wide) in paragraph at lines 1026--1027
  []
 
 [50 <./imagenes/distribucion_edad_sexo.png> <./imagenes/distribucion_clases.png>]
-<imagenes/distribucion_clases_top10.png, id=669, 714.7503pt x 354.123pt>
+<imagenes/distribucion_clases_top10.png, id=699, 714.7503pt x 354.123pt>
 File: imagenes/distribucion_clases_top10.png Graphic file (type png)
 <use imagenes/distribucion_clases_top10.png>
 Package pdftex.def Info: imagenes/distribucion_clases_top10.png  used on input line 1036.
 (pdftex.def)             Requested size: 292.77629pt x 145.06168pt.
-<imagenes/distribucion_superclases.png, id=671, 570.933pt x 354.123pt>
+<imagenes/distribucion_superclases.png, id=701, 570.933pt x 354.123pt>
 File: imagenes/distribucion_superclases.png Graphic file (type png)
 <use imagenes/distribucion_superclases.png>
 Package pdftex.def Info: imagenes/distribucion_superclases.png  used on input line 1046.
 (pdftex.def)             Requested size: 292.77629pt x 181.59998pt.
  [51 <./imagenes/distribucion_clases_top10.png> <./imagenes/distribucion_superclases.png>]
-<imagenes/co-ocurrencia_top20.png, id=678, 655.4889pt x 570.933pt>
+<imagenes/co-ocurrencia_top20.png, id=708, 655.4889pt x 570.933pt>
 File: imagenes/co-ocurrencia_top20.png Graphic file (type png)
 <use imagenes/co-ocurrencia_top20.png>
 Package pdftex.def Info: imagenes/co-ocurrencia_top20.png  used on input line 1060.
 (pdftex.def)             Requested size: 292.77629pt x 255.0096pt.
  [52 <./imagenes/co-ocurrencia_top20.png>]
-<imagenes/num_patologias.png, id=686, 570.933pt x 354.123pt>
+<imagenes/num_patologias.png, id=716, 570.933pt x 354.123pt>
 File: imagenes/num_patologias.png Graphic file (type png)
 <use imagenes/num_patologias.png>
 Package pdftex.def Info: imagenes/num_patologias.png  used on input line 1087.
 (pdftex.def)             Requested size: 292.77629pt x 181.59998pt.
  [53 <./imagenes/num_patologias.png>]
-<imagenes/wavelet-db6.png, id=693, 605.6226pt x 325.9377pt>
+<imagenes/wavelet-db6.png, id=723, 605.6226pt x 325.9377pt>
 File: imagenes/wavelet-db6.png Graphic file (type png)
 <use imagenes/wavelet-db6.png>
 Package pdftex.def Info: imagenes/wavelet-db6.png  used on input line 1111.
 (pdftex.def)             Requested size: 209.12683pt x 112.54808pt.
  [54 <./imagenes/wavelet-db6.png>]
-<imagenes/wavelet-recostruida-pac10.png, id=701, 731.3724pt x 284.0211pt>
+<imagenes/wavelet-recostruida-pac10.png, id=731, 731.3724pt x 284.0211pt>
 File: imagenes/wavelet-recostruida-pac10.png Graphic file (type png)
 <use imagenes/wavelet-recostruida-pac10.png>
 Package pdftex.def Info: imagenes/wavelet-recostruida-pac10.png  used on input line 1128.
 (pdftex.def)             Requested size: 292.77629pt x 113.69743pt.
-<imagenes/envolvente-pac10.png, id=703, 731.3724pt x 284.7438pt>
+<imagenes/envolvente-pac10.png, id=733, 731.3724pt x 284.7438pt>
 File: imagenes/envolvente-pac10.png Graphic file (type png)
 <use imagenes/envolvente-pac10.png>
 Package pdftex.def Info: imagenes/envolvente-pac10.png  used on input line 1141.
 (pdftex.def)             Requested size: 292.77629pt x 113.98674pt.
  [55 <./imagenes/wavelet-recostruida-pac10.png>]
-<imagenes/picosR-pac10.png, id=712, 731.3724pt x 284.7438pt>
+<imagenes/picosR-pac10.png, id=742, 731.3724pt x 284.7438pt>
 File: imagenes/picosR-pac10.png Graphic file (type png)
 <use imagenes/picosR-pac10.png>
 Package pdftex.def Info: imagenes/picosR-pac10.png  used on input line 1156.
 (pdftex.def)             Requested size: 292.77629pt x 113.98674pt.
  [56 <./imagenes/envolvente-pac10.png> <./imagenes/picosR-pac10.png>]
-<imagenes/latidos_pac10.png, id=721, 619.3539pt x 395.3169pt>
+<imagenes/latidos_pac10.png, id=751, 619.3539pt x 395.3169pt>
 File: imagenes/latidos_pac10.png Graphic file (type png)
 <use imagenes/latidos_pac10.png>
 Package pdftex.def Info: imagenes/latidos_pac10.png  used on input line 1175.
 (pdftex.def)             Requested size: 292.77629pt x 186.87267pt.
- [57 <./imagenes/latidos_pac10.png>] [58] [59] [60]
-Overfull \hbox (2.19768pt too wide) in paragraph at lines 1277--1279
+ [57 <./imagenes/latidos_pac10.png>] [58] [59] [60] [61]
+Overfull \hbox (2.19768pt too wide) in paragraph at lines 1296--1298
 []\T1/cmr/m/n/12 Las ca-rac-te-rís-ti-cas fre-cuen-cia-les per-mi-ten ana-li-zar la se-ñal en el do-mi-nio tiempo-
  []
 
-[61]
-Overfull \hbox (2.97147pt too wide) in paragraph at lines 1302--1302
+[62]
+Overfull \hbox (2.97147pt too wide) in paragraph at lines 1334--1334
 []\T1/cmr/bx/n/17.28 Desarrollo ex-pe-ri-men-tal y op-ti-mi-za-ción del sis-
  []
 
-[62]
+[63] [64] [65] [66] [67] [68] [69] [70] [71] [72]
 Cap\'{\i }tulo 6.
-[63
+[73
 
-] [64
+] [74
 
 ]
 Cap\'{\i }tulo 7.
-[65] [66
-
-] [67
+[75] [76
 
 ]
-Overfull \hbox (8.51064pt too wide) in paragraph at lines 1336--1336
+Overfull \hbox (4.8651pt too wide) in paragraph at lines 1583--1583
+\T1/cmr/m/n/12 regularizaci % C3 % B3n -[] b % C3 % A1sicas -[] para -[] redes -[] neuronales -[] b48f396924d4$[] 
+ []
+
+[77
+
+]
+Overfull \hbox (10.69482pt too wide) in paragraph at lines 1583--1583
+[][]\T1/cmr/m/n/12 Interactive Chaos. (s.f.). Elas-tic Net [Ac-ce-di-do: 2026-05-24]. []$https : / / interactivechaos .
+ []
+
+
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 1583--1583
 [][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
+[78]
+Overfull \hbox (14.72577pt too wide) in paragraph at lines 1583--1583
+[]$\T1/cmr/m/n/12 https : / / docs . pytorch . org / docs / 2 . 12 / generated / torch . nn . BCEWithLogitsLoss .
+ []
 
-Overfull \hbox (9.72339pt too wide) in paragraph at lines 1336--1336
+
+Overfull \hbox (50.24496pt too wide) in paragraph at lines 1583--1583
+\T1/cmr/m/n/12 / / scikit -[] learn . org / stable / modules / generated / sklearn . multiclass . OneVsRestClassi^^\er .
+ []
+
+
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 1583--1583
 \T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
  []
 
-[68] [69] (memoria.aux
+[79] [80] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1211,23 +1231,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: B7DBF600BD2998B012036E418F3557B9;10630.
+(rerunfilecheck)             Checksum: 19C930D5462DC921F6A5B9C4DA3B6BBE;11848.
 Package logreq Info: Writing requests to 'memoria.run.xml'.
 \openout1 = `memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35199 strings out of 467871
- 672298 string characters out of 5419344
- 1571843 words of memory out of 5000000
- 63388 multiletter control sequences out of 15000+600000
+ 35346 strings out of 467871
+ 677477 string characters out of 5419344
+ 1574132 words of memory out of 5000000
+ 63494 multiletter control sequences out of 15000+600000
  644321 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,94p,761b,3155s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on memoria.pdf (69 pages, 1765964 bytes).
+Output written on memoria.pdf (80 pages, 1823532 bytes).
 PDF statistics:
- 1365 PDF objects out of 1440 (max. 8388607)
- 201 named destinations out of 1000 (max. 500000)
- 542 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1537 PDF objects out of 1728 (max. 8388607)
+ 242 named destinations out of 1000 (max. 500000)
+ 590 words of extra memory for PDF output out of 10000 (max. 10000000)
 

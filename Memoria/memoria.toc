@@ -46,9 +46,15 @@
 \contentsline {subsection}{\numberline {5.4.1}Características temporales}{59}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Características morfológicas}{60}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Características estadísticas}{61}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Características de frecuencia}{61}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Estimación del eje eléctrico}{62}{subsection.5.4.5}%
-\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{62}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{63}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{65}{chapter.7}%
-\contentsline {chapter}{Bibliografía}{67}{chapter.7}%
+\contentsline {subsection}{\numberline {5.4.4}Características de frecuencia}{62}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Estimación del eje eléctrico}{63}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Desarrollo experimental y optimización del sistema}{63}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Modelos de clasificación binaria}{64}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Estrategias de decisión y ajuste de umbrales}{69}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Modelos de regresión probabilística}{70}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Configuración 1}{72}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}Configuración 2}{72}{subsection.5.5.5}%
+\contentsline {subsection}{\numberline {5.5.6}Configuración 3}{72}{subsection.5.5.6}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{73}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{75}{chapter.7}%
+\contentsline {chapter}{Bibliografía}{77}{chapter.7}%

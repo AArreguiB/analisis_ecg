@@ -324,6 +324,69 @@
       \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
       \endverb
     \endentry
+    \entry{codificandobits_activacion}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1ed665feb5cfa0a54b450ca3fad60bcd}{%
+           family={{Codificando Bits}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{fullhash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{fullhashraw}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{bibnamehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authorbibnamehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authornamehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authorfullhash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authorfullhashraw}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{Función de activación}
+      \verb{urlraw}
+      \verb https://codificandobits.com/blog/funcion-de-activacion/
+      \endverb
+      \verb{url}
+      \verb https://codificandobits.com/blog/funcion-de-activacion/
+      \endverb
+    \endentry
+    \entry{duran2019_regularization_nn}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=412d84473866134932c8253b12e46d7e}{%
+           family={Durán},
+           familyi={D\bibinitperiod},
+           given={Jaime},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{412d84473866134932c8253b12e46d7e}
+      \strng{fullhash}{412d84473866134932c8253b12e46d7e}
+      \strng{fullhashraw}{412d84473866134932c8253b12e46d7e}
+      \strng{bibnamehash}{412d84473866134932c8253b12e46d7e}
+      \strng{authorbibnamehash}{412d84473866134932c8253b12e46d7e}
+      \strng{authornamehash}{412d84473866134932c8253b12e46d7e}
+      \strng{authorfullhash}{412d84473866134932c8253b12e46d7e}
+      \strng{authorfullhashraw}{412d84473866134932c8253b12e46d7e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-03-27}
+      \field{title}{Técnicas de regularización básicas para redes neuronales}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://medium.com/metadatos/t%C3%A9cnicas-de-regularizaci%C3%B3n-b%C3%A1sicas-para-redes-neuronales-b48f396924d4
+      \endverb
+      \verb{url}
+      \verb https://medium.com/metadatos/t%C3%A9cnicas-de-regularizaci%C3%B3n-b%C3%A1sicas-para-redes-neuronales-b48f396924d4
+      \endverb
+    \endentry
     \entry{cardioteca_eje_cardiaco}{misc}{}{}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
@@ -480,6 +543,65 @@
       \verb https://doi.org/10.1038/s41591-018-0268-3
       \endverb
     \endentry
+    \entry{ibm_random_forest}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué es Random Forest?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/random-forest
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/random-forest
+      \endverb
+    \endentry
+    \entry{interactivechaos_elasticnet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a28e8d1dee8924550bbb1075898d76de}{%
+           family={{Interactive Chaos}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{fullhash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{fullhashraw}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{bibnamehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authorbibnamehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authornamehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authorfullhash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authorfullhashraw}{a28e8d1dee8924550bbb1075898d76de}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{Elastic Net}
+      \verb{urlraw}
+      \verb https://interactivechaos.com/es/manual/tutorial-de-machine-learning/elastic-net
+      \endverb
+      \verb{url}
+      \verb https://interactivechaos.com/es/manual/tutorial-de-machine-learning/elastic-net
+      \endverb
+    \endentry
     \entry{kalmady2024ecg_cv}{article}{}{}
       \name{author}{12}{}{%
         {{un=0,uniquepart=base,hash=d66bdd70c870c10959e3bce9b6ef6391}{%
@@ -618,6 +740,125 @@
       \verb https://cvphysiology.com/arrhythmias/a013
       \endverb
     \endentry
+    \entry{ibm_logistic_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ed958f9d3f73b33a264a563ee73e6aa2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Fangfang},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{fullhash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{fullhashraw}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{bibnamehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authorbibnamehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authornamehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authorfullhash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authorfullhashraw}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué es la regresión logística?}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/logistic-regression
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/logistic-regression
+      \endverb
+    \endentry
+    \entry{ibm_neural_networks}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=409e57be58d764f0c131ce7ac963fcae}{%
+           family={{Lee, Fangfang}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{fullhash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{fullhashraw}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{bibnamehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authorbibnamehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authornamehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authorfullhash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authorfullhashraw}{409e57be58d764f0c131ce7ac963fcae}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué son las redes neuronales?}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/neural-networks
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/neural-networks
+      \endverb
+    \endentry
+    \entry{lera2025logistic_regression}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9d8dae36c6d8123010bdd77fcb8d1d7d}{%
+           family={Lera},
+           familyi={L\bibinitperiod},
+           given={Lydia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39c2771f72ce052cc4140a8cec24cd4f}{%
+           family={Leyton},
+           familyi={L\bibinitperiod},
+           given={Bárbara},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33213c1462f2463d475edd6fee11a4ee}{%
+           family={Lizana},
+           familyi={L\bibinitperiod},
+           given={Pablo\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{70135d39480d7c89e6ca0873597e5573}
+      \strng{fullhash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{fullhashraw}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{bibnamehash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{authorbibnamehash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{authornamehash}{70135d39480d7c89e6ca0873597e5573}
+      \strng{authorfullhash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{authorfullhashraw}{7fe8dec60a349e408f93aa5108fd4592}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Morphology}
+      \field{note}{Accedido: 2026-05-16}
+      \field{number}{5}
+      \field{title}{La regresión logística y su aplicación en la investigación biomédica}
+      \field{volume}{43}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.4067/s0717-95022025000501545
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.4067/s0717-95022025000501545
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.4067/s0717-95022025000501545
+      \endverb
+    \endentry
     \entry{medlineplus_ecg_es}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
@@ -647,6 +888,47 @@
       \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
       \endverb
     \endentry
+    \entry{ibm_ridge_regression}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=28036c3883d75a8886c3ff73a4b2dde1}{%
+           family={Murel},
+           familyi={M\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b0ee043c5d5ce373995f25c08671606}{%
+           family={Kavlakoglu},
+           familyi={K\bibinitperiod},
+           given={Eda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{bibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorbibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authornamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué es la regresión Ridge?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/ridge-regression
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/ridge-regression
+      \endverb
+    \endentry
     \entry{ibm_confusion_matrix}{misc}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=28036c3883d75a8886c3ff73a4b2dde1}{%
@@ -670,8 +952,10 @@
       \strng{authornamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
       \strng{authorfullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
       \strng{authorfullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -884,6 +1168,67 @@
       \field{title}{ECG tutorial: Basic principles of ECG analysis}
       \field{year}{2025}
     \endentry
+    \entry{pytorch_bcewithlogitsloss}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c27c821223528080796a27ff4a7f3626}{%
+           family={{PyTorch contributors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{fullhash}{c27c821223528080796a27ff4a7f3626}
+      \strng{fullhashraw}{c27c821223528080796a27ff4a7f3626}
+      \strng{bibnamehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authorbibnamehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authornamehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authorfullhash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authorfullhashraw}{c27c821223528080796a27ff4a7f3626}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{torch.nn.BCEWithLogitsLoss}
+      \verb{urlraw}
+      \verb https://docs.pytorch.org/docs/2.12/generated/torch.nn.BCEWithLogitsLoss.html
+      \endverb
+      \verb{url}
+      \verb https://docs.pytorch.org/docs/2.12/generated/torch.nn.BCEWithLogitsLoss.html
+      \endverb
+    \endentry
+    \entry{q2b_interpretable_ecg_nn}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c5c993f1a0fc4245810e898f1da86510}{%
+           family={{Q2B Studio}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{fullhash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{fullhashraw}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{bibnamehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authorbibnamehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authornamehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authorfullhash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authorfullhashraw}{c5c993f1a0fc4245810e898f1da86510}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-03-27}
+      \field{title}{Redes neuronales interpretables para analizar electrocardiogramas de 12 derivaciones: diagnóstico de enfermedades cardíacas}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
+      \endverb
+      \verb{url}
+      \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
+      \endverb
+    \endentry
     \entry{repsol_machine_learning}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1c4169e68fa93846dda807b46179989e}{%
@@ -944,6 +1289,163 @@
       \endverb
       \verb{url}
       \verb https://salvavidas.com/blog/diferencias-de-genero-en-enfermedades-cardiacas/
+      \endverb
+    \endentry
+    \entry{sklearn_elasticnet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{ElasticNet}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html
+      \endverb
+    \endentry
+    \entry{sklearn_logistic_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{LogisticRegression}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+      \endverb
+    \endentry
+    \entry{sklearn_ovr_classifier}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{OneVsRestClassifier}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
+      \endverb
+    \endentry
+    \entry{sklearn_ridge}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{Ridge}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+      \endverb
+    \endentry
+    \entry{sklearn_random_forest_classifier}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{5}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{sklearn.ensemble.RandomForestClassifier}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
       \endverb
     \endentry
     \entry{sadec_arritmia}{misc}{}{}
@@ -1301,6 +1803,89 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1016/j.mcpdig.2024.03.009
+      \endverb
+    \endentry
+    \entry{zou2022heartbeat_rf}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=95cea1d04d9bb965949f0abf68f8ebe3}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Congyu},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ebef8797652674bd338b32d49ae2766}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70a27ff2ffcbf98da758e9769a2d18e2}{%
+           family={Wolfgang},
+           familyi={W\bibinitperiod},
+           given={Utschick},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49523172d0ae6f983f816854841d8311}{%
+           family={Ruckert},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5e4c6d7b5de40f6baad2743aa8da749}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10443731c384a7777958452c32b71b1f}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7138a2bc21c563c70394d648b4fcea2e}{%
+           family={Steger},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f7122963683ffe37adb5ee9c56aaf1c}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Eimo},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{894f70554a316b0d8a2d4db2428f6fae}
+      \strng{fullhash}{de64bca563373a4aff7336432496e4b2}
+      \strng{fullhashraw}{de64bca563373a4aff7336432496e4b2}
+      \strng{bibnamehash}{de64bca563373a4aff7336432496e4b2}
+      \strng{authorbibnamehash}{de64bca563373a4aff7336432496e4b2}
+      \strng{authornamehash}{894f70554a316b0d8a2d4db2428f6fae}
+      \strng{authorfullhash}{de64bca563373a4aff7336432496e4b2}
+      \strng{authorfullhashraw}{de64bca563373a4aff7336432496e4b2}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Translational Engineering in Health and Medicine}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{Heartbeat Classification by Random Forest With a Novel Context Feature: A Segment Label}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{1900508}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/JTEHM.2022.3202749
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/JTEHM.2022.3202749
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/JTEHM.2022.3202749
       \endverb
     \endentry
   \enddatalist
@@ -1610,6 +2195,69 @@
       \verb https://www.cigna.com/es-us/knowledge-center/hw/el-corazn-y-su-sistema-elctrico-zm2272
       \endverb
     \endentry
+    \entry{codificandobits_activacion}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1ed665feb5cfa0a54b450ca3fad60bcd}{%
+           family={{Codificando Bits}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{fullhash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{fullhashraw}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{bibnamehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authorbibnamehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authornamehash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authorfullhash}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \strng{authorfullhashraw}{1ed665feb5cfa0a54b450ca3fad60bcd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{Función de activación}
+      \verb{urlraw}
+      \verb https://codificandobits.com/blog/funcion-de-activacion/
+      \endverb
+      \verb{url}
+      \verb https://codificandobits.com/blog/funcion-de-activacion/
+      \endverb
+    \endentry
+    \entry{duran2019_regularization_nn}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=412d84473866134932c8253b12e46d7e}{%
+           family={Durán},
+           familyi={D\bibinitperiod},
+           given={Jaime},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{412d84473866134932c8253b12e46d7e}
+      \strng{fullhash}{412d84473866134932c8253b12e46d7e}
+      \strng{fullhashraw}{412d84473866134932c8253b12e46d7e}
+      \strng{bibnamehash}{412d84473866134932c8253b12e46d7e}
+      \strng{authorbibnamehash}{412d84473866134932c8253b12e46d7e}
+      \strng{authornamehash}{412d84473866134932c8253b12e46d7e}
+      \strng{authorfullhash}{412d84473866134932c8253b12e46d7e}
+      \strng{authorfullhashraw}{412d84473866134932c8253b12e46d7e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-03-27}
+      \field{title}{Técnicas de regularización básicas para redes neuronales}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://medium.com/metadatos/t%C3%A9cnicas-de-regularizaci%C3%B3n-b%C3%A1sicas-para-redes-neuronales-b48f396924d4
+      \endverb
+      \verb{url}
+      \verb https://medium.com/metadatos/t%C3%A9cnicas-de-regularizaci%C3%B3n-b%C3%A1sicas-para-redes-neuronales-b48f396924d4
+      \endverb
+    \endentry
     \entry{cardioteca_eje_cardiaco}{misc}{}{}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
@@ -1766,6 +2414,65 @@
       \verb https://doi.org/10.1038/s41591-018-0268-3
       \endverb
     \endentry
+    \entry{ibm_random_forest}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué es Random Forest?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/random-forest
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/random-forest
+      \endverb
+    \endentry
+    \entry{interactivechaos_elasticnet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a28e8d1dee8924550bbb1075898d76de}{%
+           family={{Interactive Chaos}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{fullhash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{fullhashraw}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{bibnamehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authorbibnamehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authornamehash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authorfullhash}{a28e8d1dee8924550bbb1075898d76de}
+      \strng{authorfullhashraw}{a28e8d1dee8924550bbb1075898d76de}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{Elastic Net}
+      \verb{urlraw}
+      \verb https://interactivechaos.com/es/manual/tutorial-de-machine-learning/elastic-net
+      \endverb
+      \verb{url}
+      \verb https://interactivechaos.com/es/manual/tutorial-de-machine-learning/elastic-net
+      \endverb
+    \endentry
     \entry{kalmady2024ecg_cv}{article}{}{}
       \name{author}{12}{}{%
         {{un=0,uniquepart=base,hash=d66bdd70c870c10959e3bce9b6ef6391}{%
@@ -1904,6 +2611,125 @@
       \verb https://cvphysiology.com/arrhythmias/a013
       \endverb
     \endentry
+    \entry{ibm_logistic_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ed958f9d3f73b33a264a563ee73e6aa2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Fangfang},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{fullhash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{fullhashraw}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{bibnamehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authorbibnamehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authornamehash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authorfullhash}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \strng{authorfullhashraw}{ed958f9d3f73b33a264a563ee73e6aa2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué es la regresión logística?}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/logistic-regression
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/logistic-regression
+      \endverb
+    \endentry
+    \entry{ibm_neural_networks}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=409e57be58d764f0c131ce7ac963fcae}{%
+           family={{Lee, Fangfang}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{fullhash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{fullhashraw}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{bibnamehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authorbibnamehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authornamehash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authorfullhash}{409e57be58d764f0c131ce7ac963fcae}
+      \strng{authorfullhashraw}{409e57be58d764f0c131ce7ac963fcae}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué son las redes neuronales?}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/neural-networks
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/neural-networks
+      \endverb
+    \endentry
+    \entry{lera2025logistic_regression}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9d8dae36c6d8123010bdd77fcb8d1d7d}{%
+           family={Lera},
+           familyi={L\bibinitperiod},
+           given={Lydia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39c2771f72ce052cc4140a8cec24cd4f}{%
+           family={Leyton},
+           familyi={L\bibinitperiod},
+           given={Bárbara},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33213c1462f2463d475edd6fee11a4ee}{%
+           family={Lizana},
+           familyi={L\bibinitperiod},
+           given={Pablo\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{70135d39480d7c89e6ca0873597e5573}
+      \strng{fullhash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{fullhashraw}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{bibnamehash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{authorbibnamehash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{authornamehash}{70135d39480d7c89e6ca0873597e5573}
+      \strng{authorfullhash}{7fe8dec60a349e408f93aa5108fd4592}
+      \strng{authorfullhashraw}{7fe8dec60a349e408f93aa5108fd4592}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Morphology}
+      \field{note}{Accedido: 2026-05-16}
+      \field{number}{5}
+      \field{title}{La regresión logística y su aplicación en la investigación biomédica}
+      \field{volume}{43}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.4067/s0717-95022025000501545
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.4067/s0717-95022025000501545
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.4067/s0717-95022025000501545
+      \endverb
+    \endentry
     \entry{medlineplus_ecg_es}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
@@ -1933,6 +2759,47 @@
       \verb https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/
       \endverb
     \endentry
+    \entry{ibm_ridge_regression}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=28036c3883d75a8886c3ff73a4b2dde1}{%
+           family={Murel},
+           familyi={M\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b0ee043c5d5ce373995f25c08671606}{%
+           family={Kavlakoglu},
+           familyi={K\bibinitperiod},
+           given={Eda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{fullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{bibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorbibnamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authornamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \strng{authorfullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{IBM}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{¿Qué es la regresión Ridge?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/ridge-regression
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/ridge-regression
+      \endverb
+    \endentry
     \entry{ibm_confusion_matrix}{misc}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=28036c3883d75a8886c3ff73a4b2dde1}{%
@@ -1956,8 +2823,10 @@
       \strng{authornamehash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
       \strng{authorfullhash}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
       \strng{authorfullhashraw}{b2fbd0b4d46f41ed3b4a51162bfa10ea}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -2170,6 +3039,67 @@
       \field{title}{ECG tutorial: Basic principles of ECG analysis}
       \field{year}{2025}
     \endentry
+    \entry{pytorch_bcewithlogitsloss}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c27c821223528080796a27ff4a7f3626}{%
+           family={{PyTorch contributors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{fullhash}{c27c821223528080796a27ff4a7f3626}
+      \strng{fullhashraw}{c27c821223528080796a27ff4a7f3626}
+      \strng{bibnamehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authorbibnamehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authornamehash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authorfullhash}{c27c821223528080796a27ff4a7f3626}
+      \strng{authorfullhashraw}{c27c821223528080796a27ff4a7f3626}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{torch.nn.BCEWithLogitsLoss}
+      \verb{urlraw}
+      \verb https://docs.pytorch.org/docs/2.12/generated/torch.nn.BCEWithLogitsLoss.html
+      \endverb
+      \verb{url}
+      \verb https://docs.pytorch.org/docs/2.12/generated/torch.nn.BCEWithLogitsLoss.html
+      \endverb
+    \endentry
+    \entry{q2b_interpretable_ecg_nn}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c5c993f1a0fc4245810e898f1da86510}{%
+           family={{Q2B Studio}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{fullhash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{fullhashraw}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{bibnamehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authorbibnamehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authornamehash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authorfullhash}{c5c993f1a0fc4245810e898f1da86510}
+      \strng{authorfullhashraw}{c5c993f1a0fc4245810e898f1da86510}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-03-27}
+      \field{title}{Redes neuronales interpretables para analizar electrocardiogramas de 12 derivaciones: diagnóstico de enfermedades cardíacas}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
+      \endverb
+      \verb{url}
+      \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
+      \endverb
+    \endentry
     \entry{repsol_machine_learning}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1c4169e68fa93846dda807b46179989e}{%
@@ -2230,6 +3160,163 @@
       \endverb
       \verb{url}
       \verb https://salvavidas.com/blog/diferencias-de-genero-en-enfermedades-cardiacas/
+      \endverb
+    \endentry
+    \entry{sklearn_elasticnet}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-24}
+      \field{title}{ElasticNet}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html
+      \endverb
+    \endentry
+    \entry{sklearn_logistic_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{LogisticRegression}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+      \endverb
+    \endentry
+    \entry{sklearn_ovr_classifier}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{OneVsRestClassifier}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
+      \endverb
+    \endentry
+    \entry{sklearn_ridge}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{Ridge}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+      \endverb
+    \endentry
+    \entry{sklearn_random_forest_classifier}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{5}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{sklearn.ensemble.RandomForestClassifier}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
       \endverb
     \endentry
     \entry{sadec_arritmia}{misc}{}{}
@@ -2587,6 +3674,89 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1016/j.mcpdig.2024.03.009
+      \endverb
+    \endentry
+    \entry{zou2022heartbeat_rf}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=95cea1d04d9bb965949f0abf68f8ebe3}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Congyu},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ebef8797652674bd338b32d49ae2766}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70a27ff2ffcbf98da758e9769a2d18e2}{%
+           family={Wolfgang},
+           familyi={W\bibinitperiod},
+           given={Utschick},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49523172d0ae6f983f816854841d8311}{%
+           family={Ruckert},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5e4c6d7b5de40f6baad2743aa8da749}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10443731c384a7777958452c32b71b1f}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7138a2bc21c563c70394d648b4fcea2e}{%
+           family={Steger},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f7122963683ffe37adb5ee9c56aaf1c}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Eimo},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{894f70554a316b0d8a2d4db2428f6fae}
+      \strng{fullhash}{de64bca563373a4aff7336432496e4b2}
+      \strng{fullhashraw}{de64bca563373a4aff7336432496e4b2}
+      \strng{bibnamehash}{de64bca563373a4aff7336432496e4b2}
+      \strng{authorbibnamehash}{de64bca563373a4aff7336432496e4b2}
+      \strng{authornamehash}{894f70554a316b0d8a2d4db2428f6fae}
+      \strng{authorfullhash}{de64bca563373a4aff7336432496e4b2}
+      \strng{authorfullhashraw}{de64bca563373a4aff7336432496e4b2}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Translational Engineering in Health and Medicine}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{Heartbeat Classification by Random Forest With a Novel Context Feature: A Segment Label}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{1900508}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/JTEHM.2022.3202749
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/JTEHM.2022.3202749
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/JTEHM.2022.3202749
       \endverb
     \endentry
   \enddatalist

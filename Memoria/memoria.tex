@@ -1264,26 +1264,57 @@ Para todas estas características, se calculan posteriormente la media y la desv
 Las características estadísticas permiten describir la señal desde una perspectiva global, sin depender explícitamente de su interpretación fisiológica. 
 Complementan la información temporal y morfológica, aportando una representación más general del comportamiento de la señal ECG.
 
-En este bloque se calculan, para cada latido, la media y la desviación estándar de la señal, que permiten caracterizar el nivel medio de amplitud y su dispersión. 
+Para cada latido se calcula la media y la desviación estándar de la señal, que permiten caracterizar el nivel medio de amplitud y su dispersión. 
 Se incluyen la amplitud máxima y mínima, que permiten identificar los valores extremos de la señal dentro de cada latido.
+Así, se consigue una representación más robusta y menos sensible a variaciones puntuales o posibles errores de segmentación.
+Adicionalmente, se incorporan medidas estadísticas de orden superior como la asimetría (skewness) y la curtosis (kurtosis).
 
-Adicionalmente, se incorporan medidas estadísticas de orden superior como la asimetría (skewness) y la curtosis (kurtosis). 
-La asimetría permite evaluar si la distribución de la señal está desplazada hacia valores positivos o negativos, mientras que la curtosis mide el grado de concentración de la señal alrededor de su media, permitiendo detectar distribuciones más o menos “picudas”.
+En primer lugar, se calcula la media de la señal, que proporciona información sobre el nivel medio de amplitud del latido, lo que puede ser indicativo de la intensidad general de la actividad eléctrica cardíaca.
+Pequeñas variaciones pueden estar relacionadas con cambios en la morfología de la señal.
+
+La desviación estándar permite cuantificar la dispersión de los valores de amplitud de la señal. 
+Un valor elevado de esta medida indica una mayor variabilidad en la amplitud del latido, lo que podría estar asociado a alteraciones en la conducción eléctrica o a la presencia de ruido en el registro, mientras que un valor bajo sugiere una señal más homogénea.
+Esta caracterísitica resulta muy útil para diferenciar señales con distinta complejidad morfológica, ya que latidos con formas más irregulares suelen presentar una mayor dispersión de valores.
+
+Los valores máximo y mínimo de la señal permiten caracterizar los extremos de amplitud de cada latido y complementan la información obtenida mediante las características morfológicas, proporcionando una visión más completa de la forma del latido.
+Estas medidas pueden ser especialmente relevantes en la detección de alteraciones isquémicas o de daño miocárdico, que suelen manifestarse mediante cambios en la amplitud de las ondas del ECG.
+
+Además, se calcula la asimetría (skewness) de la distribución de amplitudes. 
+Esta medida permite evaluar si los valores de la señal se distribuyen de forma simétrica alrededor de su media o si existe una mayor concentración de valores hacia amplitudes positivas o negativas. 
+Cambios en la forma del complejo QRS o en la presencia de ondas más pronunciadas pueden reflejarse en esta característica.
+
+Por último, se incorpora la curtosis (kurtosis), que describe el grado de concentración de los valores alrededor de la media y la presencia de picos pronunciados en la distribución. 
+Esta medida permite diferenciar señales con morfologías más suaves de aquellas que presentan cambios bruscos o componentes más agudos.
 
 Dado que cada paciente dispone de múltiples latidos, todas estas medidas se agregan posteriormente mediante su media y desviación estándar, lo que permite obtener una representación global estable y menos sensible a variaciones puntuales entre latidos.
+
+En conjunto, estas características aportan una descripción global de la señal ECG y complementan la información proporcionada por las características temporales y morfológicas. 
+Aunque individualmente pueden parecer menos interpretables desde un punto de vista clínico, resultan especialmente útiles para los algoritmos de aprendizaje automático, ya que permiten capturar patrones generales presentes en la señal que no siempre son evidentes mediante el análisis visual.
 
 \subsection{Características de frecuencia}
 
 Las características frecuenciales permiten analizar la señal en el dominio tiempo-frecuencia, capturando información que no es directamente observable en el dominio temporal. 
-Se emplea la transformada wavelet discreta, que resulta especialmente adecuada para señales no estacionarias como el ECG.
+Se emplea la transformada wavelet discreta, ya que es especialmente adecuada para señales no estacionarias como el ECG.
 
-A partir de la descomposición de la señal mediante la transformada wavelet, se calcula la energía de distintos coeficientes de detalle, en concreto d4, d5 y d6, que se corresponden con diferentes rangos de frecuencia asociados a la actividad eléctrica cardíaca. 
+Para obtener estas características se utiliza de nuevo la transformada wavelet discreta utilzando la wavelet db6 y una profundidad de 8 niveles.
+A partir de los coeficientes obtenidos se calcula la energía asociada a diferentes bandas de frecuencia. 
+
+En concreto, se consideran los coeficientes d4, d5 y d6, que se corresponden con diferentes rangos de frecuencia asociados a la actividad eléctrica cardíaca. 
 La energía se calcula como la suma del cuadrado de los coeficientes, lo que proporciona una medida de la potencia de la señal en cada banda frecuencial.
 
-Estas energías permiten caracterizar la distribución espectral de la señal y detectar posibles alteraciones en la actividad eléctrica del corazón. 
-Posteriormente, se agregan a nivel de paciente mediante la media y la desviación estándar de cada banda, con el objetivo de capturar tanto el comportamiento global como su variabilidad entre latidos.
+Las energías correspondientes a d4 y d5 contienen gran parte de la información asociada al complejo QRS.
+Es por esto que estas características proporcionan una medida indirecta de la intensidad y complejidad de los procesos de despolarización ventricular presentes en cada latido.
 
-Adicionalmente, se calcula un ratio entre bandas de frecuencia baja y alta, que resume la relación entre distintas componentes espectrales de la señal en una única variable, aportando información complementaria sobre la distribución de la energía en el dominio frecuencial.
+Por su parte, la energía del coeficiente d6 se asocia a componentes de frecuencia más bajas, que pueden estar relacionadas con la actividad de las ondas P y T, así como con posibles alteraciones en la repolarización ventricular.
+Permite capturar variaciones más lentas de la señal que no siempre se reflejan en las bandas dominadas por el complejo QRS.
+
+Al igual que en el resto de características, las energías calculadas para cada latido se agregan posteriormente a nivel de paciente mediante su media y desviación estándar. 
+La media permite caracterizar el comportamiento frecuencial típico del paciente, mientras que la desviación estándar proporciona información sobre la estabilidad o variabilidad de dicho comportamiento entre latidos.
+
+Finalmente, se calcula una relación entre las energías de la banda de frecuencia más alta y la banda de frecuencia más baja. 
+Esta medida permite describir cómo se distribuye la energía de la señal entre componentes de frecuencia más alta y más baja. 
+Dos señales pueden presentar una morfología aparentemente similar en el dominio temporal, pero diferir significativamente en su composición espectral. 
+Por este motivo, esta característica aporta información complementaria que puede resultar útil para mejorar la capacidad discriminativa de los modelos de clasificación.
 
 \subsection{Estimación del eje eléctrico}
 
@@ -1296,10 +1327,226 @@ A partir de estas amplitudes se obtiene el ángulo del eje eléctrico mediante u
 Desviaciones significativas del eje eléctrico pueden estar asociadas a alteraciones estructurales del corazón, bloqueos de conducción o hipertrofias ventriculares, por lo que esta variable aporta información global complementaria a las características previamente descritas.
 
 
+\todo{hacer algo para que no parezca del apartado del eje electrico}
 El conjunto de características extraídas permite construir una representación multidimensional de la señal electrocardiográfica, integrando información temporal, morfológica, estadística y frecuencial. 
 Esta combinación es fundamental para proporcionar a los modelos de clasificación una base informativa capaz de capturar patrones complejos asociados a diferentes patologías cardiovasculares.
 
 \section{Desarrollo experimental y optimización del sistema}
+
+En esta sección se describe todo el proceso experimental llevado a cabo para la construcción y optimización del sistema de clasificación automática de patologías cardíacas a partir de señales ECG.
+Dado que el problema trata una tarea compleja de clasificación multilabel y multietiqueta y probabilística en algunos casos, se ha seguido un enfoque iterativo basado en la evolución progresiva de distintos modelos y configuraciones.
+
+El objetivo principal de esta fase no es únicamente obtener un modelo final con un rendimiento competitivo, sino analizar en profundidad el comportamiento de diferentes algoritmos bajo distintos planteamientos del problema, con el fin de identificar la estrategia más adecuada en términos de capacidad predictiva y estabilidad del sistema.
+
+Para ello, el desarrollo experimental se ha estructurado en tres escenarios principales. 
+En primer lugar, un enfoque de clasificación binaria utilizando una única derivación del ECG, en el que el problema se redefine mediante la agrupación de patologías en superclases. 
+Así, el objetivo consiste en la clasificación binaria de patologías agrupadas y la clase normal, lo que permite evaluar la capacidad del modelo para diferenciar entre registros normales y patológicos, sin entrar en la especificidad de cada diagnóstico individual.
+Cada superclase se modela de forma independiente como una variable binaria, permitiendo la coexistencia de múltiples condiciones en un mismo paciente.
+
+En segundo lugar, se ha considerado también un enfoque de clasificación binaria basado en la utilización de las 12 derivaciones, con el objetivo de evaluar el impacto de incorporar información espacial más completa del registro electrocardiográfico. 
+
+Finalmente, se ha abordado un tercer escenario más complejo, basado en las 12 derivaciones, orientado a la clasificación probabilística de las 71 patologías, donde cada paciente puede presentar simultáneamente múltiples diagnósticos, lo que incrementa significativamente la dificultad del problema debido al desbalance de clases y a la naturaleza multietiqueta del etiquetado.
+
+Adicionalmente, en los dos primeros escenarios de clasificación binaria, se han explorado distintas estrategias de decisión mediante la modificación de los umbrales de clasificación, con el objetivo de ajustar el equilibrio entre sensibilidad y especificidad del sistema. 
+En concreto, se han evaluado tanto umbrales inferiores al valor por defecto como configuraciones de umbral fijo personalizdo a cada superclase, con el fin de analizar su impacto en la capacidad del modelo para detectar correctamente la presencia de patología. 
+Este ajuste resulta especialmente relevante en aplicaciones clínicas, donde los falsos negativos tienen un impacto crítico.
+
+En conjunto, este proceso experimental permite comparar de forma sistemática diferentes formulaciones del problema y analizar cómo la complejidad del escenario afecta al comportamiento de los modelos y a la capacidad de generalización del sistema.
+
+\subsection{Modelos de clasificación binaria}
+
+En el escenario 1 y 2 se utiliza un enfoque de clasificación binaria, por lo que se han evaluado distintos modelos de aprendizaje supervisado con el objetivo de analizar su capacidad para diferenciar la presencia o ausencia de patologías agrupadas en superclases.
+Trabajan sobre dos configuraciones de entrada distintas: la primera basada en la utilización de una única derivación del ECG, mientras que la segunda incorpora las 12 derivaciones disponibles.
+
+En este trabajo los modelos se han adaptado explícitamente a un problema multietiqueta en el que un mismo paciente puede activar simultáneamente varias superclases. 
+Esto condiciona tanto el diseño de los clasificadores como la interpretación de sus salidas, que se basan en probabilidades independientes por etiqueta.
+
+\subsubsection*{Regresión logística}
+
+La regresión logística es un modelo de clasificación lineal muy utilizado en problemas biomédicos debido a su simplicidad, interpretabilidad y estabilidad. (\cite{lera2025logistic_regression})
+Se basa en modelar la probabilidad de pertenencia a una clase mediante una combinación lineal de las características de entrada, seguida de la aplicación de una función sigmoide que acota la salida entre 0 y 1. (\cite{ibm_logistic_regression})
+
+Este modelo se usa como referencia base (baseline), ya que permite establecer un punto de comparación frente a métodos más complejos. 
+Su principal ventaja es la interpretabilidad de sus coeficientes, lo que facilita entender que características del ECG influyen en la predicción de cada superclase.
+
+En este problema, la regresión logística se adapta a un escenario multietiqueta mediante un enfoque One-vs-Rest. 
+Consiste en descomponer el problema original, que involucra múltiples clases, en varios problemas de clasificación binaria independientes, uno por cada superclase.
+Cada modelo aprende modelos específicos asociados a una condición concreta sin verse condicionado por la presencia de otras patologías, lo que permite una mayor flexibilidad en la interpretación de los resultados. (\cite{sklearn_ovr_classifier})
+
+Por otro lado, se ha incorporado el parámetro \textit{class\_weight="balanced"}, que ajusta automáticamente el peso de cada clase de acuerdo con su frecuencia en el conjunto de entrenamiento. 
+Este mecanismo es especialmente relevante en el contexto de datos clínicos, donde existe un fuerte desbalance entre clases, como se ve en la Figura \ref{fig:distribucion-superclases}, ya que permite mejorar la capacidad del modelo para detectar clases minoritarias sin sacrificar excesivamente la precisión en las clases mayoritarias.
+
+Sin este ajuste, los modelos tenderían a favorecer las clases mayoritarias, obteniendo buenos resultados globales pero con un rendimiento pobre en las patologías minoritarias, que son precisamente las de mayor interés clínico. 
+La ponderación de clases permite mitigar este efecto, penalizando en mayor medida los errores cometidos sobre clases infrarrepresentadas y favoreciendo un comportamiento más equilibrado del modelo.
+
+\subsubsection*{Random Forest}
+
+Random Forest es un algoritmo de clasificación basado en la construcción de múltiples árboles de decisión.
+La idea principal consiste en entrenar un conjunto de árboles de decisión independientes sobre diferentes subconjuntos aleatorios de los datos y combinar posteriormente sus predicciones.
+De esta forma, en lugar de depender de un único árbol, que podría producir overfitting, el modelo final se beneficia de la diversidad entre los árboles, lo que mejora su capacidad de generalización. (\cite{ibm_random_forest})
+
+Una de las principales ventajas del Random Forest es su capacidad para modelar relaciones complejas y no lineales entre las variables de entrada y las clases objetivo. 
+Esta característica resulta especialmente interesante en el análisis de señales ECG, donde las relaciones entre las características temporales, morfológicas y frecuenciales y la presencia de una determinada patología suelen ser altamente complejas y difíciles de describir mediante modelos lineales. (\cite{zou2022heartbeat_rf})
+
+A diferencia de la regresión logística, que requiere una adaptación explícita para manejar problemas multietiqueta, Random Forest admite directamente mútiples variables objetivo.
+El modelo recibe directamente la matriz de etiquetas de entrenamiento, donde cada columna corresponde a una superclase diferente.
+De esta forma, el clasificador aprende simultáneamente a predecir la presencia o ausencia de cada una de ellas, permitiendo que un mismo paciente pueda presentar varias patologías de forma simultánea.
+
+Se implementa un bosque de 300 árboles, lo que proporciona un buen equilibrio entre capacidad de modelado y eficiencia computacional. 
+Inicialmente, se realizaron pruebas con un número menor de árboles, pero se observó que el rendimiento del modelo mejoraba significativamente al aumentar la cantidad de árboles, hasta alcanzar un punto de saturación a partir de aproximadamente 300 árboles, donde las mejoras adicionales eran marginales.
+
+También se limitó la profundidad máxima de cada árbol a 10 niveles, con el objetivo de evitar el sobreajuste.
+Esta restricción impide que los árboles memorizen los patrones del conjunto de entrenamiento, lo que podría comprometer su capacidad de generalización a nuevos datos.
+
+Se aumentó el número mínimo de muestras por hoja hasta 10.
+Este parámetro impide que los árboles generen ramas muy específicas para casos individuales, lo que reduce la influencia de ruido y mejora el comportamiento sobre el conjunto de prueba.
+
+También se utilizó la configuración \textit{max\_features="sqrt"}, que limita el número de características consideradas en cada división a la raíz cuadrada del total de características disponibles.
+Esta estrategia introduce una mayor aleatoriedad en la construcción de los árboles, lo que contribuye a mejorar la diversidad del conjunto y, por tanto, su capacidad de generalización.
+
+Por otro lado, se incorporó el parámetro \textit{class\_weight="balanced"} para compensar el desbalance entre clases, de forma similar al planteamiento de la regresión logística.
+Si todas las muestras recibieran el mismo peso durante el entrenamiento, el modelo tendería a favorecer las clases mayoritarias, obteniendo aparentemente buenos resultados globales pero un rendimiento deficiente en patologías menos frecuentes. 
+La opción \textit{balanced} ajusta automáticamente el peso de cada clase de forma inversamente proporcional a su frecuencia, penalizando más los errores cometidos sobre las clases minoritarias y favoreciendo un aprendizaje más equilibrado.
+
+Una característica especialmente relevante de Random Forest es su capacidad para proporcionar probabilidades de pertenencia a cada clase. 
+En lugar de generar únicamente una decisión binaria, cada árbol emite una predicción y el conjunto del bosque permite estimar la probabilidad de que una muestra pertenezca a una determinada categoría.
+
+En conjunto, Random Forest constituye un modelo especialmente adecuado para este trabajo debido a su capacidad para capturar relaciones no lineales, su robustez frente al ruido, su tolerancia a datos heterogéneos y su facilidad para generar estimaciones probabilísticas que posteriormente pueden ajustarse mediante estrategias de decisión específicas para cada patología. 
+Estas características lo convierten en una alternativa muy competitiva para el análisis automático de señales electrocardiográficas y la detección de patologías cardíacas.
+
+\subsubsection*{Red Neuronal Multicapa}
+
+Las redes neuronales artificiales son modelos de aprendizaje supervisado inspirados en la estructura y funcionamiento del cerebro humano.
+Constituyen una de las técnicas más utilizadas para modelar relaciones complejas entre variables de entrada y clases objetivo, especialmente en problemas con alta dimensionalidad y no linealidad, como es el caso del análisis de señales ECG. (\cite{ibm_neural_networks})
+
+En el ámbito de señales electrocardiográficas, esta capacidad es especialmente relevante debido a la complejidad de las relaciones entre las características extraídas y la presencia de diferentes patologías, que a menudo no pueden ser capturadas adecuadamente mediante modelos lineales o basados en reglas.
+
+En este trabajo se ha implementado una red neuronal multicapa (MLP) completamente conectada, diseñada para abordar el problema multietiqueta.
+A diferencia de los modelos anteriores, donde cada etiqueta se predice de forma relativamente independiente, la red neuronal aprende una representación conjunta de los datos que posteriormente se utiliza para estimar la probabilidad de pertenencia a cada superclase de forma simultánea, lo que permite capturar interacciones entre las diferentes patologías presentes en un mismo paciente.
+
+La arquitectura de la red está compuesta por tres capas ocultas de tamaño decreciente (256, 128 y 64 neuronas respectivamente) seguida de una capa de salida con 5 neuronas, cada una correspondiente a una superclase diferente.
+Esta estructura permite reducir de forma progresiva la dimensionalidad de la información, extrayendo características cada vez más abstractas y relevantes para la tarea de clasificación.
+
+Esta arquitectura decreciente se ha seleccionado para evitar modelos excesivamente complejos que podrían sobreajustar el conjunto de entrenamiento.
+Durante las primeras fases del desarrollo se evaluaron configuraciones con capas de mayor tamaño, observándose una mayor tendencia al sobreajuste. 
+Por este motivo se optó por una arquitectura más compacta, capaz de mantener una buena capacidad de representación sin comprometer la generalización.
+
+La función de activación utilizada en las capas ocultas es ReLU (\textit{Rectified Linear Unit}),una de las más utilizadas en redes neuronales modernas debido a su simplicidad computacional y a su capacidad para mitigar problemas asociados al desvanecimiento del gradiente durante el entrenamiento. 
+Gracias a esta función, la red puede modelar relaciones no lineales complejas entre las características de entrada y las patologías objetivo. (\cite{codificandobits_activacion})
+
+Para el entrenamiento del modelo se utiliza la función de pérdida BCEWithLogitsLoss, especialmente adecuada en problemas de clasificación multietiqueta, ya que combina en una única operación la función sigmoide y la entropía cruzada binaria. 
+Esta formulación permite una mayor estabilidad numérica durante el entrenamiento en comparación con la aplicación separada de ambas funciones. (\cite{pytorch_bcewithlogitsloss})
+
+Al igual que en los modelos anteriores, se incorpora el ajuste de pesos para compensar el desbalance entre clases. 
+En este caso, se utiliza el parámetro \textit{pos\_weight}, que asigna un peso específico a las clases positivas en función de su frecuencia relativa en el conjunto de entrenamiento.
+Este peso se calcula a partir de la proporción entre muestras positivas y negativas en el conjunto de entrenamiento, de forma que las clases menos frecuentes tengan una mayor penalización cuando son clasificadas incorrectamente. 
+Este ajuste resulta especialmente relevante en este problema, ya que sin él el modelo tendería a favorecer las clases mayoritarias, degradando el rendimiento en patologías minoritarias. (\cite{pytorch_bcewithlogitsloss})
+
+Para controlar el sobreajuste durante el entrenamiento, se reserva un 20 \% del conjunto de entrenamiento como validación independiente, utilizada únicamente para monitorizar el rendimiento del modelo. 
+A partir de esta partición se aplica early stopping, de forma que el entrenamiento se detiene cuando la pérdida en validación deja de mejorar durante varias épocas consecutivas, recuperándose el estado del modelo con mejor resultado en validación, lo que permite evitar la degradación por sobreajuste y mantener la mejor generalización posible. (\cite{duran2019_regularization_nn})
+
+Una vez entrenado el modelo, la salida de la red consiste en una probabilidad independiente por cada superclase, obtenida mediante la función sigmoide aplicada a la capa de salida. 
+Estas probabilidades no se transforman directamente en decisiones mediante un umbral fijo estándar, sino que se utiliza un conjunto de umbrales específicos por clase.
+
+Este diseño permite ajustar de forma independiente la sensibilidad de cada patología, lo cual resulta especialmente relevante en aplicaciones médicas donde el coste de un falso negativo es significativamente mayor que el de un falso positivo. 
+De este modo, el sistema prioriza la detección de patologías incluso a costa de incrementar ligeramente la tasa de falsas alarmas.
+
+\subsection{Estrategias de decisión y ajuste de umbrales}
+
+Los modelos desarrollados en este trabajo no generan directamente una predicción binaria, sino una probabilidad asociada a cada una de las superclases consideradas. 
+Estas probabilidades deben transformarse en decisiones finales de presencia o ausencia de cada patología mediante un proceso de binarización.
+
+Este proceso se realiza mediante la aplicación de un umbral de decisión, que determina a partir de qué valor de probabilidad se considera que una clase está presente (valor 1) o ausente (valor 0). 
+De forma general, este umbral se aplica sobre cada una de las salidas del modelo tras la función sigmoide (en el caso de la red neuronal) o sobre las probabilidades estimadas por los distintos clasificadores.
+
+Inicialmente, se utilizó el valor estándar de 0.5 como umbral de referencia, que es el criterio habitual en problemas de clasificación binaria. 
+Sin embargo, este enfoque mostró limitaciones en el contexto del problema abordado, especialmente debido al desbalance entre clases y a la importancia clínica de reducir los falsos negativos.
+
+Posteriormente, se probó una estrategia más sensible consistente en reducir de forma uniforme el umbral a 0.3 para todas las clases. 
+Esta modificación incrementó la sensibilidad del sistema, favoreciendo la detección de patologías, aunque también introdujo un aumento de falsos positivos.
+
+Finalmente, se optó por una estrategia más ajustada basada en umbrales específicos por superclase, definidos manualmente en función de la relevancia clínica de cada patología y del impacto relativo de los falsos negativos y falsos positivos. 
+Este enfoque permite adaptar el comportamiento del modelo a la criticidad de cada enfermedad, incorporando conocimiento del dominio en la fase de decisión.
+
+Los umbrales definidos son los siguientes:
+
+\begin{itemize}
+	\item \textbf{NORM (0.55):} se emplea un umbral más alto con el objetivo de reducir falsos positivos en la clase de normalidad, evitando clasificar pacientes enfermos como sanos.
+	\item \textbf{STTC (0.4):} asociado a alteraciones del segmento ST/T, relacionadas con isquemia o infarto. Se utiliza un valor intermedio que equilibra sensibilidad y precisión.
+	\item \textbf{CD (0.3):} alteraciones de conducción, con un umbral equilibrado debido a su detectabilidad relativamente estable.
+	\item \textbf{MI (0.25):} infarto de miocardio, considerado la patología más crítica del sistema, por lo que se prioriza la sensibilidad reduciendo el umbral para minimizar falsos negativos.
+	\item \textbf{HYP (0.35):} hipertrofia, con relevancia clínica intermedia, manteniendo un compromiso entre precisión y recall.
+\end{itemize}
+
+La aplicación de estos umbrales se realiza de forma homogénea en todos los modelos del sistema, garantizando un criterio de decisión consistente entre los distintos enfoques evaluados. 
+De este modo, las diferencias de rendimiento entre modelos no dependen del proceso de binarización, sino de su capacidad de aprendizaje.
+
+Desde un punto de vista clínico, esta estrategia permite controlar explícitamente el equilibrio entre sensibilidad y especificidad, priorizando la detección de patologías relevantes incluso a costa de incrementar ligeramente los falsos positivos, lo cual es aceptable en este tipo de sistemas de apoyo al diagnóstico.
+
+\subsection{Modelos de regresión probabilística}
+
+En este tercer escenario experimental se aborda el problema desde una perspectiva de regresión multisalida, en la que el objetivo no es realizar una decisión binaria sobre la presencia o ausencia de una patología, sino estimar un valor continuo entre 0 y 1 para cada una de las 71 enfermedades consideradas. 
+Este valor se interpreta como una medida de probabilidad o grado de asociación entre el registro ECG del paciente y cada patología.
+
+Este enfoque resulta especialmente adecuado en problemas médicos multietiqueta, ya que en la práctica clínica un paciente puede presentar simultáneamente varias patologías con distinto grado de severidad, lo que convierte el problema en una tarea de estimación continua más que de clasificación estricta.
+
+La estructura de los modelos implementados es la misma: son modelos de regresión multisalida que aprenden simultáneamente a predecir un vector de 71 dimensiones, donde cada componente representa una patología.
+
+Dado que cada patología tiene una distribución y dificultad de detección distinta, las salidas del modelo se recortan al rango [0, 1] mediante una operación de clipping, asegurando así una interpretación coherente como probabilidad.
+
+Posteriormente, el rendimiento se evalúa mediante métricas de regresión y análisis específicos diseñados para variables desbalanceadas, como el error medio absoluto (MAE), el sesgo de predicción o la distribución de errores por clase.
+
+\subsubsection*{Ridge Regression}
+
+La regresión Ridge es una extensión de la regresión lineal clásica que incorpora un término de regularización L2 con el objetivo de reducir el sobreajuste y mejorar la capacidad de generalización del modelo.
+Esta regularización penaliza la magnitud de los coeficientes aprendidos durante el entrenamiento, evitando que el modelo dependa en exceso de variables concretas o de posibles correlaciones entre características. De este modo, se obtiene un modelo más estable y robusto frente al ruido presente en los datos. (\cite{ibm_ridge_regression})
+
+Este tipo de modelo es especialmente relevante debido al gran número de variables que tiene cada paciente.
+Por este motivo, la regularización es importante, ya que ayuda a que el modelo generalice mejor y no se ajuste en exceso a los datos de entrenamiento. 
+En este caso, en lugar de realizar una clasificación directa, el modelo estima para cada paciente un vector de 71 valores entre 0 y 1, donde cada uno representa la probabilidad de que ese paciente tenga una determinada enfermedad, interpretando la salida como una estimación de riesgo en lugar de una decisión fija.
+
+Dado que Ridge está pensado para problemas con una sola salida, se ha utilizado MultiOutputRegressor, que permite entrenar un modelo independiente por cada una de las 71 enfermedades. De esta forma, el sistema final está formado por 71 modelos Ridge en paralelo, cada uno especializado en una patología.
+
+En la implementación realizada se ha utilizado un valor de regularización $\alpha = 10$. 
+Este valor determina cuánto se penalizan los coeficientes del modelo: valores bajos permiten mayor flexibilidad pero aumentan el riesgo de sobreajuste, mientras que valores altos hacen el modelo más simple y estable, aunque con menor capacidad de ajuste. (\cite{sklearn_ridge})
+En pruebas iniciales se probaron valores más bajos, pero estos provocaban cierto sobreajuste, por lo que se decidió aumentar el valor. 
+Este ajuste mejora la estabilidad del modelo y su comportamiento en datos no vistos.
+
+Finalmente, las predicciones se recortan al rango [0, 1], ya que la regresión lineal puede generar valores fuera de ese intervalo. 
+Este paso permite mantener una interpretación coherente como probabilidades.
+
+En conjunto, Ridge se utiliza como un modelo base sencillo e interpretable dentro del enfoque de regresión probabilística, aunque su capacidad para capturar relaciones complejas es limitada.
+
+\subsubsection*{ElasticNet}
+
+Elastic Net es una extensión de la regresión lineal que combina dos tipos de regularización: L1 (Lasso) y L2 (Ridge). 
+Esto significa que, además de reducir el tamaño de los coeficientes para evitar el sobreajuste, también puede llegar a eliminar algunos de ellos, lo que ayuda a seleccionar automáticamente las variables más relevantes. 
+Por este motivo, es un modelo especialmente útil cuando existen muchas características correlacionadas o poco informativas, como ocurre en este problema. (\cite{interactivechaos_elasticnet})
+
+En este trabajo, este modelo se aplica al mismo escenario de regresión probabilística que Ridge, donde el objetivo es estimar para cada paciente un vector de 71 valores entre 0 y 1, interpretados como la probabilidad de presencia de cada patología. 
+De esta forma, el modelo no realiza una clasificación directa, sino una estimación continua del riesgo asociado a cada enfermedad.
+
+Al igual que en Ridge, se utiliza MultiOutputRegressor, ya que Elastic Net solo permite predecir una variable objetivo a la vez. 
+Esto implica que se entrenan 71 modelos independientes en paralelo, uno por cada patología.
+
+En la implementación se han utilizado los parámetros $\alpha = 0.001$ y l1\_ratio = 0.5. El parámetro $\alpha$ controla la intensidad de la regularización, mientras que l1\_ratio determina el equilibrio entre L1 y L2: valores cercanos a 0 se comportan como Ridge, y valores cercanos a 1 como Lasso. (\cite{sklearn_elasticnet})
+En este caso se ha elegido un valor intermedio para combinar estabilidad y capacidad de selección de variables, manteniendo un equilibrio entre simplicidad y ajuste del modelo.
+
+Finalmente, al igual que en el resto de modelos de regresión, las predicciones se limitan al intervalo [0, 1] para mantener su interpretación como probabilidades.
+
+En conjunto, Elastic Net se utiliza como una alternativa más flexible a Ridge, ya que permite no solo regularizar el modelo, sino también reducir la influencia de variables menos relevantes, lo que puede mejorar el rendimiento en datos de alta dimensionalidad.
+
+\subsubsection*{Random Forest Regressor}
+
+\subsubsection*{HistGradientBoosting Regressor}
+
+\subsubsection*{Red Neuronal}
+
+\subsection{Configuración 1}
+
+\subsection{Configuración 2}
+
+\subsection{Configuración 3}
 
 Hablar aqui de todo: los modelos que he usado, los tres enfoques distintos 
 
