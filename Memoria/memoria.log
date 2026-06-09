@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  4 JUN 2026 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  9 JUN 2026 20:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1180,48 +1180,68 @@ Overfull \hbox (2.97147pt too wide) in paragraph at lines 1334--1334
  []
 
 [63] [64] [65] [66] [67] [68] [69] [70] [71] [72]
-Cap\'{\i }tulo 6.
-[73
+Overfull \hbox (1.09805pt too wide) in paragraph at lines 1553--1556
+[]\T1/cmr/m/n/12 Para la im-ple-men-ta-ción se ha uti-li-za-do un bos-que de 300 ár-bo-les (\T1/cmtt/m/n/12 n_estimators
+ []
 
-] [74
+
+Overfull \hbox (22.96631pt too wide) in paragraph at lines 1561--1563
+[]\T1/cmr/m/n/12 Además, en la fa-se de di-se-ño se plan-teó el uso del cri-te-rio de di-vi-sión \T1/cmtt/m/n/12 squared_error\T1/cmr/m/n/12 ,
+ []
+
+[73]
+Overfull \hbox (21.66936pt too wide) in paragraph at lines 1580--1583
+[]\T1/cmr/m/n/12 Para su im-ple-men-ta-ción se ha uti-li-za-do una con-fi-gu-ra-ción con-tro-la-da con \T1/cmtt/m/n/12 max_depth
+ []
+
+
+Overfull \hbox (62.01366pt too wide) in paragraph at lines 1584--1588
+[]\T1/cmr/m/n/12 Dado el des-ba-lan-ce pre-sen-te en las dis-tin-tas pa-to-lo-gías, se ha es-ta-ble-ci-do \T1/cmtt/m/n/12 min_samples_leaf
+ []
+
+[74] [75] [76]
+Cap\'{\i }tulo 6.
+[77
+
+] [78
 
 ]
 Cap\'{\i }tulo 7.
-[75] [76
+[79] [80
 
 ]
-Overfull \hbox (4.8651pt too wide) in paragraph at lines 1583--1583
+Overfull \hbox (4.8651pt too wide) in paragraph at lines 1675--1675
 \T1/cmr/m/n/12 regularizaci % C3 % B3n -[] b % C3 % A1sicas -[] para -[] redes -[] neuronales -[] b48f396924d4$[] 
  []
 
-[77
+[81
 
 ]
-Overfull \hbox (10.69482pt too wide) in paragraph at lines 1583--1583
-[][]\T1/cmr/m/n/12 Interactive Chaos. (s.f.). Elas-tic Net [Ac-ce-di-do: 2026-05-24]. []$https : / / interactivechaos .
+Overfull \hbox (10.69482pt too wide) in paragraph at lines 1675--1675
+[][]\T1/cmr/m/n/12 Interactive Chaos. (s.f.). Elas-tic Net [Ac-ce-di-do: 2026-05-16]. []$https : / / interactivechaos .
  []
 
 
-Overfull \hbox (8.51064pt too wide) in paragraph at lines 1583--1583
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 1675--1675
 [][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
-[78]
-Overfull \hbox (14.72577pt too wide) in paragraph at lines 1583--1583
+[82]
+Overfull \hbox (14.72577pt too wide) in paragraph at lines 1675--1675
 []$\T1/cmr/m/n/12 https : / / docs . pytorch . org / docs / 2 . 12 / generated / torch . nn . BCEWithLogitsLoss .
  []
 
-
-Overfull \hbox (50.24496pt too wide) in paragraph at lines 1583--1583
+[83]
+Overfull \hbox (50.24496pt too wide) in paragraph at lines 1675--1675
 \T1/cmr/m/n/12 / / scikit -[] learn . org / stable / modules / generated / sklearn . multiclass . OneVsRestClassi^^\er .
  []
 
 
-Overfull \hbox (9.72339pt too wide) in paragraph at lines 1583--1583
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 1675--1675
 \T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
  []
 
-[79] [80] (memoria.aux
+[84] [85] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1237,17 +1257,17 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35346 strings out of 467871
- 677477 string characters out of 5419344
- 1574132 words of memory out of 5000000
- 63494 multiletter control sequences out of 15000+600000
- 644321 words of font info for 80 fonts, out of 8000000 for 9000
+ 35396 strings out of 467871
+ 679309 string characters out of 5419344
+ 1577694 words of memory out of 5000000
+ 63532 multiletter control sequences out of 15000+600000
+ 644634 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,94p,761b,3155s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on memoria.pdf (80 pages, 1823532 bytes).
+ <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on memoria.pdf (85 pages, 1853538 bytes).
 PDF statistics:
- 1537 PDF objects out of 1728 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
+ 1620 PDF objects out of 1728 (max. 8388607)
+ 253 named destinations out of 1000 (max. 500000)
  590 words of extra memory for PDF output out of 10000 (max. 10000000)
 

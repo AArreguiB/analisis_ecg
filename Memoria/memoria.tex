@@ -1373,7 +1373,7 @@ En este problema, la regresión logística se adapta a un escenario multietiquet
 Consiste en descomponer el problema original, que involucra múltiples clases, en varios problemas de clasificación binaria independientes, uno por cada superclase.
 Cada modelo aprende modelos específicos asociados a una condición concreta sin verse condicionado por la presencia de otras patologías, lo que permite una mayor flexibilidad en la interpretación de los resultados. (\cite{sklearn_ovr_classifier})
 
-Por otro lado, se ha incorporado el parámetro \textit{class\_weight="balanced"}, que ajusta automáticamente el peso de cada clase de acuerdo con su frecuencia en el conjunto de entrenamiento. 
+Por otro lado, se ha incorporado el parámetro \texttt{class\_weight="balanced"}, que ajusta automáticamente el peso de cada clase de acuerdo con su frecuencia en el conjunto de entrenamiento. 
 Este mecanismo es especialmente relevante en el contexto de datos clínicos, donde existe un fuerte desbalance entre clases, como se ve en la Figura \ref{fig:distribucion-superclases}, ya que permite mejorar la capacidad del modelo para detectar clases minoritarias sin sacrificar excesivamente la precisión en las clases mayoritarias.
 
 Sin este ajuste, los modelos tenderían a favorecer las clases mayoritarias, obteniendo buenos resultados globales pero con un rendimiento pobre en las patologías minoritarias, que son precisamente las de mayor interés clínico. 
@@ -1401,12 +1401,12 @@ Esta restricción impide que los árboles memorizen los patrones del conjunto de
 Se aumentó el número mínimo de muestras por hoja hasta 10.
 Este parámetro impide que los árboles generen ramas muy específicas para casos individuales, lo que reduce la influencia de ruido y mejora el comportamiento sobre el conjunto de prueba.
 
-También se utilizó la configuración \textit{max\_features="sqrt"}, que limita el número de características consideradas en cada división a la raíz cuadrada del total de características disponibles.
+También se utilizó la configuración \texttt{max\_features="sqrt"}, que limita el número de características consideradas en cada división a la raíz cuadrada del total de características disponibles.
 Esta estrategia introduce una mayor aleatoriedad en la construcción de los árboles, lo que contribuye a mejorar la diversidad del conjunto y, por tanto, su capacidad de generalización.
 
-Por otro lado, se incorporó el parámetro \textit{class\_weight="balanced"} para compensar el desbalance entre clases, de forma similar al planteamiento de la regresión logística.
+Por otro lado, se incorporó el parámetro \texttt{class\_weight="balanced"} para compensar el desbalance entre clases, de forma similar al planteamiento de la regresión logística.
 Si todas las muestras recibieran el mismo peso durante el entrenamiento, el modelo tendería a favorecer las clases mayoritarias, obteniendo aparentemente buenos resultados globales pero un rendimiento deficiente en patologías menos frecuentes. 
-La opción \textit{balanced} ajusta automáticamente el peso de cada clase de forma inversamente proporcional a su frecuencia, penalizando más los errores cometidos sobre las clases minoritarias y favoreciendo un aprendizaje más equilibrado.
+La opción \texttt{balanced} ajusta automáticamente el peso de cada clase de forma inversamente proporcional a su frecuencia, penalizando más los errores cometidos sobre las clases minoritarias y favoreciendo un aprendizaje más equilibrado.
 
 Una característica especialmente relevante de Random Forest es su capacidad para proporcionar probabilidades de pertenencia a cada clase. 
 En lugar de generar únicamente una decisión binaria, cada árbol emite una predicción y el conjunto del bosque permite estimar la probabilidad de que una muestra pertenezca a una determinada categoría.
@@ -1438,7 +1438,7 @@ Para el entrenamiento del modelo se utiliza la función de pérdida BCEWithLogit
 Esta formulación permite una mayor estabilidad numérica durante el entrenamiento en comparación con la aplicación separada de ambas funciones. (\cite{pytorch_bcewithlogitsloss})
 
 Al igual que en los modelos anteriores, se incorpora el ajuste de pesos para compensar el desbalance entre clases. 
-En este caso, se utiliza el parámetro \textit{pos\_weight}, que asigna un peso específico a las clases positivas en función de su frecuencia relativa en el conjunto de entrenamiento.
+En este caso, se utiliza el parámetro \texttt{pos\_weight}, que asigna un peso específico a las clases positivas en función de su frecuencia relativa en el conjunto de entrenamiento.
 Este peso se calcula a partir de la proporción entre muestras positivas y negativas en el conjunto de entrenamiento, de forma que las clases menos frecuentes tengan una mayor penalización cuando son clasificadas incorrectamente. 
 Este ajuste resulta especialmente relevante en este problema, ya que sin él el modelo tendería a favorecer las clases mayoritarias, degradando el rendimiento en patologías minoritarias. (\cite{pytorch_bcewithlogitsloss})
 
@@ -1452,6 +1452,7 @@ Este diseño permite ajustar de forma independiente la sensibilidad de cada pato
 De este modo, el sistema prioriza la detección de patologías incluso a costa de incrementar ligeramente la tasa de falsas alarmas.
 
 \subsection{Estrategias de decisión y ajuste de umbrales}
+\label{apartado_umbral}
 
 Los modelos desarrollados en este trabajo no generan directamente una predicción binaria, sino una probabilidad asociada a cada una de las superclases consideradas. 
 Estas probabilidades deben transformarse en decisiones finales de presencia o ausencia de cada patología mediante un proceso de binarización.
@@ -1538,17 +1539,108 @@ En conjunto, Elastic Net se utiliza como una alternativa más flexible a Ridge, 
 
 \subsubsection*{Random Forest Regressor}
 
+Este modelo es una adaptación de los bosques aleatorios al ámbito de regresión.
+Al igual que en el caso de clasificación, se basa en la combinación de múltiples árboles de decisión entrenados sobre subconjuntos aleatorios de datos y de las variables de entrada. 
+La predicción final se obtiene promediando las predicciones generadas por todos los árboles del bosque, lo que permite reducir la varianza del modelo y obtener resultados más estables y robustos. (\cite{geeksforgeeks_rf_regression_ml})
+
+A diferencia de los modelos lineales anteriores, Random Forest es capaz de capturar relaciones no lineales y patrones complejos entre las características extraídas del ECG y las patologías asociadas. 
+Esta capacidad es reseñable en un problema como este, donde la relación entre las características fisiológicas y las enfermedades cardíacas no siempre sigue un comportamiento lineal. (\cite{prathik2025_rf_regressor})
+
+En este escenario de regresión probabilística, el modelo estima para cada paciente un vector de 71 valores continuos entre 0 y 1, uno por cada patología. 
+Estas salidas no deben interpretarse como probabilidades clínicas directas, sino como una medida de similitud o grado de asociación entre el perfil del paciente y los patrones observados en el conjunto de entrenamiento. 
+En otras palabras, el modelo estima qué tan frecuente es cada patología en pacientes con características similares.
+
+Para la implementación se ha utilizado un bosque de 300 árboles (\texttt{n\_estimators = 300}), buscando un equilibrio entre rendimiento y coste computacional. 
+Inicialmente se probó una configuración con un número mayor de árboles, llegando hasta 800, con el objetivo de mejorar la estabilidad del modelo. 
+Sin embargo, esta configuración no pudo evaluarse de forma completa en todos los experimentos, por lo que finalmente se optó por un número intermedio de árboles que permitiera mantener la coherencia del análisis y la viabilidad del entrenamiento.
+
+Además, se ha limitado la profundidad máxima de los árboles a 10 niveles (\texttt{max\_depth = 10}) para evitar sobreajuste y controlar la complejidad del modelo. 
+También se ha fijado un mínimo de 10 muestras por hoja (\texttt{min\_samples\_leaf = 10}), lo que ayuda a suavizar las predicciones y reducir la sensibilidad al ruido presente en los datos. 
+Por otro lado, se utiliza \texttt{max\_features = 'sqrt'}, lo que implica que cada árbol considera únicamente una selección aleatoria de variables en cada división, reduciendo la correlación entre árboles y mejorando la capacidad de generalización del modelo.
+
+Además, en la fase de diseño se planteó el uso del criterio de división \texttt{squared\_error}, con la intención de mejorar la precisión en la reducción del error cuadrático. 
+Sin embargo, esta configuración incrementaba de forma notable el tiempo de ejecución, por lo que se descartó en favor de la configuración por defecto, que ofrecía un compromiso más adecuado entre rendimiento y coste computacional.
+
+Finalmente, las predicciones se recortan al intervalo [0, 1] para mantener una interpretación coherente como medida de asociación o probabilidad relativa de cada patología.
+
+En conjunto, este modelo se utiliza como referencia dentro de los enfoques no lineales en el escenario de regresión probabilística, permitiendo evaluar el comportamiento del sistema frente a modelos más simples.
+
 \subsubsection*{HistGradientBoosting Regressor}
 
+El HistGradientBoosting Regressor es una versión actualizada y optimizada del algoritmo de \textit{Gradient Boosting}, que construye el modelo mediante una combinación de múltiples árboles débiles.
+En cada iteración, el modelo intenta corregir los errores cometidos por el conjunto de árboles anteriores, lo que permite mejorar progresivamente la precisión de las predicciones.
+A diferencia del Random Forest, donde los árboles se entrenan de forma independiente, en este modelo existe una dependencia secuencial entre ellos. (\cite{picard2024_hist_gbr})
+
+Este enfoque es especialmente potente en problemas con relaciones no lineales y estructuras complejas en los datos, como ocurre en el análisis de señales ECG. 
+Además, la versión basada en histogramas implementa optimizaciones que reducen el coste computacional al agrupar los valores continuos en bins, lo que acelera el entrenamiento sin una pérdida significativa de rendimiento. (\cite{riaux2024_histgbm})
+
+En este trabajo, el modelo se aplica al escenario de regresión probabilística, donde se predice un vector de 71 valores entre 0 y 1, uno por cada patología. 
+Estas salidas representan el grado de asociación entre las características del paciente y la presencia de cada enfermedad, más que una probabilidad clínica estricta.
+
+Para su implementación se ha utilizado una configuración controlada con \texttt{max\_depth = 6}, con el objetivo de limitar la complejidad de los árboles base y reducir el riesgo de sobreajuste. 
+El parámetro \texttt{learning\_rate = 0.05} regula la contribución de cada árbol al modelo final, permitiendo un aprendizaje más estable y progresivo. 
+Asimismo, se ha fijado \texttt{max\_iter = 300}, que determina el número de iteraciones del proceso de boosting. (\cite{sklearn_histgbr})
+
+Dado el desbalance presente en las distintas patologías, se ha establecido \texttt{min\_samples\_leaf = 20}, lo que ayuda a evitar divisiones demasiado específicas en clases poco representadas. 
+Además, se ha incluido una regularización L2 con \texttt{l2\_regularization = 0.1}, con el objetivo de mejorar la estabilidad del modelo y reducir el sobreajuste.
+Al igual que en los modelos anteriores, se utiliza MultiOutputRegressor para poder entrenar de forma independiente un modelo por cada una de las 71 patologías.
+\todo{arreglar desbordamiento de linea}
+
+Finalmente, las predicciones se recortan al intervalo [0, 1] para mantener una interpretación coherente como medida de asociación entre el paciente y cada patología.
+
+En conjunto, este modelo representa una alternativa más avanzada dentro de los enfoques de regresión no lineal, permitiendo comparar el rendimiento del boosting frente a métodos como Random Forest o regresión lineal regularizada.
 \subsubsection*{Red Neuronal}
+
+En este caso se emplea una red neuronal multicapa con el objetivo de obtener una salida continua por cada una de las 71 patologías, interpretada como un valor de asociación entre el paciente y cada enfermedad. 
+A diferencia del enfoque de clasificación, no se aplica posteriormente un umbral fijo para la toma de decisiones, sino que se trabajan directamente las salidas continuas del modelo.
+
+La arquitectura utilizada es equivalente a la empleada en el modelo de clasificación, con tres capas totalmente conectadas de tamaño decreciente (256, 128 y 64 neuronas), junto con ReLU en las capas intermedias y técnicas de Batch Normalization y Dropout para estabilizar el entrenamiento y reducir el sobreajuste.
+
+El entrenamiento se realiza mediante BCEWithLogitsLoss, trabajando directamente con los logits generados por la red, lo que permite una formulación numéricamente estable para problemas multisalida. 
+El optimizador utilizado es Adam, complementado con un esquema de reducción adaptativa del learning rate mediante ReduceLROnPlateau.
+
+Para mejorar la estabilidad del entrenamiento, se calcula una ponderación basada en el desbalance entre clases a partir de la proporción de ejemplos positivos y negativos por etiqueta. 
+Sin embargo, este peso no se aplica directamente en la función de pérdida.
+
+El control del sobreajuste se realiza mediante early stopping, conservando el modelo con menor pérdida observada durante el entrenamiento.
+
+Finalmente, las salidas del modelo se obtienen aplicando la función sigmoide sobre los logits, obteniéndose valores en el rango [0,1] que se interpretan como una medida continua de probabilidad o asociación.
 
 \subsection{Configuración 1}
 
+En este escenario se trabajó con el escenario más sencillo, utilizando la señal en formato reducido con una única derivación y un enfoque de clasificación binaria por superclases.
+A nivel de implementación, esta configuración se utilizó principalmente como punto de partida para validar el correcto funcionamiento de los modelos antes de abordar el problema más complejo.
+
+Como entradas del sistema se utilizaron tanto el megavector de la señal en bruto como las caracteristicas extraídas a partir del mismo.
+Esto permitió comparar el comportamiento de los modelos con diferentes representaciones de los datos.
+
+Durante el desarrollo experimental los modelos utilizados fueron Regresión Logística, Random Forest y una Red Neuronal Multicapa.
+Esto permitió establecer una primera referencia de rendimiento y detectar limitaciones asociadas a la simplicidad del espacio de características.
+
+En cuanto a la decisión final de clasificación, se utilizaron las tres opciones de umbralización explicadas en \ref{apartado_umbral}, con el objetivo de analizar su impacto en el equilibrio entre sensibilidad y precisión.
 \subsection{Configuración 2}
+Esta segunda opción introduce un incremento en la complejidad del problema mediante el uso de las 12 derivaciones completas del ECG, pero manteniendo el enfoque de clasificación por superclases.
+
+Desde el punto de vista de la implementación, el principal cambio respecto a la Configuración 1 fue el aumento masivo del volumen de información disponible. El uso de las señales completas de las 12 derivaciones multiplicó considerablemente el tamaño de los datos de entrada \todo{explicar los números}, haciendo inviable el entrenamiento de los modelos utilizando directamente la señal bruta debido al elevado coste computacional asociado. 
+Por este motivo, se optó por trabajar exclusivamente con las características extraídas de cada latido, reduciendo drásticamente la dimensionalidad del problema sin perder la información más relevante desde el punto de vista clínico.
+
+Esta configuración permitió evaluar el impacto que tiene la incorporación de información procedente de todas las derivaciones del ECG sobre la capacidad predictiva de los modelos, manteniendo constante la estructura del problema de clasificación. 
+Para ello se emplearon los mismos algoritmos utilizados en la configuración anterior así como la misma estrategia de ajuste de umbrales.
 
 \subsection{Configuración 3}
 
-Hablar aqui de todo: los modelos que he usado, los tres enfoques distintos 
+La tercera configuración representa el escenario más exigente de todo el trabajo. En este caso se trabaja directamente con las 71 patologías originales, manteniendo además la naturaleza multietiqueta del problema.
+
+Al igual que en la configuración anterior, únicamente se emplean las características extraídas de las 12 derivaciones del ECG, ya que el volumen de información asociado a la señal bruta completa resulta excesivamente elevado para los recursos computacionales disponibles.
+
+La principal diferencia respecto a las configuraciones anteriores está en la salida del sistema. 
+Mientras que en los escenarios de clasificación cada modelo debía determinar la presencia o ausencia de una serie de patologías mediante decisiones binarias, en esta configuración los modelos generan directamente valores continuos comprendidos entre 0 y 1 para cada una de las 71 patologías. 
+Estos valores pueden interpretarse como una medida del grado de asociación entre el paciente analizado y cada una de las patologías consideradas.
+
+Debido a este cambio de enfoque, fue necesario emplear modelos de regresión capaces de generar salidas continuas. 
+Inicialmente se implementaron Ridge Regression, Random Forest Regressor y una Red Neuronal Multicapa, que sirvieron como referencia para evaluar la viabilidad del enfoque probabilístico. 
+Tras analizar sus resultados, se incorporaron Elastic Net e HistGradientBoosting Regressor con el objetivo de explorar técnicas de regularización adicionales y modelos capaces de capturar relaciones no lineales más complejas entre las características extraídas y las patologías. 
+De esta forma, fue posible comparar aproximaciones lineales, basadas en árboles y basadas en redes neuronales dentro de un mismo escenario experimental. 
 
 
 % -------------------------------------------------

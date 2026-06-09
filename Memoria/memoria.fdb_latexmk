@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber memoria"] 1780524147.456 "memoria.bcf" "memoria.bbl" "memoria" 1780524257.46016 0
-  "bibliografia.bib" 1780524079 14565 f4c8a5bbba4644e7213b94a597fcfe98 ""
-  "memoria.bcf" 1780524257 137543 85b38a7ffc7f1a72b8634ea2e3aaa562 "pdflatex"
+["biber memoria"] 1780598052.62178 "memoria.bcf" "memoria.bbl" "memoria" 1781029574.39183 0
+  "bibliografia.bib" 1780595574 16248 da57af6afd319368b2db73f218afb63c ""
+  "memoria.bcf" 1781029574 137928 9136f31152ed7294bf4b3cf6cfc83cca "pdflatex"
   (generated)
   "memoria.bbl"
   "memoria.blg"
   (rewritten before read)
-["pdflatex"] 1780524251.60009 "c:/Users/Ana/Documents/4º GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex" "memoria.pdf" "memoria" 1780524257.46126 0
-  "C:/Users/Ana/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1780511617 81107 70b8516c68c2e617189c5e44bfd16b96 ""
+["pdflatex"] 1781029567.3264 "c:/Users/Ana/Documents/4º GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex" "memoria.pdf" "memoria" 1781029574.39277 0
+  "C:/Users/Ana/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1780594976 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1779214278 31952 e92f47d07afb61c5f54af5a9aeacaa87 ""
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1779214272 40136 6fbb3f38c25a3644534aa0dd765e05a4 ""
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1728.pk" 1779214291 49100 480aa886d6aa9a7d40eb40f0e4690e94 ""
@@ -19,6 +19,7 @@
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1440.pk" 1779215282 34320 6df9857d3ea8fda88dfdfd1170ac6e27 ""
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk" 1779214297 42516 5f27a683e5a6fb04a7a342b701855aed ""
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecti1200.pk" 1779214260 39120 5d3de546e97f45f0e2a87882c3ea87b6 ""
+  "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1200.pk" 1779214266 24152 d19a54fd9178ec803998e11d3e4b7b6d ""
   "C:/Users/Ana/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1774130139 14064 20d02fe233f6ba6d4e54cf0def082903 ""
   "C:/Users/Ana/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1774130127 13332519 0e2157a2fac3fa91632f4c05567f8f0d ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
@@ -34,6 +35,7 @@
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1728.tfm" 993062128 3168 11457c8185ce67fb79662ba8b03d6db1 ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm2488.tfm" 993062132 3184 93c67f4c0884ba9e31b75d469978f63b ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecti1200.tfm" 993062324 2832 28bbd97ca29f46e76c87a158a9915203 ""
+  "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1200.tfm" 993062344 1348 c48a0620e07683860afba1730adf9e53 ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -217,7 +219,7 @@
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Ana/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Ana/Documents/4º GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex" 1780524250 134931 646235c7fbf02dd33f4e7a7c24526dc5 ""
+  "c:/Users/Ana/Documents/4º GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex" 1781029566 147070 1c170e0f1d89a01415cfc218423dd991 ""
   "imagenes/co-ocurrencia_top20.png" 1780078386 54332 1f1170586bd95c8e2edb74b4c7be94ee ""
   "imagenes/confusion_matrix.png" 1779612830 30856 3b645925cd1947dcf8402633131137c7 ""
   "imagenes/distribucion_clases.png" 1780072430 66292 90b114a69062f0ffe4abf351d41f60cc ""
@@ -239,14 +241,14 @@
   "imagenes/sistema-electrico-corazon.png" 1779292743 86119 a7c2de0b3dada086e63090fac4faa8f5 ""
   "imagenes/wavelet-db6.png" 1780264505 29527 cc53c7ee00ed50def6d03b451d85754c ""
   "imagenes/wavelet-recostruida-pac10.png" 1780265489 84406 af8a4fc1ec17744921150cd34b7b1b1d ""
-  "memoria.aux" 1780524257 28426 ec5293f6e405015a11b2e6ffbef15da7 "pdflatex"
-  "memoria.bbl" 1780524150 165065 d5388e2a83868effa17b84968ad3178b "biber memoria"
-  "memoria.lof" 1780524257 3104 2a68c3513097372c8f3691ab461ad28b "pdflatex"
-  "memoria.lot" 1780524257 370 edfd58356ae3a12c7ffdeae620ebb1fe "pdflatex"
-  "memoria.out" 1780524257 11848 19c930d5462dc921f6a5b9c4da3b6bbe "pdflatex"
-  "memoria.run.xml" 1780524257 2382 086973f7cc53ede0c3ed2acc520474fc "pdflatex"
-  "memoria.tex" 1780524250 134931 646235c7fbf02dd33f4e7a7c24526dc5 ""
-  "memoria.toc" 1780524257 5467 14f07111541ce3b99e2fd152cad18992 "pdflatex"
+  "memoria.aux" 1781029573 30017 9d8fc1d96dd1ca535f0eca50af5ae5ee "pdflatex"
+  "memoria.bbl" 1780598057 182885 9e9d278d11e970cf812c80faccc7be48 "biber memoria"
+  "memoria.lof" 1781029574 3104 2a68c3513097372c8f3691ab461ad28b "pdflatex"
+  "memoria.lot" 1781029574 370 edfd58356ae3a12c7ffdeae620ebb1fe "pdflatex"
+  "memoria.out" 1781029574 11848 19c930d5462dc921f6a5b9c4da3b6bbe "pdflatex"
+  "memoria.run.xml" 1781029574 2382 086973f7cc53ede0c3ed2acc520474fc "pdflatex"
+  "memoria.tex" 1781029566 147070 1c170e0f1d89a01415cfc218423dd991 ""
+  "memoria.toc" 1781029574 5467 33a18fc482543f4a9ba1c4205f32f962 "pdflatex"
   (generated)
   "memoria.aux"
   "memoria.bcf"

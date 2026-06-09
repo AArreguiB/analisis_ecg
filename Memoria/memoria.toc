@@ -52,9 +52,9 @@
 \contentsline {subsection}{\numberline {5.5.1}Modelos de clasificación binaria}{64}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}Estrategias de decisión y ajuste de umbrales}{69}{subsection.5.5.2}%
 \contentsline {subsection}{\numberline {5.5.3}Modelos de regresión probabilística}{70}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}Configuración 1}{72}{subsection.5.5.4}%
-\contentsline {subsection}{\numberline {5.5.5}Configuración 2}{72}{subsection.5.5.5}%
-\contentsline {subsection}{\numberline {5.5.6}Configuración 3}{72}{subsection.5.5.6}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{73}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{75}{chapter.7}%
-\contentsline {chapter}{Bibliografía}{77}{chapter.7}%
+\contentsline {subsection}{\numberline {5.5.4}Configuración 1}{75}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}Configuración 2}{75}{subsection.5.5.5}%
+\contentsline {subsection}{\numberline {5.5.6}Configuración 3}{76}{subsection.5.5.6}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{77}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajos Futuros}{79}{chapter.7}%
+\contentsline {chapter}{Bibliografía}{81}{chapter.7}%

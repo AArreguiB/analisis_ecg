@@ -535,11 +535,14 @@ INPUT .\imagenes\latidos_pac10.png
 INPUT .\imagenes\latidos_pac10.png
 INPUT .\imagenes\latidos_pac10.png
 INPUT .\imagenes\latidos_pac10.png
+INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
 INPUT memoria.aux
 INPUT .\memoria.out
 INPUT .\memoria.out
 INPUT memoria.run.xml
 OUTPUT memoria.run.xml
+INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
+INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk

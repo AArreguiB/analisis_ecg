@@ -924,41 +924,6 @@
       \verb http://dx.doi.org/10.4067/s0717-95022025000501545
       \endverb
     \endentry
-    \entry{mccaffrey2023_mlp_regression}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b3c5d4e2d2b2f3fb870328b7a7831b5e}{%
-           family={McCaffrey},
-           familyi={M\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{fullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{fullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{bibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authorbibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authornamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authorfullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authorfullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-16}
-      \field{title}{Regression Using a scikit MLPRegressor Neural Network}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
-      \endverb
-      \verb{url}
-      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
-      \endverb
-    \endentry
     \entry{medlineplus_ecg_es}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
@@ -2989,41 +2954,6 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.4067/s0717-95022025000501545
-      \endverb
-    \endentry
-    \entry{mccaffrey2023_mlp_regression}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b3c5d4e2d2b2f3fb870328b7a7831b5e}{%
-           family={McCaffrey},
-           familyi={M\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{fullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{fullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{bibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authorbibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authornamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authorfullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \strng{authorfullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accedido: 2026-05-16}
-      \field{title}{Regression Using a scikit MLPRegressor Neural Network}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
-      \endverb
-      \verb{url}
-      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
       \endverb
     \endentry
     \entry{medlineplus_ecg_es}{misc}{}{}
