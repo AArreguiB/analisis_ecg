@@ -53,6 +53,40 @@
       \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
       \endverb
     \endentry
+    \entry{attal2026_roc_auc}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ffe1d1e630df67f1decc06711dd95408}{%
+           family={Attal},
+           familyi={A\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{fullhash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{fullhashraw}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{bibnamehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authorbibnamehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authornamehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authorfullhash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authorfullhashraw}{ffe1d1e630df67f1decc06711dd95408}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Entender la curva ROC AUC: métricas esenciales para la evaluación de modelos de Machine Learning}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://liora.io/es/curva-roc-auc-todo-sobre
+      \endverb
+      \verb{url}
+      \verb https://liora.io/es/curva-roc-auc-todo-sobre
+      \endverb
+    \endentry
     \entry{ayano2022ecg_ml_review}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=78f1b14091f192e969a87f4d2f65c78d}{%
@@ -327,6 +361,40 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2107.05469
+      \endverb
+    \endentry
+    \entry{chugh2020_regression_metrics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b61d3a8db4cd073b6a5d20e2b57a6e54}{%
+           family={Chugh},
+           familyi={C\bibinitperiod},
+           given={Akshita},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{fullhash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{fullhashraw}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{bibnamehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authorbibnamehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authornamehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authorfullhash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authorfullhashraw}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e
+      \endverb
+      \verb{url}
+      \verb https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e
       \endverb
     \endentry
     \entry{cigna_corazon_electrico}{misc}{}{}
@@ -803,6 +871,37 @@
       \endverb
       \verb{url}
       \verb https://cvphysiology.com/arrhythmias/a013
+      \endverb
+    \endentry
+    \entry{koshurai2024_log_loss}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eb75090d3df10566453f1994139deb8e}{%
+           family={{KoshurAI}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{fullhash}{eb75090d3df10566453f1994139deb8e}
+      \strng{fullhashraw}{eb75090d3df10566453f1994139deb8e}
+      \strng{bibnamehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authorbibnamehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authornamehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authorfullhash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authorfullhashraw}{eb75090d3df10566453f1994139deb8e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Understanding Log Loss: A Comprehensive Guide with Code Examples}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://koshurai.medium.com/understanding-log-loss-a-comprehensive-guide-with-code-examples-c79cf5411426
+      \endverb
+      \verb{url}
+      \verb https://koshurai.medium.com/understanding-log-loss-a-comprehensive-guide-with-code-examples-c79cf5411426
       \endverb
     \endentry
     \entry{ibm_logistic_regression}{misc}{}{}
@@ -1360,6 +1459,35 @@
       \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
       \endverb
     \endentry
+    \entry{qlik_multiclass_scoring}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7d29c77aefa4247375ba26f439c0652}{%
+           family={{Qlik}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{bibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorbibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authornamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Scoring multiclass classification}
+      \verb{urlraw}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
+      \endverb
+      \verb{url}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
+      \endverb
+    \endentry
     \entry{repsol_machine_learning}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1c4169e68fa93846dda807b46179989e}{%
@@ -1518,7 +1646,7 @@
       \verb https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
       \endverb
     \endentry
-    \entry{sklearn_logistic_regression}{misc}{}{}
+    \entry{sklearn_log_loss}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
            family={{Scikit-learn developers}},
@@ -1536,6 +1664,38 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{log\_loss}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html
+      \endverb
+    \endentry
+    \entry{sklearn_logistic_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{4}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -1564,10 +1724,10 @@
       \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradate}{4}
+      \field{extradate}{5}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -1595,10 +1755,10 @@
       \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
-      \field{extraname}{5}
+      \field{extraname}{6}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradate}{5}
+      \field{extradate}{6}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -1626,10 +1786,10 @@
       \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
-      \field{extraname}{6}
+      \field{extraname}{7}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradate}{6}
+      \field{extradate}{7}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -2120,6 +2280,40 @@
       \verb https://medium.com/biased-algorithms/evaluation-metrics-for-classification-models-b995f9980716
       \endverb
     \endentry
+    \entry{attal2026_roc_auc}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ffe1d1e630df67f1decc06711dd95408}{%
+           family={Attal},
+           familyi={A\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{fullhash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{fullhashraw}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{bibnamehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authorbibnamehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authornamehash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authorfullhash}{ffe1d1e630df67f1decc06711dd95408}
+      \strng{authorfullhashraw}{ffe1d1e630df67f1decc06711dd95408}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Entender la curva ROC AUC: métricas esenciales para la evaluación de modelos de Machine Learning}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://liora.io/es/curva-roc-auc-todo-sobre
+      \endverb
+      \verb{url}
+      \verb https://liora.io/es/curva-roc-auc-todo-sobre
+      \endverb
+    \endentry
     \entry{ayano2022ecg_ml_review}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=78f1b14091f192e969a87f4d2f65c78d}{%
@@ -2394,6 +2588,40 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2107.05469
+      \endverb
+    \endentry
+    \entry{chugh2020_regression_metrics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b61d3a8db4cd073b6a5d20e2b57a6e54}{%
+           family={Chugh},
+           familyi={C\bibinitperiod},
+           given={Akshita},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{fullhash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{fullhashraw}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{bibnamehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authorbibnamehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authornamehash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authorfullhash}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \strng{authorfullhashraw}{b61d3a8db4cd073b6a5d20e2b57a6e54}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e
+      \endverb
+      \verb{url}
+      \verb https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e
       \endverb
     \endentry
     \entry{cigna_corazon_electrico}{misc}{}{}
@@ -2870,6 +3098,37 @@
       \endverb
       \verb{url}
       \verb https://cvphysiology.com/arrhythmias/a013
+      \endverb
+    \endentry
+    \entry{koshurai2024_log_loss}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eb75090d3df10566453f1994139deb8e}{%
+           family={{KoshurAI}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{fullhash}{eb75090d3df10566453f1994139deb8e}
+      \strng{fullhashraw}{eb75090d3df10566453f1994139deb8e}
+      \strng{bibnamehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authorbibnamehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authornamehash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authorfullhash}{eb75090d3df10566453f1994139deb8e}
+      \strng{authorfullhashraw}{eb75090d3df10566453f1994139deb8e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Understanding Log Loss: A Comprehensive Guide with Code Examples}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://koshurai.medium.com/understanding-log-loss-a-comprehensive-guide-with-code-examples-c79cf5411426
+      \endverb
+      \verb{url}
+      \verb https://koshurai.medium.com/understanding-log-loss-a-comprehensive-guide-with-code-examples-c79cf5411426
       \endverb
     \endentry
     \entry{ibm_logistic_regression}{misc}{}{}
@@ -3427,6 +3686,35 @@
       \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
       \endverb
     \endentry
+    \entry{qlik_multiclass_scoring}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7d29c77aefa4247375ba26f439c0652}{%
+           family={{Qlik}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{bibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorbibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authornamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Scoring multiclass classification}
+      \verb{urlraw}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
+      \endverb
+      \verb{url}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
+      \endverb
+    \endentry
     \entry{repsol_machine_learning}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1c4169e68fa93846dda807b46179989e}{%
@@ -3585,7 +3873,7 @@
       \verb https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
       \endverb
     \endentry
-    \entry{sklearn_logistic_regression}{misc}{}{}
+    \entry{sklearn_log_loss}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
            family={{Scikit-learn developers}},
@@ -3603,6 +3891,38 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{log\_loss}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html
+      \endverb
+    \endentry
+    \entry{sklearn_logistic_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9313fff0baf27a0d9ef343b0b7d76b8d}{%
+           family={{Scikit-learn developers}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{fullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{bibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorbibnamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{4}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -3631,10 +3951,10 @@
       \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradate}{4}
+      \field{extradate}{5}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -3662,10 +3982,10 @@
       \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
-      \field{extraname}{5}
+      \field{extraname}{6}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradate}{5}
+      \field{extradate}{6}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -3693,10 +4013,10 @@
       \strng{authornamehash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhash}{9313fff0baf27a0d9ef343b0b7d76b8d}
       \strng{authorfullhashraw}{9313fff0baf27a0d9ef343b0b7d76b8d}
-      \field{extraname}{6}
+      \field{extraname}{7}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradate}{6}
+      \field{extradate}{7}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}

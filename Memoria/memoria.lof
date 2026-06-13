@@ -1,30 +1,34 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Anatomía eléctrica del corazón.}}{16}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Triángulo de Einthoven.}}{18}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Eje de las derivaciones bipolares en el plano frontal}}{19}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Eje de las derivaciones aumentadas de las extremidades en el plano frontal}}{20}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Sistema hexaxial}}{20}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Derivaciones precordiales.\textcolor {red}{[poner pie de pagina con la fuente]}}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Esquema de un ciclo cardíaco típico del ECG}}{25}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Matriz de confusión.}}{29}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Anatomía eléctrica del corazón.}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Triángulo de Einthoven.}}{20}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Eje de las derivaciones bipolares en el plano frontal}}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Eje de las derivaciones aumentadas de las extremidades en el plano frontal}}{22}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Sistema hexaxial}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Derivaciones precordiales.\textcolor {red}{[poner pie de pagina con la fuente]}}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Esquema de un ciclo cardíaco típico del ECG}}{27}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Matriz de confusión.}}{31}{figure.caption.29}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pipeline general del sistema. Elaboración propia.}}{48}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Distribución de los pacientes por edad}}{49}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Distribución de los pacientes por sexo}}{49}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Distribución de los pacientes por edad y sexo}}{50}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Distribución de las patologías en el conjunto de datos.}}{50}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Distribución de las patologías más frecuentes en el conjunto de datos.}}{51}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Distribución de las patologías por superclases.}}{51}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Matriz de co-ocurrencia de las 20 clases más frecuentes.}}{52}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Distribución del número de patologías por paciente.}}{53}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Morfología de la wavelet db6. \textcolor {red}{[lo pongo?]}}}{54}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Señal original y señal reconstruida a partir de los coeficientes d4 y d5 \textcolor {red}{[cambiar pie de foto?]}}}{55}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Envolvente de la señal reconstruida a partir de los coeficientes d4 y d5.}}{56}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Picos R detectados en la envolvente.}}{56}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Latidos cardíacos segmentados.}}{57}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pipeline general del sistema. Elaboración propia.}}{52}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Distribución de los pacientes por edad}}{53}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Distribución de los pacientes por sexo}}{53}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Distribución de los pacientes por edad y sexo}}{54}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Distribución de las patologías en el conjunto de datos.}}{54}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Distribución de las patologías más frecuentes en el conjunto de datos.}}{55}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Distribución de las patologías por superclases.}}{55}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Matriz de co-ocurrencia de las 20 clases más frecuentes.}}{56}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Distribución del número de patologías por paciente.}}{57}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Morfología de la wavelet db6. \textcolor {red}{[lo pongo?]}}}{58}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Señal original y señal reconstruida a partir de los coeficientes d4 y d5 \textcolor {red}{[cambiar pie de foto?]}}}{59}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Envolvente de la señal reconstruida a partir de los coeficientes d4 y d5.}}{60}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Picos R detectados en la envolvente.}}{60}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Latidos cardíacos segmentados.}}{61}{figure.caption.52}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Megavector)}}{92}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Conjunto de ROCs de regresión logística de la configuración 1 (Megavector)}}{94}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Características)}}{95}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Conjunto de ROCs de regresión logística de la configuración 1 (Características)}}{95}{figure.caption.72}%
 \addvspace {10\p@ }

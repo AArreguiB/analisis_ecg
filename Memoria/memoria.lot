@@ -1,9 +1,16 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Interpretación del eje cardíaco según las derivaciones DI y aVF (\blx@tocontentsinit {0}\cite {prutkin_ecg_uptodate})}}{21}{table.caption.15}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Interpretación del eje cardíaco según las derivaciones DI y aVF (\blx@tocontentsinit {0}\cite {prutkin_ecg_uptodate})}}{23}{table.caption.15}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Resultados globales en test de la configuración 1}}{82}{table.caption.61}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Comparación del rendimiento entre entrenamiento y test en la configuración 1}}{83}{table.caption.62}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Resultados globales de test de la configuración 2}}{85}{table.caption.63}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparación del rendimiento entre train y test en la Configuración 2}}{86}{table.caption.64}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Resultados globales de test de la configuración 3}}{88}{table.caption.65}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Resultados de regresión logística por clase (Megavector)}}{90}{table.caption.67}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Resultados de regresión logística por clase (Características)}}{95}{table.caption.70}%
 \addvspace {10\p@ }

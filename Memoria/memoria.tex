@@ -28,6 +28,7 @@
 \usepackage[style=apa,backend=biber]{biblatex}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{tabularx}
 
 \usepackage{xcolor}
 
@@ -305,9 +306,6 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 
 	\begin{table}[H]
 	\centering
-	\caption{Interpretación del eje cardíaco según las derivaciones DI y aVF (\cite{prutkin_ecg_uptodate})}
-	\label{tab:eje_cardiaco}
-
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
 	\textbf{DI} & \textbf{aVF} & \textbf{Cuadrante} & \textbf{Rango del eje} & \textbf{Interpretación} \\ \hline
@@ -321,6 +319,8 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	- & + & Superior derecho & $-90^\circ$ a $-180^\circ$ & Eje extremo derecho o izquierdo \\ \hline
 
 	\end{tabular}
+	\caption{Interpretación del eje cardíaco según las derivaciones DI y aVF (\cite{prutkin_ecg_uptodate})}
+	\label{tab:eje_cardiaco}
 	\end{table}
 
 	\item \textbf{Derivaciones precordiales}
@@ -588,6 +588,42 @@ De forma complementaria, el Hamming Accuracy se define como la proporcion de eti
 \end{equation*}
 
 Es especialemnte útil en problemas multilabel, ya que evalúa el rendimiento del modelo considerando cada etiqueta de forma individual, en lugar de considerar únicamente la predicción global de cada muestra.
+
+\subsubsection*{Promedios Micro y Macro}
+
+En problemas multietiqueta, las métricas de precisión, recall y F1 pueden agregarse mediante diferentes estrategias de promedio. (\cite{qlik_multiclass_scoring})
+En este trabajo se utilizan los promedios macro y micro para evaluar el rendimiento de los modelos de forma complementaria.
+
+El promedio macro calcula la métrica de forma independiente para cada clase y posteriormente obtiene la media aritmética de los resultados, otorgando el mismo peso a todas las clases independientemente de su frecuencia. 
+Esta medida resulta especialmente útil en escenarios con desbalance entre clases, ya que permite evaluar el rendimiento del modelo en patologías minoritarias sin que queden enmascaradas por las más frecuentes.
+
+Por otro lado, el promedio micro calcula las métricas globales considerando conjuntamente el número total de verdaderos positivos, falsos positivos y falsos negativos, proporcionando una visión más global del rendimiento del sistema, donde las clases más frecuentes tienen mayor influencia en el resultado final.
+
+\subsubsection*{MAE y MSE}
+
+El MAE (Mean Absolute Error) mide el error medio absoluto entre las predicciones del modelo y los valores reales. 
+En este contexto, indica en qué medida las probabilidades estimadas se desvían, en promedio, de los valores reales. 
+Se trata de una métrica fácil de interpretar y robusta frente a valores extremos.
+
+El MSE (Mean Squared Error) calcula el error cuadrático medio, penalizando de forma más severa los errores grandes. 
+Esto hace que sea especialmente útil para detectar modelos que cometen desviaciones importantes en algunas predicciones, aportando una visión complementaria al MAE. (\cite{chugh2020_regression_metrics})
+
+\subsubsection*{Log-loss}
+
+La log-loss evalúa la calidad de las probabilidades predichas por el modelo, no solo la decisión final. 
+Esta métrica penaliza de forma especialmente fuerte los errores cometidos con alta confianza, es decir, cuando el modelo asigna una probabilidad elevada a una clase incorrecta. Por este motivo, resulta muy adecuada en problemas de clasificación probabilística, ya que permite evaluar no solo si el modelo acierta, sino también si está bien calibrado en sus estimaciones.
+
+Además, la log-loss es sensible al grado de incertidumbre del modelo: predicciones cercanas a los valores reales reducen significativamente su valor, mientras que predicciones “sobreconfiadas” pero erróneas lo incrementan de forma notable. 
+Esto la convierte en una métrica especialmente útil en contextos clínicos o multietiqueta desbalanceados, donde una mala estimación de la probabilidad puede ser más informativa que el propio error de clasificación. (\cite{koshurai2024_log_loss})
+
+\subsubsection*{AUC}
+
+La AUC (Area Under the ROC Curve) se interpreta de forma especialmente útil en contextos clínicos, ya que mide la capacidad del modelo para diferenciar entre pacientes sanos y pacientes con patología, independientemente del umbral que se utilice para tomar la decisión final.
+
+Desde un punto de vista clínico, puede entenderse como la probabilidad de que el modelo asigne una mayor puntuación de riesgo a un paciente realmente enfermo que a uno sano. 
+Por tanto, no depende de un punto de corte concreto, lo que resulta muy relevante en medicina, donde el umbral de decisión puede ajustarse en función del equilibrio entre falsos positivos y falsos negativos.
+
+En escenarios como este, donde existe un fuerte desbalance entre clases, la AUC es especialmente útil porque no se ve tan afectada por la prevalencia de la clase mayoritaria como otras métricas, y permite evaluar de forma más estable la capacidad real del modelo para detectar patologías. (\cite{attal2026_roc_auc})
 
 \section{Tecnologías y librerías utilizadas}
 
@@ -1472,7 +1508,7 @@ Este enfoque permite adaptar el comportamiento del modelo a la criticidad de cad
 Los umbrales definidos son los siguientes:
 
 \begin{itemize}
-	\item \textbf{NORM (0.55):} se emplea un umbral más alto con el objetivo de reducir falsos positivos en la clase de normalidad, evitando clasificar pacientes enfermos como sanos.
+	\item \textbf{NORM (0.6):} se emplea un umbral más alto con el objetivo de reducir falsos positivos en la clase de normalidad, evitando clasificar pacientes enfermos como sanos.
 	\item \textbf{STTC (0.4):} asociado a alteraciones del segmento ST/T, relacionadas con isquemia o infarto. Se utiliza un valor intermedio que equilibra sensibilidad y precisión.
 	\item \textbf{CD (0.3):} alteraciones de conducción, con un umbral equilibrado debido a su detectabilidad relativamente estable.
 	\item \textbf{MI (0.25):} infarto de miocardio, considerado la patología más crítica del sistema, por lo que se prioriza la sensibilidad reduciendo el umbral para minimizar falsos negativos.
@@ -1621,7 +1657,7 @@ En cuanto a la decisión final de clasificación, se utilizaron las tres opcione
 \subsection{Configuración 2}
 Esta segunda opción introduce un incremento en la complejidad del problema mediante el uso de las 12 derivaciones completas del ECG, pero manteniendo el enfoque de clasificación por superclases.
 
-Desde el punto de vista de la implementación, el principal cambio respecto a la Configuración 1 fue el aumento masivo del volumen de información disponible. El uso de las señales completas de las 12 derivaciones multiplicó considerablemente el tamaño de los datos de entrada \todo{explicar los números}, haciendo inviable el entrenamiento de los modelos utilizando directamente la señal bruta debido al elevado coste computacional asociado. 
+Desde el punto de vista de la implementación, el principal cambio respecto a la Configuración 1 fue el aumento masivo del volumen de información disponible. El uso de las señales completas de las 12 derivaciones multiplicó considerablemente el tamaño de los datos de entrada \todo{explicar los números?}, haciendo inviable el entrenamiento de los modelos utilizando directamente la señal bruta debido al elevado coste computacional asociado. 
 Por este motivo, se optó por trabajar exclusivamente con las características extraídas de cada latido, reduciendo drásticamente la dimensionalidad del problema sin perder la información más relevante desde el punto de vista clínico.
 
 Esta configuración permitió evaluar el impacto que tiene la incorporación de información procedente de todas las derivaciones del ECG sobre la capacidad predictiva de los modelos, manteniendo constante la estructura del problema de clasificación. 
@@ -1649,7 +1685,511 @@ De esta forma, fue posible comparar aproximaciones lineales, basadas en árboles
 
 \chapter{Análisis de Resultados}
 
+Una vez realizado el desarrollo experimental del sistema, es necesario analizar los resultados obtenidos.
+El objetivo principal es evaluar el rendimiento de los distintos modelos implementados según las distintas configuraciones planteadas, así como estudiar su comportamiento en función del tipo de enfoque utilizado.
+
+El análisis empieza con una visión global de los resultados hasta un nivel detallado por modelo y patología, lo que permite comparar de forma estructurada las distintas alternativas propuestas.
+En primer lugar, se exponen los resultados globales agregados para cada modelo y enfoque experimental.
+Después, se realiza una comparación entre los distintos modelos de clasificación y regresión, analizando sus diferencias en términos de rendimiento y comportamiento.
+
+A continuación, se estudia el impacto de las configuraciones experimentales definidas previamente, así como el efecto del ajuste de umbrales en la toma de decisiones del sistema. 
+Finalmente, se incluye un análisis por patología y una discusión de los resultados desde un punto de vista clínico, junto con las principales limitaciones del sistema desarrollado.
+
+\section{Resultados globales}
+\label{sec:resultados-globales}
+
+Con el objetivo de evaluar el rendimiento de los modelos desarrollados bajo las distintas configuraciones propuestas, se presentan a continuación los resultados obtenidos en la fase experimental.
+El análisis se centra en comparar el comportamiento de los diferentes enfoques de modelado, tanto en clasificación como en regresión probabilística, así como en estudiar el impacto de la representación de los datos y de la complejidad del problema sobre el rendimiento final.
+
+Los resultados se organizan de forma progresiva, desde los escenarios más simples hasta los más complejos, lo que permite interpretar de manera más clara la influencia de cada decisión de diseño en la capacidad predictiva del sistema.
+Se incluyen comparaciones globales entre modelos y métricas representativas que permiten obtener una visión general del comportamiento de cada enfoque.
+
+
+\subsection{Configuración 1: Derivación I y clasificación binaria}
+
+La primera configuración corresponde con al escenario más sencillo del sistema, en el que se utiliza únicamente la derivación I del ECG junto con un enfoque de clasificación binaria por superclases.
+Permite validar el funcionamiento general de los modelos y establece una referencia inicial de rendimiento antes de aumentar la complejidad del problema.
+
+En esta fase se emplearon dos representaciones distintas de los datos de entrada: la señal en bruto mediante un megavector y un conjunto de características extraídas a partir de los latidos.
+Esto permite analizar el impacto de la representación de la información en el rendimiento de los modelos.
+
+Los mejores resultados de esta configuración se obtuvieron al utilizar una estrategia de umbralización personalizada por superclase, lo que permitió ajustar de forma independiente el punto de decisión de cada categoría y mejorar el equilibrio entre sensibilidad y precisión.
+
+En la Tabla \ref{tab:resultados-globales-1} se observan los resultados obtenidos del conjunto de test de estos tres modelos con cada una de las entradas. El promedio utilizado es tipo macro.
+
+\begin{table}[H]
+	\centering
+	\small
+	%\setlength{\tabcolsep}{1pt}
+	\hspace*{-2cm}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+	\hline
+	\textbf{Modelo} & \textbf{Entrada} & \textbf{Hamming Acc} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{AUC global}\\ \hline
+	Regresión Logística & Megavector & 0.7215 & 0.4064 & 0.7789 & 0.5074 & 0.7656\\ \hline
+	Regresión Logística & Features & 0.7426 & 0.4153 & 0.8417 & 0.5330 & 0.8091 \\ \hline
+	Random Forest & Megavector & 0.7684 & 0.4665 & 0.6931 & 0.4956 & 0.8011 \\ \hline
+	Random Forest & Features & 0.7714 & 0.4767 & 0.7011 & 0.5013 & 0.8153 \\ \hline
+	MLP & Megavector & 0.8013 & 0.2418 & 0.2418 & 0.2706 & 0.8098 \\ \hline
+	MLP & Features & 0.8149 & 0.8021 & 0.3087 & 0.3751 & 0.8277\\ \hline
+	\end{tabular}
+	\caption{Resultados globales en test de la configuración 1}
+	\label{tab:resultados-globales-1}
+\end{table}
+
+A continuación, en la Tabla \ref{tab:overfitting_accuracy_config1} se muestra la diferencia entre el conjunto de train y test en Hamming Accuracy para poder comprobar si el modelo presenta sobreajuste.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Modelo} & \textbf{Entrada} & \textbf{Accuracy Train} & \textbf{Accuracy Test} & \textbf{Diferencia} \\
+	\hline
+
+	Logistic Regression & Megavector & 0.7769 & 0.7215 & 0.0554 \\
+	Logistic Regression & Features    & 0.7479 & 0.7426 & 0.0053 \\
+
+	Random Forest & Megavector & 0.8187 & 0.7684 & 0.0503 \\
+	Random Forest & Features    & 0.8090 & 0.7714 & 0.0376 \\
+
+	MLP & Megavector & 0.8054 & 0.8013 & 0.0041 \\
+	MLP & Features & 0.8220 & 0.8149 & 0.0071 \\
+
+	\hline
+	\end{tabular}
+	\caption{Comparación del rendimiento entre entrenamiento y test en la configuración 1}
+	\label{tab:overfitting_accuracy_config1}
+\end{table}
+
+Aunque la Hamming Accuracy proporciona una visión global del número de etiquetas correctamente clasificadas, en este problema resulta especialmente relevante analizar métricas como Precision, Recall y F1-score macro, ya que permiten evaluar el comportamiento del modelo de forma equilibrada entre superclases independientemente de su frecuencia de aparición.
+
+Era esperable que los valores de Hamming Accuracy fuesen superiores al F1-score Macro debido al desbalance existente entre superclases, ya que la accuracy se ve favorecida por las categorías más frecuentes, mientras que el F1-score macro penaliza por igual los errores cometidos en todas las clases.
+\todo{No me convence del todo}
+
+En términos generales, se observa que la Red Neuronal Multicapa (MLP) es el modelo que alcanza los mejores valores de accuracy, independientemente del tipo de entrada utilizado. 
+Este comportamiento refleja una mayor capacidad del modelo para capturar relaciones no lineales complejas en los datos, lo que se traduce en un mayor número de predicciones correctas a nivel global.
+
+Sin embargo, este mejor rendimiento en accuracy no se refleja de forma equivalente en el equilibrio entre clases. 
+En particular, los valores de F1 macro obtenidos por la red neuronal son más bajos que los de otros modelos, lo que indica una tendencia a favorecer las clases mayoritarias en detrimento de aquellas menos representadas. 
+Este comportamiento es especialmente relevante en el contexto del problema, ya que implica una menor sensibilidad en la detección de determinadas patologías.
+
+Por otro lado, Random Forest presenta un comportamiento más equilibrado entre las distintas métricas. 
+Aunque su accuracy es inferior al de la red neuronal, mantiene valores más consistentes en términos de F1 macro, lo que sugiere una mejor capacidad para manejar el desbalance entre clases. 
+Este equilibrio lo convierte en un modelo más robusto desde el punto de vista clínico, al no centrarse únicamente en el rendimiento global.
+
+En el caso de la regresión logística, se observa el rendimiento más limitado de los tres modelos, aunque se aprecia una mejora consistente cuando se utilizan características extraídas en lugar del megavector de la señal. 
+Este resultado indica que una representación más estructurada de la señal ECG facilita la separación entre clases, aunque no es suficiente para alcanzar el rendimiento de los modelos no lineales.
+
+En cuanto a la capacidad discriminativa, medida mediante el AUC global, todos los modelos alcanzan valores superiores a 0.75, lo que indica una capacidad razonable para diferenciar entre las distintas superclases. 
+Los mejores resultados corresponden a la red neuronal multicapa utilizando características extraídas, seguida de Random Forest con características y la regresión logística con características. 
+Estos valores muestran que los modelos son capaces de ordenar correctamente las probabilidades asociadas a las distintas clases incluso antes de aplicar los umbrales de decisión finales.
+
+Respecto al tipo de entrada, se observa una tendencia general a una ligera mejora en los resultados cuando se emplean características extraídas. 
+Este efecto es más notable en la red neuronal multicapa, mientras que en Random Forest y regresión logística es más moderado. 
+Esto sugiere que la reducción de dimensionalidad y la extracción de información relevante contribuyen a mejorar la capacidad predictiva del sistema, especialmente en modelos con mayor capacidad de aprendizaje.
+
+Desde el punto de vista de la generalización, el análisis de la diferencia entre el rendimiento en entrenamiento y test muestra que no existe un sobreajuste significativo en ninguno de los modelos evaluados. 
+La regresión logística presenta prácticamente el mismo rendimiento en ambos conjuntos, mientras que Random Forest muestra una ligera variación en función del tipo de entrada, aunque dentro de márgenes aceptables. 
+La red neuronal multicapa destaca por presentar diferencias muy reducidas entre entrenamiento y test, lo que indica una buena capacidad de generalización, favorecida por el uso de técnicas como dropout, batch normalization y early stopping.
+
+En conjunto, los resultados de esta configuración muestran que no existe un único modelo claramente superior en todas las métricas analizadas. 
+Mientras que la red neuronal multicapa obtiene los mejores resultados en términos de Hamming Accuracy y AUC global, la regresión logística y Random Forest presentan un comportamiento más equilibrado entre superclases, reflejado en valores superiores de F1-score macro. 
+El uso de características extraídas mejora de forma consistente el rendimiento de todos los modelos respecto al uso directo del megavector de la señal ECG, confirmando la utilidad de la etapa de extracción de características para este problema de clasificación.
+
+\subsection{Configuración 2: 12 derivaciones y clasificación binaria}
+
+\todo{cambio de numeros por el cambio de umbral}
+
+La segunda configuración introduce un incremento en la complejidad del problema mediante el uso de las 12 derivaciones completas del ECG. 
+Este cambio permite disponer de una mejor representación de la señal cardíaca, lo que se traduce en una mejora general del rendimiento de los modelos en comparación con la configuración anterior.
+
+Como se ha comentado con anterioridad, debido al elevado coste computacional asociado al uso de un megavector que contenga las doce derivaciones, se ha optado por utilizar únicamente como entrada del sistema las características extraídas de la señal ECG. 
+
+En este contexto, se mantiene la misma estrategia experimental que en la configuración anterior, utilizando los mismos modelos de clasificación y el mismo esquema de evaluación, lo que permite una comparación directa del efecto producido por el incremento de información disponible.
+
+La Tabla \ref{tab:config2_metrics_final} recoge los resultados globales obtenidos sobre el conjunto de test para los distintos modelos evaluados en la Configuración 2. 
+Además de la Hamming accuracy, se incluyen métricas de precisión, recall y F1-score calculadas tanto mediante promedio macro como micro. 
+A diferencia de la Configuración 1, donde el análisis se centró principalmente en comparar el comportamiento general de los modelos y se complementó posteriormente con un estudio detallado por superclases, en esta configuración se incorporan también las métricas micro para obtener una visión más completa del rendimiento global del sistema. 
+Mientras que las métricas macro evalúan el comportamiento medio sobre cada superclase otorgando la misma importancia a todas ellas, las métricas micro agregan conjuntamente todas las predicciones realizadas y reflejan mejor el rendimiento global del modelo teniendo en cuenta la distribución real de las clases. 
+El uso combinado de ambas perspectivas permite analizar simultáneamente la capacidad de detección equilibrada entre patologías y el comportamiento global del sistema en condiciones más próximas a un escenario real de utilización.
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\setlength{\tabcolsep}{1pt}
+	\hspace*{-2cm}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	\textbf{Modelo} & \textbf{Hamming Acc.} & \textbf{Prec. Macro} & \textbf{Rec. Macro} & \textbf{F1 Macro} & \textbf{Prec. Micro} & \textbf{Rec. Micro} & \textbf{F1 Micro} \\
+	\hline
+
+	Logistic Regression & 0.8324 & 0.5370 & 0.8732 & 0.6515 & 0.5480 & 0.8769 & 0.6744 \\
+	Random Forest       & 0.8320 & 0.5614 & 0.7938 & 0.6180 & 0.5301 & 0.7623 & 0.6253 \\
+	MLP                 & 0.8676 & 0.8465 & 0.5342 & 0.6372 & 0.8351 & 0.5977 & 0.6967 \\
+
+	\hline
+	\end{tabular}
+	\caption{Resultados globales de test de la configuración 2}
+	\label{tab:config2_metrics_final}
+\end{table}
+
+La Tabla \ref{tab:config2_gap} recoge la Hamming accuracy obtenida en entrenamiento y test para cada modelo, junto con la diferencia entre ambas. Esta comparación permite evaluar la capacidad de generalización de los modelos y analizar la posible presencia de sobreajuste.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Modelo} & \textbf{Acc. Train} & \textbf{Acc. Test} & \textbf{Diferencia} \\
+	\hline
+	Logistic Regression & 0.8432 & 0.8324 & 0.0108 \\
+	Random Forest       & 0.8652 & 0.8320 & 0.0332 \\
+	MLP                 & 0.8935 & 0.8676 & 0.0259 \\
+	\hline
+	\end{tabular}
+	\caption{Comparación del rendimiento entre train y test en la Configuración 2}
+	\label{tab:config2_gap}
+\end{table}
+
+La incorporación de las doce derivaciones completas del ECG produce una mejora significativa del rendimiento respecto a la Configuración 1 en los tres modelos evaluados. 
+Este resultado confirma que la información adicional contenida en las distintas derivaciones aporta características relevantes para la identificación de las superclases consideradas, permitiendo una representación más completa de la actividad eléctrica cardíaca.
+
+Analizando los resultados globales, la red neuronal multicapa obtiene la mayor Hamming accuracy, superando claramente a la regresión logística y a Random Forest. 
+Esto indica que es el modelo que clasifica correctamente un mayor porcentaje de etiquetas individuales, lo que sugiere una mejor capacidad para explotar la información adicional disponible en las doce derivaciones.
+
+En términos de precisión, la red neuronal multicapa presenta también los mejores resultados tanto en la métrica macro (0.8465) como en la micro (0.8351). 
+Estos valores reflejan que sus predicciones son considerablemente más fiables que las del resto de modelos, generando un menor número de falsos positivos. 
+Sin embargo, esta mejora en precisión viene acompañada de una reducción del recall, que alcanza únicamente 0.5342 en la métrica macro y 0.5977 en la micro. 
+Esto indica que el modelo adopta una estrategia más conservadora, priorizando la confianza de las predicciones frente a la detección exhaustiva de todas las patologías presentes.
+
+Por el contrario, la regresión logística presenta el comportamiento opuesto. Sus valores de recall son los más elevados de los tres modelos. 
+Esto demuestra una gran capacidad para detectar casos positivos, aunque a costa de una reducción significativa de la precisión, que apenas supera el 0.53 en ambas métricas. 
+En consecuencia, el modelo consigue identificar una mayor proporción de patologías presentes, pero genera también un número considerablemente mayor de falsos positivos.
+
+Random Forest se sitúa en una posición intermedia entre ambos enfoques. 
+Aunque no alcanza los mejores resultados en ninguna de las métricas analizadas, presenta un compromiso razonable entre precisión y recall, obteniendo valores más equilibrados que los observados en la regresión logística y la red neuronal. 
+No obstante, este equilibrio no resulta suficiente para superar a ninguno de los otros modelos en términos de F1-score.
+
+La comparación de los valores de F1-score permite analizar conjuntamente precisión y recall. 
+En términos macro, la regresión logística obtiene el mejor resultado, ligeramente por encima de la red neuronal multicapa y de Random Forest.
+Esto indica que, considerando todas las superclases con la misma importancia, la regresión logística mantiene el mejor equilibrio global entre sensibilidad y precisión. 
+Sin embargo, cuando se considera la distribución real de las clases mediante el F1 micro, la red neuronal multicapa pasa a ocupar la primera posición, seguida de la regresión logística y Random Forest. 
+Este resultado sugiere que la red neuronal aprovecha mejor la información disponible en los casos más representativos del conjunto de datos y ofrece el mejor rendimiento global del sistema.
+
+En cuanto a la generalización de los modelos, los tres presentan una diferencia muy pequeña entre la hamming accuracy de train y test, lo que indica una ausencia de problemas graves de sobreajuste.
+La regresión logística muestra el menor gap, confirmando su elevada capacidad de generalización y la simplicidad de su estructura. 
+La red neuronal multicapa presenta un gap de 0.0259, manteniendo un buen equilibrio entre rendimiento y capacidad de generalización debido a las técnicas de regularización empleadas durante el entrenamiento. 
+Por su parte, Random Forest es el modelo que presenta la mayor diferencia entre entrenamiento y test, aunque este valor sigue siendo suficientemente bajo como para considerar que el modelo generaliza adecuadamente sobre datos no vistos.
+
+En conjunto, los resultados obtenidos muestran que el incremento de información proporcionado por las doce derivaciones beneficia especialmente a la red neuronal multicapa, que consigue el mejor rendimiento global en términos de Hamming accuracy y F1 micro. 
+No obstante, la regresión logística continúa destacando por su elevada capacidad de detección, obteniendo los mejores valores de recall y F1 macro. 
+Estos resultados ponen de manifiesto que la elección del modelo óptimo depende en gran medida del objetivo clínico: maximizar la detección de patologías o reducir el número de falsas alarmas manteniendo un elevado rendimiento global.
+
+\subsection{Configuración 3: 12 derivación y clasificación probabilística}
+
+La tercera configuración corresponde con el escenario más exigente. 
+En este caso, se trabaja con las 71 patologías originales y las 12 derivaciones completas del ECG.
+
+Debido a la elevada dimensionalidad de los datos, los modelos se entrenan exclusivamente a partir de las características extraídas de las doce derivaciones del ECG. 
+Este escenario permite evaluar el comportamiento de los distintos enfoques en condiciones más próximas a un entorno clínico real, donde la complejidad diagnóstica es considerablemente mayor y las patologías presentan una distribución altamente desbalanceada.
+
+En esta configuración se analizan los modelos planteados inicialmente (Ridge Regression, Random Forest Regressor y Red Neuronal Multicapa) y los modelos incorporados durante el desarrollo experimental, con el objetivo de identificar las arquitecturas más adecuadas para abordar un problema de clasificación multietiqueta de alta complejidad.
+
+Dado que el objetivo es evaluar la calidad de las predicciones probabilísticas y no únicamente las etiquetas finales, no se emplea la métrica de accuracy, ya que esta no resulta representativa en escenarios multietiqueta altamente desbalanceados.
+En su lugar, se utilizan métricas más informativas como el error absoluto medio (MAE), el error cuadrático medio (MSE), la log-loss y el AUC global.
+
+Las métricas incluidas en la Tabla \ref{tab:analisis-global-config3} se han seleccionado para ofrecer una evaluación completa del rendimiento de los modelos en un contexto de clasificación multietiqueta con salida probabilística. 
+El MAE y el MSE permiten cuantificar el error entre las probabilidades predichas y los valores reales, proporcionando una medida global de precisión, siendo el MSE más sensible a errores grandes.
+
+Por su parte, la log-loss evalúa la calidad de las probabilidades predichas, penalizando especialmente las predicciones incorrectas con alta confianza, lo que la hace adecuada para problemas probabilísticos.
+
+Finalmente, el AUC global mide la capacidad del modelo para discriminar entre clases de forma independiente del umbral, siendo especialmente relevante en un escenario altamente desbalanceado, donde la accuracy no resulta representativa.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Modelo} & \textbf{MAE} & \textbf{MSE} & \textbf{Log-loss} & \textbf{AUC global} \\
+	\hline
+	Ridge Regression            & 0.0253 & 0.0097 & 0.0392 & 0.8808 \\
+	ElasticNet Regression       & 0.0242 & 0.0098 & 0.0373 & 0.8887 \\
+	Random Forest Regressor     & 0.0229 & 0.0098 & 0.0358 & 0.9002 \\
+	HistGradientBoosting        & 0.0188 & 0.0085 & 0.0330 & 0.8509 \\
+	MLP Regressor               & 0.0140 & 0.0112 & 0.0558 & 0.8835 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados globales de test de la configuración 3}
+	\label{tab:analisis-global-config3}
+\end{table}
+
+En primer lugar, el HistGradientBoosting obtiene el mejor rendimiento en términos de error global, con el menor MAE  y el menor MSE, lo que indica una buena capacidad para aproximar las probabilidades reales. 
+No obstante, este bajo error debe interpretarse con cautela, ya que en un problema altamente desbalanceado como el planteado, donde la clase mayoritaria corresponde a la condición normal, es posible que el modelo esté ajustando mejor las probabilidades en dicha clase dominante, lo que reduce el error global sin implicar necesariamente un mejor rendimiento en la detección de patologías. 
+Esto puede explicar en parte la menor AUC obtenida por este modelo, que refleja una menor capacidad discriminativa.
+
+El Random Forest Regressor presenta el mejor AUC global, lo que lo convierte en el modelo con mayor capacidad para distinguir entre clases positivas y negativas. 
+Además, mantiene valores de error bajos, lo que indica un equilibrio entre precisión en las probabilidades y capacidad de discriminación.
+
+Los modelos lineales regularizados (Ridge y ElasticNet) muestran un comportamiento muy similar entre sí. 
+Ambos presentan un rendimiento intermedio, con AUCs en torno a 0.88–0.89 y errores ligeramente superiores a los modelos basados en árboles, lo que refleja su menor capacidad para capturar relaciones no lineales en los datos.
+
+Finalmente, la MLP Regressor destaca por obtener el menor MAE, lo que indica un ajuste muy preciso a nivel de predicción continua. Sin embargo, este resultado no se traduce en un mejor comportamiento global, ya que presenta el MSE más alto y una log-loss elevada, lo que sugiere cierta inestabilidad en las probabilidades estimadas. 
+Su AUC se sitúa en un nivel intermedio, por debajo de Random Forest pero por encima de los modelos lineales.
+
+En conjunto, se observa que los modelos basados en árboles ofrecen el mejor compromiso global entre capacidad discriminativa y estabilidad en la predicción, destacando especialmente Random Forest como el más equilibrado en este escenario de alta dimensionalidad y fuerte desbalanceo.
+
+\section{Análisis por modelos y enfermedades}
+
+Además de las métricas globales presentadas en el apartado \ref{sec:resultados-globales}, es necesario examinar el comportamiento de los modelos a un nivel más específico, evaluando su rendimiento en cada una de las configuraciones planteadas.
+
+Para ello, se analizan métricas por clase, matrices de confusión y el efecto de distintos umbrales de decisión cuando corresponda.
+Este estudio permite identificar las categorías que presentan una mayor o menor capacidad de detección, así como las fortalezas y limitaciones de cada modelo en función de la naturaleza del problema abordado.
+
+En todas las superclases, se busca minimizar el valor de los falsos negativos, ya que desde un punto de vista médico, es mejor clasificar a un paciente sano como enfermo en vez de ignorar una enfermedad grave que pueda tener el paciente. 
+Esto es al revés en la clase NORM, que busca reducir el número de falsos positivos, y diagnosticar como sano un paciente con alguna enfermedad.
+
+\todo{añadir solo las matrices del umbral optimo el resto en anexos?}
+\subsection{Configuración 1}
+
+\subsubsection*{Regresión Logística}
+
+El siguiente análisis examina el rendimiento de cada combinación a nivel de clase, con el objetivo de identificar qué patologías resultan más o menos difíciles de detectar según el modelo y la representación empleada. 
+Para ello se recurre a las métricas por clase recogidas en las tablas correspondientes, así como a las matrices de confusión y curvas ROC que se presentan en las figuras asociadas a cada modelo.
+
+Dado que las clases están desbalanceadas y tienen relevancia clínica, no se emplea un único umbral de decisión global. 
+En su lugar, se define un conjunto de umbrales específicos por superclase (explicados en el apartado \ref{apartado_umbral}), ajustados manualmente en función del compromiso entre sensibilidad y precisión. 
+Este ajuste permite priorizar la detección de patologías críticas, especialmente aquellas donde los falsos negativos tienen mayor impacto clínico, incluso a costa de incrementar falsos positivos en determinadas clases.
+
+\vspace{1cm}
+
+\textbf{Megavector}
+
+Los resultados agrupado por superclase se muestran en la Tabla \ref{tab:metrics_clase_lr_mv}, donde se reportan las métricas de precisión, recall y F1-score para cada categoría en el conjunto de test tras la aplicación de los umbrales definidos
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.52 & 0.60 & 0.56 \\
+	STTC & 0.67 & 0.85 & 0.75 \\
+	CD   & 0.37 & 0.82 & 0.51 \\
+	MI   & 0.17 & 0.84 & 0.28 \\
+	HYP  & 0.31 & 0.78 & 0.44 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de regresión logística por clase (Megavector)}
+	\label{tab:metrics_clase_lr_mv}
+\end{table}
+
+En conjunto, los resultados muestran un comportamiento heterogéneo entre clases, reflejando tanto la complejidad del problema como el efecto directo del ajuste de umbrales sobre el equilibrio entre precisión y exhaustividad.
+
+Se observa un patrón general en el que el modelo tiende a favorecer el recall en la mayoría de las superclases, lo que indica una estrategia orientada a minimizar falsos negativos. 
+Este comportamiento es coherente con el diseño del sistema, donde se prioriza la detección de patologías frente a la exactitud estricta de la predicción.
+
+Este efecto se refleja directamente en el F1-score, que actúa como métrica de compromiso entre precisión y recall. 
+En aquellas clases donde existe un desequilibrio claro entre ambas, el F1 se mantiene en valores intermedios, penalizando precisamente esta falta de equilibrio. 
+Por tanto, el F1 permite sintetizar en una única métrica el impacto real del ajuste de umbrales sobre el rendimiento del modelo.
+
+La clase STTC destaca como la superclase con mejor equilibrio global entre precisión y recall y con un F1-score relativamente alto, lo que sugiere que el modelo es capaz de identificar de forma relativamente estable los patrones asociados a estas patologías
+Este comportamiento se ve reforzado por su alta capacidad discriminativa, como se refleja posteriormente en las curvas ROC (ver Figura \ref{fig:roc-lr-mv}).
+
+En el caso de NORM, se observa un comportamiento relativamente equilibrado, con una precisión de 0.52, un recall de 0.60 y un F1-score de 0.56. 
+El umbral utilizado para esta superclase es más restrictivo que en el resto debido a la importancia clínica de evitar que un paciente con alguna patología sea clasificado como sano. 
+Como consecuencia, el modelo adopta una estrategia más conservadora al asignar la etiqueta NORM, mejorando la precisión a costa de una reducción moderada del recall. 
+A pesar de ello, mantiene una capacidad razonable para identificar registros normales, obteniendo un equilibrio aceptable entre ambas métricas.
+
+La clase CD muestra un comportamiento caracterizado por una sensibilidad elevada, detectando la mayoría de los casos positivos, y una precisión más reducida, lo que se traduce en un F1-score intermedio. 
+Este patrón sugiere la presencia de solapamiento en la representación del ECG entre alteraciones de conducción y otras clases relacionadas.
+
+Por otro lado, MI presenta uno de los comportamientos más relevantes desde el punto de vista clínico, con un recall elevado y una precisión sensiblemente menor. 
+Este resultado es coherente con un enfoque conservador del modelo, orientado a priorizar la detección de posibles infartos, aunque ello implique un mayor número de falsos positivos.
+
+Finalmente, En la clase HYP se observa un comportamiento marcado por un recall elevado acompañado de una precisión significativamente menor. 
+Esto indica que el modelo es capaz de detectar la mayoría de los casos positivos, aunque genera un número elevado de falsos positivos, lo que sugiere solapamiento de patrones electrocardiográficos en la representación en crudo del ECG y una mayor sensibilidad inducida por el ajuste del umbral.
+
+\vspace{0.5cm}
+
+Las matrices de confusión de la Figura \ref{fig:matrix-lr-mv} permiten analizar en detalle el comportamiento del modelo más allá de las métricas globales, descomponiendo los aciertos y errores en términos de verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos. 
+Este análisis es especialmente relevante en un problema clínico, donde el tipo de error cometido tiene una importancia diferente según la patología.
+
+En este caso, el ajuste de umbrales por clase influye directamente en la distribución de errores, modificando el equilibrio entre sensibilidad y precisión en cada superclase.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-lr-mv.png}
+    \caption{Matrices de confusión de regresión logística de la configuración 1 (Megavector)}
+    \label{fig:matrix-lr-mv}
+\end{figure}
+
+En la clase NORM, el modelo presenta 504 verdaderos positivos, 2089 verdaderos negativos, 474 falsos positivos y 330 falsos negativos. 
+A nivel global, se observa que la clase normal no es la más “limpia” del sistema, ya que acumula un número relativamente elevado de falsos positivos. 
+Esto indica que una parte importante de registros que pertenecen a otras patologías están siendo clasificados como normales, lo cual es especialmente relevante desde el punto de vista clínico, ya que este tipo de error es el más crítico en esta clase.
+Sin embargo, el número de falsos positivos es menor respecto a configuraciones menos restrictivas, aunque aumenta ligeramente el número de falsos negativos. 
+Desde el punto de vista clínico, este comportamiento es adecuado, ya que prioriza evitar falsos diagnósticos de normalidad.
+
+En la clase STTC, el modelo muestra 1206 verdaderos positivos, 1390 verdaderos negativos, 586 falsos positivos y 215 falsos negativos.
+En este caso, STTC destaca como la segunda clase con mayor número de falsos negativos, lo que indica que una parte relevante de casos con alteraciones del segmento ST/T no está siendo detectada. 
+Esto sugiere que, aunque la clase presenta una capacidad discriminativa razonable, existen patrones que el modelo no consigue capturar completamente, probablemente debido a la similitud con otras alteraciones de repolarización o a variabilidad en la morfología de la señal.
+
+En la clase CD, se observan 734 verdaderos positivos, 1248 verdaderos negativos, 1257 falsos positivos y 158 falsos negativos. 
+El comportamiento de esta clase está dominado por un número elevado de falsos positivos, lo que indica una tendencia del modelo a sobre-asignar esta etiqueta. 
+Este fenómeno suele aparecer en clases con características intermedias o menos definidas, donde el modelo encuentra similitudes parciales con múltiples categorías. 
+Como consecuencia, la precisión se ve penalizada, aunque la capacidad de detección (recall) se mantiene elevada.
+
+En la clase MI, el modelo presenta 348 verdaderos positivos, 1249 verdaderos negativos, 1732 falsos positivos y 68 falsos negativos. 
+Este es uno de los comportamientos más relevantes desde el punto de vista clínico, ya que el número de falsos negativos es relativamente bajo en comparación con el resto de clases. 
+Esto indica que el modelo está priorizando la detección de posibles infartos, incluso a costa de generar un número muy elevado de falsos positivos. 
+Este comportamiento es coherente con un enfoque conservador, donde es preferible sobre-detectar eventos críticos antes que omitirlos.
+
+Finalmente, en la clase HYP se observan 592 verdaderos positivos, 1309 verdaderos negativos, 1331 falsos positivos y 165 falsos negativos. 
+El comportamiento es intermedio, con una sensibilidad relativamente alta pero una precisión limitada. 
+Esto refleja que el modelo detecta una proporción importante de casos positivos, pero aún presenta dificultades para distinguir correctamente esta clase frente a otras alteraciones con patrones parcialmente similares.
+
+En conjunto, las matrices de confusión muestran un patrón consistente en el que el modelo tiende a priorizar la sensibilidad frente a la precisión, especialmente en las clases patológicas. Este comportamiento es intencionado dentro del diseño del sistema, ya que en un contexto clínico resulta más crítico minimizar falsos negativos que reducir falsos positivos. 
+No obstante, este enfoque incrementa la carga de falsos positivos en varias clases, especialmente en CD y MI, lo que evidencia el compromiso inherente entre sensibilidad y especificidad en este tipo de problemas.
+
+Se observa que la clase NORM actúa como principal punto de conflicto del sistema, debido a la dificultad de separar completamente la normalidad del resto de alteraciones cuando se trabaja con señal ECG en crudo, sin una representación más estructurada de la información.
+
+\vspace{0.5cm}
+
+Las curvas ROC mostradas en la Figura \ref{fig:roc-lr-mv} permiten evaluar la capacidad discriminativa del modelo independientemente del umbral de decisión fijado, analizando la relación entre la tasa de verdaderos positivos y la tasa de falsos positivos para cada superclase. 
+Este análisis complementa las métricas basadas en umbral fijo, ya que permite valorar la calidad intrínseca de las probabilidades generadas por el modelo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-mv.png}
+    \caption{Conjunto de ROCs de regresión logística de la configuración 1 (Megavector)}
+    \label{fig:roc-lr-mv}
+\end{figure}
+
+En términos generales, los resultados muestran un comportamiento razonablemente estable en la mayoría de las superclases, con valores de AUC superiores a 0.7 en todos los casos. 
+La superclase STTC obtiene el mejor rendimiento, lo que indica una buena capacidad del modelo para diferenciar este tipo de alteraciones del resto de clases.
+
+Por otro lado, CD presenta un AUC de 0.7330, mientras que MI y HYP obtienen valores similares, lo que sugiere una mayor dificultad del modelo para separar estas patologías en el espacio de probabilidad. 
+NORM alcanza un AUC de 0.7983, reflejando una capacidad discriminativa intermedia, aunque condicionada por el solapamiento con determinadas clases patológicas.
+
+Por todo esto, se confirma una capacidad discriminativa moderada del modelo sobre la representación en megavector, coherente con los resultados observados en las métricas por clase y en las matrices de confusión. 
+Este comportamiento sugiere que, aunque el modelo es capaz de capturar patrones relevantes en la señal, existe todavía un grado significativo de solapamiento entre clases que limita su separación completa.
+
+\vspace{1cm}
+
+\textbf{Características}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.54 & 0.69 & 0.61 \\
+	STTC & 0.67 & 0.88 & 0.76 \\
+	CD   & 0.36 & 0.90 & 0.51 \\
+	MI   & 0.17 & 0.94 & 0.28 \\
+	HYP  & 0.34 & 0.82 & 0.48 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de regresión logística por clase (Características)}
+	\label{tab:metrics_clase_lr_feat}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-lr-feat.png}
+    \caption{Matrices de confusión de regresión logística de la configuración 1 (Características)}
+    \label{fig:matrix-lr-feat}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat.png}
+    \caption{Conjunto de ROCs de regresión logística de la configuración 1 (Características)}
+    \label{fig:roc-lr-feat}
+\end{figure}
+
+\begin{comment}
+\subsubsection*{Random Forest}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-rf-mv.png}
+    \caption{Matrices de confusión de random forest de la configuración 1 con megavector}
+    \label{fig:matrix-rf-mv}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-mv.png}
+    \caption{Conjunto de ROCs de random forest de la configuración 1 con megavector}
+    \label{fig:roc-rf-mv}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-rf-feat.png}
+    \caption{Matrices de confusión de random forest de la configuración 1 con características}
+    \label{fig:matrix-rf-feat}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat.png}
+    \caption{Conjunto de ROCs de random forest de la configuración 1 con características}
+    \label{fig:roc-rf-feat}
+\end{figure}
+
+\subsubsection*{Red Neuronal Multicapa}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-mlp-mv.png}
+    \caption{Matrices de confusión de red neuronal de la configuración 1 con megavector}
+    \label{fig:matrix-mlp-mv}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-mv.png}
+    \caption{Conjunto de ROCs de red neuronal de la configuración 1 con megavector}
+    \label{fig:roc-mlp-mv}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-mlp-feat.png}
+    \caption{Matrices de confusión de red neuronal de la configuración 1 con características}
+    \label{fig:matrix-mlp-feat}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-feat.png}
+    \caption{Conjunto de ROCs de red neuronal de la configuración 1 con características}
+    \label{fig:roc-mlp-feat}
+\end{figure}
+
+\subsection{Configuración 2}
+
+\subsubsection*{Regresión Logística}
+
+\subsubsection*{Random Forest}
+
+\subsubsection*{Red Neuronal Multicapa}
+
+\subsection{Configuración 3}
+
+\subsubsection*{Ridge Regression}
+
+\subsubsection*{Elastic Net}
+
+\subsubsection*{Random Forest}
+
+\subsubsection*{HistGradientBoosting}
+
+\subsubsection*{Red Neuronal Multicapa}
+\end{comment}
 Resultados globales, comparacion entre enfoques, resultados por enfermedad (matrices de confusion), thresholds personalizados, analisis clinicos, limitaciones
+
+
 
 % -------------------------------------------------
 % CAPÍTULO 7

@@ -924,6 +924,41 @@
       \verb http://dx.doi.org/10.4067/s0717-95022025000501545
       \endverb
     \endentry
+    \entry{mccaffrey2023_mlp_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3c5d4e2d2b2f3fb870328b7a7831b5e}{%
+           family={McCaffrey},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{fullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{fullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{bibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authorbibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authornamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authorfullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authorfullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{Regression Using a scikit MLPRegressor Neural Network}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
+      \endverb
+      \verb{url}
+      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
+      \endverb
+    \endentry
     \entry{medlineplus_ecg_es}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
@@ -1323,6 +1358,35 @@
       \endverb
       \verb{url}
       \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
+      \endverb
+    \endentry
+    \entry{qlik_multiclass_scoring}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7d29c77aefa4247375ba26f439c0652}{%
+           family={{Qlik}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{bibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorbibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authornamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Scoring multiclass classification}
+      \verb{urlraw}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
+      \endverb
+      \verb{url}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
       \endverb
     \endentry
     \entry{repsol_machine_learning}{misc}{}{}
@@ -2956,6 +3020,41 @@
       \verb http://dx.doi.org/10.4067/s0717-95022025000501545
       \endverb
     \endentry
+    \entry{mccaffrey2023_mlp_regression}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3c5d4e2d2b2f3fb870328b7a7831b5e}{%
+           family={McCaffrey},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{fullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{fullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{bibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authorbibnamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authornamehash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authorfullhash}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \strng{authorfullhashraw}{b3c5d4e2d2b2f3fb870328b7a7831b5e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-05-16}
+      \field{title}{Regression Using a scikit MLPRegressor Neural Network}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
+      \endverb
+      \verb{url}
+      \verb https://visualstudiomagazine.com/articles/2023/05/01/regression-scikit.aspx
+      \endverb
+    \endentry
     \entry{medlineplus_ecg_es}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b70da9e55c985ffa772ce858b23840a}{%
@@ -3355,6 +3454,35 @@
       \endverb
       \verb{url}
       \verb https://www.q2bstudio.com/nuestro-blog/677225/redes-neuronales-interpretables-para-analizar-electrocardiogramas-12-derivaciones-diagnostico-enfermedades-cardiacas
+      \endverb
+    \endentry
+    \entry{qlik_multiclass_scoring}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7d29c77aefa4247375ba26f439c0652}{%
+           family={{Qlik}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{fullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{bibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorbibnamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authornamehash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhash}{b7d29c77aefa4247375ba26f439c0652}
+      \strng{authorfullhashraw}{b7d29c77aefa4247375ba26f439c0652}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido: 2026-04-24}
+      \field{title}{Scoring multiclass classification}
+      \verb{urlraw}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
+      \endverb
+      \verb{url}
+      \verb https://help.qlik.com/es-ES/cloud-services/Subsystems/Hub/Content/Sense_Hub/AutoML/scoring-multiclass-classification.htm
       \endverb
     \endentry
     \entry{repsol_machine_learning}{misc}{}{}
