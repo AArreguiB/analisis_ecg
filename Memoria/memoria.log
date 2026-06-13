@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  13 JUN 2026 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  13 JUN 2026 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1239,61 +1239,62 @@ File: imagenes/roc-lr-mv.png Graphic file (type png)
 <use imagenes/roc-lr-mv.png>
 Package pdftex.def Info: imagenes/roc-lr-mv.png  used on input line 2060.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [93] [94 <./imagenes/roc-lr-mv.png>]
-<imagenes/matrix-lr-feat.png, id=1046, 1438.173pt x 294.8616pt>
+ [93] [94 <./imagenes/roc-lr-mv.png>] [95]
+<imagenes/matrix-lr-feat.png, id=1052, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-lr-feat.png Graphic file (type png)
 <use imagenes/matrix-lr-feat.png>
-Package pdftex.def Info: imagenes/matrix-lr-feat.png  used on input line 2097.
+Package pdftex.def Info: imagenes/matrix-lr-feat.png  used on input line 2124.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
-<imagenes/roc-lr-feat.png, id=1047, 498.663pt x 426.393pt>
+ [96 <./imagenes/matrix-lr-feat.png>]
+<imagenes/roc-lr-feat.png, id=1059, 570.933pt x 426.393pt>
 File: imagenes/roc-lr-feat.png Graphic file (type png)
 <use imagenes/roc-lr-feat.png>
-Package pdftex.def Info: imagenes/roc-lr-feat.png  used on input line 2104.
-(pdftex.def)             Requested size: 250.95476pt x 214.58179pt.
- Excluding 'comment' comment. [95 <./imagenes/matrix-lr-feat.png> <./imagenes/roc-lr-feat.png>] [96
-
-]
+Package pdftex.def Info: imagenes/roc-lr-feat.png  used on input line 2159.
+(pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
+ [97 <./imagenes/roc-lr-feat.png>] Excluding 'comment' comment. [98]
 Cap\'{\i }tulo 7.
-[97] [98
+[99
+
+] [100
 
 ]
-Overfull \hbox (2.05347pt too wide) in paragraph at lines 2215--2215
+Overfull \hbox (2.05347pt too wide) in paragraph at lines 2282--2282
 \T1/cmr/m/n/12 medium . com / analytics -[] vidhya / mae -[] mse -[] rmse -[] coe^^^cient -[] of -[] determination -[]
  []
 
-[99
+[101
 
 ]
-Overfull \hbox (4.8651pt too wide) in paragraph at lines 2215--2215
+Overfull \hbox (4.8651pt too wide) in paragraph at lines 2282--2282
 \T1/cmr/m/n/12 regularizaci % C3 % B3n -[] b % C3 % A1sicas -[] para -[] redes -[] neuronales -[] b48f396924d4$[] 
  []
 
 
-Overfull \hbox (10.69482pt too wide) in paragraph at lines 2215--2215
+Overfull \hbox (10.69482pt too wide) in paragraph at lines 2282--2282
 [][]\T1/cmr/m/n/12 Interactive Chaos. (s.f.). Elas-tic Net [Ac-ce-di-do: 2026-05-16]. []$https : / / interactivechaos .
  []
 
-[100]
-Overfull \hbox (8.51064pt too wide) in paragraph at lines 2215--2215
+[102]
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 2282--2282
 [][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
 
-Overfull \hbox (14.72577pt too wide) in paragraph at lines 2215--2215
+Overfull \hbox (14.72577pt too wide) in paragraph at lines 2282--2282
 []$\T1/cmr/m/n/12 https : / / docs . pytorch . org / docs / 2 . 12 / generated / torch . nn . BCEWithLogitsLoss .
  []
 
-[101]
-Overfull \hbox (50.24496pt too wide) in paragraph at lines 2215--2215
+[103]
+Overfull \hbox (50.24496pt too wide) in paragraph at lines 2282--2282
 \T1/cmr/m/n/12 / / scikit -[] learn . org / stable / modules / generated / sklearn . multiclass . OneVsRestClassi^^\er .
  []
 
 
-Overfull \hbox (9.72339pt too wide) in paragraph at lines 2215--2215
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 2282--2282
 \T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
  []
 
-[102] [103] (memoria.aux
+[104] [105] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1309,17 +1310,17 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35583 strings out of 467871
- 683522 string characters out of 5419344
- 1581511 words of memory out of 5000000
+ 35585 strings out of 467871
+ 683538 string characters out of 5419344
+ 1581519 words of memory out of 5000000
  63669 multiletter control sequences out of 15000+600000
  647734 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,94p,1249b,3155s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on memoria.pdf (103 pages, 2114277 bytes).
+Output written on memoria.pdf (105 pages, 2122768 bytes).
 PDF statistics:
- 1882 PDF objects out of 2073 (max. 8388607)
- 298 named destinations out of 1000 (max. 500000)
+ 1893 PDF objects out of 2073 (max. 8388607)
+ 300 named destinations out of 1000 (max. 500000)
  658 words of extra memory for PDF output out of 10000 (max. 10000000)
 

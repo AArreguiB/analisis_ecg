@@ -1962,7 +1962,7 @@ Este ajuste permite priorizar la detección de patologías críticas, especialme
 
 \textbf{Megavector}
 
-Los resultados agrupado por superclase se muestran en la Tabla \ref{tab:metrics_clase_lr_mv}, donde se reportan las métricas de precisión, recall y F1-score para cada categoría en el conjunto de test tras la aplicación de los umbrales definidos
+Los resultados agrupados por superclase se muestran en la Tabla \ref{tab:metrics_clase_lr_mv}, donde se reportan las métricas de precisión, recall y F1-score para cada categoría en el conjunto de test tras la aplicación de los umbrales definidos
 
 \begin{table}[H]
 	\centering
@@ -2075,6 +2075,9 @@ Este comportamiento sugiere que, aunque el modelo es capaz de capturar patrones 
 
 \textbf{Características}
 
+Los resultados de la Tabla \ref{tab:metrics_clase_lr_feat} muestran el rendimiento de la regresión logística utilizando como entrada las características extraídas de la señal ECG. 
+En comparación con la representación basada en megavector, se observa un incremento generalizado del recall en prácticamente todas las superclases, lo que indica que esta representación facilita la detección de los casos positivos, aunque con un posible compromiso en la precisión en determinadas clases.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
@@ -2092,6 +2095,30 @@ Este comportamiento sugiere que, aunque el modelo es capaz de capturar patrones 
 	\label{tab:metrics_clase_lr_feat}
 \end{table}
 
+En la clase NORM se obtiene una precisión de 0.54, un recall de 0.69 y un F1-score de 0.61. 
+Este comportamiento refleja una mejora en la capacidad del modelo para identificar correctamente registros normales respecto a la configuración anterior, aunque con un aumento moderado de falsos positivos, lo que sugiere una mayor sensibilidad del modelo a patrones cercanos a la normalidad.
+
+La clase STTC presenta un rendimiento sólido, con un recall de 0.88 y un F1-score de 0.76. 
+Este resultado indica que el modelo es capaz de detectar de forma consistente las alteraciones del segmento ST/T cuando se utilizan características estructuradas, lo que sugiere que este tipo de representación mejora la separabilidad de este tipo de patrones frente a la señal en crudo.
+
+En la clase CD se observa un recall elevado acompañado de una precisión más limitada, lo que se traduce en un F1-score moderado. 
+Este comportamiento indica que el modelo tiende a priorizar la detección de la mayoría de los casos positivos, aunque a costa de un incremento en los falsos positivos, lo que sugiere solapamiento entre esta clase y otras alteraciones con características similares.
+
+En la clase MI destaca un recall muy alto frente a una precisión baja, lo que da lugar a un F1-score reducido. 
+Este resultado refleja un comportamiento claramente conservador desde el punto de vista clínico, donde el modelo prioriza la detección de posibles infartos, minimizando los falsos negativos incluso a costa de una elevada tasa de falsos positivos. 
+Este patrón es coherente con la relevancia clínica de esta patología.
+
+Finalmente, la clase HYP presenta un comportamiento intermedio, con un recall de 0.82 y una precisión de 0.34. 
+Aunque el modelo consigue detectar la mayoría de los casos positivos, la precisión limitada indica una dificultad significativa para diferenciar esta clase de otras patologías con patrones electrocardiográficos similares.
+
+En conjunto, estos resultados confirman que el uso de características extraídas mejora de forma consistente la sensibilidad del modelo respecto a la representación en megavector, especialmente en clases patológicas. 
+Sin embargo, este incremento en recall viene acompañado de una reducción general en la precisión, lo que evidencia el compromiso habitual entre detección y tasa de falsas alarmas en este tipo de problemas desbalanceados.
+
+\vspace{0.5cm}
+
+Las matrices de confusión correspondientes a la configuración basada en características, mostradas en la Figura \ref{fig:matrix-lr-feat}, permiten analizar con mayor detalle el comportamiento del modelo en términos de aciertos y errores por superclase. 
+En conjunto, se observa un patrón consistente con los resultados de las métricas anteriores, donde el modelo tiende a priorizar la detección de casos positivos a costa de un incremento en los falsos positivos en varias clases.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{imagenes/matrix-lr-feat.png}
@@ -2099,12 +2126,52 @@ Este comportamiento sugiere que, aunque el modelo es capaz de capturar patrones 
     \label{fig:matrix-lr-feat}
 \end{figure}
 
+En la clase NORM se obtienen 578 verdaderos positivos, 2068 verdaderos negativos, 495 falsos positivos y 256 falsos negativos. 
+En este caso, se observa una mejora en la capacidad de detección de la clase normal en comparación con la representación en megavector, reflejada en la reducción de falsos negativos. 
+Sin embargo, el número de falsos positivos se mantiene relativamente elevado, lo que indica que aún existe confusión entre registros normales y patológicos leves. 
+Este comportamiento es coherente con la dificultad intrínseca de delimitar la clase NORM en presencia de alteraciones sutiles en la señal ECG.
+
+En la clase STTC se observan 1251 verdaderos positivos, 1372 verdaderos negativos, 604 falsos positivos y 170 falsos negativos. 
+Destaca especialmente la reducción de falsos negativos respecto a la configuración anterior, lo que indica una mejora en la capacidad del modelo para detectar alteraciones del segmento ST/T. 
+Este resultado es consistente con el aumento del recall observado en las métricas por clase, sugiriendo que la representación mediante características facilita la identificación de este tipo de patrones.
+
+En la clase CD, el modelo presenta 799 verdaderos positivos, 1086 verdaderos negativos, 1419 falsos positivos y 93 falsos negativos. 
+Se observa una clara tendencia a la sobreasignación de esta clase, reflejada en el elevado número de falsos positivos. 
+Esto sugiere que el modelo encuentra similitudes frecuentes entre CD y otras clases, lo que provoca una pérdida de precisión, aunque mantiene una alta sensibilidad.
+
+En la clase MI se observa un comportamiento especialmente relevante desde el punto de vista clínico, con 391 verdaderos positivos y únicamente 25 falsos negativos. 
+Este resultado indica una capacidad muy elevada para detectar casos de infarto, priorizando claramente la sensibilidad del modelo. 
+No obstante, esta mejora viene acompañada de un incremento significativo en falsos positivos, lo que refleja un comportamiento conservador en la toma de decisiones, coherente con la importancia crítica de esta patología.
+
+Finalmente, la clase HYP presenta 617 verdaderos positivos, 1421 verdaderos negativos, 1219 falsos positivos y 140 falsos negativos. 
+El comportamiento es intermedio, con una sensibilidad elevada pero una precisión limitada, lo que sugiere que el modelo sigue teniendo dificultades para diferenciar esta clase de otras alteraciones con patrones electrocardiográficos similares.
+
+En conjunto, las matrices de confusión confirman el patrón observado en las métricas globales: el uso de características extraídas mejora la capacidad de detección de las clases patológicas, especialmente en términos de reducción de falsos negativos, aunque a costa de un aumento en falsos positivos. 
+Este comportamiento refleja el compromiso inherente entre sensibilidad y precisión en problemas clínicos desbalanceados, donde la prioridad se orienta hacia la detección de patologías relevantes.
+
+\vspace{0.5cm}
+
+En la Figura \ref{fig:roc-lr-feat} se observa el conjunto de curvas ROC para cada superclase en la configuración basada en características. 
+De forma global, las curvas muestran un comportamiento consistente, situándose claramente por encima de la diagonal de no discriminación, lo que indica que el modelo es capaz de diferenciar de manera significativa entre clases positivas y negativas en todos los casos.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat.png}
     \caption{Conjunto de ROCs de regresión logística de la configuración 1 (Características)}
     \label{fig:roc-lr-feat}
 \end{figure}
+
+Este comportamiento se cuantifica mediante los valores de AUC por superclase, donde se observa un rendimiento especialmente alto en STTC y NORM, lo que indica una buena capacidad de separación entre estas clases y el resto del espacio de decisión. 
+En el caso de STTC, este resultado es coherente con su buen comportamiento en las métricas de clasificación, mientras que en NORM refleja la capacidad del modelo para distinguir registros normales incluso en presencia de solapamiento con otras patologías.
+
+Las clases MI y HYP presentan valores de AUC intermedios, lo que indica una capacidad discriminativa razonable, aunque con mayor dificultad para establecer fronteras claras entre clases debido a la similitud de patrones electrocardiográficos con otras alteraciones. 
+A pesar de ello, el modelo mantiene una capacidad de ordenación de probabilidades adecuada, lo que justifica los buenos valores de recall observados previamente en estas clases.
+
+Finalmente, la clase CD presenta el valor de AUC más bajo, lo que sugiere que es la superclase con mayor dificultad relativa de separación en este escenario. 
+Este resultado es coherente con el comportamiento observado en las matrices de confusión, donde se aprecia una mayor tasa de falsos positivos, indicando solapamiento con otras categorías del conjunto.
+
+En conjunto, el modelo posee una buena capacidad discriminativa general, especialmente teniendo en cuenta la naturaleza desbalanceada del problema y la complejidad de la señal ECG en crudo. 
+Estos resultados refuerzan las conclusiones obtenidas a partir de las métricas por clase, evidenciando un rendimiento consistente y clínicamente razonable.
 
 \begin{comment}
 \subsubsection*{Random Forest}
