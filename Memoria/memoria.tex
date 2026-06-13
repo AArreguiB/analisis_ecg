@@ -2594,14 +2594,243 @@ De hecho, estos resultados sugieren que el modelo aprende representaciones útil
 
 \subsection{Configuración 2}
 
+La segunda configuración se basa exclusivamente en el uso de características extraídas a partir de la señal electrocardiográfica, sustituyendo la representación en bruto empleada en la configuración anterior. 
+Este cambio permite trabajar con una representación más compacta y estructurada de la señal, en la que se sintetiza información relevante del ECG en variables diseñadas para capturar patrones clínicamente significativos.
+
+Al reducir la dimensionalidad del problema y centrarse en descriptores más informativos, esta configuración busca mejorar la capacidad de generalización de los modelos y facilitar la separación entre superclases. 
+En este contexto, se analiza si la transformación de la señal en un conjunto de características derivadas permite mejorar el rendimiento de clasificación frente a representaciones más directas.
+
+El análisis se realiza de forma análoga a la configuración 1, utilizando métricas por clase (precisión, recall y F1-score), junto con las matrices de confusión y las curvas ROC asociadas a cada modelo. 
+Esto permite evaluar de manera comparativa el impacto del tipo de representación sobre la capacidad discriminativa de los algoritmos.
+
+Dado que el problema mantiene un importante desbalance entre clases y diferentes implicaciones clínicas según la patología, se conservan los umbrales de decisión específicos por superclase definidos en el apartado \ref{apartado_umbral}, con el objetivo de priorizar la detección de aquellas enfermedades donde los falsos negativos tienen mayor relevancia clínica.
+
+A continuación, se presenta el análisis detallado del comportamiento de los distintos modelos bajo esta representación de entrada.
+
 \subsubsection*{Regresión Logística}
 
-\begin{comment}
+La regresión logística constituye el modelo lineal de referencia dentro de esta configuración. 
+Su utilización permite evaluar hasta qué punto las distintas superclases pueden ser separadas mediante combinaciones lineales de la información procedente de las doce derivaciones del ECG. 
+Este enfoque sirve como punto de partida para analizar el valor añadido de incorporar una representación multiderivación completa frente a escenarios más limitados.
+
+\vspace{0.5cm}
+
+Los resultados obtenidos por la regresión logística en la Configuración 2, basada en la utilización de las doce derivaciones del ECG, se recogen en la Tabla \ref{tab:metrics_clase_lr_feat12}. 
+En esta configuración se observa una mejora generalizada del rendimiento respecto a la Configuración 1, especialmente en términos de recall, lo que indica una mayor capacidad del modelo para detectar correctamente las distintas superclases.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.63 & 0.80 & 0.71 \\
+	STTC & 0.76 & 0.92 & 0.83 \\
+	CD   & 0.49 & 0.86 & 0.63 \\
+	MI   & 0.30 & 0.91 & 0.45 \\
+	HYP  & 0.52 & 0.84 & 0.64 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de regresión logística por clase (Características y 12 derivaciones)}
+	\label{tab:metrics_clase_lr_feat12}
+\end{table}
+
+En conjunto, se observa un incremento significativo en la sensibilidad del modelo en todas las clases, lo que indica que la incorporación de la información procedente de las doce derivaciones mejora la capacidad de detección de patrones patológicos. 
+Este comportamiento es especialmente relevante en un contexto clínico, donde la reducción de falsos negativos tiene un impacto directo en la seguridad del diagnóstico.
+
+La clase STTC presenta el mejor rendimiento global, con un recall de 0.92 y un F1-score de 0.83, lo que confirma que se trata de la superclase mejor representada por el modelo en esta configuración. 
+Este resultado sugiere que los patrones asociados a alteraciones del segmento ST/T son claramente identificables cuando se dispone de información multiderivación completa.
+
+En el caso de NORM, se observa una mejora notable en comparación con la configuración anterior, alcanzando un recall de 0.80. 
+Esto indica una mayor capacidad del modelo para identificar correctamente registros normales, aunque la precisión se mantiene moderada, lo que sugiere cierta confusión residual con clases patológicas.
+
+La clase CD muestra una mejora significativa en recall, alcanzando 0.86, lo que indica una mayor sensibilidad en la detección de alteraciones de conducción. 
+Sin embargo, la precisión moderada refleja la persistencia de cierto solapamiento con otras clases, lo que afecta al equilibrio global de la métrica F1.
+
+Por otro lado, MI presenta una mejora especialmente relevante desde el punto de vista clínico, con un recall de 0.91. 
+Este resultado indica que el modelo es capaz de detectar la gran mayoría de los casos de infarto, reduciendo de forma importante el riesgo de falsos negativos, aunque a costa de una precisión más reducida.
+
+Finalmente, la clase HYP alcanza un recall de 0.84, mostrando también una mejora respecto a la configuración anterior. 
+Sin embargo, su precisión moderada indica que aún existe cierta dificultad para separar completamente esta clase del resto de patologías.
+
+En conjunto, estos resultados evidencian que la utilización de las doce derivaciones del ECG mejora de forma consistente la capacidad de detección del modelo lineal, especialmente en términos de sensibilidad, lo que resulta especialmente relevante en un contexto clínico donde los falsos negativos son críticos.
+
+\vspace{0.5cm}
+
+Las matrices de confusión de la Figura \ref{fig:matrix-lr-feat12} permiten analizar en detalle el comportamiento de la regresión logística en la Configuración 2, basada en las doce derivaciones del ECG. 
+En conjunto, se observa una mejora clara en la capacidad de detección de las distintas superclases, especialmente en términos de reducción de falsos negativos, lo que refuerza el efecto positivo de la información multiderivación en el rendimiento del modelo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-lr-feat12.png}
+    \caption{Matrices de confusión de regresión logística de la configuración 2}
+    \label{fig:matrix-lr-feat12}
+\end{figure}
+
+En la clase NORM, el modelo presenta 664 verdaderos positivos, 2181 verdaderos negativos, 382 falsos positivos y 170 falsos negativos. 
+Estos resultados muestran una mejora significativa respecto a la configuración anterior, especialmente en la reducción de falsos negativos, lo que indica una mayor capacidad para identificar correctamente registros normales. 
+No obstante, el número de falsos positivos se mantiene relativamente elevado, lo que sugiere cierta confusión con patrones patológicos leves.
+
+En la clase STTC se obtienen 1310 verdaderos positivos, 1565 verdaderos negativos, 411 falsos positivos y 111 falsos negativos. 
+Este resultado refleja un rendimiento muy sólido, con una alta capacidad de detección y una reducción notable de los falsos negativos. 
+Es la clase que presenta el comportamiento más equilibrado, consolidándose como una de las superclases mejor identificadas por el modelo.
+
+En la clase CD se observan 771 verdaderos positivos, 1705 verdaderos negativos, 800 falsos positivos y 121 falsos negativos. 
+Aunque la sensibilidad mejora de forma evidente respecto a la configuración anterior, el incremento de falsos positivos indica que la mayor capacidad de detección viene acompañada de una mayor tendencia a la sobreclasificación de esta patología.
+
+En la clase MI destaca especialmente la reducción de falsos negativos, con solo 38 casos, lo que supone una mejora muy relevante desde el punto de vista clínico. 
+El modelo es capaz de detectar prácticamente todos los casos de infarto, aunque esto se acompaña de un aumento de falsos positivos, lo que refleja un comportamiento claramente orientado a maximizar la sensibilidad.
+
+Finalmente, la clase HYP presenta 635 verdaderos positivos, 2057 verdaderos negativos, 583 falsos positivos y 122 falsos negativos. 
+Se observa también una mejora importante en la detección de esta patología, con una reducción significativa de falsos negativos, aunque persiste cierta confusión con otras clases que incrementa el número de falsos positivos.
+
+En conjunto, las matrices de confusión confirman que la utilización de las doce derivaciones del ECG mejora de forma consistente la sensibilidad del modelo, especialmente en patologías críticas como MI, donde la reducción de falsos negativos resulta especialmente relevante. 
+Este comportamiento sugiere que la representación multiderivación permite capturar patrones electrocardiográficos más completos, aunque introduce cierto incremento en la confusión entre clases en términos de falsos positivos.
+
+\vspace{0.5cm}
+
+Las curvas ROC de la Figura \ref{fig:roc-lr-feat12} permiten evaluar la capacidad discriminativa de la regresión logística en la Configuración 2 de forma independiente al umbral de decisión utilizado en la clasificación final. 
+Este análisis resulta especialmente relevante, ya que permite comprobar si las mejoras observadas en las métricas de clasificación se deben a una mejor separación de las clases o únicamente a un ajuste del umbral.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat12.png}
+    \caption{Curvas ROC de regresión logística de la configuración 2}
+    \label{fig:roc-lr-feat12}
+\end{figure}
+
+En conjunto, las curvas ROC muestran un comportamiento claramente superior al de la configuración anterior, situándose todas las clases en valores próximos a la esquina superior izquierda del plano ROC, lo que indica una alta capacidad de discriminación entre superclases.
+
+La clase STTC obtiene el mejor resultado global, con un AUC de 0.9311, lo que confirma que el modelo es capaz de distinguir de forma muy robusta este tipo de alteraciones respecto al resto de clases. 
+Este resultado es coherente con el elevado recall y F1-score observados previamente, consolidando a STTC como la superclase mejor modelada en esta configuración.
+
+La clase NORM alcanza un AUC de 0.9072, lo que representa una mejora muy significativa respecto a la configuración anterior. 
+Este resultado indica que el modelo es capaz de separar adecuadamente los registros normales de los patológicos a nivel de probabilidad, incluso aunque la clasificación final dependa del umbral aplicado.
+
+Las clases MI y HYP presentan valores de AUC de 0.8962 en ambos casos, lo que refleja una capacidad discriminativa muy elevada. 
+En el caso de MI, este resultado es especialmente relevante desde el punto de vista clínico, ya que confirma que el modelo aprende a identificar patrones asociados al infarto de forma consistente, aunque la decisión final pueda verse afectada por la elección del umbral.
+
+Finalmente, la clase CD obtiene un AUC de 0.8569, el menor de entre las superclases, si bien sigue reflejando una capacidad discriminativa alta dentro del modelo.
+Esto indica que, aunque sigue siendo la superclase más compleja, la incorporación de las doce derivaciones mejora de forma notable su separabilidad respecto a la configuración anterior.
+
+Con todo esto, se confirma una mejora sustancial en la capacidad discriminativa del modelo en esta configuración, lo que respalda los resultados observados tanto en las métricas por clase como en las matrices de confusión.
+
+
 
 \subsubsection*{Random Forest}
 
+Random Forest introduce un enfoque basado en conjuntos de árboles de decisión, lo que le permite modelar relaciones no lineales entre las variables procedentes de las doce derivaciones del ECG. 
+En este contexto, su análisis permite evaluar si la información espacial completa de la señal mejora la capacidad de discriminación entre superclases en comparación con modelos lineales.
+
+\vspace{0.5cm}
+
+Los resultados obtenidos por la regresión logística en la Configuración 2, empleando características extraídas junto con la información de las doce derivaciones del ECG, se recogen en la Tabla \ref{tab:metrics_clase_rf_feat12}. 
+En términos generales, se observa una mejora en el equilibrio global del modelo respecto a la configuración anterior, especialmente en aquellas clases donde se había identificado mayor dificultad de separación.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.72 & 0.59 & 0.65 \\
+	STTC & 0.90 & 0.67 & 0.76 \\
+	CD   & 0.47 & 0.87 & 0.61 \\
+	MI   & 0.28 & 0.95 & 0.43 \\
+	HYP  & 0.48 & 0.81 & 0.60 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de regresión logística por clase (Características y 12 derivaciones)}
+	\label{tab:metrics_clase_rf_feat12}
+\end{table}
+
+En conjunto, se observa un cambio en el comportamiento del modelo respecto a la Configuración 1, con una tendencia más equilibrada entre precisión y recall en varias superclases. 
+En particular, se aprecia una mejora en la precisión de clases como STTC y NORM, lo que indica una reducción en el número de falsos positivos respecto a la versión anterior del modelo.
+
+La clase STTC presenta el mejor equilibrio global, lo que refleja una capacidad de clasificación muy sólida. 
+Sin embargo, el recall de 0.67 indica que el modelo es más conservador en la asignación de esta etiqueta, priorizando la fiabilidad de las predicciones frente a la sensibilidad.
+
+En el caso de NORM, se observa una mejora en precisión, aunque con una reducción del recall respecto a la configuración anterior. 
+Este comportamiento indica que el modelo es más restrictivo a la hora de clasificar registros como normales, reduciendo falsos positivos a costa de un mayor número de falsos negativos.
+
+La clase CD presenta un comportamiento caracterizado por una alta sensibilidad pero una precisión moderada, lo que sugiere que el modelo tiende a sobrepredecir esta clase en algunos casos, aunque consigue detectar la mayoría de los positivos reales.
+
+Por otro lado, MI destaca por un recall muy elevado, lo que refleja una estrategia claramente orientada a maximizar la detección de infartos, reduciendo al mínimo los falsos negativos. 
+Sin embargo, la baja precisión indica un elevado número de falsos positivos, lo que representa un compromiso explícito hacia la sensibilidad en esta clase crítica.
+
+Finalmente, HYP muestra un comportamiento intermedio, lo que refleja una mejora en la capacidad de detección respecto a configuraciones anteriores, aunque todavía con cierta inestabilidad en la asignación de esta etiqueta.
+
+En conjunto, estos resultados confirman que la combinación de características extraídas y las doce derivaciones permite mejorar la capacidad de detección global del modelo, especialmente en términos de sensibilidad, aunque introduce un cierto desequilibrio en la precisión en algunas superclases críticas.
+
+\vspace{0.5cm}
+
+Las matrices de confusión de la Figura \ref{fig:matrix-rf-feat12} permiten analizar con mayor detalle el comportamiento de la regresión logística en la Configuración 2, basada en características extraídas junto con las doce derivaciones del ECG. 
+En conjunto, se observa una mejora en la capacidad de detección de las distintas superclases, aunque acompañada de un incremento en el número de falsos positivos en determinadas categorías.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/matrix-rf-feat12.png}
+    \caption{Matrices de confusión de random forest de la configuración 2}
+    \label{fig:matrix-rf-feat12}
+\end{figure}
+
+En la clase NORM se obtienen 495 verdaderos positivos, 2370 verdaderos negativos, 193 falsos positivos y 339 falsos negativos. 
+En este caso, el modelo muestra una reducción significativa de falsos positivos respecto a configuraciones anteriores, lo que indica una mayor fiabilidad a la hora de identificar registros normales. Sin embargo, el número de falsos negativos se mantiene en un nivel moderado, lo que refleja cierta tendencia a no clasificar como normales algunos casos que sí lo son.
+
+En la clase STTC se observan 948 verdaderos positivos, 1865 verdaderos negativos, 111 falsos positivos y 473 falsos negativos. 
+Este resultado muestra un comportamiento más conservador del modelo, con una reducción clara de falsos positivos, aunque a costa de un incremento en los falsos negativos, lo que sugiere una menor sensibilidad en comparación con la configuración anterior.
+
+En la clase CD se obtienen 773 verdaderos positivos, 1626 verdaderos negativos, 879 falsos positivos y 119 falsos negativos. 
+En este caso, se mantiene una alta capacidad de detección de la clase, aunque el aumento de falsos positivos indica una tendencia del modelo a sobreasignar esta categoría en presencia de patrones similares a otras alteraciones.
+
+En la clase MI se observa un comportamiento especialmente relevante desde el punto de vista clínico, con 395 verdaderos positivos y únicamente 21 falsos negativos. 
+Esto indica una capacidad muy elevada para detectar casos de infarto, minimizando el riesgo de no identificación de esta patología. 
+No obstante, este comportamiento se acompaña de un elevado número de falsos positivos, lo que refleja una estrategia claramente orientada a maximizar la sensibilidad.
+
+Finalmente, la clase HYP presenta 611 verdaderos positivos, 1983 verdaderos negativos, 657 falsos positivos y 146 falsos negativos. 
+El modelo muestra una capacidad de detección razonable, aunque con cierta confusión con otras clases, lo que se traduce en un equilibrio intermedio entre precisión y sensibilidad.
+
+En conjunto, las matrices de confusión confirman que esta configuración prioriza la reducción de falsos negativos en las clases patológicas más relevantes, especialmente en MI, a costa de un incremento en falsos positivos en varias superclases. 
+Este comportamiento es coherente con un enfoque clínico conservador, en el que se prioriza la detección de patologías frente a la exactitud estricta de la clasificación.
+
+\vspace{0.5cm}
+
+Las curvas ROC de la Figura \ref{fig:roc-rf-feat12} permiten analizar la capacidad discriminativa del Random Forest, evaluando su rendimiento independientemente al umbral de decisión utilizado.
+Este análisis resulta especialmente relevante en modelos basados en árboles, donde la capacidad de modelar relaciones no lineales puede influir significativamente en la separación entre clases.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-rf-feat12.png}
+    \caption{Curvas ROC de random forest de la configuración 2}
+    \label{fig:roc-rf-feat12}
+\end{figure}
+
+En términos generales, las curvas ROC reflejan un comportamiento estable y consistente del modelo, con valores de AUC elevados en todas las superclases. 
+Esto indica que Random Forest es capaz de establecer una ordenación fiable de las probabilidades asociadas a cada clase, incluso en presencia de solapamiento entre patrones electrocardiográficos.
+
+El mejor rendimiento lo presenta la clase STTC, demostrando así que las combinaciones de caracterísiticas de esta patología se capturan correctamente por el conjunto de árboles del modelo.
+Esto refuerza su papel como una de las superclases mejor diferenciadas.
+
+La clase MI tiene una AUC superior a 0.9, que confirma la capacidad del modelo para identificar patrones asociados al infarto.
+Esto es relevante ya que indica que la estructura basada en árboles es capaz de mantener una buena separación incluso en una clase clínicamente crítica y con patrones complejos.
+
+La AUC de la clase NORM refleja una buena capacidad del modelo de diferenciar registros normales de aquellos con patologías.
+Aunque no es la clase con mejor rendimiento, mantiene una separación sólida en el espacio de decisión del modelo.
+
+Por su parte, la superclase HYP es ligeramente más complicada de diagnosticar, lo que hace que surja una mayor dificultad en la representación de alteraciones dentro del modelo.
+
+Finalmente, la clase CD tiene la AUC con el valor más bajo, aunque sigue siendo elevada.
+Este resultado confirma que, a pesar de ser la clase más compleja en términos de separación, Random Forest es capaz de capturar parte de su estructura discriminativa.
+
+En resumen, el modelo Random Forest es capaz de manejar relaciones no lineales y mantiene un rendimiento estable entre clases.
+
+
 \subsubsection*{Red Neuronal Multicapa}
 
+La red neuronal multicapa representa el modelo con mayor capacidad de aprendizaje dentro de esta configuración. 
+Su arquitectura permite capturar relaciones no lineales complejas entre las distintas derivaciones del ECG, lo que la convierte en una herramienta especialmente adecuada para evaluar el potencial discriminativo de la señal multiderivación completa en la detección de patrones clínicamente relevantes.
+
+\begin{comment}
 \subsection{Configuración 3}
 
 \subsubsection*{Ridge Regression}

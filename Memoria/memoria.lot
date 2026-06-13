@@ -17,4 +17,6 @@
 \contentsline {table}{\numberline {6.9}{\ignorespaces Resultados de random forest por clase (Características)}}{103}{table.caption.77}%
 \contentsline {table}{\numberline {6.10}{\ignorespaces Resultados de red neuronal por clase (Megavector)}}{107}{table.caption.81}%
 \contentsline {table}{\numberline {6.11}{\ignorespaces Resultados de red neuronal por clase (Características)}}{110}{table.caption.84}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces Resultados de regresión logística por clase (Características y 12 derivaciones)}}{115}{table.caption.88}%
+\contentsline {table}{\numberline {6.13}{\ignorespaces Resultados de regresión logística por clase (Características y 12 derivaciones)}}{119}{table.caption.92}%
 \addvspace {10\p@ }
