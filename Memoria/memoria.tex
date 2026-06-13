@@ -1479,7 +1479,8 @@ Este peso se calcula a partir de la proporción entre muestras positivas y negat
 Este ajuste resulta especialmente relevante en este problema, ya que sin él el modelo tendería a favorecer las clases mayoritarias, degradando el rendimiento en patologías minoritarias. (\cite{pytorch_bcewithlogitsloss})
 
 Para controlar el sobreajuste durante el entrenamiento, se reserva un 20 \% del conjunto de entrenamiento como validación independiente, utilizada únicamente para monitorizar el rendimiento del modelo. 
-A partir de esta partición se aplica early stopping, de forma que el entrenamiento se detiene cuando la pérdida en validación deja de mejorar durante varias épocas consecutivas, recuperándose el estado del modelo con mejor resultado en validación, lo que permite evitar la degradación por sobreajuste y mantener la mejor generalización posible. (\cite{duran2019_regularization_nn})
+Esta partición permite evaluar la capacidad de generalización durante el entrenamiento y ajustar la complejidad de los modelos cuando es necesario. 
+De este modo, se evita que el modelo se optimice exclusivamente sobre el conjunto de entrenamiento, favoreciendo un comportamiento más estable en datos no vistos. (\cite{duran2019_regularization_nn})
 
 Una vez entrenado el modelo, la salida de la red consiste en una probabilidad independiente por cada superclase, obtenida mediante la función sigmoide aplicada a la capa de salida. 
 Estas probabilidades no se transforman directamente en decisiones mediante un umbral fijo estándar, sino que se utiliza un conjunto de umbrales específicos por clase.
@@ -1638,8 +1639,6 @@ El optimizador utilizado es Adam, complementado con un esquema de reducción ada
 Para mejorar la estabilidad del entrenamiento, se calcula una ponderación basada en el desbalance entre clases a partir de la proporción de ejemplos positivos y negativos por etiqueta. 
 Sin embargo, este peso no se aplica directamente en la función de pérdida.
 
-El control del sobreajuste se realiza mediante early stopping, conservando el modelo con menor pérdida observada durante el entrenamiento.
-
 Finalmente, las salidas del modelo se obtienen aplicando la función sigmoide sobre los logits, obteniéndose valores en el rango [0,1] que se interpretan como una medida continua de probabilidad o asociación.
 
 \subsection{Configuración 1}
@@ -1727,10 +1726,12 @@ En la Tabla \ref{tab:resultados-globales-1} se observan los resultados obtenidos
 	\textbf{Modelo} & \textbf{Entrada} & \textbf{Hamming Acc} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{AUC global}\\ \hline
 	Regresión Logística & Megavector & 0.7215 & 0.4064 & 0.7789 & 0.5074 & 0.7656\\ \hline
 	Regresión Logística & Features & 0.7426 & 0.4153 & 0.8417 & 0.5330 & 0.8091 \\ \hline
+
 	Random Forest & Megavector & 0.7684 & 0.4665 & 0.6931 & 0.4956 & 0.8011 \\ \hline
 	Random Forest & Features & 0.7714 & 0.4767 & 0.7011 & 0.5013 & 0.8153 \\ \hline
-	MLP & Megavector & 0.8013 & 0.2418 & 0.2418 & 0.2706 & 0.8098 \\ \hline
-	MLP & Features & 0.8149 & 0.8021 & 0.3087 & 0.3751 & 0.8277\\ \hline
+
+	MLP & Megavector & 0.8127 & 0.7677 & 0.3327 & 0.4051 & 0.8137 \\ \hline
+	MLP & Features & 0.8121 & 0.8060 & 0.3020 & 0.3610 & 0.8296\\ \hline
 	\end{tabular}
 	\caption{Resultados globales en test de la configuración 1}
 	\label{tab:resultados-globales-1}
@@ -1751,8 +1752,8 @@ A continuación, en la Tabla \ref{tab:overfitting_accuracy_config1} se muestra l
 	Random Forest & Megavector & 0.8187 & 0.7684 & 0.0503 \\
 	Random Forest & Features    & 0.8090 & 0.7714 & 0.0376 \\
 
-	MLP & Megavector & 0.8054 & 0.8013 & 0.0041 \\
-	MLP & Features & 0.8220 & 0.8149 & 0.0071 \\
+	MLP & Megavector & 0.8558 & 0.8127 & 0.0431 \\
+	MLP & Features & 0.8234 & 0.8121 & 0.0113 \\
 
 	\hline
 	\end{tabular}
@@ -1789,7 +1790,7 @@ Esto sugiere que la reducción de dimensionalidad y la extracción de informaci�
 
 Desde el punto de vista de la generalización, el análisis de la diferencia entre el rendimiento en entrenamiento y test muestra que no existe un sobreajuste significativo en ninguno de los modelos evaluados. 
 La regresión logística presenta prácticamente el mismo rendimiento en ambos conjuntos, mientras que Random Forest muestra una ligera variación en función del tipo de entrada, aunque dentro de márgenes aceptables. 
-La red neuronal multicapa destaca por presentar diferencias muy reducidas entre entrenamiento y test, lo que indica una buena capacidad de generalización, favorecida por el uso de técnicas como dropout, batch normalization y early stopping.
+La red neuronal multicapa destaca por presentar diferencias muy reducidas entre entrenamiento y test, lo que indica una buena capacidad de generalización, favorecida por el uso de técnicas como dropout y batch normalization.
 
 En conjunto, los resultados de esta configuración muestran que no existe un único modelo claramente superior en todas las métricas analizadas. 
 Mientras que la red neuronal multicapa obtiene los mejores resultados en términos de Hamming Accuracy y AUC global, la regresión logística y Random Forest presentan un comportamiento más equilibrado entre superclases, reflejado en valores superiores de F1-score macro. 
@@ -1798,6 +1799,8 @@ El uso de características extraídas mejora de forma consistente el rendimiento
 \subsection{Configuración 2: 12 derivaciones y clasificación binaria}
 
 \todo{cambio de numeros por el cambio de umbral}
+
+\todo{cambio de numeros con la eliminación del early stopping}
 
 La segunda configuración introduce un incremento en la complejidad del problema mediante el uso de las 12 derivaciones completas del ECG. 
 Este cambio permite disponer de una mejor representación de la señal cardíaca, lo que se traduce en una mejora general del rendimiento de los modelos en comparación con la configuración anterior.
@@ -1938,25 +1941,22 @@ En conjunto, se observa que los modelos basados en árboles ofrecen el mejor com
 
 \section{Análisis por modelos y enfermedades}
 
-Además de las métricas globales presentadas en el apartado \ref{sec:resultados-globales}, es necesario examinar el comportamiento de los modelos a un nivel más específico, evaluando su rendimiento en cada una de las configuraciones planteadas.
+Con el objetivo de complementar las métricas globales presentadas anteriormente, en este apartado se analiza el rendimiento de los distintos modelos a nivel de superclase. 
+Para ello se estudian las métricas de precisión, recall y F1-score obtenidas para cada categoría, así como las matrices de confusión y las curvas ROC asociadas.
 
-Para ello, se analizan métricas por clase, matrices de confusión y el efecto de distintos umbrales de decisión cuando corresponda.
-Este estudio permite identificar las categorías que presentan una mayor o menor capacidad de detección, así como las fortalezas y limitaciones de cada modelo en función de la naturaleza del problema abordado.
+Dado que el problema presenta un importante desbalance entre clases y que las distintas patologías tienen una relevancia clínica diferente, no se emplea un único umbral de decisión global. 
+En su lugar, se utilizan umbrales específicos para cada superclase, definidos según el criterio descrito en el apartado \ref{apartado_umbral}. 
+Este enfoque permite adaptar el equilibrio entre sensibilidad y precisión a las características de cada categoría, priorizando la detección de aquellas patologías donde los falsos negativos pueden tener consecuencias clínicas más relevantes.
 
-En todas las superclases, se busca minimizar el valor de los falsos negativos, ya que desde un punto de vista médico, es mejor clasificar a un paciente sano como enfermo en vez de ignorar una enfermedad grave que pueda tener el paciente. 
-Esto es al revés en la clase NORM, que busca reducir el número de falsos positivos, y diagnosticar como sano un paciente con alguna enfermedad.
+A continuación se analiza el comportamiento de cada modelo utilizando tanto la representación basada en el megavector de la señal ECG como el conjunto de características extraídas.
 
 \todo{añadir solo las matrices del umbral optimo el resto en anexos?}
 \subsection{Configuración 1}
 
 \subsubsection*{Regresión Logística}
 
-El siguiente análisis examina el rendimiento de cada combinación a nivel de clase, con el objetivo de identificar qué patologías resultan más o menos difíciles de detectar según el modelo y la representación empleada. 
-Para ello se recurre a las métricas por clase recogidas en las tablas correspondientes, así como a las matrices de confusión y curvas ROC que se presentan en las figuras asociadas a cada modelo.
-
-Dado que las clases están desbalanceadas y tienen relevancia clínica, no se emplea un único umbral de decisión global. 
-En su lugar, se define un conjunto de umbrales específicos por superclase (explicados en el apartado \ref{apartado_umbral}), ajustados manualmente en función del compromiso entre sensibilidad y precisión. 
-Este ajuste permite priorizar la detección de patologías críticas, especialmente aquellas donde los falsos negativos tienen mayor impacto clínico, incluso a costa de incrementar falsos positivos en determinadas clases.
+La regresión logística constituye el modelo de referencia más sencillo evaluado en esta configuración. 
+Debido a su naturaleza lineal, permite analizar hasta qué punto las distintas superclases pueden separarse mediante fronteras de decisión simples, así como evaluar el impacto de la representación de entrada sobre su capacidad discriminativa.
 
 \vspace{1cm}
 
@@ -2173,70 +2173,430 @@ Este resultado es coherente con el comportamiento observado en las matrices de c
 En conjunto, el modelo posee una buena capacidad discriminativa general, especialmente teniendo en cuenta la naturaleza desbalanceada del problema y la complejidad de la señal ECG en crudo. 
 Estos resultados refuerzan las conclusiones obtenidas a partir de las métricas por clase, evidenciando un rendimiento consistente y clínicamente razonable.
 
-\begin{comment}
+
 \subsubsection*{Random Forest}
+
+En este apartado se estudia el rendimiento del modelo Random Forest empleando tanto el megavector de la señal ECG como las características extraídas. 
+El objetivo es analizar su capacidad para discriminar entre las distintas superclases y comparar el efecto de ambas representaciones sobre las métricas de clasificación, las matrices de confusión y las curvas ROC.
+
+\vspace{1cm}
+
+\textbf{Megavector}
+
+Los resultados de la Tabla \ref{tab:metrics_clase_rf_mv} muestran el rendimiento del modelo Random Forest utilizando como entrada el megavector de la señal ECG en la configuración 1. 
+A diferencia de la regresión logística, este modelo presenta un comportamiento más desigual entre precisión y recall según la superclase, lo que indica una estrategia de decisión más conservadora en ciertas clases y más restrictiva en otras.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.60 & 0.51 & 0.55 \\
+	STTC & 0.80 & 0.48 & 0.60 \\
+	CD   & 0.38 & 0.80 & 0.52 \\
+	MI   & 0.19 & 0.88 & 0.31 \\
+	HYP  & 0.36 & 0.79 & 0.50 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de random forest por clase (Megavector)}
+	\label{tab:metrics_clase_rf_mv}
+\end{table}
+
+En la clase NORM se obtiene una precisión de 0.60, un recall de 0.51 y un F1-score de 0.55. 
+Este resultado refleja una mayor capacidad del modelo para evitar falsos positivos en comparación con la regresión logística, aunque a costa de una reducción en la sensibilidad. 
+En este caso, el modelo es más estricto a la hora de asignar la etiqueta NORM, lo que reduce la probabilidad de clasificar como normal un caso que pueda presentar alteraciones.
+
+La clase STTC presenta un comportamiento caracterizado por una precisión elevada pero un recall relativamente bajo, lo que da lugar a un F1-score de 0.60. 
+Este patrón indica que el modelo es muy conservador a la hora de asignar esta clase, es decir, cuando predice STTC suele hacerlo con alta fiabilidad, pero deja sin detectar una parte importante de los casos positivos. 
+Esto sugiere que el modelo encuentra patrones claros para esta clase, pero no logra generalizar bien todos los casos posibles dentro de la misma.
+
+En la clase CD se observa un equilibrio más estable entre precisión y recall, lo que indica una tendencia del modelo a priorizar la detección de la mayoría de los casos positivos, aunque con un número considerable de falsos positivos. 
+Este comportamiento es coherente con clases intermedias en complejidad, donde el modelo tiende a sobre-asignar la etiqueta para no perder sensibilidad.
+
+La clase MI presenta un recall muy elevado frente a una precisión muy baja, lo que refleja un comportamiento claramente orientado a la detección de infartos, minimizando falsos negativos a costa de generar un gran número de falsas alarmas. 
+Desde el punto de vista clínico, este comportamiento es coherente con la importancia crítica de esta patología, aunque reduce la fiabilidad de las predicciones positivas.
+
+Finalmente, la clase HYP muestra un rendimiento intermedio, con un recall de 0.79 y una precisión de 0.36. 
+Esto indica que el modelo consigue detectar una proporción elevada de casos positivos, aunque con dificultades para discriminar correctamente esta clase frente a otras patologías con patrones electrocardiográficos similares.
+
+En conjunto, Random Forest con entrada megavector muestra un comportamiento más sesgado hacia la sensibilidad en las clases patológicas críticas, especialmente MI y CD, mientras que reduce notablemente el recall en STTC. 
+Este patrón sugiere que el modelo tiende a construir fronteras de decisión más rígidas y segmentadas en el espacio de alta dimensionalidad del megavector, lo que mejora la precisión en algunas clases pero limita la generalización en otras.
+
+\vspace{0.5cm}
+
+La Figura \ref{fig:matrix-rf-mv} muestra las matrices de confusión por clase de random forest y entrada megavector.
+En conjunto, se observa un patrón más marcado de especialización del modelo, donde determinadas clases presentan una mejora clara en la reducción de falsos positivos, mientras que otras muestran una pérdida significativa de sensibilidad.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{imagenes/matrix-rf-mv.png}
-    \caption{Matrices de confusión de random forest de la configuración 1 con megavector}
+    \caption{Matrices de confusión de random forest de la configuración 1 (Megavector)}
     \label{fig:matrix-rf-mv}
 \end{figure}
 
+En la clase NORM se obtienen 425 verdaderos positivos, 2283 verdaderos negativos, 280 falsos positivos y 409 falsos negativos. 
+Este resultado muestra un comportamiento más conservador respecto a la asignación de la clase normal, reduciendo de forma notable los falsos positivos en comparación con la regresión logística. 
+Sin embargo, esta mejora en precisión viene acompañada de un aumento de falsos negativos, lo que indica que el modelo tiende a clasificar como patológicos algunos registros que realmente son normales. 
+En este caso, el modelo prioriza evitar falsos diagnósticos de normalidad erróneos, pero pierde sensibilidad en esta clase.
+
+En la clase STTC se observan 682 verdaderos positivos, 1803 verdaderos negativos, 173 falsos positivos y 739 falsos negativos. 
+Aquí se aprecia uno de los puntos débiles del modelo, ya que el número de falsos negativos es elevado, lo que implica que una proporción importante de alteraciones del segmento ST/T no está siendo detectada. 
+Este comportamiento es coherente con el bajo recall observado en las métricas por clase y sugiere que el modelo no consigue capturar completamente la variabilidad de esta patología en el espacio del megavector.
+
+En la clase CD se obtienen 718 verdaderos positivos, 1327 verdaderos negativos, 1178 falsos positivos y 174 falsos negativos. 
+En este caso, el modelo presenta una tendencia clara a la sobrepredicción de esta clase, reflejada en el elevado número de falsos positivos. 
+Esto indica que el modelo identifica patrones compatibles con CD en registros que pertenecen a otras superclases, lo que penaliza la precisión pero mantiene una sensibilidad relativamente alta.
+
+En la clase MI se observa un comportamiento muy orientado a la detección de la patología, con 366 verdaderos positivos y únicamente 50 falsos negativos. 
+Este resultado indica una alta sensibilidad en la detección de infartos, lo que es coherente con un comportamiento conservador desde el punto de vista clínico. 
+Sin embargo, este rendimiento se acompaña de un número elevado de falsos positivos, lo que refleja una baja precisión en esta clase.
+
+Finalmente, la clase HYP presenta 599 verdaderos positivos, 1582 verdaderos negativos, 1058 falsos positivos y 158 falsos negativos. 
+El comportamiento es intermedio, con una sensibilidad relativamente alta pero con una proporción significativa de falsos positivos, lo que indica dificultades del modelo para diferenciar esta clase de otras alteraciones con patrones electrocardiográficos similares.
+
+En conjunto, las matrices de confusión muestran que Random Forest tiende a mejorar la especificidad en comparación con modelos lineales en ciertas clases, especialmente NORM, pero introduce una mayor inestabilidad en la detección de clases como STTC, donde el incremento de falsos negativos es especialmente relevante. 
+Este comportamiento refleja una mayor rigidez del modelo en el espacio de alta dimensionalidad del megavector, lo que afecta de forma desigual a las distintas superclases.
+
+\vspace{0.5cm}
+
+En la Figura \ref{fig:roc-rf-mv}, se observa que las curvas se sitúan claramente por encima de la diagonal de aleatoriedad, lo que indica que el modelo es capaz de diferenciar de manera consistente entre las distintas clases frente al resto, incluso en un problema multietiqueta desbalanceado.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-mv.png}
-    \caption{Conjunto de ROCs de random forest de la configuración 1 con megavector}
+    \includegraphics[width=0.5\textwidth]{imagenes/roc-rf-mv.png}
+    \caption{Conjunto de ROCs de random forest de la configuración 1 (Megavector)}
     \label{fig:roc-rf-mv}
 \end{figure}
+
+Este comportamiento se cuantifica mediante los valores de AUC por superclase, donde se observa un rendimiento especialmente elevado en STTC y NORM. 
+En el caso de STTC, este valor confirma una buena capacidad del modelo para ordenar correctamente las probabilidades de pertenencia a esta clase, aunque este resultado no se refleja completamente en el recall obtenido previamente, lo que sugiere que el umbral utilizado limita parte de su sensibilidad. 
+En NORM, el AUC elevado indica una buena capacidad de separación global entre registros normales y patológicos, coherente con la reducción de falsos positivos observada en las matrices de confusión.
+
+Las clases MI y HYP presentan valores de AUC intermedios, lo que indica una capacidad discriminativa razonable, aunque inferior a las clases más separables. 
+En el caso de MI, este resultado es especialmente relevante desde el punto de vista clínico, ya que confirma que, a pesar del elevado número de falsos positivos observado, el modelo es capaz de asignar puntuaciones de probabilidad adecuadas para distinguir esta clase de forma global. 
+En HYP, el comportamiento sugiere una separabilidad moderada, afectada probablemente por la similitud de patrones con otras alteraciones estructurales del ECG.
+
+Finalmente, la clase CD presenta el valor de AUC más bajo, lo que indica que es la superclase con mayor dificultad relativa de separación en este escenario. 
+Este resultado es consistente con el comportamiento observado en las matrices de confusión, donde se aprecia una tendencia a la sobreasignación de la clase, reflejando solapamiento en el espacio de representación del megavector.
+
+En conjunto, Random Forest presenta una capacidad discriminativa sólida en este escenario, ligeramente superior a modelos lineales en términos globales, aunque con un comportamiento más desigual entre clases. 
+Esto sugiere que el modelo es capaz de capturar relaciones no lineales relevantes en la señal ECG, si bien su rendimiento varía de forma significativa dependiendo de la superclase analizada.
+
+\vspace{1cm}
+
+\textbf{Características}
+
+Los resultados de la Tabla \ref{tab:metrics_clase_rf_feat} muestran el rendimiento del modelo Random Forest utilizando como entrada las características extraídas de la señal ECG en la configuración 1. 
+En comparación con la representación basada en megavector, se observa un comportamiento más equilibrado en algunas clases, aunque persiste una clara tendencia a priorizar la sensibilidad en las patologías más relevantes clínicamente.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.58 & 0.56 & 0.57 \\
+	STTC & 0.85 & 0.46 & 0.59 \\
+	CD   & 0.40 & 0.83 & 0.54 \\
+	MI   & 0.19 & 0.90 & 0.31 \\
+	HYP  & 0.37 & 0.76 & 0.49 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de random forest por clase (Características)}
+	\label{tab:metrics_clase_rf_feat}
+\end{table}
+
+En la clase NORM se obtiene una precisión de 0.58, un recall de 0.56 y un F1-score de 0.57. 
+Este resultado refleja un comportamiento más equilibrado respecto a la versión con megavector, con una ligera mejora en precisión pero una reducción en la capacidad de detección de casos normales. 
+Esto sugiere que la representación basada en características no mejora de forma clara la separación de la clase NORM, aunque sí estabiliza parcialmente el comportamiento del modelo.
+
+La clase STTC presenta una precisión elevada junto con un recall bajo, lo que da lugar a un F1-score de 0.59. 
+Este patrón indica que el modelo es muy conservador a la hora de asignar esta clase, de forma que cuando predice STTC lo hace con alta fiabilidad, pero deja sin detectar una proporción importante de casos positivos. 
+Esto sugiere que, aunque las características extraídas permiten identificar patrones muy representativos, el modelo no consigue generalizar completamente la variabilidad de esta clase.
+
+En la clase CD se observa un recall elevado frente a una precisión de 0.40, lo que indica una tendencia clara a sobreasignar esta clase. 
+Este comportamiento refleja que el modelo prioriza la detección de la mayoría de los casos positivos, aunque a costa de incrementar el número de falsos positivos, lo que penaliza la precisión.
+
+La clase MI presenta un recall muy alto y una precisión baja, manteniendo un F1-score reducido. 
+Este comportamiento confirma el enfoque conservador del modelo en esta patología, donde se prioriza claramente la detección de infartos frente a la reducción de falsas alarmas.
+Desde el punto de vista clínico, este comportamiento es coherente, ya que minimizar falsos negativos en MI es prioritario.
+
+Finalmente, la clase HYP muestra un comportamiento intermedio, con un recall de 0.76 y una precisión de 0.37. 
+Aunque el modelo es capaz de detectar una proporción significativa de casos positivos, la baja precisión indica dificultades para diferenciar esta clase de otras patologías con patrones electrocardiográficos similares.
+
+En conjunto, Random Forest con entrada basada en características muestra un comportamiento ligeramente más estable que con megavector en términos de equilibrio entre precisión y recall, aunque no se observan mejoras globales claras. 
+El modelo mantiene una fuerte orientación hacia la sensibilidad en las clases patológicas, especialmente MI y CD, lo que refleja una estrategia conservadora coherente con el contexto clínico del problema.
+
+\vspace{0.5cm}
+
+Las matrices de la Figura \ref{fig:matrix-rf-feat} muestran un patrón consistente con los resultados de las métricas previas, donde el modelo mantiene una tendencia clara a priorizar la sensibilidad en las clases patológicas, aunque con variaciones importantes en el equilibrio entre falsos positivos y falsos negativos según la clase.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{imagenes/matrix-rf-feat.png}
-    \caption{Matrices de confusión de random forest de la configuración 1 con características}
+    \caption{Matrices de confusión de random forest de la configuración 1 (Características)}
     \label{fig:matrix-rf-feat}
 \end{figure}
+
+En la clase NORM se obtienen 470 verdaderos positivos, 2224 verdaderos negativos, 339 falsos positivos y 364 falsos negativos. 
+En este caso, se observa una reducción de falsos positivos respecto a la configuración con megavector, lo que indica una mejora en la capacidad del modelo para evitar clasificaciones erróneas de normalidad. 
+Sin embargo, el número de falsos negativos sigue siendo elevado, lo que refleja que una parte relevante de registros normales es clasificada como patológica. 
+Este comportamiento es coherente con una estrategia conservadora en la asignación de la clase NORM.
+
+En la clase STTC se observan 647 verdaderos positivos, 1863 verdaderos negativos, 113 falsos positivos y 774 falsos negativos. 
+Destaca especialmente el elevado número de falsos negativos, lo que indica una pérdida significativa de sensibilidad en esta clase. 
+A pesar de la baja tasa de falsos positivos, el modelo no es capaz de detectar una proporción importante de alteraciones del segmento ST/T, lo que sugiere una limitación en la generalización de los patrones asociados a esta clase dentro del espacio de características.
+
+En la clase CD se obtienen 740 verdaderos positivos, 1377 verdaderos negativos, 1128 falsos positivos y 152 falsos negativos. 
+El comportamiento muestra una tendencia clara a la sobreasignación de esta clase, reflejada en el elevado número de falsos positivos. 
+Esto indica que el modelo identifica patrones compatibles con CD en registros que pertenecen a otras superclases, lo que reduce la precisión aunque mantiene una sensibilidad relativamente alta.
+
+En la clase MI se observa un comportamiento especialmente relevante desde el punto de vista clínico, con 375 verdaderos positivos y únicamente 41 falsos negativos. 
+Este resultado confirma una alta capacidad del modelo para detectar casos de infarto, priorizando claramente la sensibilidad. 
+No obstante, este comportamiento viene acompañado de un número elevado de falsos positivos, lo que indica una estrategia conservadora orientada a minimizar errores críticos de no detección.
+
+Finalmente, la clase HYP presenta 572 verdaderos positivos, 1654 verdaderos negativos, 986 falsos positivos y 185 falsos negativos. 
+El modelo muestra un comportamiento intermedio, con una sensibilidad aceptable pero con una precisión limitada, lo que sugiere dificultades para diferenciar esta clase frente a otras patologías con patrones electrocardiográficos similares.
+
+En conjunto, las matrices de confusión confirman que el uso de características extraídas mejora parcialmente la especificidad del modelo en comparación con el megavector, especialmente en NORM, pero no elimina la tendencia general a priorizar la sensibilidad en las clases patológicas. 
+Este comportamiento refleja el compromiso inherente del problema entre reducción de falsos negativos y control de falsas alarmas.
+
+\vspace{0.5cm}
+
+Las curvas ROC de la Figura \ref{fig:roc-rf-feat} se sitúan claramente por encima de la diagonal de no discriminación, lo que indica que el modelo es capaz de diferenciar de manera consistente entre clases positivas y negativas en todos los casos, incluso en un escenario multiclase desbalanceado.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat.png}
-    \caption{Conjunto de ROCs de random forest de la configuración 1 con características}
+    \caption{Conjunto de ROCs de random forest de la configuración 1 (Características)}
     \label{fig:roc-rf-feat}
 \end{figure}
 
+Este comportamiento se cuantifica mediante los valores de AUC por superclase, donde se observa un rendimiento especialmente elevado en STTC y NORM. 
+En el caso de STTC, este valor confirma una buena capacidad del modelo para ordenar correctamente las probabilidades asociadas a esta clase, aunque este rendimiento no se traduce completamente en un recall elevado, lo que sugiere que el umbral de decisión penaliza parte de la sensibilidad. 
+En NORM, el AUC elevado refleja una buena capacidad de separación global entre registros normales y patológicos, coherente con la reducción parcial de falsos positivos observada en las matrices de confusión.
+
+Las clases MI y HYP presentan valores de AUC intermedios, lo que indica una capacidad discriminativa razonable, aunque inferior a las clases más separables. 
+En el caso de MI, este resultado es especialmente relevante desde el punto de vista clínico, ya que confirma que el modelo es capaz de asignar puntuaciones de probabilidad adecuadas para diferenciar esta clase del resto, a pesar de la presencia de falsos positivos derivados del enfoque conservador del modelo. 
+En HYP, el comportamiento sugiere una separabilidad moderada, afectada por la similitud de patrones electrocardiográficos con otras alteraciones estructurales.
+
+Finalmente, la clase CD presenta el valor de AUC más bajo, lo que indica que sigue siendo la superclase con mayor dificultad relativa de separación en este escenario. 
+Este resultado es coherente con el comportamiento observado en las matrices de confusión, donde se aprecia una tendencia a la sobreasignación de la clase, reflejando solapamiento en el espacio de representación incluso con características extraídas.
+
+En conjunto, el modelo Random Forest con características presenta la mejor capacidad discriminativa global dentro de la configuración analizada, superando a la versión basada en megavector y reforzando la utilidad de las características extraídas para este problema.
+
 \subsubsection*{Red Neuronal Multicapa}
+
+En este apartado se analiza el rendimiento de la red neuronal multicapa utilizando tanto el megavector de la señal ECG como las características extraídas. Debido a su capacidad para modelar relaciones no lineales complejas, este tipo de arquitectura puede capturar patrones difíciles de representar mediante modelos más simples. 
+El objetivo es evaluar hasta qué punto dicha capacidad se traduce en una mejora de la detección de las distintas superclases, así como estudiar el equilibrio alcanzado entre sensibilidad y precisión en cada una de ellas.
+
+\vspace{1cm}
+
+\textbf{Megavector}
+
+La Tabla \ref{tab:metrics_clase_mlp_mv} muestra los resultados obtenidos por la red neuronal multicapa utilizando como entrada el megavector de la señal ECG en la configuración 1. 
+Este modelo se evalúa en un escenario de clasificación multietiqueta desbalanceado, donde el objetivo es analizar su capacidad para discriminar entre distintas superclases a partir de la señal en bruto.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.76 & 0.15 & 0.26 \\
+	STTC & 0.71 & 0.85 & 0.77 \\
+	CD   & 0.63 & 0.23 & 0.33 \\
+	MI   & 0.87 & 0.10 & 0.18 \\
+	HYP  & 0.87 & 0.34 & 0.49 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de red neuronal por clase (Megavector)}
+	\label{tab:metrics_clase_mlp_mv}
+\end{table}
+
+En conjunto, los resultados muestran un comportamiento desigual entre clases, con una clara especialización del modelo en la detección de STTC, mientras que el rendimiento en el resto de superclases se ve limitado principalmente por valores bajos de recall.
+
+En la clase NORM se obtiene una precisión de 0.76 junto con un recall de 0.15, lo que indica que el modelo es capaz de identificar correctamente los casos normales cuando los predice, aunque presenta dificultades para detectarlos de forma consistente. 
+Este comportamiento sugiere una tendencia del modelo a ser conservador en la asignación de esta clase, probablemente debido a la similitud entre registros normales y ciertos patrones patológicos.
+
+La clase STTC presenta el mejor rendimiento global, con un recall de 0.85 y un F1-score de 0.77, lo que indica una buena capacidad de detección de alteraciones del segmento ST/T. 
+Este resultado sugiere que esta clase presenta patrones suficientemente diferenciables en la representación del megavector, lo que facilita su identificación por parte del modelo.
+
+En el caso de CD y MI se observan precisiones elevadas, pero recalls bajos. 
+Esto indica que el modelo solo asigna estas etiquetas cuando existe una alta confianza, lo que reduce la aparición de falsos positivos, pero limita de forma importante la sensibilidad del sistema en estas patologías. 
+Este comportamiento es especialmente relevante en MI, donde la baja sensibilidad implica una menor capacidad de detección de eventos críticos.
+
+Finalmente, la clase HYP presenta un comportamiento intermedio, con una precisión de 0.87 y un recall de 0.34, lo que indica una capacidad de detección moderada, aunque todavía limitada en comparación con otras clases más fácilmente identificables.
+
+En conjunto, la red neuronal multicapa con entrada basada en megavector muestra una fuerte dependencia de la separabilidad de las clases en el espacio de entrada, destacando especialmente en STTC, pero con limitaciones claras en la detección de varias patologías menos representadas o con patrones más solapados.
+
+\vspace{0.5cm}
+
+En la Figura \ref{fig:matrix-mlp-mv}, que muestras las matrices de confusión de la red neuronal con entrada megavector, se observa un patrón claramente desigual, donde el modelo muestra una buena capacidad de discriminación en STTC, mientras que presenta dificultades importantes en la detección del resto de patologías.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{imagenes/matrix-mlp-mv.png}
-    \caption{Matrices de confusión de red neuronal de la configuración 1 con megavector}
+    \caption{Matrices de confusión de red neuronal de la configuración 1 (Megavector)}
     \label{fig:matrix-mlp-mv}
 \end{figure}
+
+En la clase NORM se obtienen 128 verdaderos positivos, 2523 verdaderos negativos, 40 falsos positivos y 706 falsos negativos. 
+Este resultado refleja una capacidad muy limitada del modelo para identificar correctamente los registros normales, lo que se traduce en un recall bajo. 
+El elevado número de falsos negativos indica que una gran parte de los casos normales está siendo clasificada como patológica, lo que sugiere que el modelo es especialmente restrictivo a la hora de asignar esta clase.
+
+En la clase STTC se observan 1203 verdaderos positivos, 1491 verdaderos negativos, 485 falsos positivos y 218 falsos negativos. 
+En este caso, el modelo muestra su mejor comportamiento, con una capacidad de detección relativamente sólida y un equilibrio razonable entre sensibilidad y precisión. 
+Aunque existen falsos positivos relevantes, la tasa de falsos negativos es moderada, lo que explica el buen recall observado previamente en las métricas por clase.
+
+En la clase CD se obtienen 201 verdaderos positivos, 2385 verdaderos negativos, 120 falsos positivos y 691 falsos negativos. 
+Este resultado evidencia una baja capacidad de detección de la clase, con un número elevado de falsos negativos. 
+Esto indica que el modelo no consigue capturar adecuadamente los patrones asociados a CD dentro del espacio de representación del megavector, lo que explica su bajo recall.
+
+En la clase MI se observa un comportamiento especialmente crítico desde el punto de vista clínico, con 41 verdaderos positivos y 375 falsos negativos. 
+Este resultado refleja una sensibilidad extremadamente baja, lo que implica que el modelo no es capaz de detectar la mayoría de los casos de infarto. 
+Aunque el número de falsos positivos es reducido, este comportamiento es problemático en un contexto clínico, ya que prioriza en exceso la precisión frente a la detección de casos positivos.
+
+Finalmente, la clase HYP presenta 257 verdaderos positivos, 2600 verdaderos negativos, 40 falsos positivos y 500 falsos negativos. 
+El modelo muestra una baja sensibilidad en esta clase, con un número elevado de falsos negativos, lo que indica dificultades claras para distinguirla de otras patologías con patrones electrocardiográficos similares.
+
+En conjunto, las matrices de confusión confirman el comportamiento observado en las métricas de clasificación: la red neuronal multicapa con entrada basada en megavector tiende a especializarse en la clase STTC, mientras que presenta una sensibilidad muy limitada en el resto de superclases. 
+Este comportamiento sugiere una fuerte dependencia de la representabilidad de las características implícitas en el megavector, que no resultan suficientemente discriminativas para varias de las patologías analizadas.
+
+\vspace{0.5cm}
+
+En conjunto, las curvas ROC (Figura \ref{fig:roc-mlp-mv}) se sitúan por encima de la diagonal de aleatoriedad en todas las superclases, lo que indica que el modelo es capaz de establecer una ordenación coherente de las probabilidades asignadas a cada clase, incluso cuando la decisión final de clasificación no es óptima.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-mv.png}
-    \caption{Conjunto de ROCs de red neuronal de la configuración 1 con megavector}
+    \caption{Conjunto de ROCs de red neuronal de la configuración 1 (Megavector)}
     \label{fig:roc-mlp-mv}
 \end{figure}
+
+Este comportamiento se cuantifica mediante los valores de AUC por superclase, donde se observa un rendimiento especialmente elevado en STTC y NORM. 
+En el caso de STTC, este valor confirma una buena capacidad del modelo para distinguir esta clase del resto, coherente con su buen rendimiento en términos de recall y F1-score. 
+En NORM, el AUC elevado indica que, a pesar del bajo recall observado en las matrices de confusión, el modelo sí es capaz de asignar puntuaciones de probabilidad adecuadas, lo que sugiere que el problema no reside tanto en la separabilidad, sino en el punto de decisión utilizado.
+
+Las clases MI y HYP presentan valores de AUC intermedios, lo que indica una capacidad discriminativa razonable. 
+En el caso de MI, este resultado es especialmente relevante desde el punto de vista clínico, ya que demuestra que el modelo sí es capaz de diferenciar parcialmente esta clase del resto, aunque la elección del umbral y la distribución de errores penalicen fuertemente su sensibilidad. 
+En HYP, el comportamiento refleja una separabilidad moderada, consistente con la dificultad del modelo para capturar completamente sus patrones en la señal ECG.
+
+Finalmente, la clase CD presenta el valor de AUC más bajo, lo que indica que es la superclase con mayor dificultad relativa de separación en este escenario. 
+Este resultado es coherente con el comportamiento observado en las matrices de confusión, donde se aprecia una baja capacidad de detección y un elevado número de falsos negativos.
+
+En conjunto, la red neuronal multicapa tiene una buena capacidad discriminativa global, aunque esta no se traduce directamente en un rendimiento equilibrado en términos de clasificación final. 
+Esto sugiere que las limitaciones del modelo no provienen únicamente de la representación del megavector, sino también de la calibración del proceso de decisión.
+
+\vspace{1cm}
+
+\textbf{Características}
+
+La Tabla \ref{tab:metrics_clase_mlp_feat} muestra los resultados obtenidos por la red neuronal multicapa utilizando como entrada las características extraídas de la señal ECG en la configuración 1. 
+En este caso, se observa un comportamiento similar al obtenido con la representación basada en megavector, aunque con ciertas variaciones en el equilibrio entre precisión y recall según la superclase.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.80 & 0.05 & 0.09 \\
+	STTC & 0.72 & 0.86 & 0.78 \\
+	CD   & 0.71 & 0.16 & 0.26 \\
+	MI   & 0.88 & 0.09 & 0.17 \\
+	HYP  & 0.92 & 0.35 & 0.51 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de red neuronal por clase (Características)}
+	\label{tab:metrics_clase_mlp_feat}
+\end{table}
+
+En conjunto, los resultados muestran un patrón altamente conservador en la mayoría de las clases, con valores de precisión elevados pero recalls significativamente bajos, lo que indica que el modelo solo asigna ciertas etiquetas cuando existe una alta confianza en la predicción.
+
+En la clase NORM se obtiene una precisión de 0.80 junto con un recall de 0.05, lo que refleja una capacidad muy limitada para identificar correctamente registros normales. 
+Aunque las predicciones positivas de esta clase son altamente fiables, el modelo apenas las asigna, lo que implica una sensibilidad extremadamente baja.
+
+La clase STTC presenta el mejor rendimiento global, con un recall de 0.86 y un F1-score de 0.78, lo que indica una buena capacidad de detección de alteraciones del segmento ST/T. 
+Este resultado sugiere que esta clase presenta patrones suficientemente diferenciables dentro del espacio de características extraídas, lo que facilita su identificación por parte del modelo.
+
+En el caso de CD y MI se observa un comportamiento especialmente restrictivo, con recalls muy bajos, a pesar de presentar precisiones elevadas. 
+Esto indica que el modelo solo asigna estas etiquetas en casos muy concretos, reduciendo los falsos positivos pero a costa de una pérdida importante de sensibilidad. 
+Este comportamiento es especialmente crítico en MI, donde la baja capacidad de detección implica una limitación importante desde el punto de vista clínico.
+
+Finalmente, la clase HYP presenta un comportamiento intermedio, con una precisión de 0.92 y un recall de 0.35, lo que refleja una mejora respecto a las clases más problemáticas, aunque todavía con una sensibilidad insuficiente para una detección completa.
+
+En conjunto, la red neuronal multicapa con entrada basada en características muestra un comportamiento más conservador que otros modelos, priorizando la precisión sobre la sensibilidad. 
+Esto se traduce en predicciones muy fiables cuando se activan, pero con una capacidad limitada para detectar la totalidad de los casos positivos en varias superclases.
+
+\vspace{0.5cm}
+
+En la Figura \ref{fig:matrix-mlp-feat} se observa un patrón claramente conservador, donde el modelo tiende a reducir los falsos positivos, pero a costa de incrementar de forma significativa los falsos negativos en varias clases.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{imagenes/matrix-mlp-feat.png}
-    \caption{Matrices de confusión de red neuronal de la configuración 1 con características}
+    \caption{Matrices de confusión de red neuronal de la configuración 1 (Características)}
     \label{fig:matrix-mlp-feat}
 \end{figure}
+
+En la clase NORM se obtienen 40 verdaderos positivos, 2553 verdaderos negativos, 10 falsos positivos y 794 falsos negativos. 
+Este resultado refleja una capacidad muy limitada del modelo para identificar correctamente los registros normales, con una tendencia marcada a clasificar la mayoría de los casos como patológicos. 
+Aunque el número de falsos positivos es prácticamente nulo, el elevado número de falsos negativos indica una sensibilidad extremadamente baja en esta clase.
+
+En la clase STTC se observan 1226 verdaderos positivos, 1491 verdaderos negativos, 485 falsos positivos y 195 falsos negativos. 
+En este caso, el modelo presenta su mejor comportamiento, con una capacidad de detección elevada y un equilibrio razonable entre sensibilidad y precisión. 
+Este resultado es coherente con las métricas por clase, donde STTC destaca como la superclase mejor identificada por el modelo.
+
+En la clase CD se obtienen 142 verdaderos positivos, 2446 verdaderos negativos, 59 falsos positivos y 750 falsos negativos. 
+Este comportamiento evidencia una sensibilidad muy baja, ya que la mayoría de los casos positivos no son detectados. 
+A pesar de la baja tasa de falsos positivos, el modelo no consigue capturar adecuadamente los patrones asociados a esta patología.
+
+En la clase MI se observa un comportamiento especialmente crítico desde el punto de vista clínico, con 38 verdaderos positivos y 378 falsos negativos. 
+Este resultado indica una capacidad prácticamente nula de detección de infartos en comparación con el número total de casos reales, lo que refleja una limitación importante del modelo en esta clase, a pesar de la baja tasa de falsos positivos.
+
+Finalmente, la clase HYP presenta 264 verdaderos positivos, 2618 verdaderos negativos, 22 falsos positivos y 493 falsos negativos. 
+Aunque el modelo reduce significativamente los falsos positivos en esta clase, la sensibilidad sigue siendo limitada, lo que indica dificultades para capturar completamente sus patrones característicos.
+
+En conjunto, las matrices de confusión confirman el comportamiento observado en las métricas de clasificación: la red neuronal multicapa con entrada basada en características prioriza fuertemente la precisión frente a la sensibilidad. 
+Este comportamiento produce predicciones muy fiables cuando el modelo activa una clase, pero una capacidad de detección insuficiente en la mayoría de las superclases, especialmente en aquellas de mayor relevancia clínica como MI o CD.
+
+\vspace{0.5cm}
+
+Las curvas ROC de la Figura \ref{fig:roc-mlp-feat} permiten evaluar la capacidad discriminativa de la red neuronal multicapa con entrada basada en características de forma independiente al umbral de decisión utilizado en la clasificación final. 
+Este análisis resulta especialmente relevante en este caso, ya que las métricas de clasificación y las matrices de confusión mostraron una sensibilidad reducida en varias superclases.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-feat.png}
-    \caption{Conjunto de ROCs de red neuronal de la configuración 1 con características}
+    \caption{Conjunto de ROCs de red neuronal de la configuración 1 (Características)}
     \label{fig:roc-mlp-feat}
 \end{figure}
+
+Los valores de AUC obtenidos indican una buena capacidad de separación entre clases en todas las categorías analizadas. 
+La superclase STTC presenta el mejor resultado, lo que confirma la elevada capacidad del modelo para distinguir este tipo de alteraciones del resto de registros. 
+Este comportamiento es coherente con los buenos valores de recall y F1-score observados anteriormente.
+
+La clase NORM alcanza un AUC de 0.8547, uno de los valores más elevados del conjunto. 
+Este resultado indica que el modelo es capaz de diferenciar adecuadamente entre registros normales y patológicos a nivel probabilístico. 
+Sin embargo, esta capacidad discriminativa no se traduce en una sensibilidad elevada, como se observó en las matrices de confusión, lo que sugiere que las limitaciones del modelo están más relacionadas con el proceso de decisión final que con la separación de clases en sí misma.
+
+Las clases MI y HYP presentan valores de AUC de 0.8021 y 0.8194 respectivamente, lo que indica una capacidad discriminativa razonable. 
+En el caso de MI, este resultado es especialmente relevante, ya que demuestra que el modelo es capaz de identificar patrones asociados al infarto a nivel probabilístico, aunque posteriormente la clasificación final resulte excesivamente conservadora y produzca un número elevado de falsos negativos.
+
+Por su parte, la clase CD obtiene el valor de AUC más reducido, lo que confirma que se trata de una de las superclases más difíciles de separar en este escenario. 
+Este comportamiento es consistente con las dificultades observadas previamente en las métricas por clase y en las matrices de confusión.
+
+En conjunto, la red neuronal multicapa posee una buena capacidad discriminativa cuando utiliza características extraídas como entrada. 
+De hecho, estos resultados sugieren que el modelo aprende representaciones útiles para diferenciar las distintas superclases, aunque dicha capacidad no se refleja completamente en las métricas finales de clasificación debido a la fuerte reducción del recall observada en varias categorías.
+
 
 \subsection{Configuración 2}
 
 \subsubsection*{Regresión Logística}
+
+\begin{comment}
 
 \subsubsection*{Random Forest}
 
@@ -2265,6 +2625,10 @@ Resultados globales, comparacion entre enfoques, resultados por enfermedad (matr
 \chapter{Conclusiones y Trabajos Futuros}
 
 Conclusiones y posibles mejoras y trabajos futuros
+
+Red neuronal con early stopping
+cnn
+umbrales optimos 
 
 % -------------------------------------------------
 % BIBLIOGRAFÍA

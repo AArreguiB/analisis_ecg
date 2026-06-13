@@ -13,4 +13,8 @@
 \contentsline {table}{\numberline {6.5}{\ignorespaces Resultados globales de test de la configuración 3}}{88}{table.caption.65}%
 \contentsline {table}{\numberline {6.6}{\ignorespaces Resultados de regresión logística por clase (Megavector)}}{90}{table.caption.67}%
 \contentsline {table}{\numberline {6.7}{\ignorespaces Resultados de regresión logística por clase (Características)}}{95}{table.caption.70}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Resultados de random forest por clase (Megavector)}}{99}{table.caption.74}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Resultados de random forest por clase (Características)}}{103}{table.caption.77}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces Resultados de red neuronal por clase (Megavector)}}{107}{table.caption.81}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces Resultados de red neuronal por clase (Características)}}{110}{table.caption.84}%
 \addvspace {10\p@ }

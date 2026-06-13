@@ -31,4 +31,12 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Conjunto de ROCs de regresión logística de la configuración 1 (Megavector)}}{94}{figure.caption.69}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Características)}}{96}{figure.caption.71}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Conjunto de ROCs de regresión logística de la configuración 1 (Características)}}{97}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Matrices de confusión de random forest de la configuración 1 (Megavector)}}{100}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Conjunto de ROCs de random forest de la configuración 1 (Megavector)}}{101}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Matrices de confusión de random forest de la configuración 1 (Características)}}{104}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Conjunto de ROCs de random forest de la configuración 1 (Características)}}{105}{figure.caption.79}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Megavector)}}{108}{figure.caption.82}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Conjunto de ROCs de red neuronal de la configuración 1 (Megavector)}}{109}{figure.caption.83}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Características)}}{111}{figure.caption.85}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Conjunto de ROCs de red neuronal de la configuración 1 (Características)}}{113}{figure.caption.86}%
 \addvspace {10\p@ }
