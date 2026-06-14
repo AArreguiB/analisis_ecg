@@ -39,8 +39,11 @@
 \contentsline {figure}{\numberline {6.10}{\ignorespaces Conjunto de ROCs de red neuronal de la configuración 1 (Megavector)}}{109}{figure.caption.83}%
 \contentsline {figure}{\numberline {6.11}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Características)}}{111}{figure.caption.85}%
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Conjunto de ROCs de red neuronal de la configuración 1 (Características)}}{113}{figure.caption.86}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Matrices de confusión de regresión logística de la configuración 2}}{116}{figure.caption.89}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Curvas ROC de regresión logística de la configuración 2}}{117}{figure.caption.90}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Matrices de confusión de regresión logística de la configuración 2}}{117}{figure.caption.89}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Curvas ROC de regresión logística de la configuración 2}}{118}{figure.caption.90}%
 \contentsline {figure}{\numberline {6.15}{\ignorespaces Matrices de confusión de random forest de la configuración 2}}{120}{figure.caption.93}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Curvas ROC de random forest de la configuración 2}}{121}{figure.caption.94}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Curvas ROC de random forest de la configuración 2}}{122}{figure.caption.94}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Matrices de confusión de red neuronal de la configuración 2}}{124}{figure.caption.97}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Curvas ROC de red neuronal de la configuración 2}}{125}{figure.caption.98}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }

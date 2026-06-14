@@ -1757,7 +1757,7 @@ A continuación, en la Tabla \ref{tab:overfitting_accuracy_config1} se muestra l
 
 	\hline
 	\end{tabular}
-	\caption{Comparación del rendimiento entre entrenamiento y test en la configuración 1}
+	\caption{Comparación del rendimiento entre train y test en la configuración 1}
 	\label{tab:overfitting_accuracy_config1}
 \end{table}
 
@@ -1826,9 +1826,9 @@ El uso combinado de ambas perspectivas permite analizar simultáneamente la capa
 	\textbf{Modelo} & \textbf{Hamming Acc.} & \textbf{Prec. Macro} & \textbf{Rec. Macro} & \textbf{F1 Macro} & \textbf{Prec. Micro} & \textbf{Rec. Micro} & \textbf{F1 Micro} \\
 	\hline
 
-	Logistic Regression & 0.8324 & 0.5370 & 0.8732 & 0.6515 & 0.5480 & 0.8769 & 0.6744 \\
-	Random Forest       & 0.8320 & 0.5614 & 0.7938 & 0.6180 & 0.5301 & 0.7623 & 0.6253 \\
-	MLP                 & 0.8676 & 0.8465 & 0.5342 & 0.6372 & 0.8351 & 0.5977 & 0.6967 \\
+	Logistic Regression & 0.8324 & 0.5409 & 0.8660 & 0.6513 & 0.5501 & 0.8699 & 0.6740 \\
+	Random Forest       & 0.8320 & 0.5693 & 0.7768 & 0.6122 & 0.5310 & 0.7458 & 0.6203 \\
+	MLP                 & 0.8496 & 0.6345 & 0.8059 & 0.7091 & 0.6633 & 0.8296 & 0.7372 \\ 
 
 	\hline
 	\end{tabular}
@@ -1846,7 +1846,7 @@ La Tabla \ref{tab:config2_gap} recoge la Hamming accuracy obtenida en entrenamie
 	\hline
 	Logistic Regression & 0.8432 & 0.8324 & 0.0108 \\
 	Random Forest       & 0.8652 & 0.8320 & 0.0332 \\
-	MLP                 & 0.8935 & 0.8676 & 0.0259 \\
+	MLP                 & 0.9360 & 0.8496 & 0.0864 \\
 	\hline
 	\end{tabular}
 	\caption{Comparación del rendimiento entre train y test en la Configuración 2}
@@ -1859,7 +1859,7 @@ Este resultado confirma que la información adicional contenida en las distintas
 Analizando los resultados globales, la red neuronal multicapa obtiene la mayor Hamming accuracy, superando claramente a la regresión logística y a Random Forest. 
 Esto indica que es el modelo que clasifica correctamente un mayor porcentaje de etiquetas individuales, lo que sugiere una mejor capacidad para explotar la información adicional disponible en las doce derivaciones.
 
-En términos de precisión, la red neuronal multicapa presenta también los mejores resultados tanto en la métrica macro (0.8465) como en la micro (0.8351). 
+En términos de precisión, la red neuronal multicapa presenta también los mejores resultados tanto en la métrica macro como en la micro . 
 Estos valores reflejan que sus predicciones son considerablemente más fiables que las del resto de modelos, generando un menor número de falsos positivos. 
 Sin embargo, esta mejora en precisión viene acompañada de una reducción del recall, que alcanza únicamente 0.5342 en la métrica macro y 0.5977 en la micro. 
 Esto indica que el modelo adopta una estrategia más conservadora, priorizando la confianza de las predicciones frente a la detección exhaustiva de todas las patologías presentes.
@@ -2591,6 +2591,18 @@ Este comportamiento es consistente con las dificultades observadas previamente e
 En conjunto, la red neuronal multicapa posee una buena capacidad discriminativa cuando utiliza características extraídas como entrada. 
 De hecho, estos resultados sugieren que el modelo aprende representaciones útiles para diferenciar las distintas superclases, aunque dicha capacidad no se refleja completamente en las métricas finales de clasificación debido a la fuerte reducción del recall observada en varias categorías.
 
+\vspace{1cm}
+
+De forma global, los resultados obtenidos muestran que todos los modelos son capaces de discriminar adecuadamente entre las distintas superclases, alcanzando valores de AUC superiores a 0.8 en la mayoría de los casos. 
+Asimismo, se observa que el uso de características extraídas produce una mejora consistente respecto al uso directo del megavector, especialmente en términos de capacidad discriminativa.
+
+La regresión logística presenta el rendimiento más limitado, aunque mantiene un comportamiento estable y mejora notablemente cuando se utilizan características extraídas. 
+Por su parte, la red neuronal multicapa obtiene los mayores valores de Hamming Accuracy y AUC global, pero muestra una tendencia a favorecer las clases mayoritarias, reduciendo significativamente el recall en varias patologías relevantes.
+
+En cambio, Random Forest ofrece el mejor equilibrio entre precisión y recall en la mayoría de las superclases, manteniendo además una elevada sensibilidad en patologías críticas como MI. 
+Desde una perspectiva clínica, este comportamiento resulta especialmente interesante, ya que reduce el riesgo de falsos negativos sin penalizar excesivamente el rendimiento global.
+
+Por tanto, aunque la red neuronal multicapa obtiene las mejores métricas globales, Random Forest con características extraídas puede considerarse el modelo más adecuado dentro de esta configuración, al combinar una buena capacidad discriminativa con un comportamiento más equilibrado entre superclases y una mayor sensibilidad en las patologías de mayor interés clínico.
 
 \subsection{Configuración 2}
 
@@ -2631,7 +2643,7 @@ En esta configuración se observa una mejora generalizada del rendimiento respec
 	HYP  & 0.52 & 0.84 & 0.64 \\
 	\hline
 	\end{tabular}
-	\caption{Resultados de regresión logística por clase (Características y 12 derivaciones)}
+	\caption{Resultados de regresión logística por clase (Configuración 2)}
 	\label{tab:metrics_clase_lr_feat12}
 \end{table}
 
@@ -2740,7 +2752,7 @@ En términos generales, se observa una mejora en el equilibrio global del modelo
 	HYP  & 0.48 & 0.81 & 0.60 \\
 	\hline
 	\end{tabular}
-	\caption{Resultados de regresión logística por clase (Características y 12 derivaciones)}
+	\caption{Resultados de regresión logística por clase (Configuración 2)}
 	\label{tab:metrics_clase_rf_feat12}
 \end{table}
 
@@ -2830,34 +2842,534 @@ En resumen, el modelo Random Forest es capaz de manejar relaciones no lineales y
 La red neuronal multicapa representa el modelo con mayor capacidad de aprendizaje dentro de esta configuración. 
 Su arquitectura permite capturar relaciones no lineales complejas entre las distintas derivaciones del ECG, lo que la convierte en una herramienta especialmente adecuada para evaluar el potencial discriminativo de la señal multiderivación completa en la detección de patrones clínicamente relevantes.
 
-\begin{comment}
+\vspace{0.5cm}
+
+Los resultados obtenidos por la red neuronal multicapa en la Configuración 2 se recogen en la Tabla \ref{tab:metrics_clase_mlp_feat12}. 
+En esta configuración se observa un comportamiento global equilibrado del modelo en la clasificación de las distintas superclases, con un buen compromiso entre precisión y recall en la mayoría de ellas.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Clase} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+	\hline
+	NORM & 0.64 & 0.82 & 0.72 \\
+	STTC & 0.78 & 0.92 & 0.84 \\
+	CD   & 0.65 & 0.78 & 0.71 \\
+	MI   & 0.49 & 0.71 & 0.58 \\
+	HYP  & 0.62 & 0.80 & 0.70 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados de red neuronal por clase (Configuración 2)}
+	\label{tab:metrics_clase_mlp_feat12}
+\end{table}
+
+La clase STTC destaca como la superclase con mejor rendimiento global, mostrando un comportamiento especialmente estable entre precisión y recall. 
+Esto indica que el modelo es capaz de capturar de forma clara los patrones asociados a este tipo de alteraciones electrocardiográficas, siendo la clase mejor diferenciada en este escenario.
+
+En el caso de NORM, se observa un rendimiento equilibrado, con una buena capacidad de detección de registros normales y una precisión consistente. 
+Esto sugiere que el modelo logra diferenciar de manera adecuada entre casos normales y patológicos, aunque con cierto grado de solapamiento inherente al problema.
+
+La clase CD presenta un comportamiento sólido, con una capacidad de detección razonable y una precisión moderada. 
+Esto indica que el modelo es capaz de identificar la mayoría de los casos asociados a esta alteración, aunque aún existe cierta confusión con otras superclases con patrones similares.
+
+Por otro lado, MI se mantiene como una de las clases más complejas del problema, con una sensibilidad menor en comparación con el resto, lo que refleja la dificultad intrínseca de identificar este tipo de patrones electrocardiográficos. 
+Aun así, el modelo consigue mantener una capacidad de detección aceptable.
+
+Finalmente, HYP muestra un comportamiento intermedio, con un rendimiento relativamente equilibrado, aunque ligeramente inferior a las clases más separables. 
+Esto sugiere que el modelo es capaz de capturar parte de sus características, pero aún existen solapamientos con otras patologías.
+
+En conjunto, estos resultados muestran que la red neuronal multicapa en esta configuración ofrece un comportamiento estable y coherente en todas las superclases, consolidándose como un modelo con buena capacidad de discriminación global dentro del problema de clasificación planteado.
+
+\vspace{0.5cm}
+
+Las matrices de confusión de la Figura \ref{fig:matrix-mlp-feat12} permiten analizar en detalle el comportamiento de la red neuronal multicapa en la Configuración 2, descomponiendo el rendimiento del modelo en términos de aciertos y errores para cada superclase.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/matrix-mlp-feat12.png}
+    \caption{Matrices de confusión de red neuronal de la configuración 2}
+    \label{fig:matrix-mlp-feat12}
+\end{figure}
+
+En la clase NORM, el modelo presenta 686 verdaderos positivos, 2177 verdaderos negativos, 386 falsos positivos y 148 falsos negativos. 
+En conjunto, se observa un comportamiento estable, con una buena capacidad para identificar registros normales y un número relativamente controlado de falsos positivos. 
+Esto indica que el modelo consigue diferenciar de forma adecuada entre patrones normales y patológicos, aunque todavía existe cierto solapamiento con algunas alteraciones leves.
+
+En la clase STTC, el modelo muestra 1301 verdaderos positivos, 1608 verdaderos negativos, 368 falsos positivos y 120 falsos negativos. 
+Este resultado refleja uno de los mejores comportamientos globales, con una alta capacidad de detección y una baja tasa de error por omisión, lo que confirma la buena separabilidad de este tipo de alteraciones.
+
+En la clase CD, se observan 694 verdaderos positivos, 2125 verdaderos negativos, 380 falsos positivos y 198 falsos negativos. 
+El modelo presenta una capacidad de detección adecuada, aunque con cierta presencia de falsos positivos, lo que sugiere solapamiento con otras superclases con patrones electrocardiográficos similares.
+
+En la clase MI, el modelo obtiene 296 verdaderos positivos, 2672 verdaderos negativos, 309 falsos positivos y 120 falsos negativos. 
+Este resultado es especialmente relevante desde el punto de vista clínico, ya que muestra una buena capacidad de detección de infartos, manteniendo una tasa de falsos negativos relativamente baja, aunque con cierto incremento de falsos positivos debido a la dificultad inherente de esta clase.
+
+En la clase HYP, se registran 607 verdaderos positivos, 2264 verdaderos negativos, 376 falsos positivos y 150 falsos negativos. 
+El comportamiento es intermedio, con una capacidad de detección razonable y un equilibrio aceptable entre errores, aunque todavía existe cierto solapamiento con otras patologías.
+
+En conjunto, las matrices de confusión reflejan un modelo robusto y equilibrado, con una tendencia general a priorizar la detección de patologías frente a la minimización de falsos positivos, lo cual es coherente con el enfoque clínico del problema.
+
+\vspace{0.5cm}
+
+Las curvas ROC de la Figura \ref{fig:roc-mlp-feat12} permiten evaluar la capacidad discriminativa de la red neuronal multicapa en la Configuración 2, analizando su comportamiento de forma independiente al umbral de decisión utilizado en la clasificación final. 
+Este análisis resulta especialmente relevante en este tipo de modelos, ya que permite valorar su capacidad para asignar probabilidades coherentes a cada superclase incluso en presencia de solapamiento entre patrones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-feat12.png}
+    \caption{Curvas ROC de red neuronal de la configuración 2}
+    \label{fig:roc-mlp-feat12}
+\end{figure}
+
+En conjunto, las curvas ROC muestran un comportamiento muy sólido del modelo, con valores de AUC elevados en todas las superclases, lo que indica una alta capacidad de separación entre clases a nivel de puntuaciones de probabilidad. 
+Esto refleja que la red neuronal no solo clasifica correctamente en el punto de decisión final, sino que además mantiene una ordenación consistente de las predicciones.
+
+La clase STTC obtiene el mejor rendimiento global, lo que confirma una excelente capacidad del modelo para diferenciar este tipo de alteraciones del resto de clases. 
+Este resultado es coherente con el comportamiento observado en las métricas por clase y en las matrices de confusión, consolidándose como la superclase más claramente separable.
+
+La clase NORM alcanza un AUC de 0.9164, lo que indica una muy buena capacidad del modelo para distinguir registros normales de patológicos. 
+Este resultado refuerza la fiabilidad del modelo en la identificación de la clase de referencia dentro del problema.
+
+Por su parte, la clase HYP presenta un AUC de 0.9025, mostrando una capacidad discriminativa alta, aunque ligeramente inferior a STTC, lo que sugiere una mayor complejidad en la representación de este tipo de alteraciones.
+
+La clase MI obtiene un AUC de 0.9006, lo que refleja una muy buena capacidad del modelo para diferenciar patrones asociados a infarto del resto de clases, manteniendo una separación sólida incluso en una patología clínicamente crítica.
+
+Finalmente, la clase CD presenta un AUC de 0.8986, siendo la más baja del conjunto, aunque sigue situándose en valores elevados. Esto indica que, pese a ser la clase más compleja en términos de separación, el modelo mantiene una capacidad discriminativa muy adecuada.
+
+En conjunto, la red neuronal multicapa presenta un buen rendimiento en esta configuración, destacando su capacidad para modelar relaciones no lineales complejas y mantener una separación consistente entre superclases.
+
+\vspace{1cm}
+
+De forma global, la Configuración 2 mejora el rendimiento de todos los modelos con respecto a la configuración anterior. 
+En general, todos los clasificadores aumentan su capacidad de discriminación entre superclases, con valores de AUC que se mantienen consistentemente altos, lo que indica que la representación basada en características extraídas junto con las doce derivaciones del ECG es más informativa que la señal en bruto.
+
+La regresión logística sigue siendo el modelo más débil, como era esperable, ya que su capacidad para separar clases no lineales es limitada. 
+Aun así, su mejora en recall respecto a la configuración anterior es importante: el modelo deja de “fallar por falta de sensibilidad” y pasa a detectar más patologías, aunque a costa de más falsos positivos. 
+Es decir, mejora clínicamente en detección, pero no en precisión.
+
+Random Forest se comporta como un modelo intermedio muy sólido. 
+No es el mejor en métricas globales puras, pero sí el más estable: mantiene recalls altos en clases críticas como MI y CD, y no se descompensa tanto como la red neuronal. 
+Su patrón es claro: prioriza sensibilidad en patologías importantes, pero introduce ruido, especialmente en clases solapadas. 
+Esto en clínica suele ser aceptable porque reduce riesgo de no detección.
+
+La red neuronal multicapa es la que mejor rendimiento global alcanza, lo que indica que es el modelo que mejor aprovecha la representación del problema. 
+Sin embargo, su comportamiento no es el más “limpio”: tiende a favorecer clases mejor representadas y más fáciles, mientras que en clases más complejas o minoritarias el recall cae. 
+Es decir, aprende muy bien el patrón global, pero no es tan consistente clínicamente en todas las patologías.
+
+En conclusión, aunque la red neuronal gana en rendimiento global, Random Forest ofrece un comportamiento más robusto y controlado en patologías críticas, lo que lo hace más fiable si el criterio principal es minimizar falsos negativos de forma consistente.
+
 \subsection{Configuración 3}
+
+La Configuración 3 es el escenario más completo del sistema, en el que se utilizan las doce derivaciones del ECG junto con características extraídas de la señal. 
+El problema se formula como una salida probabilística sobre 71 patologías, en lugar de una clasificación por superclases.
+
+Esto permite estimar la probabilidad de cada patología y capturar relaciones más complejas entre patrones electrocardiográficos, aumentando la riqueza de la información respecto a las configuraciones anteriores.
+
+Se evalúan cinco modelos: Ridge Regression, Elastic Net, Random Forest Regressor, HistGradient Boosting y MLP, lo que permite comparar enfoques lineales, de ensamblado y redes neuronales.
+
+Dado el número de clases, los resultados se presentan de forma resumida. En la tabla solo se incluyen patologías representativas seleccionadas por su relevancia clínica: alteraciones de conducción (CLBBB, CRBBB, LAFB), infarto e isquemia (IMI, ASMI), alteraciones generales del ECG (IVCD, NDT), y clases relevantes como NORM, LVH y PVC. Esto permite interpretar el comportamiento del modelo sin necesidad de mostrar las 71 clases.
+
+El objetivo es evaluar la capacidad de los modelos para estimar probabilidades coherentes en un problema altamente desbalanceado y de alta complejidad clínica.
 
 \subsubsection*{Ridge Regression}
 
+Los resultados de la Tabla \ref{tab:metrics_grouped_rr} muestran diferencias claras de rendimiento según el tipo de patología, lo que indica que el comportamiento del modelo está fuertemente condicionado por la complejidad de los patrones electrocardiográficos.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Patología} & \textbf{AUC} & \textbf{MAE} & \textbf{Spearman} \\
+	\hline
+
+	NORM & 0.919 & 0.252 & 0.721 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones de conducción}} \\\hline
+	CLBBB & 0.995 & 0.025 & 0.293 \\ \hline
+	CRBBB & 0.998 & 0.027 & 0.277 \\ \hline
+	LAFB  & 0.982 & 0.074 & 0.458 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Infarto e isquemia}}\\ \hline
+	IMI   & 0.904 & 0.109 & 0.448 \\ \hline
+	ASMI  & 0.918 & 0.119 & 0.462 \\ 
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones generales ECG}} \\ \hline
+	IVCD  & 0.805 & 0.069 & 0.187 \\ \hline
+	NDT   & 0.844 & 0.155 & 0.343 \\ 
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Otras clases relevantes}}  \\ \hline
+	LVH   & 0.942 & 0.088 & 0.474 \\ \hline
+	PVC   & 0.969 & 0.059 & 0.383 \\
+	\hline
+
+	\end{tabular}
+	\caption{Métricas de Ridge Regressor por patología agrupadas por tipo clínico}
+	\label{tab:metrics_grouped_rr}
+\end{table}
+
+En las alteraciones de conducción, el modelo alcanza los mejores resultados globales, con valores de AUC muy elevados. 
+Esto sugiere que estas patologías presentan patrones más estructurados y consistentes en la señal ECG, lo que facilita su discriminación. 
+Sin embargo, el valor de Spearman es más moderado en algunos casos, lo que indica que, aunque la separación entre clases es buena, la calibración de las probabilidades no siempre es completamente proporcional.
+
+En las patologías relacionadas con infarto e isquemia, el rendimiento es ligeramente inferior. 
+Aunque el modelo mantiene una buena capacidad discriminativa, se observa una mayor variabilidad en las correlaciones, lo que refleja el mayor solapamiento clínico y morfológico entre estas clases y otras alteraciones.
+
+Las clases agrupadas como alteraciones generales del ECG presentan el rendimiento más bajo dentro del conjunto, especialmente en términos de AUC y correlación. 
+Esto es coherente con su mayor heterogeneidad interna, lo que dificulta la captura de un patrón común estable.
+
+Por último, las clases restantes muestran un comportamiento intermedio, con buena capacidad de discriminación pero con diferencias en la calidad de la predicción probabilística según la patología.
+
+En cuanto a las métricas de error, el MAE se mantiene globalmente bajo, lo que indica que el modelo comete errores reducidos en la estimación de probabilidades. 
+No obstante, este comportamiento no implica necesariamente una buena separación entre clases, sino únicamente una calibración razonable de las salidas.
+
+Por otro lado, los valores de Spearman reflejan una coherencia moderada en el ranking de probabilidades, especialmente en patologías con mayor número de muestras, lo que sugiere que el modelo es capaz de ordenar correctamente parte de las clases, aunque con limitaciones en patologías más complejas o minoritarias.
+
+En conjunto, se observa que el modelo Ridge es especialmente eficaz en patologías con patrones bien definidos, mientras que su rendimiento disminuye en aquellas con mayor variabilidad o solapamiento clínico, lo que es consistente con las limitaciones inherentes a los modelos lineales en problemas de alta complejidad.
+
 \subsubsection*{Elastic Net}
 
-\subsubsection*{Random Forest}
+Los resultados recogidos en la Tabla \ref{tab:metrics_grouped_en} muestran que Elastic Net presenta un comportamiento muy similar al observado en Ridge Regression, manteniendo una elevada capacidad discriminativa en la mayoría de las patologías analizadas. 
+La clase NORM alcanza valores elevados tanto de AUC como de correlación, lo que indica una buena capacidad para distinguir registros normales y una estimación probabilística consistente.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+
+	\textbf{Patología} & \textbf{AUC} & \textbf{MAE} & \textbf{Spearman} \\
+	\hline
+	NORM & 0.920 & 0.254 & 0.723 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones de conducción}} \\
+	\hline
+	CLBBB & 0.997 & 0.026 & 0.296 \\ \hline
+	CRBBB & 0.998 & 0.027 & 0.278 \\ \hline
+	LAFB  & 0.983 & 0.074 & 0.460 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones generales ECG}} \\
+	\hline
+	IVCD  & 0.825 & 0.066 & 0.199 \\ \hline
+	NDT   & 0.845 & 0.154 & 0.344 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
+	\hline
+	IMI   & 0.904 & 0.110 & 0.449 \\ \hline
+	ASMI  & 0.919 & 0.119 & 0.461 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
+	\hline
+	PVC   & 0.971 & 0.059 & 0.382 \\ \hline
+	LVH   & 0.946 & 0.088 & 0.477 \\
+	\hline
+
+	\end{tabular}
+	\caption{Métricas de Elastic Net por patología agrupadas por tipo clínico}
+	\label{tab:metrics_grouped_en}
+\end{table}
+
+Las alteraciones de conducción continúan siendo el grupo mejor identificado por el modelo. 
+Patologías como CLBBB, CRBBB y LAFB obtienen los valores de AUC más altos del conjunto, lo que sugiere que sus patrones electrocardiográficos resultan fácilmente distinguibles para el modelo. Además, los valores de MAE permanecen reducidos, reflejando una estimación probabilística estable.
+
+Por el contrario, las alteraciones generales del ECG presentan los resultados más modestos. 
+IVCD y NDT muestran los valores de AUC y Spearman más bajos entre las patologías analizadas, evidenciando una mayor dificultad para discriminar correctamente estas clases. 
+Este comportamiento es coherente con su naturaleza más heterogénea y con el solapamiento existente con otras alteraciones electrocardiográficas.
+
+Las patologías relacionadas con infarto e isquemia mantienen una buena capacidad discriminativa, aunque con errores de predicción superiores a los observados en las alteraciones de conducción. 
+Esto sugiere que la identificación de estas patologías continúa siendo más compleja debido a la similitud de sus manifestaciones electrocardiográficas con otras enfermedades cardiovasculares.
+
+Por último, las clases PVC y LVH presentan un comportamiento sólido en las tres métricas consideradas. 
+Especialmente destacable es el caso de LVH, que muestra uno de los valores de correlación más elevados del conjunto, indicando una buena correspondencia entre las probabilidades estimadas por el modelo y la presencia real de la patología.
+
+En conjunto, Elastic Net mantiene fortalezas y limitaciones muy similares a las observadas en Ridge Regression. 
+La incorporación de regularización L1 no produce mejoras sustanciales en la capacidad discriminativa, aunque contribuye a conservar un comportamiento estable en la mayoría de las patologías analizadas.
+
+
+\subsubsection*{Random Forest Regressor}
+
+El modelo Random Forest Regressor, cuyos resultados se observan en la Tabla \ref{tab:metrics_grouped_rfr} muestra un comportamiento global sólido, destacando por una capacidad de discriminación elevada en la mayoría de patologías, especialmente en aquellas con patrones electrocardiográficos bien definidos.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+
+	\textbf{Patología} & \textbf{AUC} & \textbf{MAE} & \textbf{Spearman} \\
+	\hline
+	NORM & 0.935 & 0.242 & 0.754 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones en la conducción}} \\
+	\hline
+	CLBBB & 0.998 & 0.020 & 0.277 \\ \hline
+	CRBBB & 0.998 & 0.028 & 0.261 \\ \hline
+	LAFB  & 0.984 & 0.075 & 0.443 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones generales de ECG}} \\
+	\hline
+	IVCD & 0.799 & 0.064 & 0.182 \\ \hline
+	NDT  & 0.874 & 0.143 & 0.371 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
+	\hline
+	IMI  & 0.879 & 0.113 & 0.395 \\ \hline
+	ASMI & 0.923 & 0.118 & 0.459 \\
+	\hline
+
+
+	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
+	\hline
+	LVH & 0.952 & 0.080 & 0.467 \\ \hline
+	PVC & 0.978 & 0.064 & 0.373 \\
+	\hline
+
+	\end{tabular}
+	\caption{Métricas de Random Forest Regressor por patología agrupadas por tipo clínico}
+	\label{tab:metrics_grouped_rfr}
+\end{table}
+
+Las mejores prestaciones se observan en las alteraciones de la conducción, donde el modelo alcanza valores de AUC muy cercanos a la perfección en clases como CLBBB y CRBBB. 
+Este comportamiento sugiere que este tipo de patrones electrocardiográficos presentan una señal bien definida, fácilmente capturable por modelos basados en ensembles de árboles.
+
+En el caso de las alteraciones generales del ECG, el rendimiento disminuye ligeramente, especialmente en métricas de correlación, lo que refleja una mayor heterogeneidad clínica dentro de estas clases. 
+Aun así, el modelo mantiene una capacidad de discriminación aceptable, lo que indica que sigue capturando parte de la estructura subyacente de los datos.
+
+En el grupo de infarto e isquemia, el modelo muestra un comportamiento intermedio, con valores de AUC y correlación algo más moderados. 
+Esto puede explicarse por la mayor variabilidad morfológica de estas patologías en el ECG, lo que dificulta una predicción completamente estable.
+
+Finalmente, en las clases consideradas relevantes como hipertrofia ventricular izquierda y extrasístoles ventriculares, el modelo vuelve a mostrar un rendimiento sólido, con una buena capacidad de discriminación y correlación entre predicción y valor real.
+
+En conjunto, Random Forest se posiciona como uno de los modelos más robustos de la configuración, destacando especialmente por su estabilidad en clases bien definidas, aunque con cierta variabilidad en patologías más heterogéneas.
+
 
 \subsubsection*{HistGradientBoosting}
 
+Los resultados de la Tabla \ref{tab:metrics_grouped_hgb} muestran que, de momento, el HistGradienteBoosting presenta el mejor comportamiento global dentro de la Configuración 3, destacando tanto en capacidad de discriminación como en coherencia de las predicciones.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+
+	\textbf{Patología} & \textbf{AUC} & \textbf{MAE} & \textbf{Spearman} \\
+	\hline
+	NORM & 0.981 & 0.146 & 0.835 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones en la conducción}} \\
+	\hline
+	CLBBB & 0.992 & 0.012 & 0.380 \\
+	CRBBB & 0.998 & 0.005 & 0.389 \\
+	LAFB  & 0.997 & 0.035 & 0.491 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones generales de ECG}} \\
+	\hline
+	IVCD & 0.949 & 0.055 & 0.294 \\
+	NDT  & 0.979 & 0.093 & 0.467 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
+	\hline
+	IMI  & 0.989 & 0.053 & 0.547 \\
+	ASMI & 0.988 & 0.055 & 0.529 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
+	\hline
+	LVH & 0.954 & 0.061 & 0.494 \\
+	PVC & 0.990 & 0.056 & 0.368 \\
+	\hline
+
+	\end{tabular}
+	\caption{Métricas de HistGradientBoosting por patología agrupadas por tipo clínico}
+	\label{tab:metrics_grouped_hgb}
+\end{table}
+
+En términos generales, se observa una mejora clara respecto a modelos basados en regresores lineales y Random Forest, especialmente en aquellas patologías con patrones electrocardiográficos más definidos. 
+Las alteraciones de la conducción vuelven a ser el grupo con mejor rendimiento, alcanzando valores de AUC prácticamente máximos en CLBBB y CRBBB, lo que confirma que estas clases son fácilmente separables a partir de las características utilizadas.
+
+Una de las diferencias más relevantes respecto a modelos anteriores se encuentra en las métricas de correlación (Spearman), donde se aprecia un incremento consistente en prácticamente todas las categorías. 
+Esto indica que el modelo no solo discrimina correctamente entre presencia y ausencia de patología, sino que además ordena mejor las probabilidades estimadas, lo que resulta especialmente relevante en un contexto probabilístico.
+
+En el caso de las alteraciones generales del ECG y de las patologías de infarto e isquemia, el modelo mantiene un rendimiento elevado y más estable que en enfoques anteriores, reduciendo la variabilidad observada entre clases. 
+Esto sugiere una mejor capacidad de generalización ante patrones más heterogéneos.
+
+Finalmente, en las clases relevantes como hipertrofia ventricular izquierda y extrasístoles ventriculares, el modelo vuelve a mostrar valores altos tanto en AUC como en correlación, consolidando su comportamiento robusto en el conjunto del problema.
+
+En conjunto, HistGradientBoosting se posiciona como el modelo más equilibrado de la configuración, combinando alta capacidad discriminativa con una mejora notable en la calidad de la predicción probabilística.
+
 \subsubsection*{Red Neuronal Multicapa}
-\end{comment}
-Resultados globales, comparacion entre enfoques, resultados por enfermedad (matrices de confusion), thresholds personalizados, analisis clinicos, limitaciones
 
+La Tabla \ref{tab:metrics_grouped_mlp} muestra los resultados obtenidos en la regresión usando la Red Neuronal Multicapa.
+Se observa que el modelo alcanza un rendimiento global consistente en el conjunto de test, con una capacidad de discriminación alta en la mayoría de las patologías analizadas.
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+
+	\textbf{Patología} & \textbf{AUC} & \textbf{MAE} & \textbf{Spearman} \\
+	\hline
+	NORM & 0.940 & 0.161 & 0.761 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones de conducción}} \\
+	\hline
+	CLBBB & 0.991 & 0.012 & 0.305 \\ \hline
+	CRBBB & 0.997 & 0.021 & 0.289 \\ \hline
+	LAFB  & 0.985 & 0.053 & 0.445 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Alteraciones generales ECG}} \\
+	\hline
+	IVCD & 0.790 & 0.033 & 0.177 \\ \hline
+	NDT  & 0.883 & 0.096 & 0.380 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
+	\hline
+	IMI  & 0.913 & 0.073 & 0.453 \\ \hline
+	ASMI & 0.941 & 0.078 & 0.481 \\
+	\hline
+
+	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
+	\hline
+	PVC & 0.969 & 0.045 & 0.366 \\ \hline
+	LVH & 0.933 & 0.056 & 0.448 \\
+	\hline
+
+	\end{tabular}
+	\caption{Métricas de la Red Neuronal Multicapa por patología agrupadas por tipo clínico}
+	\label{tab:metrics_grouped_mlp}
+\end{table}
+
+En términos generales, el modelo obtiene valores de AUC muy altos en prácticamente todas las clases, destacando especialmente en las alteraciones de conducción, donde se alcanzan valores cercanos a 1 en CLBBB y CRBBB, lo que indica una separación muy clara entre casos positivos y negativos. 
+Este comportamiento sugiere que el modelo es especialmente eficaz en patologías con patrones eléctricos bien estructurados.
+
+En el grupo de infarto e isquemia, el modelo mantiene un rendimiento consistente, con AUC elevados en IMI y ASMI, acompañado de valores de Spearman moderados, lo que indica una buena capacidad no solo de clasificación, sino también de preservación del orden relativo de las predicciones.
+
+En contraste, las alteraciones generales del ECG, como IVCD y NDT, presentan un rendimiento inferior, con una disminución tanto en AUC como en correlación de Spearman. 
+Esto refleja la mayor complejidad de estas clases, donde los patrones electrocardiográficos son menos definidos y más heterogéneos.
+
+En conjunto, la red neuronal multicapa se posiciona como uno de los modelos más equilibrados, mostrando mejoras claras frente a enfoques más lineales, especialmente en términos de capacidad de modelado no lineal y consistencia en la correlación entre predicción y valor real.
+
+\vspace{1cm}
+
+De forma global, la Configuración 3 plantea el escenario más complejo de estudio, ya que plantea una predicción probabilística sobre las 71 patologías.
+A pesar de ello, todos los modelos mantienen una capacidad discriminativa elevada en la mayoría de las clases, con valores de AUC generalmente altos.
+
+Los enfoques lineales presentan un rendimiento más limitado, con tendencia a generar predicciones conservadoras concentradas en valores bajos, lo que reduce la sensibilidad en varias patologías, especialmente en los casos positivos.
+
+Sin embargo, los modelos no lineales presentan un comportamiento superior. 
+Random Forest presenta un rendimiento estable y robusto, aunque tiene una capacidad de calibración probabilística más limitada.
+HistGradientBoosting mejora tanto la discriminación como la coherencia en las predicciones, siendo así uno de los modelos más competitivos.
+
+La Red Neuronal Multicapa obtiene el mejor rendimiento global, destacando por una AUC muy elevada y una mejor capacidad para adaptarse a la complejidad del problema, manteniendo un comportamiento más equilibrado entre patologías.
+
+En conjunto, las alteraciones de conducción son las mejor resueltas por todos los modelos, mientras que las alteraciones generales del ECG presentan la mayor dificultad. 
+Las patologías de infarto e isquemia se sitúan en un nivel intermedio, con mejor desempeño en los modelos no lineales.
+
+En conclusión, la Configuración 3 confirma que la Red Neuronal Multicapa es el modelo más adecuado en este escenario, al combinar la mejor capacidad discriminativa con el comportamiento más consistente.
+
+\subsection{Limitaciones del análisis}
+
+Este análisis presenta ciertas limitaciones que condicionan la interpretación de los resultados obtenidos.
+En primer lugar, el desbalance de clases afecta de forma directa al comportamiento de los modelos, haciendo que en muchos casos se priorice la reducción del error global frente a la detección de las patologías menos representadas.
+
+Por otro lado, se observa que no todas las métricas reflejan de la misma forma el rendimiento clínico de los modelos.
+Medidas como el MAE pueden resultar engañosas, ya que un error medio bajo no garantiza una buena capacidad de detección de casos positivos, especialmente cuando los modelos tienden a hacer predicciones conservadoras.
+
+Además, la complejidad creciente del problema a lo largo de las configuraciones, especialmente en el caso de la formulación con 71 patologías, introduce un mayor grado de solapamiento entre clases, lo que dificulta la separación clara entre algunas patologías y genera variabilidad en el comportamiento de los modelos.
+
+Por último, la heterogeneidad inherente a ciertas clases clínicas limita la capacidad de generalización, provocando diferencias notables en el rendimiento dependiendo del tipo de patología.
 
 % -------------------------------------------------
 % CAPÍTULO 7
 % -------------------------------------------------
 
-\chapter{Conclusiones y Trabajos Futuros}
+\chapter{Dashboard interactivo}
 
-Conclusiones y posibles mejoras y trabajos futuros
+% -------------------------------------------------
+% CAPÍTULO 8
+% -------------------------------------------------
+
+\chapter{Conclusiones y Trabajos futuros}
+
+
+\section{Conclusiones}
+
+\begin{enumerate}
+	\item La clasificación automática de patologías cardíacas mediante aprendizaje automático es viable y clínicamente razonable. 
+	Los modelos desarrollados han demostrado capacidad para discriminar entre superclases de patologías y para estimar probabilidades sobre 71 condiciones cardíacas, obteniendo valores de AUC consistentemente altos. 
+	Esto confirma que el aprendizaje automático constituye una herramienta válida para el apoyo al diagnóstico electrocardiográfico, sin necesidad de recurrir a arquitecturas de gran complejidad computacional.
+	\item El uso de las doce derivaciones es imprescindible para un rendimiento adecuado. 
+	Los experimentos de la Configuración 1 demuestran que limitar el sistema a una única derivación reduce significativamente la capacidad discriminativa de todos los modelos. 
+	La incorporación de las doce derivaciones en la Configuración 2 y 3 produce una mejora generalizada y consistente, confirmando que la información espacial del electrocardiograma es esencial para capturar la variedad de patrones asociados a las distintas patologías cardíacas.
+	\item La extracción de características mejora la representación de la señal frente al uso del megavector en bruto. 
+	La combinación de características temporales, morfológicas y estadísticas proporciona una representación más compacta, informativa y manejable que permite a los modelos generalizar mejor. 
+	Frente al megavector de la señal en crudo, la representación basada en características reduce la dimensionalidad del problema sin pérdida de información relevante, lo que se traduce en mejoras tanto en rendimiento como en eficiencia computacional.
+	\item Los modelos no lineales superan consistentemente a los enfoques lineales. 
+	La regresión logística y los enfoques basados en regularización lineal (Ridge, Elastic Net) presentan el rendimiento más limitado en todos los escenarios, mostrando tendencia a generar predicciones conservadoras que reducen la sensibilidad en las patologías minoritarias. 
+	En contraste, Random Forest, HistGradientBoosting y la red neuronal multicapa son capaces de capturar relaciones complejas entre características, lo que se traduce en una mejora significativa en las métricas de clasificación y discriminación.
+	\item Random Forest ofrece el comportamiento más robusto y controlado desde una perspectiva clínica. 
+	Aunque no es el modelo con mayor rendimiento global, Random Forest destaca por mantener recalls altos de forma consistente en las patologías de mayor riesgo clínico, como el infarto de miocardio (MI) y las alteraciones de conducción (CD). 
+	Su patrón de decisión tiende a priorizar la sensibilidad frente a la precisión, reduciendo el riesgo de falsos negativos, lo cual resulta especialmente valioso en entornos clínicos donde no detectar una patología grave supone un riesgo mayor que una alarma falsa.
+	\item La red neuronal multicapa obtiene el mejor rendimiento global, pero con menor consistencia clínica. 
+	El MLP es el modelo que mejor aprovecha la representación del problema y el que alcanza los valores más altos de AUC en prácticamente todas las configuraciones. Sin embargo, su comportamiento no es homogéneo entre clases: tiende a favorecer las patologías mejor representadas en el conjunto de datos, mientras que el recall cae en clases complejas o minoritarias. 
+	Por ello, su uso debe evaluarse cuidadosamente en función del contexto clínico y los criterios de evaluación más relevantes.
+	\item La elección del modelo debe guiarse por el criterio clínico prioritario, no únicamente por las métricas globales. 
+	Un modelo con mayor AUC no es necesariamente el más adecuado para una aplicación clínica real. Si el objetivo es minimizar los falsos negativos en patologías críticas, Random Forest resulta preferible. Si se busca el mejor rendimiento global y una buena calibración probabilística, HistGradientBoosting o el MLP son las opciones más adecuadas. 
+	Esta distinción es fundamental para el diseño de sistemas de apoyo al diagnóstico.
+	\item El desbalance de clases y la heterogeneidad de los patrones son las principales limitaciones del sistema. 
+	El desbalance entre patologías afecta directamente al comportamiento de los modelos, que tienden a priorizar la reducción del error global frente a la detección de las clases menos representadas. 
+	Además, la heterogeneidad de ciertas condiciones clínicas introduce solapamiento que dificulta la separación limpia entre clases y genera variabilidad en los resultados.
+	\item El sistema desarrollado sienta una base sólida para su extensión hacia herramientas clínicas reales. 
+	La integración de los modelos en el dashboard interactivo desarrollado permite visualizar las probabilidades de cada patología de forma intuitiva, acercando el sistema a un entorno de apoyo al diagnóstico real. 
+	Los resultados obtenidos, combinados con la modularidad del diseño, ofrecen una plataforma válida sobre la que construir mejoras futuras, incorporar nuevas fuentes de datos o integrar arquitecturas más avanzadas.
+\end{enumerate}
+
+\section{Trabajos futuros}
+
+A partir de los resultados obtenidos y las limitaciones identificadas a lo largo del trabajo, se plantean las siguientes líneas de mejora y extensión:
+
+\begin{enumerate}
+	\item Incorporación de early stopping en la red neuronal multicapa. 
+	Durante el entrenamiento del MLP se ha observado que el modelo puede beneficiarse de una parada anticipada basada en la evolución de la pérdida en validación, evitando el sobreajuste en configuraciones de alta complejidad como la Configuración 3. 
+	La incorporación de early stopping permitiría obtener modelos más generalizables sin necesidad de aumentar la regularización manual, mejorando especialmente el comportamiento en las patologías minoritarias.
+	\item  Exploración de redes neuronales convolucionales (CNN). 
+	Las CNN han demostrado ser especialmente eficaces en el procesamiento de señales temporales como el ECG, al ser capaces de aprender automáticamente patrones locales relevantes directamente desde la señal en bruto. 
+	Durante el desarrollo de este trabajo se inició una primera aproximación a su implementación, si bien no llegó a completarse ni a producir resultados evaluables dentro del alcance del proyecto. 
+	Como trabajo futuro, se propone retomar esta línea, completar el diseño de la arquitectura convolucional y comparar su rendimiento frente a los modelos desarrollados, con especial atención a las patologías con patrones morfológicos más complejos donde la extracción manual de características puede resultar insuficiente.
+	\item Optimización de umbrales de decisión por patología. 
+	A lo largo de las tres configuraciones, se ha utilizado un umbral de decisión personalizado para todas las clases, lo que no resulta óptimo dado el elevado desbalance existente entre patologías. 
+	Una línea natural de mejora consiste en optimizar el umbral de forma individual para cada clase, buscando maximizar métricas como el recall, sin penalizar en exceso la precisión. 
+	En las Configuraciones 1 y 2 esto permitiría ajustar el criterio de clasificación por superclase, mientras que en la Configuración 3 aportaría una mayor granularidad al poder adaptar el umbral a cada una de las 71 patologías según su gravedad clínica y su representación en el conjunto de datos.
+	\item Soporte para señales ECG de longitud variable. 
+	El sistema actual requiere que los registros ECG tengan una longitud fija, lo que limita su aplicabilidad en entornos clínicos reales donde la duración del registro puede variar. 
+	Adaptar el pipeline para procesar señales de longitud arbitraria ampliaría significativamente la utilidad del sistema y facilitaría su integración con equipos de adquisición heterogéneos.
+	\item Despliegue e integración clínica del sistema. 
+	Como línea final, se propone evolucionar el dashboard interactivo desarrollado hacia una herramienta clínica desplegable en entornos reales, con capacidad para recibir registros ECG directamente desde equipos de adquisición, generar informes automáticos con las probabilidades de cada patología y alertar al personal sanitario ante la detección de condiciones de alto riesgo. 
+	Este paso requeriría además una validación regulatoria y la colaboración con profesionales médicos para ajustar el sistema a los flujos de trabajo clínicos existentes.
+\end{enumerate}
 
 Red neuronal con early stopping
+
 cnn
+
 umbrales optimos 
+
+poder analizar cualquier longitud de latido
 
 % -------------------------------------------------
 % BIBLIOGRAFÍA
