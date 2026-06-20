@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
+\usepackage{csquotes}
 
 \usepackage{graphicx}
 \usepackage{float}
@@ -92,14 +93,17 @@
 % -------------------------------------------------
 
 \begin{titlepage}
-		%Poner imagen del logo de comillas
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.4\textwidth]{imagenes/LogoUniversidadBN.pdf}
+		\end{figure}
 		\centering
-		\Large GRADO EN INGENIERÍA EN TECNOLOGÍAS DE TELECOMUNICACIÓN \\ % Modify accordingly
+		\Large GRADO EN INGENIERÍA EN TECNOLOGÍAS DE TELECOMUNICACIÓN \\
 		\vspace*{2.5em} 
 		\centering
 		TRABAJO FIN DE GRADO\\ 
 		\vspace*{1em}
-		TITULO DEL TFG 
+		Interpretación de electrocardiogramas con técnicas de aprendizaje automático aplicadas a la detección de patologías cardíacas  
 		\\ \large
 		\vspace*{3em}
 		Autor \\ Ana Arregui Beltrán \\ 
@@ -116,19 +120,205 @@
 
 \newpage
 
+
+	
+
 % -------------------------------------------------
 % RESUMEN Y ABSTRACT
 % -------------------------------------------------
-\section*{Título del TFG (español)}
-\section*{Resumen}
+
+\cleardoublepage
+
+\noindent \textbf{Interpretación de electrocardiogramas con técnicas de aprendizaje automático aplicadas a la detección de patologías cardíacas}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Autor: Arregui Beltrán, Ana}
+
+\noindent Director: Novales Peleato, Lucas
+
+\noindent Entidad Colaboradora: ICAI -- Universidad Pontificia Comillas
+
+\vspace{0.3cm}
+
+\noindent \large \textbf{Resumen del proyecto}
+\vspace{0.3cm}
+
+Este Trabajo Fin de Grado desarrolla un sistema de detección automática de patologías cardíacas mediante aprendizaje automático aplicado a señales ECG de la base de datos PTB-XL. 
+Se evalúan distintos modelos en tres configuraciones experimentales. 
+Los resultados muestran que el uso de 12 derivaciones y la extracción de características mejora el rendimiento, alcanzando hasta 0,93 de AUC en superclases.
+\vspace{0.3cm}
+
+\textbf{Palabras clave:} Electrocardiograma, Aprendizaje automático, Clasificación multilabel, Patologías cardíacas, Procesamiento de señales
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{1. Introducción}
+\vspace{0.3cm}
+
+Las enfermedades cardiovasculares constituyen una de las principales causas de mortalidad a nivel mundial, por lo que su detección temprana resulta fundamental para mejorar el pronóstico clínico. 
+En este contexto, el electrocardiograma (ECG) es una de las herramientas diagnósticas más utilizadas por su carácter no invasivo, bajo coste y amplia disponibilidad. 
+Sin embargo, su interpretación requiere experiencia clínica y puede verse limitada por el creciente volumen de datos generado en entornos asistenciales. 
+Ante esta situación, el aprendizaje automático surge como una alternativa prometedora para desarrollar sistemas de apoyo al diagnóstico capaces de detectar patrones complejos en señales ECG de forma automática, rápida y consistente.
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{2. Definición del proyecto}
+\vspace{0.3cm}
+
+El proyecto utiliza la base de datos PTB-XL para el análisis automático de señales de electrocardiograma mediante técnicas de aprendizaje automático. 
+Se definen tres configuraciones experimentales de complejidad creciente, que van desde una única derivación con clasificación binaria hasta el uso de las 12 derivaciones con estimación probabilística de 71 patologías.
+
+Se evalúan distintos modelos de aprendizaje automático con el objetivo de comparar su rendimiento y analizar la influencia del tipo de representación de la señal y del número de derivaciones en la capacidad de predicción del sistema.
+\vspace{0.5cm}
+
+\noindent \large \textbf{3. Descripción del modelo/sistema/herramienta}
+\vspace{0.3cm}
+
+El sistema se basa en un flujo de procesamiento de señales ECG que incluye preprocesado, segmentación de latidos y extracción de características relevantes de tipo temporal, morfológico, estadístico y frecuencial. 
+A partir de estas representaciones, se entrenan y evalúan distintos modelos de aprendizaje automático según la configuración experimental.
+
+El sistema permite abordar desde una clasificación binaria de superclases hasta una estimación probabilística de 71 patologías. 
+Además, se integra un dashboard interactivo que facilita la visualización de las señales, la segmentación de latidos, las predicciones del modelo y la generación de informes clínicos.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth, trim= 5cm 5cm 5cm 5cm, clip]{imagenes/diagrama.pdf}
+	\caption{Flujo a seguir del proyecto}
+	%\label{fig:pipeline-proyecto}
+\end{figure}
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{4. Resultados}
+\vspace{0.3cm}
+
+En la primera configuración, la red neuronal multicapa obtiene el mejor rendimiento global, mientras que Random Forest presenta el comportamiento más equilibrado. 
+En la segunda configuración, el uso de las 12 derivaciones mejora de forma consistente todas las métricas, destacando de nuevo la MLP como el modelo más competitivo.
+
+En la tercera configuración se alcanzan los mejores resultados globales del sistema, con AUC de hasta 0,93 en superclases y 0,90 en la estimación probabilística de 71 patologías. 
+En este escenario, la MLP y Random Forest destacan como los modelos más robustos, mientras que la extracción de características mejora de forma consistente el rendimiento frente al uso de la señal en bruto.
+
+\todo{Que tabla de resultados pongo aquí?}
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{5. Conclusiones}
+\vspace{0.3cm}
+
+El estudio demuestra que la detección automática de patologías cardíacas mediante aprendizaje automático es viable y ofrece un rendimiento elevado sobre señales ECG. 
+El uso de las 12 derivaciones y la extracción de características mejora de forma consistente los resultados frente a representaciones más simples.
+
+Los modelos no lineales, especialmente Random Forest, HistGradientBoosting y la red neuronal multicapa, superan a los enfoques lineales. 
+La MLP obtiene el mejor rendimiento global, mientras que Random Forest muestra un comportamiento más estable desde una perspectiva clínica, especialmente en patologías de mayor riesgo.
+\vspace{0.5cm}
+
+\noindent \large \textbf{6. Referencias}
+\vspace{0.3cm}
+
+\begin{refsection}
+
+\nocite{ptbxl_dataset,hannun2019arrhythmia,ayano2022ecg_ml_review,kalmady2024ecg_cv,esc_ai_ecg_diagnostics}
+
+\printbibliography[heading=none]
+\end{refsection}
 
 \newpage
 
-\section*{Título del TFG (inglés)}
-\section*{Abstract}
+
+	
+\noindent \textbf{Interpretation of electrocardiograms using Machine Learning techniques applied to the detection of cardiac pathologies}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Author: Arregui Beltrán, Ana}
+
+\noindent Supervisor: Novales Peleato, Lucas
+
+\noindent Collaborating entity: ICAI -- Universidad Pontificia Comillas
+
+\vspace{0.3cm}
+
+\noindent \large \textbf{Abstract}
+\vspace{0.3cm}
+
+This Bachelor's Thesis develops an automatic system for detecting cardiac pathologies using machine learning applied to ECG signals from the PTB-XL database. 
+Different models are evaluated across three experimental configurations. 
+The results show that using 12 leads and feature extraction significantly improves performance, achieving up to 0.93 AUC in superclass classification.
+\vspace{0.3cm}
+
+\textbf{Key words:} Electrocardiogram, Machine learning, Multilabel classification, Cardiac pathologies, Signal processing
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{1. Introduction}
+\vspace{0.3cm}
+
+Cardiovascular diseases are one of the leading causes of mortality worldwide, making early detection essential to improve clinical outcomes. 
+In this context, the electrocardiogram (ECG) is one of the most widely used diagnostic tools due to its non-invasive nature, low cost, and wide availability. 
+However, its interpretation requires clinical expertise and is increasingly limited by the growing volume of data generated in healthcare environments. 
+In this scenario, machine learning emerges as a promising approach to develop decision-support systems capable of detecting complex patterns in ECG signals in an automatic, fast, and consistent way.
+\vspace{0.5cm}
+
+\noindent \large \textbf{2. Project description}
+\vspace{0.3cm}
+
+The project uses the PTB-XL database for automatic analysis of ECG signals using machine learning techniques. 
+Three experimental configurations of increasing complexity are defined, ranging from a single lead with binary classification to the use of 12 leads with probabilistic estimation of 71 pathologies.
+
+Different machine learning models are evaluated in order to compare their performance and analyze the influence of signal representation and number of leads on the system’s predictive capability.
+\vspace{0.5cm}
+
+\noindent \large \textbf{3. Model/System/Tool description}
+\vspace{0.3cm}
+
+The system is based on an ECG signal processing pipeline that includes preprocessing, heartbeat segmentation, and feature extraction of temporal, morphological, statistical, and frequency-based characteristics. 
+Based on these representations, different machine learning models are trained and evaluated according to each experimental configuration.
+
+The system covers both binary superclass classification and probabilistic estimation of 71 pathologies. 
+In addition, an interactive dashboard is integrated to visualize ECG signals, segmented heartbeats, model predictions, and to generate clinical reports.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth, trim= 5cm 5cm 5cm 5cm, clip]{imagenes/diagrama_en.pdf}
+	\caption{Project's pipeline}
+	%\ref{fig:pipeline-proyecto}
+\end{figure}
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{4. Results}
+\vspace{0.3cm}
+
+In the first configuration, the multilayer perceptron achieves the best overall performance, while Random Forest shows the most balanced behavior. 
+In the second configuration, the use of 12 leads consistently improves all metrics, with the MLP again being the most competitive model.
+
+In the third configuration, the best overall results are obtained, reaching up to 0.93 AUC in superclass classification and 0.90 in probabilistic estimation of 71 pathologies. 
+In this scenario, MLP and Random Forest stand out as the most robust models, while feature extraction consistently improves performance compared to raw signal representation.
+
+\todo{Que tabla de resultados pongo aquí?}
+
+\vspace{0.5cm}
+
+\noindent \large \textbf{5. Conclusions}
+\vspace{0.3cm}
+
+The study shows that automatic detection of cardiac pathologies using machine learning is feasible and achieves strong performance on ECG signals. 
+The use of 12 leads and feature extraction consistently improves results compared to simpler representations.
+
+Non-linear models, particularly Random Forest, HistGradientBoosting, and the multilayer perceptron, outperform linear approaches. 
+The MLP achieves the best overall performance, while Random Forest shows more stable behavior from a clinical perspective, especially in high-risk pathologies.
+\vspace{0.5cm}
+
+\noindent \large \textbf{6. References}
+\vspace{0.3cm}
+
+\begin{refsection}
+
+\nocite{ptbxl_dataset,hannun2019arrhythmia,ayano2022ecg_ml_review,kalmady2024ecg_cv,esc_ai_ecg_diagnostics}
+
+\printbibliography[heading=none]
+\end{refsection}
 
 \newpage
-
 % -------------------------------------------------
 % ÍNDICES
 % -------------------------------------------------
@@ -150,21 +340,88 @@
 
 \section{Contexto del problema}
 
+Las enfermedades cardiovasculares constituyen una de las principales causas de mortalidad a nivel mundial, lo que las convierte en un problema sanitario de gran relevancia. 
+Su detección temprana es fundamental para reducir complicaciones y mejorar el pronóstico de los pacientes. 
+En este contexto, el electrocardiograma (ECG) representa una de las herramientas más utilizadas en la práctica clínica para la evaluación de la actividad eléctrica del corazón.
+
+El ECG es una prueba no invasiva, de bajo coste y de fácil acceso, por lo que es una técnica clave en el diagnóstico cardiovascular. 
+Sin embargo, su interpretación requiere formación especializada y experiencia clínica, ya que la señal puede presentar patrones complejos, ruido y variabilidad entre pacientes. 
+Por todo esto y por el incremento del volumen de datos en entornos hospitalarios y sistemas de monitorización continua surge la necesidad de herramientas automáticas que faciliten el análisis de la información de forma eficiente y consistente.
 
 \section{Motivación}
 
+El creciente interés por la aplicación de técnicas de aprendizaje automático en el ámbito médico se debe a su capacidad para analizar grandes volúmenes de datos y detectar patrones complejos que pueden no ser evidentes mediante métodos tradicionales. 
+En el caso del ECG, esto abre la puerta a sistemas de apoyo al diagnóstico que pueden complementar el trabajo del especialista.
+
+Este trabajo se motiva tanto por su relevancia clínica como por su interés tecnológico. 
+Desde el punto de vista médico, la detección temprana de patologías cardíacas puede tener un impacto directo en la reducción de la mortalidad. 
+Desde el punto de vista técnico, el problema permite aplicar técnicas avanzadas de procesamiento de señales y modelos de aprendizaje automático en un entorno real y altamente complejo.
+
+El objetivo no es sustituir el diagnóstico médico, sino desarrollar herramientas que ayuden a interpretar los registros ECG, proporcionando información adicional que pueda facilitar la toma de decisiones clínicas.
 
 \section{Problema a resolver}
 
+El problema abordado en este Trabajo Fin de Grado consiste en el desarrollo de un sistema automático capaz de interpretar señales de electrocardiograma y estimar la presencia de distintas patologías cardíacas mediante técnicas de aprendizaje automático.
+
+Para ello, se trabaja con registros ECG multiderivación y se plantean distintos niveles de complejidad del problema, desde la clasificación en superclases clínicas hasta la estimación probabilística de un conjunto amplio de patologías. 
+Esta progresión permite analizar cómo influye la representación de la señal y la formulación del problema en el rendimiento de los modelos.
+
+El objetivo es evaluar la capacidad de distintos algoritmos para capturar patrones relevantes en la señal ECG, así como su comportamiento en escenarios con desbalance de clases y alta complejidad clínica.
 
 \section{Objetivos}
 
+El objetivo general es desarrollar y evaluar distintos modelos de aprendizaje automático para la detección de patologías cardíacas a partir de señales de electrocardiograma, analizando su capacidad de discriminación en distintos escenarios de complejidad.
+
+De forma más concreta, se plantean los siguientes objetivos:
+
+\begin{enumerate}
+	\item Diseñar un sistema de análisis automático de señales electrocardiográficas, capaz de procesar registros ECG multiderivación y extraer información relevante para su posterior modelado.
+	\item Evaluar distintos modelos de aprendizaje automático y comparar su rendimiento, incluyendo enfoques lineales, basados en ensembles y redes neuronales, con el fin de identificar sus ventajas y limitaciones en este problema.
+	\item Analizar el impacto de diferentes representaciones de la señal en la capacidad predictiva, estudiando cómo influyen el uso de la señal en bruto frente a características extraídas en el rendimiento de los modelos.
+	\item Estudiar el comportamiento de los modelos frente a distintas patologías y niveles de complejidad clínica, evaluando su capacidad de generalización en problemas con distinto grado de desbalance y solapamiento entre clases.
+	\item Desarrollar una herramienta que permita interpretar los resultados de forma accesible, facilitando la visualización de las predicciones y su comprensión desde un punto de vista analítico y clínico.
+\end{enumerate}
+
 \section{Alcance del proyecto}
 
-Que hace, que no hace y limitaciones
+Este trabajo se centra en el desarrollo de un sistema de análisis automático de señales de electrocardiograma mediante técnicas de aprendizaje automático. 
+El sistema está diseñado para procesar registros ECG multiderivación, aplicar distintas estrategias de preprocesamiento y entrenamiento, y evaluar la capacidad de diferentes modelos para la detección de patologías cardíacas.
+
+En concreto, el proyecto incluye el desarrollo de varias configuraciones experimentales que permiten analizar el problema desde distintos niveles de complejidad, desde la clasificación en superclases clínicas hasta la predicción probabilística de múltiples patologías. 
+Se realiza un estudio comparativo entre distintos modelos de aprendizaje automático, evaluando su comportamiento mediante métricas de clasificación y regresión.
+
+También se contempla la extracción de características relevantes a partir de la señal ECG y la utilización de estas junto con la señal original, con el objetivo de mejorar la capacidad de representación del problema y analizar su impacto en el rendimiento de los modelos.
+
+Por otro lado, el sistema desarrollado incluye una herramienta de visualización que permite interpretar los resultados obtenidos, facilitando el análisis de los registros ECG y las predicciones del modelo.
+
+
+El modelo debe entenderse como una herramienta de apoyo al análisis y de estimación preliminar de posibles patologías, basada en patrones aprendidos a partir de los datos. 
+En este sentido, los resultados obtenidos pueden ser útiles para orientar la interpretación de los registros ECG, pero no deben considerarse un diagnóstico definitivo.
+
+Asimismo, el rendimiento de los modelos está condicionado por la distribución de clases y por la presencia de patologías con patrones electrocardiográficos solapados, lo que afecta especialmente a la capacidad de discriminación en las clases más complejas o minoritarias.
 
 \section{Estructura de la memoria}
 
+\todo{No me convence mucho esta sección}
+
+La memoria se organiza en ocho capítulos que recogen de forma progresiva el desarrollo del Trabajo Fin de Grado, desde la base teórica hasta la implementación y el análisis de resultados.
+
+Después de la introducción, en el Capítulo 2, se presentan los fundamentos teóricos y tecnológicos necesarios para comprender el trabajo. 
+Se incluyen conceptos de electrocardiografía, estructura de la señal ECG, patologías relevantes y nociones básicas de aprendizaje automático y evaluación de modelos.
+
+El Capítulo 3 recoge el estado del arte, donde se revisan diferentes enfoques utilizados previamente para la interpretación automática del ECG. Se analizan tanto métodos clásicos como técnicas basadas en aprendizaje automático, así como sus principales limitaciones.
+
+El Capítulo 4 define el problema planteado y describe la base de datos utilizada, incluyendo su estructura, características principales y limitaciones. 
+También se presentan los distintos escenarios experimentales diseñados para evaluar el sistema.
+
+El Capítulo 5 detalla el desarrollo del modelo, incluyendo las etapas de preprocesamiento de la señal, extracción y selección de características, así como los distintos algoritmos de aprendizaje automático empleados en el estudio.
+
+El Capítulo 6 presenta el análisis de resultados, donde se evalúa el rendimiento de los distintos modelos en cada configuración experimental. 
+Se utilizan métricas de evaluación y se analiza su comportamiento frente a las distintas patologías.
+
+El Capítulo 7 describe el desarrollo del dashboard interactivo, diseñado como herramienta de visualización que permite analizar señales ECG y explorar las predicciones generadas por el modelo de forma intuitiva.
+
+El Capítulo 8 recoge las conclusiones del trabajo, sintetizando los resultados obtenidos y proponiendo posibles líneas de mejora y extensión futura del sistema.
 
 % -------------------------------------------------
 % CAPÍTULO 2
@@ -174,39 +431,53 @@ Que hace, que no hace y limitaciones
 
 \section{Anatomía eléctrica del corazón}
 
-El corazón es un órgano muscular que funciona como una bomba para impulsar la sangre a través del sistema circulatorio. Esta acción de bombeo está regulada por un sistema eléctrico, encargado de coordinar las contracciones de las distintas cavidades del corazón.
+El corazón es un órgano muscular que funciona como una bomba para impulsar la sangre a través del sistema circulatorio. 
+Esta acción de bombeo está regulada por un sistema eléctrico, encargado de coordinar las contracciones de las distintas cavidades del corazón.
 
-El latido se genera en la aurícula derecha, donde se encuentra el nodo sinoauricular (SA) que actúa como marcapasos natural del corazón. El nodo SA envía pulsos eléctricos que se propagan a través de las aurículas derecha e izquierda, llegando al nodo auriculoventricular (AV). En este nodo, el impulso disminuye brevemente, permitiendo que las aurículas se contraigan antes que los ventrículos. Así, la sangre se vacía de la aurículas a los ventrículos antes de su contracción.
+El latido se genera en la aurícula derecha, donde se encuentra el nodo sinoauricular (SA) que actúa como marcapasos natural del corazón. 
+El nodo SA envía pulsos eléctricos que se propagan a través de las aurículas derecha e izquierda, llegando al nodo auriculoventricular (AV). 
+En este nodo, el impulso se frena brevemente, permitiendo que las aurículas se contraigan antes que los ventrículos. 
+Así, la sangre se vacía de la aurículas a los ventrículos antes de su contracción.
 
-Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz de His hasta los ventrículos. Esta vía se divide en dos ramas, derecha e izquierda, conocidas como ramas de His. Estas ramas estimulan electricamente los ventrículos derecho e izquierdo, provocando su contracción y el bombeo de la sangre hacia el exterior del corazón. (\cite{stanford_electrical_system})
+Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz de His hasta los ventrículos. 
+Esta vía se divide en dos ramas, derecha e izquierda, conocidas como ramas de His. 
+Estas ramas estimulan eléctricamente los ventrículos, provocando su contracción y el bombeo de la sangre hacia el exterior del corazón. (\cite{stanford_electrical_system})
+
+La anatomía eléctrica del corazón se muestra en la Figura \ref{fig:sistema-electrico-corazon}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{imagenes/sistema-electrico-corazon.png}
-    \caption{Anatomía eléctrica del corazón.}
+    \caption{Anatomía eléctrica del corazón. \cite{cigna_corazon_electrico}}
     \label{fig:sistema-electrico-corazon}
 \end{figure}
 
 \footnote{\cite{cigna_corazon_electrico}}
-
-\todo{Explicar la anatomía basica del corazon??}
 
 
 \section{Electrocardiograma}
 
 \subsection{¿Que es un ECG?}
 
-El electrocardiograma (ECG) es la representación gráfica de la actividad eléctrica del corazón a lo largo del tiempo. Se trata de una prueba no invasiva, de bajo coste y fácil de realizar. Esta representación se utiliza para buscar actividad cardíaca anormal, que pueda indicar la presencia de patologías cardíacas. 
+El electrocardiograma (ECG) es la representación gráfica de la actividad eléctrica del corazón. 
+Se trata de una prueba no invasiva, de bajo coste y fácil de realizar. 
+Esta representación se utiliza para buscar actividad cardíaca anormal, que pueda indicar la presencia de patologías cardíacas. 
 
-No solo se utiliza para diagnosticar enfermedades, sino que el ECG puede evaluar el ritmo cardíaco, si este es regular o irregular y la fuerza y sincronización de las señales eléctricas. Además, se puede medir el tamaño y la posición de las cavidades del corazón. (\cite{medlineplus_ecg_es}) 
+No solo se utiliza para diagnosticar enfermedades, sino que el ECG puede evaluar el ritmo cardíaco, si este es regular o irregular y la fuerza y sincronización de las señales eléctricas. 
+Además, se puede utilizar para medir el tamaño y la posición de las cavidades del corazón. (\cite{medlineplus_ecg_es}) 
 
-El ECG es una herramienta fundamental en la práctica clínica, ya que permite la interpretación del ritmo cardíaco y la detección de alteraciones del sistema eléctrico. Aporta información relevante en la evaluación de patologías cardiovasculares, como valvulopatías, miocardiopatías, pericarditis, isquemia miocárdica o enfermedades hipertensivas. Por otro lado, el ECG se puede utilizar para monitorizar la respuesta a tratamientos farmacológicos, especialmente antiarritmicos, así como en la detección de alteraciones metabólicas. (\cite{prutkin_ecg_uptodate})
+El ECG es una herramienta fundamental en la práctica clínica, ya que permite la interpretación del ritmo cardíaco y la detección de alteraciones del sistema de conducción eléctrico. 
+Aporta información relevante en la evaluación de patologías cardiovasculares, como valvulopatías, miocardiopatías, pericarditis, isquemia miocárdica o enfermedades hipertensivas. 
+Por otro lado, el ECG se puede utilizar para monitorizar la respuesta a tratamientos farmacológicos, especialmente antiarritmicos, así como en la detección de alteraciones metabólicas. (\cite{prutkin_ecg_uptodate})
 
 \subsection{Sistema de derivaciones del ECG}
 
-Para medir la actividad eléctrica del corazón, se colocan electrodos en cada una de las extremidades y en el pecho, formando un sistema de 12 derivaciones. Cada derivación mide la diferencia de potencial eléctrico entre dos puntos o un punto del cuerpo y una referencia. El electrodo conectado en la pierna derecha sirve como electrodo de referencia a tierra. (\cite{cvphysiology_ecg_leads})
+Para medir la actividad eléctrica del corazón, se colocan electrodos en cada una de las extremidades y en el pecho, formando un sistema de 12 derivaciones. 
+Cada derivación mide la diferencia de potencial eléctrico entre dos puntos del cuerpo o un punto del cuerpo y una referencia. 
+El electrodo conectado en la pierna derecha sirve como electrodo de referencia a tierra. (\cite{cvphysiology_ecg_leads})
 
-Existen dos tipos de derivaciones: las derivaciones bipolares y las derivaciones unipolares. Las derivaciones bipolares utiliza un electrodo positivo y otro negativo para medir la diferencia de potencial, mientras que las derivaciones unipolares utilizan un unico electrodo positivo y una combinación de otros electrodos como electrodo de referencia.
+Existen dos tipos de derivaciones: las derivaciones bipolares y las derivaciones unipolares. 
+Las derivaciones bipolares utilizan un electrodo positivo y otro negativo para medir la diferencia de potencial, mientras que las derivaciones unipolares utilizan un único electrodo positivo y una combinación de otros electrodos como electrodo de referencia.
 
 Las doce derivaciones se agrupan en tres categorías según su ubicación: las derivaciones de las extremidades (I, II, III), las derivaciones aumentadas de las extremidades (aVR, aVL, aVF) y las derivaciones precordiales (V1-V6).
 
@@ -220,11 +491,13 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 		\item \underline{Derivación II}: Tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo derecho, midiendo la diferencia de potencial entre ambos puntos.
 		\item \underline{Derivación III}: Tiene el electrodo positivo en la pierna izquierda y el negativo en el brazo izquierdo, midiendo la diferencia de potencial entre ambos puntos.
 	\end{itemize}
-	Estas tres derivaciones forman un triángulo equilátero, conocido como el \textit{triángulo de Einthoven}, que representa la relación entre las derivaciones de las extremidades. Esta relación es tal que la suma de los impulsos eléctricos registrados en las derivaciones I y III es equivalente a la suma de los impulsos registrados en la derivación II:
+	Estas tres derivaciones forman un triángulo equilátero, conocido como el \textit{triángulo de Einthoven}, mostrado en la Figura \ref{fig:einthoven-triangle}, que representa la relación entre las derivaciones de las extremidades. Esta relación es tal que la suma de los impulsos eléctricos registrados en las derivaciones I y III es equivalente a la suma de los impulsos registrados en la derivación II:
 	
 	\begin{equation*}
 		DII = DI + DIII
 	\end{equation*}
+
+	
 	
 	Esta ley se conoce como \textit{Ley de Einthoven} y constituye una base fundamental para la interpretación vectorial de la actividad eléctrica cardíaca y permite verificar la coherencia de las señales registradas. (\cite{myekg_derivaciones_cardiacas})
 
@@ -238,7 +511,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	
 	\item \textbf{Derivaciones aumentadas de las extremidades}
 	
-	Se trata de derivaciones unipolares, que utilizan como referencia, una combinación de los electrodos de las extremidades. Al igual que estas, analizan la actividad eléctrica del corazón en el plano frontal.
+	Se trata de derivaciones unipolares, que utilizan como referencia una combinación de los electrodos de las extremidades. Al igual que estas, analizan la actividad eléctrica del corazón en el plano frontal.
 	
 	\begin{itemize}
 		\item \underline{Derivación aVR}: El electrodo positivo está en el brazo derecho y mide la diferencia de potencial entre el brazo derecho y el centro del corazón.
@@ -246,7 +519,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 		\item \underline{Derivación aVF}: El electrodo positivo está en la pierna izquierda y mide la diferencia de potencial entre la pierna izquierda y el centro del corazón.	
 	\end{itemize}
 
-	Estas derivaciones, complementan a las bipolares y permiten una visión más completa del plano frontal del corazón.
+	Estas derivaciones complementan a las bipolares y permiten una visión más completa del plano frontal del corazón.
 
 	\subsection*{Sistema hexaxial y eje del corazón}
 
@@ -254,9 +527,9 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 
 	Como se observa en la Figura \ref{fig:bipolar-limb-lead-axis} cada derivación bipolar tiene una orientación espacial:
 	\begin{itemize}
-		\item La derivación I se sitúa a 0º, correspondiente al eje horizontal entre el brazo derecho y el brazo izquierdo.
-		\item La derivación II tiene una orientación aproximada de +60º con respecto a este eje horizontal, entre el brazo derecho y la pierna izquierda.
-		\item La derivación III se orienta a +120º, entre el brazo izquierdo y la pierna izquierda.
+		\item La derivación I se sitúa a 0\textsuperscript{o}, correspondiente al eje horizontal entre el brazo derecho y el brazo izquierdo.
+		\item La derivación II tiene una orientación aproximada de +60\textsuperscript{o} con respecto a este eje horizontal, entre el brazo derecho y la pierna izquierda.
+		\item La derivación III se orienta a +120\textsuperscript{o}, entre el brazo izquierdo y la pierna izquierda.
 	\end{itemize}
 
 	Estas direcciones permiten interpretar la actividad eléctrica cardíaca como la proyección de un vector sobre distintos ejes espaciales. De este modo, el electrocardiograma no solo representa amplitudes eléctricas, sino también información direccional de la despolarización cardíaca. 
@@ -268,12 +541,13 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 		\label{fig:bipolar-limb-lead-axis}
 	\end{figure}
 
-	A partir de este sistema de derivaciones se incorporan las derivaciones aumentadas de las extremidades, que completan la cobertura del plano frontal y permiten una explicación más precisa del vector eléctrico. Estas derivaciones se sitúan en los siguiente ángulos:
+	A partir de este sistema de derivaciones se incorporan las derivaciones aumentadas de las extremidades, que completan la cobertura del plano frontal y permiten una explicación más precisa del vector eléctrico. (Figura \ref{fig:augmented-limb-lead-axis})
+	Estas derivaciones se sitúan en los siguiente ángulos:
 
 	\begin{itemize}
-		\item Derivación aVL: -30º sobre la horizontal
-		\item Derivación aVR: -150º sobre el eje horizontal
-		\item Derivación aVF: +90º sobre el plano horizontal
+		\item Derivación aVL: -30\textsuperscript{o} sobre la horizontal
+		\item Derivación aVR: -150\textsuperscript{o} sobre el eje horizontal
+		\item Derivación aVF: +90\textsuperscript{o} sobre el plano horizontal
 	\end{itemize}
 
 	\begin{figure}[H]
@@ -283,7 +557,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 		\label{fig:augmented-limb-lead-axis}
 	\end{figure}
 
-	El conjunto de estas seis derivaciones constituye el sistema hexaxial completo, que permite analizar la dirección del vector eléctrico cardíaco en el plano frontal y constituye la base para la determinación del eje eléctrico del corazón.
+	El conjunto de estas seis derivaciones constituye el sistema hexaxial completo,mostrado en la Figura \ref{fig:sistema-hexaxial}, que permite analizar la dirección del vector eléctrico cardíaco en el plano frontal y constituye la base para la determinación del eje eléctrico del corazón.
 
 	\begin{figure}[H]
 		\centering
@@ -297,9 +571,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 
 	La determinación del eje se basa en la polaridad del complejo QRS en estas derivaciones. Cuando el vector de despolarización se dirige hacia el polo positivo de una derivación, la deflexión del complejo QRS es positiva; por el contrario, si el vector se aleja, la deflexión es negativa. (\cite{cardioteca_eje_cardiaco})
 
-	El eje cardíaco en condiciones normales se encuentra entre -30º y 90º, haciendo que el vector resultante apunte abajo y a la izquierda. En este caso, el complejo QRS es positivo tanto en DI como en aVF. 
-
-	
+	El eje cardíaco en condiciones normales se encuentra entre -30\textsuperscript{o} y 90\textsuperscript{o}, haciendo que el vector resultante apunte abajo y a la izquierda. En este caso, el complejo QRS es positivo tanto en DI como en aVF. 
 	
 	En la tabla \ref{tab:eje_cardiaco} se resume la interpretación del eje cardíaco en función de la polaridad del complejo QRS en las derivaciones I y aVF.
 
@@ -325,7 +597,8 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 
 	\item \textbf{Derivaciones precordiales}
 	
-	Estas seis derivaciones unipolares se colocan en el pecho, en diferentes regiones del corazón, y miden la actividad eléctrica en un plano perpendicular al plano frontal. Cada una de las derivaciones precordiales observa una región específica del ventrículo.
+	Estas seis derivaciones unipolares se colocan en el pecho, en puntos bien definidos que permiten valorar diferentes regiones del corazón, y miden la actividad eléctrica en un plano perpendicular al plano frontal. 
+	Cada una de las derivaciones precordiales observa una región específica del ventrículo. En la Figura \ref{fig:chest_leads} se indica que parte del corazón observa cada derivación.
 	
 	\begin{itemize}
 		\item \underline{Derivaciones V1-V2}: Exploran la region septal y anteroseptal del corazón, observando principalmente el septo interventricular.
@@ -345,7 +618,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 \subsection{Partes del ECG}
 \label{sec:partes_ecg}
 
-Un ciclo cardíaco típico en el ECG está compuesto por varias ondas y segmentos característicos, cada uno de los cuales se asocia a una fase concreta del proceso eléctrico del corazón. En la Figura \ref{fig:partes-ecg} se muestra un esquema completo de un ciclo cardíaco típico.
+Un ciclo cardíaco típico en el ECG está compuesto por varias ondas y segmentos característicos, cada uno de los cuales se asocia a una fase concreta del proceso eléctrico del corazón. En la Figura \ref{fig:partes-ecg} se muestra un esquema completo de un ciclo cardíaco típico. (\cite{prutkin_ecg_uptodate})
 
 \subsubsection*{Onda P}
 
@@ -370,7 +643,7 @@ Una alteración en la duración del intervalo PR puede indicar bloqueos o cambio
 El complejo QRS representa la despolarización ventricular, que es el proceso eléctrico más potente del corazón.
 Su análisis es fundamental para la interpretación del ECG, ya que proporciona información sobre la conducción eléctrica ventricular, el tamaño y la posición de los ventrículos, así como la presencia de bloqueos o alteraciones en la conducción.
 
-Es una onda de corta duración, que indica que la despolarización ventricular es un proceso rápido. Una larga duración del QRS puede indicar alteraciones en la conducción, como bloquos de rama o ritmos originados fuera del sistema de conducción normal.
+Es una onda de corta duración, lo que indica que la despolarización ventricular es un proceso rápido. Una larga duración del QRS puede indicar alteraciones en la conducción, como bloquos de rama o ritmos originados fuera del sistema de conducción normal.
 
 El complejo QRS está compuesto por las siguientes deflexiones:
 \begin{itemize}
@@ -384,9 +657,11 @@ El complejo QRS está compuesto por las siguientes deflexiones:
 
 El segmento ST es la porción del ECG que se encuentra entre el final del complejo QRS y el inicio de la onda T. Representa el período en el que los ventrículos están completamente despolarizados, es decir, el tiempo entre la despolarización y la repolarización ventricular.
 
-El punto de unión entre el complejo QRS y el segmento ST se conoce como el punto J. En condiciones normales, el segmento ST es isoeléctrico, es decir, se encuentra al mismo nivel que la línea de base del ECG. Sin embargo, en ciertas patologías, como la isquemia miocárdica o el infarto de miocardio, el segmento ST puede presentar elevación o depresión, lo que indica un proceso patológico en el corazón.
+El punto de unión entre el complejo QRS y el segmento ST se conoce como el punto J, no mostrado en la Figura \ref{fig:partes-ecg}. 
+En condiciones normales, el segmento ST es isoeléctrico, es decir, se encuentra al mismo nivel que la línea de base del ECG. 
+Sin embargo, en ciertas patologías, como la isquemia miocárdica o el infarto de miocardio, el segmento ST puede presentar elevación o depresión.
 
-En condiciones normales también pueden observarse ligeras variaciones fisiológicas del segmento ST, especialmente durante episodios de taquicardia sinusal, donde el punto J puede encontrarse discretamente deprimido acompañado de un ascenso rápido del segmento ST hasta recuperar la línea isoeléctrica.
+En condiciones normales también pueden observarse ligeras variaciones fisiológicas del segmento ST, especialmente durante episodios de taquicardia sinusal, donde el punto J puede encontrarse ligeramente deprimido acompañado de un ascenso rápido del segmento ST hasta recuperar la línea isoeléctrica.
 
 
 \subsubsection*{Onda T}
@@ -448,29 +723,29 @@ Las  alteraciones detectadas en el ECG pueden afectar a la generación, propagac
 
 Entre las principales categorías clínicas relevantes en el análisis del ECG se encuentran distintas patologías que afectan a la morfología de las ondas, los intervalos y la conducción cardíaca. 
 
-A continuación, se describen las más representativas en el contexto de este estudio:
+A continuación, se describen las cinco clases en las que se agrupan las patologías estudiadas en este trabajo:
 
 \begin{itemize}
-	\item Normal (NORM)
+	\item Normal (NORM -- \textit{Normal ECG})
 	
 	Esta clase son electrocardiogramas sin alteraciones y que representan el patrón fisiológico de referencia.
 	La actividad eléctrica del corazón en estos casos sigue una secuencia normal de generación y propagación del impulso.
 
-	\item Infarto de miocardio (MI)
+	\item Infarto de miocardio (MI -- \textit{Myocardial Infarction})
 	
 	Agrupa patologías relacionadas con el daño del tejido miocárdico. 
 	Se reflejan principalmente en cambios en el segmento ST y en la onda T, así como en modificaciones de la morfología general del electrocardiograma.
 	
-	\item Bloqueos de conducción (CD)
+	\item Bloqueos de conducción (CD -- \textit{Conduction Disturbance})
 	
 	Incluye alteraciones en la propagación del impulso eléctrico a través del sistema de conducción cardíaco. 
 	Pueden afectar a la sincronización entre aurículas y ventrículos o a la activación ventricular, reflejandose en cambios en los intervalos y en el complejo QRS.
 	
-	\item Alteraciones ST-T (STTC)
+	\item Alteraciones ST-T (STTC -- \textit{ST/T change})
 	
 	Engloba alteraciones en la repolarización ventricular. Se manifiesta mediante cambios en el segmento ST y en la onda T y suele estar asociada a procesos isquémicos o alteraciones en la actividad eléctrica del miocardio.
 	
-	\item Hipertrofia (HYP)
+	\item Hipertrofia (HYP -- \textit{Hypertrophy})
 	
 	Incluye alteraciones derivadas de cambios estructurales del corazón, como el aumento del grosor de las paredes cardíacas. 
 	Estas modificaciones afectan a la propagación del impulso eléctrico y se reflejan en cambios en la amplitud y morfología de la señal ECG.
@@ -524,18 +799,18 @@ En la Figura \ref{fig:confusion-matrix} se muestra la estructura general de una 
 
 \subsubsection*{Accuracy}
 
-La exactitud o accuracy es una métrica de evaluación que mide la proporción de predicciones correctas realizadas por el modelo, respecto al total de muestras evaluadas. (\cite{evidently_accuracy_precision_recall})
+La exactitud o \textit{accuracy} es una métrica de evaluación que mide la proporción de predicciones correctas realizadas por el modelo, respecto al total de muestras evaluadas. (\cite{evidently_accuracy_precision_recall})
 Se calcula utilizando la siguiente fórmula:
 \begin{equation*}
 	\text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}
 \end{equation*}
 
-Esta métrica proporciona una visión golbal del rendimiento del modelo, indicando con qué frecuencia el sistema clasifica correctamente las muestras. 
+Esta métrica proporciona una visión global del rendimiento del modelo, indicando con qué frecuencia el sistema clasifica correctamente las muestras. 
 Sin embargo, en problemas con clases desbalanceadas o en problemas multilabel, la accuracy puede ser poco representativa, ya que no refleja adecuadamente el rendimiento en cada clase. (\cite{ibm_confusion_matrix})
 
 \subsubsection*{Precision}
 
-La precisión o precision es una métrica que mide la proporción de predicciones positivas que son correctas. 
+La precisión o \textit{precision} es una métrica que mide la proporción de predicciones positivas que son correctas. 
 Indica que porcentaje de los casos clasificados como positivos por el modelo realmente pertenecen a la clase positiva.
 Se calcula como:
 \begin{equation*}
@@ -544,12 +819,12 @@ Se calcula como:
 
 Esta métrica permite evaluar la fiabilidad de las predicciones positivas del modelo. (\cite{evidently_accuracy_precision_recall})
 En un contexto médico, una baja precisión implica un aumento de los falsos positivos, lo que puede llevar a diagnósticos erróneos o a la realización de pruebas innecesarias.
-Sin embargo, resulta es más relevante en problemas donde el costo de los falsos positivos es alto, como en el diagnóstico de enfermedades graves. \todo{Revisar esto. No me convence como está escrito}
+Sin embargo, en este tipo de problemas es preferible asumir un mayor número de falsos positivos antes que pasar por alto la presencia de una enfermedad grave, dado el mayor coste clínico asociado a un diagnóstico no detectado.
 En problemas multilabel, la precisión se puede calcular para cada clase de forma individual, lo que permite evaluar el rendimiento del modelo en cada patología específica.
 
 \subsubsection*{Recall}
 
-El recall o sensibilidad es una métrica que mide la capacidad del modelo para identificar correctamente los casos positivos reales. Indica que proporción de las muestras que pertenecen a una clase son efectivamente detectadas por el modelo. (\cite{evidently_accuracy_precision_recall})
+El \textit{recall} o sensibilidad es una métrica que mide la capacidad del modelo para identificar correctamente los casos positivos reales. Indica que proporción de las muestras que pertenecen a una clase son efectivamente detectadas por el modelo. (\cite{evidently_accuracy_precision_recall})
 Se define como:
 \begin{equation*}
 	\text{Recall} = \frac{TP}{TP + FN}	
@@ -560,7 +835,7 @@ Por esto, se considera una métrica crítica cuando el objetivo es minimizar el 
 
 \subsubsection*{F1-score}
 
-El F1-score es una métrica que combina la precisión y el recall en un único valor, proporcionando una medida equilibrada del rendimiento del modelo. (\cite{encord_f1_score_ml})
+El \textit{F1-score} es una métrica que combina la precisión y el recall en un único valor, proporcionando una medida equilibrada del rendimiento del modelo. (\cite{encord_f1_score_ml})
 Se calcula como la media armónica de la precisión y el recall:
 \begin{equation*}
 	\text{F1-score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
@@ -573,7 +848,7 @@ En un contexto médico, el F1-score permite evaluar de manera más equilibrada e
 
 En problemas de clasificación multilabel, cada muestra puede pertenecer a varias clases simultáneamente, lo que hace necesario utilizar métricas específicas para evaluar el rendimiento del modelo en este contexto.
 
-El Hamming Loss es una métrica que mide la proporción de etiquetas incorrectamente predichas por el modelo respecto al total de etiquetas evaluadas. (\cite{amit_classification_metrics})
+El \textit{Hamming Loss} es una métrica que mide la proporción de etiquetas incorrectamente predichas por el modelo respecto al total de etiquetas evaluadas. (\cite{amit_classification_metrics})
 Se define como:
 \begin{equation*}
 	\text{Hamming Loss} = \frac{1}{N \cdot L} \sum_{i=1}^{N} \sum_{j=1}^{L} \mathbb{I}(y_{ij} \neq \hat{y}_{ij})
@@ -582,7 +857,7 @@ donde $N$ es el número de muestras, $L$ es el número de clases, $y_{ij}$ es la
 
 Un valor de Hamming Loss cercano a 0 indica un buen rendimiento del modelo ya que implica un menor número de errores a nivel de etiqueta individual. 
 
-De forma complementaria, el Hamming Accuracy se define como la proporcion de etiquetas correctamente clasificadas respecto al total.
+De forma complementaria, el \textit{Hamming Accuracy} se define como la proporción de etiquetas correctamente clasificadas respecto al total.
 \begin{equation*}
 	\text{Hamming Accuracy} = 1 - \text{Hamming Loss}
 \end{equation*}
@@ -595,7 +870,7 @@ En problemas multietiqueta, las métricas de precisión, recall y F1 pueden agre
 En este trabajo se utilizan los promedios macro y micro para evaluar el rendimiento de los modelos de forma complementaria.
 
 El promedio macro calcula la métrica de forma independiente para cada clase y posteriormente obtiene la media aritmética de los resultados, otorgando el mismo peso a todas las clases independientemente de su frecuencia. 
-Esta medida resulta especialmente útil en escenarios con desbalance entre clases, ya que permite evaluar el rendimiento del modelo en patologías minoritarias sin que queden enmascaradas por las más frecuentes.
+Esta medida es especialmente útil en escenarios con desbalance entre clases, ya que permite evaluar el rendimiento del modelo en patologías minoritarias sin que queden enmascaradas por las más frecuentes.
 
 Por otro lado, el promedio micro calcula las métricas globales considerando conjuntamente el número total de verdaderos positivos, falsos positivos y falsos negativos, proporcionando una visión más global del rendimiento del sistema, donde las clases más frecuentes tienen mayor influencia en el resultado final.
 
@@ -625,6 +900,17 @@ Por tanto, no depende de un punto de corte concreto, lo que resulta muy relevant
 
 En escenarios como este, donde existe un fuerte desbalance entre clases, la AUC es especialmente útil porque no se ve tan afectada por la prevalencia de la clase mayoritaria como otras métricas, y permite evaluar de forma más estable la capacidad real del modelo para detectar patologías. (\cite{attal2026_roc_auc})
 
+\subsubsection*{Spearman}
+
+La correlación de Spearman es una métrica que se utiliza para medir la relación entre dos variables, pero no a partir de sus valores exactos, sino de su posición relativa u orden.
+
+En el contexto del aprendizaje automático, esta métrica permite evaluar si el modelo es capaz de mantener una coherencia en el ranking de las predicciones respecto a los valores reales. 
+Es decir, no se centra únicamente en acertar el valor exacto, sino en comprobar si los casos más graves reciben puntuaciones más altas que los menos relevantes, y viceversa.
+
+Esto es especialmente útil en problemas médicos, donde interesa que el modelo ordene correctamente las patologías según su probabilidad o severidad, aunque no siempre acierte con precisión el valor numérico.
+
+En resumen, Spearman mide hasta qué punto el modelo respeta la estructura de orden de los datos reales, siendo una métrica muy adecuada para evaluar la calidad de predicciones probabilísticas en este tipo de aplicaciones clínicas. (\cite{wei2024_spearman})
+
 \section{Tecnologías y librerías utilizadas}
 
 En este trabajo se ha empleado principalmente Pyhton como lenguaje de programación, debido a su amplio número de librerías orientadas al análisis de datos, el procesamiento de señales y el desarrollo de modelos de Machine Learning.
@@ -634,7 +920,7 @@ NumPy ha permitido trabajar con arrays multidimensionales de forma eficiente, mi
 
 Para el procesamiento de señales y análisis de señales se ha empleado SciPy, que proporciona herramientas específicas para el tratamiento de señales digitales, siendo especialemente relevante en el contexto de electrocardiogramas.
 
-Por otro lado, la lectura y manipulación de los registros de electrocardiogramas se ha realizado mediante la librería WFDB, muy utlizada en el ámbito biomédico para el manejo de bases de datod de señales fisiológicas.
+Por otro lado, la lectura y manipulación de los registros de electrocardiogramas se ha realizado mediante la librería WFDB, muy utlizada en el ámbito biomédico para el manejo de bases de datos de señales fisiológicas.
 
 La implementación y validación de los modelos de aprendizaje automático se ha llevado a cabo utilizando Scikit-learn, que incluye una amplia variedad de algoritmos de clasificación, así como herramientas para la evaluación del rendimiento de los modelos y la validación de los resultados.
 
@@ -642,7 +928,10 @@ Finalmente, para la visualización de datos y la creación de una interfaz inter
 \todo{Revisar esto, porque ha día 24 de mayo está sin hacer el dashboard}
 
 
-\section{Problemas en clasificación médica - \todo{OPCIONAL}}
+\section{Problemas en clasificación médica}
+
+\todo{No creo que lo vaya a poner -- Opiniones?
+}
 
 % -------------------------------------------------
 % CAPÍTULO 3
@@ -650,7 +939,7 @@ Finalmente, para la visualización de datos y la creación de una interfaz inter
 
 \chapter{Estado del Arte}
 
-Las enfermedades cardiovasculares son un de las principales causas de mortalidad en el mundo, lo que ha impulsado el desarrollo de herramientas de diagnóstico capaces de detectar estas patologías de manera temprana y precisa.
+Las enfermedades cardiovasculares son una de las principales causas de mortalidad en el mundo, lo que ha impulsado el desarrollo de herramientas de diagnóstico capaces de detectar estas patologías de manera temprana y precisa.
 Entre estas herramientas, el electrocardiograma (ECG) se destaca como una técnica no invasiva, rápida y ampliamente disponible para evaluar la actividad eléctrica del corazón.
 
 La interpretación del ECG es una herramienta fundamental en el diagnóstico de un gran número de enfermedades cardiovasculares. 
@@ -681,16 +970,16 @@ En particular, la base de datos utilizada en este trabajo proviene de este repos
 
 \section{Inteligencia artificial aplicada al ECG}
 
-Con el avance del aprendizaje profundo, los modelos han evolucionado desde la dependencia de caracterísitcas manuales hasta sistemas capaces de aprender directamente del ECG.
+Con el avance del aprendizaje profundo, los modelos han evolucionado desde la dependencia de características manuales hasta sistemas capaces de aprender directamente del ECG.
 
 Las redes neuronales convolucionales (CNN) han demostrado ser especialmente efectivas en el análisis de señales ECG, debido a su capacidad para capturar patrones locales y características morfológicas de la señal. 
-En este contexto, Hannun et al. (\cite{hannun2019arrhythmia}) desarrollaron un modelo basado en deep neural networks para la clasificación de 12 tipos de ritmos cardíacos a partir de ECG ambulatorios de una sola derivación. 
+En este contexto, Hannun et al. (\cite{hannun2019arrhythmia}) desarrollaron un modelo basado en \textit{deep neural networks} para la clasificación de 12 tipos de ritmos cardíacos a partir de ECG ambulatorios de una sola derivación. 
 
 El modelo alcanza un área bajo la curva ROC de 0.97 y un F1-score de 0.837, superando el rendimiento medio de cardiólogos expertos en la misma tarea. 
 Estos resultados evidencian el potencial del aprendizaje profundo en la interpretación automática del ECG en escenarios clínicos reales.
-\todo{igual esto no hace falta}
 
-De forma complementaria, otros trabajos han explorado la aplicación de deep learning en patologías distintas a las arritmias. Un ejemplo de esto es estudio de Mayo Clinic (\cite{wysokinski2024pe_ecg}), donde se emplean redes neuronales profundas para la detección de embolia pulmonar a partir de ECG de 12 derivaciones.
+De forma complementaria, otros trabajos han explorado la aplicación de deep learning en patologías distintas a las arritmias. 
+Un ejemplo de esto es estudio de Mayo Clinic (\cite{wysokinski2024pe_ecg}), donde se emplean redes neuronales profundas para la detección de embolia pulmonar a partir de un ECG de 12 derivaciones.
 El modelo alcanza un área bajo la curva ROC de 0.69 para la detección de la embolia pulmonar aguda, mejorando hasta 0.84 en casos de embolia de alto riesgo.
 Los autores destacan el potencial clínico del modelo, especialmente por su alto valor predictivo negativo, lo que sugiere su utilidad para descartar casos graves de forma rápida.
 
@@ -714,13 +1003,13 @@ En este estudio se plantean modelos capaces de predecir simultáneamente hasta 1
 
 Otra línea de investigación relevante es el desarrollo de modelos interpretables de aprendizaje automático. 
 En aplicaciones médicas, la explicabilidad de los modelos es un aspecto crítico, ya que permite aumentar la confianza del personal clínico en las predicciones realizadas por los sistemas automáticos. 
-En este sentido, se han propuesto técnicas de interpretable machine learning aplicadas al análisis de ECG con el objetivo de mejorar la transparencia de los modelos y facilitar la comprensión de sus decisiones.
+En este sentido, se han propuesto técnicas de \textit{interpretable machine learning} aplicadas al análisis de ECG con el objetivo de mejorar la transparencia de los modelos y facilitar la comprensión de sus decisiones.
 
 Ayano et al. (\cite{ayano2022ecg_ml_review}) realizan una revisión sistemática sobre técnicas de aprendizaje automático interpretables aplicadas al ECG, destacando que la falta de interpretabilidad sigue siendo una de las principales barreras para la adopción clínica de estos sistemas. 
 Además, identifican la necesidad de desarrollar modelos más explicables que permitan justificar las decisiones en entornos médicos reales.
 
 De forma complementaria, revisiones recientes han analizado el estado del arte del uso de inteligencia artificial en el ECG, destacando la transición desde métodos basados en ingeniería de características hacia arquitecturas profundas con extracción automática de patrones. 
-Estas revisiones también subrayan problemas recurrentes como el desbalanceo de clases, la variabilidad inter-paciente y la falta de métricas de evaluación estandarizadas.
+Estas revisiones también subrayan problemas recurrentes como el desbalanceo de clases, la variabilidad entre pacientes y la falta de métricas de evaluación estandarizadas.
 
 En este sentido, Prakash et al. (\cite{prakash2025ecg_review}) revisan más de 100 estudios sobre clasificación de latidos ECG, señalando que, aunque los modelos actuales han alcanzado altos niveles de precisión, todavía existen desafíos importantes relacionados con la generalización y la validación clínica.
 
@@ -777,7 +1066,7 @@ Estas limitaciones justifican la necesidad de desarrollar enfoques más completo
 
 A partir de las limitaciones analizadas en el estado del arte, el presente trabajo plantea un análisis comparativo de distintos escenarios de clasificación de señales ECG, evaluando el impacto que tienen distintos factores sobre el rendimiento de los modelos de aprendizaje automático.
 Se analiza la influencia del número de derivaciones utilizadas, comparando los resultados obtenidos con una sola derivación frente a los obtenidos utilizando el ECG completo de 12 derivaciones.
-Del mismo modo, se comparan distintos formas de representar la información, desde la señal ECG en bruto hasta la extracción de características manuales o estadísticas, con el objetivo de evaluar su impacto en el rendimiento de los modelos. 
+Del mismo modo, se comparan distintos formas de representar la información, desde la señal ECG en bruto hasta la extracción de características diseñadas manuealmente o estadísticas, con el objetivo de evaluar su impacto en el rendimiento de los modelos. 
 
 El trabajo utiliza distintos enfoques del problema de clasificación. Se considera un enfoque binario que detecta grupos generales de patologías y otro enfoque más complejo basado en múltiples enfermedades y salidas probabilísticas. 
 Permite analizar escenarios más próximos a la realidad clínica, donde un mismo registro puede puede presentar varias alteraciones simultáneamente y donde el nivel de confianza asociado a cada predicción puede resultar relevante desde el punto de vista médico.
@@ -844,13 +1133,13 @@ Este aspecto puede afectar de forma relevante al rendimiento final del sistema.
 Otro factor importante es la coexistencia de múltiples patologías en un mismo registro, lo que incrementa la complejidad del problema respecto a enfoques de clasificación tradicional. 
 Esta situación refleja mejor la realidad clínica, pero dificulta el aprendizaje de fronteras de decisión claras entre clases.
 
-Además, la variabilidad intrínseca de las señales electrocardiográficas, derivada de diferencias entre pacientes, condiciones de adquisición y posibles artefactos en la señal, introduce ruido que puede afectar a la robustez de los modelos.
+Además, la variabilidad intrínseca de las señales electrocardiográficas, derivada de diferencias entre pacientes, condiciones de adquisición y posibles interferencias en la señal, introduce ruido que puede afectar a la robustez de los modelos.
 
 Finalmente, aunque la base de datos es un referente en el ámbito del análisis automático de ECG, los modelos entrenados sobre este conjunto pueden no generalizar de forma directa a otros entornos clínicos o poblaciones distintas, lo que pone de manifiesto la necesidad de validaciones adicionales en escenarios externos.
 
 \section{Agrupación de patologías}
 
-La base de datos utilizada en este trabajo contiene un total de 71 patologías diferentes, definidas mediante el sistema de anotación SCP-ECG. 
+La base de datos utilizada en este trabajo contiene un total de 71 patologías diferentes, definidas mediante el sistema de anotación SCP-ECG. /todo{donde explico el sistema?}
 Este nivel de precisión introduce una elevada complejidad en el problema de clasificación, especialmente en escenarios multilabel y con distribución desbalanceada de clases.
 
 Con el objetivo de simplificar el problema y estructurar el análisis, en este trabajo se emplea una agrupación de las patologías en cinco superclases clínicas generales, previamente definidas en el apartado \ref{sec:patologias_estudiadas}. 
@@ -870,7 +1159,8 @@ Con el objetivo de analizar el impacto de distintos factores en el rendimiento d
 En este primer escenario plantea un enfoque simplificado, en el que se utiliza únicamente la derivación I del ECG, y se agrupan las patologías en las cincos superclases definidas previamente.
 El objetivo de esta configuración es evaluar el rendimiento de los modelos en condiciones de información reducida, simulando escenarios en los que solo se dispone de dispositivos de monitorización con capacidad limitada.
 
-Este modelo se entrena para realizar una clasificación binaria, en la que el objetivo es detectar la presencia o ausencia de cada una de las cinco superclases de patologías.
+Este modelo se entrena en un problema de clasificación multilabel, en el que se estima de forma independiente la presencia o ausencia de cada una de las cinco superclases de patologías. 
+Esto permite que un mismo registro pueda presentar simultáneamente varias condiciones clínicas.
 
 Esta configuración se entrenará tanto con la señal ECG en bruto como con características extraídas, lo que permitirá analizar el impacto de la representación de los datos en el rendimiento del modelo.
 
@@ -924,6 +1214,7 @@ Antes de comenzar con la limpieza y preprocesado de las señales se eliminaron t
 
 Posteriormente, las señales pasan por un proceso de preprocesado con el objetivo de detectar los ciclos cardíacos principales, identificando los picos R como referencia dentro del ECG. 
 A partir de esta información, se eliminan los registros que contienen menos de 10 latidos, y de los restantes se seleccionan únicamente los 10 primeros latidos para cada paciente.
+Tras este filtrado, el conjunto final queda compuesto por X pacientes.
 Se segmenta la señal en latidos individuales, lo que permite estrucutrar los datos de forma homogénea. 
 
 A partir de esta representación, se consideran distintas formas de entrada para los modelos. 
@@ -953,7 +1244,7 @@ Finalmente, se describen los distintos enfoques experimentales planteados y la m
 
 El sistema desarrollado en este trabajo se basa en un pipeline de aprendizaje automático aplicado al análisis de señales ECG, cuyo objetivo es la detección y clasificación automática de patologías cardíacas a partir de registros electrocardiográficos.
 
-Está compuesto por varias etapas secuenciales que permiten transformar la señal original en predicciones clínicas relevantes.
+Como se muestra en la Figura \ref{fig:arquitectura_sistema}, el sistema está compuesto por varias etapas secuenciales que permiten transformar la señal original en predicciones clínicas relevantes.
 El flujo completo empieza con la entrada de los registros electrocardiográficos, junto con la información asociada a cada paciente, y las etiquetas diagnósticas correspondientes.
 
 A continuación, las señales pasan por una etapa de preprocesado, donde los datos se limpian y se preparan con el objetivo de mejorar la representación para el posterior análisis.
@@ -967,10 +1258,8 @@ La salida del sistema puede representarse de forma binaria o probabilística, de
 
 Finalmente, las predicciones obtenidas son evaluadas mediante distintas métricas de rendimiento, permitiendo comparar el comportamiento de los modelos en los diferentes escenarios planteados.
 
-En la Figura \ref{fig:arquitectura_sistema} se muestra un diagrama general del pipeline de procesamiento desarrollado en este trabajo, que ilustra las distintas etapas y su interconexión dentro del sistema global.
-
 \begin{figure}[H]
-\centering
+\makebox[\textwidth][c]{
 
 \begin{tikzpicture}[node distance=3cm]
 
@@ -1003,6 +1292,7 @@ En la Figura \ref{fig:arquitectura_sistema} se muestra un diagrama general del p
 \draw [arrow] (modelos) -- (output);
 
 \end{tikzpicture}
+}
 
 \caption{Pipeline general del sistema. Elaboración propia.}
 \label{fig:arquitectura_sistema}
@@ -1018,7 +1308,6 @@ Este análisis permite contextualizar los datos antes de su utilización en los 
 En primer lugar, se analiza la distribución de los pacientes por edad en el conjunto de datos. La Figura \ref{fig:distribucion-edad} muetra el histograma de edades correspondiente, que revela una distribución relativamente equilibrada entre los distintos grupos de edad, con una ligera predominancia de pacientes en el rango de 50 a 70 años, lo que es consistente con la prevalencia de patologías cardiovasculares en la población adulta.
 Como se ha mencionado anteriormente, se han eliminado los registros de pacientes menores de 18 años y mayores de 89 años, por lo que en el gráfico solo se muestran los pacientes comprendidos en este rango de edad.
 
-\todo{cambiar colores de graficas?}
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{imagenes/distribucion_edad.png}
@@ -1052,19 +1341,7 @@ En conjunto, este análisis proporciona una visión general de la estructura dem
 Una vez analizada la distribución demográfica del conjunto de datos, se estudia la distribución de las etiquetas diagnósticas con el objetivo de evaluar el balance entre las distintas patologías presentes en el estudio.
 
 En primer lugar, se analiza la distribución de las clases originales del conjunto de datos. 
-La Figura \ref{fig:distribucion-clases} muestra la frecuencia de aparición de cada una de las patologías consideradas. 
-Como puede observarse, existe un claro desbalance entre clases, con un reducido número de patologías muy representadas frente a un gran número de clases con baja frecuencia de aparición.
-
-
-\todo{pongo este gráfico? No se ve nada, no se distingue nada, no aporta nada, es un gráfico de barras con 71 clases}
-\begin{figure}[H]
-		\centering
-		\includegraphics[width=1.1\textwidth]{imagenes/distribucion_clases}
-		\caption{Distribución de las patologías en el conjunto de datos.}
-		\label{fig:distribucion-clases}
-\end{figure}
-
-Dado el elevado número de categorías (71 patologías), se presenta adicionalmente una visualización alternativa basada en las 10 clases más frecuentes, agrupando el resto en una categoría adicional. 
+Dado el elevado número de categorías (71 patologías), se presenta una visualización alternativa basada en las 10 clases más frecuentes, agrupando el resto en una categoría adicional. 
 Esta representación, mostrada en la Figura \ref{fig:distribucion-clases-top10}, permite observar de forma más clara las patologías predominantes en el conjunto de datos y facilita la interpretación del desbalance existente.
 
 \begin{figure}[H]
@@ -1104,10 +1381,7 @@ Estas asociaciones reflejan la frecuente coexistencia entre alteraciones estruct
 
 De igual forma, se observan co-ocurrencias relevantes entre patologías isquémicas como ISC\_ (isquemia general), ISCAL (isquemia anterolateral) e ISCIN (isquemia inferior) y eventos como IMI, lo que pone de manifiesto la superposición de manifestaciones electrocardiográficas en distintos estadios de enfermedad coronaria.
 
-\todo{poner en negrita las enfermedades?}
-
-Por otro lado, patologías como LVH (hipertrofia ventricular izquierda) presentan múltiples asociaciones con distintas clases, especialmente con ISC\_ y con alteraciones de conducción como IVCD (trastorno inespecífico de conducción intraventricular), lo que sugiere su papel como condición frecuentemente concomitante dentro del conjunto de datos.
-
+Por otro lado, patologías como LVH (hipertrofia ventricular izquierda) presentan múltiples asociaciones con distintas clases, especialmente con ISC\_ y con alteraciones de conducción como IVCD (trastorno inespecífico de conducción intraventricular),lo que sugiere que aparece frecuentemente asociada a otras patologías dentro del conjunto de datos.
 También se identifican combinaciones poco frecuentes entre determinadas patologías, especialmente en el caso de arritmias aisladas, lo que refleja la heterogeneidad del dataset y el marcado desbalance entre clases.
 
 Estos factores justifican la necesidad de enfoques de modelado capaces de manejar múltiples etiquetas y capturar relaciones entre clases, aspectos que se abordarán en las siguientes secciones del trabajo.
@@ -1125,8 +1399,7 @@ Sin embargo, también existe una proporción significativa de registros que pres
 		\label{fig:num-patologias}
 \end{figure}
 
-Para la elaboración de este gráfico se ha considerado que un paciente tuviese 0 patologías si como único elemento en la etiqueta fuese de la categoría ``NORM''  con una probabilidad mayor que 0, mientras que si presentaban esta categoría y otra más con una probabilidad mayor que 0 se consideraba que el paciente presentaba 1 patología, y así sucesivamente.
-\todo{revisar redacción}
+Para la elaboración de este gráfico se ha considerado que un paciente tuviese 0 patologías si como único elemento en la etiqueta presenta la categoría ``NORM''  con una probabilidad mayor que 0, mientras que si presentaba esta categoría y otra más con una probabilidad mayor que 0 se ha considerado que el paciente presenta 1 patología, y así sucesivamente.
 
 \section{Preprocesado de datos}
 
@@ -1139,20 +1412,20 @@ Antes de proceder a la detección de los picos R, se aplican distintas etapas de
 Estas operaciones permiten reducir la influencia del ruido y mejorar la precisión del algoritmo de detección, especialmente en registros con variaciones de amplitud o interferencias.
 
 En primer lugar, se realiza una descomposición de la señal mediante una transformada wavelet discreta, que permite separar la señal en diferentes bandas de frecuencia. (\cite{talebi2025_fourier_wavelet})
-Se utiliza la transformada wavelet de Daubechies de orden 6 (db6) como base para la descomposición de la señal.
+Se utiliza la transformada wavelet de Daubechies de orden 6 (db6) como base para la descomposición de la señal, mostrada en la Figura \ref{fig:wavelet-db6}.
 Las wavelets de esta familia presentan una forma similar a los complejos QRS y ofrecen un buen equilibrio entre resolución temporal y frecuencial, lo que las hace especialmente adecuadas para el análisis de señales electrocardiográficas.
 
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{imagenes/wavelet-db6.png}
-		\caption{Morfología de la wavelet db6. \todo{lo pongo?}}
+		\includegraphics[width=0.4\textwidth]{imagenes/wavelet-db6.png}
+		\caption{Morfología de la wavelet db6.}
 		\label{fig:wavelet-db6}
 \end{figure}
 
 La señal se descompone en 8 niveles, permitiendo dividir el espectro en distintas bandas de frecuencia.
 Esta profundidad es adecuada para la frecuencia de muestreo utilizada (500 Hz) y permite aislar con mayor precisión las componentes asociadas a las distintas ondas del ECG. 
 Los coeficientes d4 y d5 contienen la información correspondiente al rango de frecuencias típico del complejo QRS (aproximadamente entre 5 y 25 Hz).
-Por este motivo, serán estos coeficientes lo que se utilicen para reconstruir la señal que se utilizará para detectar los latidos.
+Por este motivo, serán estos coeficientes los que se utilicen para reconstruir la señal que se utilizará para detectar los latidos.
 
 En la Figura \ref{fig:wavelet-reconstruida} se muestra la señal original junto con la señal reconstruida a partir de los coeficientes d4 y d5 de la transformada wavelet de la derivación I del registro 00010.
 Es importante señalar que la transformada wavelet discreta implica un proceso de submuestreo en cada nivel de descomposición, lo que modifica la representación de la señal en el dominio transformado. 
@@ -1162,7 +1435,7 @@ Por este motivo, las posibles variaciones en la escala de la señal no afectan a
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{imagenes/wavelet-recostruida-pac10.png}
-		\caption{Señal original y señal reconstruida a partir de los coeficientes d4 y d5 \todo{cambiar pie de foto?}}
+		\caption{Señal original y señal reconstruida a partir de los coeficientes d4 y d5}
 		\label{fig:wavelet-reconstruida}
 \end{figure}
 
@@ -1195,7 +1468,7 @@ Como se observa en la Figura \ref{fig:picosR}, los picos R detectados se corresp
 \end{figure}
 
 Una vez detectados los picos R, se segmenta la señal ECG en latidos individuales, utilizando cada pico como referencia para definir el inicio y el final de cada latido.
-Se extrae un segmento de 600 ms, comprendido entre 200 ms antes y 400 ms después del pico R.
+Por cada pico R, se extrae un segmento de 600 ms, comprendido entre 200 ms antes y 400 ms después del pico.
 
 Esta elección se fundamenta en la morfología temporal del ECG, en el que el complejo QRS se localiza en torno al pico R y actúa como referencia estable para la alineación de los latidos. 
 La inclusión de una ventana previa al pico R permite incorporar la transición desde la onda P y asegurar la captura completa del inicio del complejo QRS, teniendo en cuenta posibles variaciones en la detección del pico. 
@@ -1218,20 +1491,20 @@ De los registros restantes, se seleccionan únicamente los 10 primeros latidos p
 
 Por último, en función del escenario experimental considerado, se procede a la construcción de las entradas del modelo. 
 En el caso de utilizar únicamente la derivación I, se genera un megavector mediante la concatenación de los latidos segmentados de cada paciente. 
-Alternativamente, se extraen características temporales, morfológicas y estadísticas de cada latido, con el objetivo de obtener una representación más compacta y discriminativa de la señal.
+De la misma forma, se extraen características temporales, morfológicas y estadísticas de cada latido, con el objetivo de obtener una representación más compacta y discriminativa de la señal.
 
 También se adapta la etiqueta asociada a cada paciente en función del escenario experimental. 
-Para ello, la formulación original del problema se transforma, ya sea mediante la agrupación de patologías en superclases o mediante el mantenimiento del enfoque multilabel probabilístico, en el que cada patología se representa mediante su probabilidad de ocurrencia.
+Para ello, la formulación original del problema se transforma, ya sea mediante la agrupación de patologías en superclases o manteniendo el enfoque multilabel probabilístico, en el que cada patología se representa mediante su probabilidad de ocurrencia.
 
 \section{Selección y extracción de características}
 
 Aunque la señal ECG contiene una gran cantidad de información fisiológica, no toda resulta igualmente relevante para la tarea de clasificación. 
 Además, trabajar directamente con la señal completa implica manejar vectores de gran dimensionalidad, lo que puede incrementar la complejidad computacional y dificultar el aprendizaje de determinados modelos.
 
-Por este motivo, en uno de los enfoques planteados se realiza una extracción explícita de características sobre los latidos previamente segmentados. 
+Por este motivo, se realiza una extracción explícita de características sobre los latidos previamente segmentados. 
 El objetivo es obtener una representación compacta de la señal que preserve la información más relevante para la identificación de patologías cardíacas.
 
-Las características seleccionadas pueden agruparse en cuatro categorías principales: temporales, morfológicas, estadísticas y frecuenciales.
+Las características seleccionadas pueden agruparse en cuatro categorías principales: 
 \begin{itemize}
 	\item \textbf{Características temporales:} incluyen medidas relacionadas con la variabilidad de los intervalos cardíacos.
 	\item \textbf{Características morfológicas:} asociadas a la forma y estructura de los latidos.
@@ -1243,7 +1516,7 @@ Adicionalmente, se incluye una estimación del eje eléctrico del corazón como 
 
 \subsection{Características temporales}
 
-Las caracteristicas temporales se obtienen a partir de los intervalos RR, definidos como el tiempo transcurrido entre dos picos R consecutivos.
+Las características temporales se obtienen a partir de los intervalos RR, definidos como el tiempo transcurrido entre dos picos R consecutivos.
 Constituyen una de las medidas fundamentales en el análisis del ritmo cardíaco, ya que reflejan directamente la regularidad de los latidos y permiten caracterizar su comportamiento a lo largo del tiempo.
 
 Los intervalos RR se calculan a partir de la secuencia de picos R detectados previamente en cada registro.
@@ -1263,7 +1536,7 @@ Estas medidas permiten capturar episodios puntuales de aceleración o desacelera
 A partir de estos valores se calcula el rango de los intervalos RR, definido como la diferencia entre el valor máximo y el valor mínimo. 
 Esta característica proporciona una medida directa de la amplitud total de variación del ritmo cardíaco durante el registro.
 
-Por último, se incluye el índice RMSSD (Root Mean Square of Successive Differences), que se calcula como la raíz cuadrada de la media de las diferencias al cuadrado entre intervalos RR consecutivos. 
+Por último, se incluye el índice RMSSD (\textit{Root Mean Square of Successive Differences}), que se calcula como la raíz cuadrada de la media de las diferencias al cuadrado entre intervalos RR consecutivos. 
 Esta métrica es ampliamente utilizada en estudios de variabilidad cardíaca, ya que es especialmente sensible a variaciones de corto plazo entre latidos consecutivos y permite caracterizar de forma más fina la irregularidad del ritmo.
 
 \begin{equation*}
@@ -1281,7 +1554,7 @@ Permiten analizar cómo es cada latido de forma individual, evaluando posibles a
 En primer lugar, se considera la amplitud del pico R, que representa el punto de máxima activación ventricular. 
 Esta medida está relacionada con la intensidad de la despolarización del ventrículo, y puede verse alterada en presencia de cambios estructurales o eléctricos en el corazón.
 
-Asimismo, se calcula la amplitud de la onda T, asociada al proceso de repolarización ventricular. 
+De la misma forma, se calcula la amplitud de la onda T, asociada al proceso de repolarización ventricular. 
 Variaciones en esta onda pueden estar relacionadas con alteraciones en la recuperación eléctrica del miocardio o con procesos isquémicos.
 
 De forma complementaria, se estima la amplitud mínima previa al pico R, utilizada como aproximación a la onda Q. 
@@ -1293,7 +1566,7 @@ Ambas medidas son especialmente relevantes, ya que alteraciones en la conducció
 Finalmente, se calcula el nivel medio del segmento ST, una región clave del ciclo cardíaco situada entre la despolarización y la repolarización ventricular. 
 Variaciones en este segmento están directamente asociadas a procesos isquémicos y constituyen uno de los indicadores clínicos más importantes en cardiología.
 
-Para todas estas características, se calculan posteriormente la media y la desviación estándar a nivel de paciente, para capturar tanto el valor típico de cada medida como su variabilidad entre latidos, obteniendo así una representación más robusta de la morfología cardíaca.
+Para todas estas características se calculan posteriormente la media y la desviación estándar a nivel de paciente, para capturar tanto el valor típico de cada medida como su variabilidad entre latidos, obteniendo así una representación más robusta de la morfología cardíaca.
 
 \subsection{Características estadísticas}
 
@@ -1303,14 +1576,14 @@ Complementan la información temporal y morfológica, aportando una representaci
 Para cada latido se calcula la media y la desviación estándar de la señal, que permiten caracterizar el nivel medio de amplitud y su dispersión. 
 Se incluyen la amplitud máxima y mínima, que permiten identificar los valores extremos de la señal dentro de cada latido.
 Así, se consigue una representación más robusta y menos sensible a variaciones puntuales o posibles errores de segmentación.
-Adicionalmente, se incorporan medidas estadísticas de orden superior como la asimetría (skewness) y la curtosis (kurtosis).
+Adicionalmente, se incorporan medidas estadísticas de orden superior como la asimetría (\textit{skewness}) y la curtosis (\textit{kurtosis}).
 
-En primer lugar, se calcula la media de la señal, que proporciona información sobre el nivel medio de amplitud del latido, lo que puede ser indicativo de la intensidad general de la actividad eléctrica cardíaca.
+En primer lugar, se calcula la media de la señal, que proporciona información sobre el nivel medio de la amplitud del latido, lo que puede ser indicativo de la intensidad general de la actividad eléctrica cardíaca.
 Pequeñas variaciones pueden estar relacionadas con cambios en la morfología de la señal.
 
 La desviación estándar permite cuantificar la dispersión de los valores de amplitud de la señal. 
 Un valor elevado de esta medida indica una mayor variabilidad en la amplitud del latido, lo que podría estar asociado a alteraciones en la conducción eléctrica o a la presencia de ruido en el registro, mientras que un valor bajo sugiere una señal más homogénea.
-Esta caracterísitica resulta muy útil para diferenciar señales con distinta complejidad morfológica, ya que latidos con formas más irregulares suelen presentar una mayor dispersión de valores.
+Esta característica resulta muy útil para diferenciar señales con distinta complejidad morfológica, ya que latidos con formas más irregulares suelen presentar una mayor dispersión de valores.
 
 Los valores máximo y mínimo de la señal permiten caracterizar los extremos de amplitud de cada latido y complementan la información obtenida mediante las características morfológicas, proporcionando una visión más completa de la forma del latido.
 Estas medidas pueden ser especialmente relevantes en la detección de alteraciones isquémicas o de daño miocárdico, que suelen manifestarse mediante cambios en la amplitud de las ondas del ECG.
@@ -1322,7 +1595,7 @@ Cambios en la forma del complejo QRS o en la presencia de ondas más pronunciada
 Por último, se incorpora la curtosis (kurtosis), que describe el grado de concentración de los valores alrededor de la media y la presencia de picos pronunciados en la distribución. 
 Esta medida permite diferenciar señales con morfologías más suaves de aquellas que presentan cambios bruscos o componentes más agudos.
 
-Dado que cada paciente dispone de múltiples latidos, todas estas medidas se agregan posteriormente mediante su media y desviación estándar, lo que permite obtener una representación global estable y menos sensible a variaciones puntuales entre latidos.
+Dado que cada registro tiene múltiples latidos, todas estas medidas se agregan posteriormente mediante su media y desviación estándar, lo que permite obtener una representación global estable y menos sensible a variaciones puntuales entre latidos.
 
 En conjunto, estas características aportan una descripción global de la señal ECG y complementan la información proporcionada por las características temporales y morfológicas. 
 Aunque individualmente pueden parecer menos interpretables desde un punto de vista clínico, resultan especialmente útiles para los algoritmos de aprendizaje automático, ya que permiten capturar patrones generales presentes en la señal que no siempre son evidentes mediante el análisis visual.
@@ -1358,12 +1631,13 @@ Finalmente, se incluye una estimación del eje eléctrico cardíaco, obtenido a 
 Este eje representa la dirección predominante de la actividad eléctrica durante la despolarización ventricular y constituye un indicador clínico relevante en la evaluación de patologías cardíacas.
 
 Para su estimación, se calcula la amplitud media del complejo QRS en ambas derivaciones, considerando la diferencia entre los valores máximos y mínimos en la región del complejo. 
-A partir de estas amplitudes se obtiene el ángulo del eje eléctrico mediante una relación trigonométrica basada en la función arctan2, lo que permite determinar la dirección del vector eléctrico resultante.
+A partir de estas amplitudes se obtiene el ángulo del eje eléctrico mediante una relación trigonométrica basada en la función \texttt{arctan2}, lo que permite determinar la dirección del vector eléctrico resultante.
 
 Desviaciones significativas del eje eléctrico pueden estar asociadas a alteraciones estructurales del corazón, bloqueos de conducción o hipertrofias ventriculares, por lo que esta variable aporta información global complementaria a las características previamente descritas.
 
 
-\todo{hacer algo para que no parezca del apartado del eje electrico}
+\vspace{0.5cm}
+
 El conjunto de características extraídas permite construir una representación multidimensional de la señal electrocardiográfica, integrando información temporal, morfológica, estadística y frecuencial. 
 Esta combinación es fundamental para proporcionar a los modelos de clasificación una base informativa capaz de capturar patrones complejos asociados a diferentes patologías cardiovasculares.
 
@@ -1381,7 +1655,7 @@ Cada superclase se modela de forma independiente como una variable binaria, perm
 
 En segundo lugar, se ha considerado también un enfoque de clasificación binaria basado en la utilización de las 12 derivaciones, con el objetivo de evaluar el impacto de incorporar información espacial más completa del registro electrocardiográfico. 
 
-Finalmente, se ha abordado un tercer escenario más complejo, basado en las 12 derivaciones, orientado a la clasificación probabilística de las 71 patologías, donde cada paciente puede presentar simultáneamente múltiples diagnósticos, lo que incrementa significativamente la dificultad del problema debido al desbalance de clases y a la naturaleza multietiqueta del etiquetado.
+Finalmente, se ha abordado un tercer escenario más complejo, basado en las 12 derivaciones, orientado a la clasificación probabilística de las 71 patologías, donde cada paciente puede presentar simultáneamente múltiples diagnósticos, lo que incrementa significativamente la dificultad del problema debido al desbalance de clases y a la naturaleza multietiqueta del diagnóstico.
 
 Adicionalmente, en los dos primeros escenarios de clasificación binaria, se han explorado distintas estrategias de decisión mediante la modificación de los umbrales de clasificación, con el objetivo de ajustar el equilibrio entre sensibilidad y especificidad del sistema. 
 En concreto, se han evaluado tanto umbrales inferiores al valor por defecto como configuraciones de umbral fijo personalizdo a cada superclase, con el fin de analizar su impacto en la capacidad del modelo para detectar correctamente la presencia de patología. 
@@ -1402,7 +1676,7 @@ Esto condiciona tanto el diseño de los clasificadores como la interpretación d
 La regresión logística es un modelo de clasificación lineal muy utilizado en problemas biomédicos debido a su simplicidad, interpretabilidad y estabilidad. (\cite{lera2025logistic_regression})
 Se basa en modelar la probabilidad de pertenencia a una clase mediante una combinación lineal de las características de entrada, seguida de la aplicación de una función sigmoide que acota la salida entre 0 y 1. (\cite{ibm_logistic_regression})
 
-Este modelo se usa como referencia base (baseline), ya que permite establecer un punto de comparación frente a métodos más complejos. 
+Este modelo se usa como referencia base, ya que permite establecer un punto de comparación frente a métodos más complejos. 
 Su principal ventaja es la interpretabilidad de sus coeficientes, lo que facilita entender que características del ECG influyen en la predicción de cada superclase.
 
 En este problema, la regresión logística se adapta a un escenario multietiqueta mediante un enfoque One-vs-Rest. 
@@ -1412,7 +1686,7 @@ Cada modelo aprende modelos específicos asociados a una condición concreta sin
 Por otro lado, se ha incorporado el parámetro \texttt{class\_weight="balanced"}, que ajusta automáticamente el peso de cada clase de acuerdo con su frecuencia en el conjunto de entrenamiento. 
 Este mecanismo es especialmente relevante en el contexto de datos clínicos, donde existe un fuerte desbalance entre clases, como se ve en la Figura \ref{fig:distribucion-superclases}, ya que permite mejorar la capacidad del modelo para detectar clases minoritarias sin sacrificar excesivamente la precisión en las clases mayoritarias.
 
-Sin este ajuste, los modelos tenderían a favorecer las clases mayoritarias, obteniendo buenos resultados globales pero con un rendimiento pobre en las patologías minoritarias, que son precisamente las de mayor interés clínico. 
+Sin este ajuste, el modelo tendería a favorecer las clases mayoritarias, obteniendo buenos resultados globales pero con un rendimiento pobre en las patologías minoritarias, que son precisamente las de mayor interés clínico. 
 La ponderación de clases permite mitigar este efecto, penalizando en mayor medida los errores cometidos sobre clases infrarrepresentadas y favoreciendo un comportamiento más equilibrado del modelo.
 
 \subsubsection*{Random Forest}
@@ -1467,10 +1741,10 @@ Esta arquitectura decreciente se ha seleccionado para evitar modelos excesivamen
 Durante las primeras fases del desarrollo se evaluaron configuraciones con capas de mayor tamaño, observándose una mayor tendencia al sobreajuste. 
 Por este motivo se optó por una arquitectura más compacta, capaz de mantener una buena capacidad de representación sin comprometer la generalización.
 
-La función de activación utilizada en las capas ocultas es ReLU (\textit{Rectified Linear Unit}),una de las más utilizadas en redes neuronales modernas debido a su simplicidad computacional y a su capacidad para mitigar problemas asociados al desvanecimiento del gradiente durante el entrenamiento. 
+La función de activación utilizada en las capas ocultas es ReLU (\textit{Rectified Linear Unit}), una de las más utilizadas en redes neuronales modernas debido a su simplicidad computacional y a su capacidad para mitigar problemas asociados al desvanecimiento del gradiente durante el entrenamiento. 
 Gracias a esta función, la red puede modelar relaciones no lineales complejas entre las características de entrada y las patologías objetivo. (\cite{codificandobits_activacion})
 
-Para el entrenamiento del modelo se utiliza la función de pérdida BCEWithLogitsLoss, especialmente adecuada en problemas de clasificación multietiqueta, ya que combina en una única operación la función sigmoide y la entropía cruzada binaria. 
+Para el entrenamiento del modelo se utiliza la función de pérdida \texttt{BCEWithLogitsLoss}, especialmente adecuada en problemas de clasificación multietiqueta, ya que combina en una única operación la función sigmoide y la entropía cruzada binaria. 
 Esta formulación permite una mayor estabilidad numérica durante el entrenamiento en comparación con la aplicación separada de ambas funciones. (\cite{pytorch_bcewithlogitsloss})
 
 Al igual que en los modelos anteriores, se incorpora el ajuste de pesos para compensar el desbalance entre clases. 
@@ -1511,9 +1785,9 @@ Los umbrales definidos son los siguientes:
 \begin{itemize}
 	\item \textbf{NORM (0.6):} se emplea un umbral más alto con el objetivo de reducir falsos positivos en la clase de normalidad, evitando clasificar pacientes enfermos como sanos.
 	\item \textbf{STTC (0.4):} asociado a alteraciones del segmento ST/T, relacionadas con isquemia o infarto. Se utiliza un valor intermedio que equilibra sensibilidad y precisión.
-	\item \textbf{CD (0.3):} alteraciones de conducción, con un umbral equilibrado debido a su detectabilidad relativamente estable.
-	\item \textbf{MI (0.25):} infarto de miocardio, considerado la patología más crítica del sistema, por lo que se prioriza la sensibilidad reduciendo el umbral para minimizar falsos negativos.
-	\item \textbf{HYP (0.35):} hipertrofia, con relevancia clínica intermedia, manteniendo un compromiso entre precisión y recall.
+	\item \textbf{CD (0.3):} asociado con alteraciones de conducción, con un umbral equilibrado debido a su detectabilidad relativamente estable.
+	\item \textbf{MI (0.25):} indica infarto de miocardio, considerado la patología más crítica del sistema, por lo que se prioriza la sensibilidad reduciendo el umbral para minimizar falsos negativos.
+	\item \textbf{HYP (0.35):} asociado con hipertrofia, con relevancia clínica intermedia, manteniendo un compromiso entre precisión y recall.
 \end{itemize}
 
 La aplicación de estos umbrales se realiza de forma homogénea en todos los modelos del sistema, garantizando un criterio de decisión consistente entre los distintos enfoques evaluados. 
@@ -1543,7 +1817,7 @@ Este tipo de modelo es especialmente relevante debido al gran número de variabl
 Por este motivo, la regularización es importante, ya que ayuda a que el modelo generalice mejor y no se ajuste en exceso a los datos de entrenamiento. 
 En este caso, en lugar de realizar una clasificación directa, el modelo estima para cada paciente un vector de 71 valores entre 0 y 1, donde cada uno representa la probabilidad de que ese paciente tenga una determinada enfermedad, interpretando la salida como una estimación de riesgo en lugar de una decisión fija.
 
-Dado que Ridge está pensado para problemas con una sola salida, se ha utilizado MultiOutputRegressor, que permite entrenar un modelo independiente por cada una de las 71 enfermedades. De esta forma, el sistema final está formado por 71 modelos Ridge en paralelo, cada uno especializado en una patología.
+Dado que Ridge está pensado para problemas con una sola salida, se ha utilizado \texttt{MultiOutputRegressor}, que permite entrenar un modelo independiente por cada una de las 71 enfermedades. De esta forma, el sistema final está formado por 71 modelos Ridge en paralelo, cada uno especializado en una patología.
 
 En la implementación realizada se ha utilizado un valor de regularización $\alpha = 10$. 
 Este valor determina cuánto se penalizan los coeficientes del modelo: valores bajos permiten mayor flexibilidad pero aumentan el riesgo de sobreajuste, mientras que valores altos hacen el modelo más simple y estable, aunque con menor capacidad de ajuste. (\cite{sklearn_ridge})
@@ -1567,7 +1841,7 @@ De esta forma, el modelo no realiza una clasificación directa, sino una estimac
 Al igual que en Ridge, se utiliza MultiOutputRegressor, ya que Elastic Net solo permite predecir una variable objetivo a la vez. 
 Esto implica que se entrenan 71 modelos independientes en paralelo, uno por cada patología.
 
-En la implementación se han utilizado los parámetros $\alpha = 0.001$ y l1\_ratio = 0.5. El parámetro $\alpha$ controla la intensidad de la regularización, mientras que l1\_ratio determina el equilibrio entre L1 y L2: valores cercanos a 0 se comportan como Ridge, y valores cercanos a 1 como Lasso. (\cite{sklearn_elasticnet})
+En la implementación se han utilizado los parámetros $\alpha = 0.001$ y l1\_ratio = 0.5. El parámetro $\alpha$ controla la intensidad de la regularización, mientras que \texttt{l1\_ratio} determina el equilibrio entre L1 y L2: valores cercanos a 0 se comportan como Ridge, y valores cercanos a 1 como Lasso. (\cite{sklearn_elasticnet})
 En este caso se ha elegido un valor intermedio para combinar estabilidad y capacidad de selección de variables, manteniendo un equilibrio entre simplicidad y ajuste del modelo.
 
 Finalmente, al igual que en el resto de modelos de regresión, las predicciones se limitan al intervalo [0, 1] para mantener su interpretación como probabilidades.
@@ -1587,9 +1861,9 @@ En este escenario de regresión probabilística, el modelo estima para cada paci
 Estas salidas no deben interpretarse como probabilidades clínicas directas, sino como una medida de similitud o grado de asociación entre el perfil del paciente y los patrones observados en el conjunto de entrenamiento. 
 En otras palabras, el modelo estima qué tan frecuente es cada patología en pacientes con características similares.
 
-Para la implementación se ha utilizado un bosque de 300 árboles (\texttt{n\_estimators = 300}), buscando un equilibrio entre rendimiento y coste computacional. 
+Para su implementación se ha utilizado un bosque de 300 árboles (\texttt{n\_estimators = 300}), buscando un equilibrio entre rendimiento y coste computacional. 
 Inicialmente se probó una configuración con un número mayor de árboles, llegando hasta 800, con el objetivo de mejorar la estabilidad del modelo. 
-Sin embargo, esta configuración no pudo evaluarse de forma completa en todos los experimentos, por lo que finalmente se optó por un número intermedio de árboles que permitiera mantener la coherencia del análisis y la viabilidad del entrenamiento.
+Sin embargo, esta configuración no pudo evaluarse completamente debido al elevado tiempo de entrenamiento requerido, por lo que se optó finalmente por un número intermedio de árboles que permitiera completar el análisis de forma viable.
 
 Además, se ha limitado la profundidad máxima de los árboles a 10 niveles (\texttt{max\_depth = 10}) para evitar sobreajuste y controlar la complejidad del modelo. 
 También se ha fijado un mínimo de 10 muestras por hoja (\texttt{min\_samples\_leaf = 10}), lo que ayuda a suavizar las predicciones y reducir la sensibilidad al ruido presente en los datos. 
@@ -1620,21 +1894,22 @@ Asimismo, se ha fijado \texttt{max\_iter = 300}, que determina el número de ite
 
 Dado el desbalance presente en las distintas patologías, se ha establecido \texttt{min\_samples\_leaf = 20}, lo que ayuda a evitar divisiones demasiado específicas en clases poco representadas. 
 Además, se ha incluido una regularización L2 con \texttt{l2\_regularization = 0.1}, con el objetivo de mejorar la estabilidad del modelo y reducir el sobreajuste.
-Al igual que en los modelos anteriores, se utiliza MultiOutputRegressor para poder entrenar de forma independiente un modelo por cada una de las 71 patologías.
+Al igual que en los modelos anteriores, se utiliza \texttt{MultiOutputRegressor} para poder entrenar de forma independiente un modelo por cada una de las 71 patologías.
 \todo{arreglar desbordamiento de linea}
 
 Finalmente, las predicciones se recortan al intervalo [0, 1] para mantener una interpretación coherente como medida de asociación entre el paciente y cada patología.
 
 En conjunto, este modelo representa una alternativa más avanzada dentro de los enfoques de regresión no lineal, permitiendo comparar el rendimiento del boosting frente a métodos como Random Forest o regresión lineal regularizada.
+
 \subsubsection*{Red Neuronal}
 
 En este caso se emplea una red neuronal multicapa con el objetivo de obtener una salida continua por cada una de las 71 patologías, interpretada como un valor de asociación entre el paciente y cada enfermedad. 
 A diferencia del enfoque de clasificación, no se aplica posteriormente un umbral fijo para la toma de decisiones, sino que se trabajan directamente las salidas continuas del modelo.
 
-La arquitectura utilizada es equivalente a la empleada en el modelo de clasificación, con tres capas totalmente conectadas de tamaño decreciente (256, 128 y 64 neuronas), junto con ReLU en las capas intermedias y técnicas de Batch Normalization y Dropout para estabilizar el entrenamiento y reducir el sobreajuste.
+La arquitectura utilizada es equivalente a la empleada en el modelo de clasificación, con tres capas totalmente conectadas de tamaño decreciente (256, 128 y 64 neuronas), junto con ReLU en las capas intermedias y técnicas de \textit{Batch Normalization} y \textit{Dropout} para estabilizar el entrenamiento y reducir el sobreajuste.
 
-El entrenamiento se realiza mediante BCEWithLogitsLoss, trabajando directamente con los logits generados por la red, lo que permite una formulación numéricamente estable para problemas multisalida. 
-El optimizador utilizado es Adam, complementado con un esquema de reducción adaptativa del learning rate mediante ReduceLROnPlateau.
+El entrenamiento se realiza mediante \texttt{BCEWithLogitsLoss}, trabajando directamente con los logits generados por la red, lo que permite una formulación numéricamente estable para problemas multisalida. 
+El optimizador utilizado es Adam, complementado con un esquema de reducción adaptativa del learning rate mediante \texttt{ReduceLROnPlateau}.
 
 Para mejorar la estabilidad del entrenamiento, se calcula una ponderación basada en el desbalance entre clases a partir de la proporción de ejemplos positivos y negativos por etiqueta. 
 Sin embargo, este peso no se aplica directamente en la función de pérdida.
@@ -1643,10 +1918,10 @@ Finalmente, las salidas del modelo se obtienen aplicando la función sigmoide so
 
 \subsection{Configuración 1}
 
-En este escenario se trabajó con el escenario más sencillo, utilizando la señal en formato reducido con una única derivación y un enfoque de clasificación binaria por superclases.
+En este escenario se trabajó con la configuración más sencilla, utilizando la señal en formato reducido con una única derivación y un enfoque de clasificación binaria por superclases.
 A nivel de implementación, esta configuración se utilizó principalmente como punto de partida para validar el correcto funcionamiento de los modelos antes de abordar el problema más complejo.
 
-Como entradas del sistema se utilizaron tanto el megavector de la señal en bruto como las caracteristicas extraídas a partir del mismo.
+Como entradas del sistema se utilizaron tanto el megavector de la señal en bruto como las características extraídas a partir del mismo.
 Esto permitió comparar el comportamiento de los modelos con diferentes representaciones de los datos.
 
 Durante el desarrollo experimental los modelos utilizados fueron Regresión Logística, Random Forest y una Red Neuronal Multicapa.
@@ -1684,15 +1959,15 @@ De esta forma, fue posible comparar aproximaciones lineales, basadas en árboles
 
 \chapter{Análisis de Resultados}
 
+\todo{unificar pies de foto}
+
 Una vez realizado el desarrollo experimental del sistema, es necesario analizar los resultados obtenidos.
 El objetivo principal es evaluar el rendimiento de los distintos modelos implementados según las distintas configuraciones planteadas, así como estudiar su comportamiento en función del tipo de enfoque utilizado.
 
 El análisis empieza con una visión global de los resultados hasta un nivel detallado por modelo y patología, lo que permite comparar de forma estructurada las distintas alternativas propuestas.
-En primer lugar, se exponen los resultados globales agregados para cada modelo y enfoque experimental.
-Después, se realiza una comparación entre los distintos modelos de clasificación y regresión, analizando sus diferencias en términos de rendimiento y comportamiento.
 
-A continuación, se estudia el impacto de las configuraciones experimentales definidas previamente, así como el efecto del ajuste de umbrales en la toma de decisiones del sistema. 
-Finalmente, se incluye un análisis por patología y una discusión de los resultados desde un punto de vista clínico, junto con las principales limitaciones del sistema desarrollado.
+En primer lugar, se estudia el impacto de las configuraciones experimentales definidas previamente, así como el efecto del ajuste de umbrales en la toma de decisiones del sistema. 
+Seguidamente, se incluye un análisis por patología y una discusión de los resultados desde un punto de vista clínico, junto con las principales limitaciones del sistema desarrollado.
 
 \section{Resultados globales}
 \label{sec:resultados-globales}
@@ -1737,6 +2012,34 @@ En la Tabla \ref{tab:resultados-globales-1} se observan los resultados obtenidos
 	\label{tab:resultados-globales-1}
 \end{table}
 
+
+Aunque la Hamming Accuracy proporciona una visión global del número de etiquetas correctamente clasificadas, en este problema resulta especialmente relevante analizar métricas como Precision, Recall y F1-score macro, ya que permiten evaluar el comportamiento del modelo de forma equilibrada entre superclases independientemente de su frecuencia de aparición.
+
+Era esperable que la Hamming Accuracy presentase valores superiores al F1-macro debido al desbalance entre superclases. 
+La accuracy se ve influida principalmente por las clases mayoritarias, mientras que el F1-macro otorga el mismo peso a todas las clases, penalizando más los errores en las minoritarias.
+
+En términos generales, se observa que la Red Neuronal Multicapa (MLP) es el modelo que alcanza los mejores valores de accuracy, independientemente del tipo de entrada utilizado. 
+Este comportamiento refleja una mayor capacidad del modelo para capturar relaciones no lineales complejas en los datos, lo que se traduce en un mayor número de predicciones correctas a nivel global.
+
+Sin embargo, este mejor rendimiento en accuracy no se refleja de forma equivalente en el equilibrio entre clases. 
+En particular, los valores de F1 macro obtenidos por la red neuronal son más bajos que los de otros modelos, lo que indica una tendencia a favorecer las clases mayoritarias en detrimento de aquellas menos representadas. 
+Este comportamiento es especialmente relevante en el contexto del problema, ya que implica una menor sensibilidad en la detección de determinadas patologías.
+
+Por otro lado, Random Forest presenta un comportamiento más equilibrado entre las distintas métricas. 
+Aunque su accuracy es inferior al de la red neuronal, mantiene valores más consistentes en términos de F1 macro, lo que sugiere una mejor capacidad para manejar el desbalance entre clases. 
+Este equilibrio lo convierte en un modelo más robusto desde el punto de vista clínico, al no centrarse únicamente en el rendimiento global.
+
+En el caso de la regresión logística, se observa el rendimiento más limitado de los tres modelos, aunque se aprecia una mejora consistente cuando se utilizan características extraídas en lugar del megavector de la señal. 
+Este resultado indica que una representación más estructurada de la señal ECG facilita la separación entre clases, aunque no es suficiente para alcanzar el rendimiento de los modelos no lineales.
+
+En cuanto a la capacidad discriminativa, medida mediante el AUC global, todos los modelos alcanzan valores superiores a 0.75, lo que indica una capacidad razonable para diferenciar entre las distintas superclases. 
+Los mejores resultados corresponden a la red neuronal multicapa utilizando características extraídas, seguida de Random Forest con características y la regresión logística con características. 
+Estos valores muestran que los modelos son capaces de ordenar correctamente las probabilidades asociadas a las distintas clases incluso antes de aplicar los umbrales de decisión finales.
+
+Respecto al tipo de entrada, se observa una tendencia general a una ligera mejora en los resultados cuando se emplean características extraídas. 
+Este efecto es más notable en la red neuronal multicapa, mientras que en Random Forest y regresión logística es más moderado. 
+Esto sugiere que la reducción de dimensionalidad y la extracción de información relevante contribuyen a mejorar la capacidad predictiva del sistema, especialmente en modelos con mayor capacidad de aprendizaje.
+
 A continuación, en la Tabla \ref{tab:overfitting_accuracy_config1} se muestra la diferencia entre el conjunto de train y test en Hamming Accuracy para poder comprobar si el modelo presenta sobreajuste.
 
 \begin{table}[H]
@@ -1761,33 +2064,6 @@ A continuación, en la Tabla \ref{tab:overfitting_accuracy_config1} se muestra l
 	\label{tab:overfitting_accuracy_config1}
 \end{table}
 
-Aunque la Hamming Accuracy proporciona una visión global del número de etiquetas correctamente clasificadas, en este problema resulta especialmente relevante analizar métricas como Precision, Recall y F1-score macro, ya que permiten evaluar el comportamiento del modelo de forma equilibrada entre superclases independientemente de su frecuencia de aparición.
-
-Era esperable que los valores de Hamming Accuracy fuesen superiores al F1-score Macro debido al desbalance existente entre superclases, ya que la accuracy se ve favorecida por las categorías más frecuentes, mientras que el F1-score macro penaliza por igual los errores cometidos en todas las clases.
-\todo{No me convence del todo}
-
-En términos generales, se observa que la Red Neuronal Multicapa (MLP) es el modelo que alcanza los mejores valores de accuracy, independientemente del tipo de entrada utilizado. 
-Este comportamiento refleja una mayor capacidad del modelo para capturar relaciones no lineales complejas en los datos, lo que se traduce en un mayor número de predicciones correctas a nivel global.
-
-Sin embargo, este mejor rendimiento en accuracy no se refleja de forma equivalente en el equilibrio entre clases. 
-En particular, los valores de F1 macro obtenidos por la red neuronal son más bajos que los de otros modelos, lo que indica una tendencia a favorecer las clases mayoritarias en detrimento de aquellas menos representadas. 
-Este comportamiento es especialmente relevante en el contexto del problema, ya que implica una menor sensibilidad en la detección de determinadas patologías.
-
-Por otro lado, Random Forest presenta un comportamiento más equilibrado entre las distintas métricas. 
-Aunque su accuracy es inferior al de la red neuronal, mantiene valores más consistentes en términos de F1 macro, lo que sugiere una mejor capacidad para manejar el desbalance entre clases. 
-Este equilibrio lo convierte en un modelo más robusto desde el punto de vista clínico, al no centrarse únicamente en el rendimiento global.
-
-En el caso de la regresión logística, se observa el rendimiento más limitado de los tres modelos, aunque se aprecia una mejora consistente cuando se utilizan características extraídas en lugar del megavector de la señal. 
-Este resultado indica que una representación más estructurada de la señal ECG facilita la separación entre clases, aunque no es suficiente para alcanzar el rendimiento de los modelos no lineales.
-
-En cuanto a la capacidad discriminativa, medida mediante el AUC global, todos los modelos alcanzan valores superiores a 0.75, lo que indica una capacidad razonable para diferenciar entre las distintas superclases. 
-Los mejores resultados corresponden a la red neuronal multicapa utilizando características extraídas, seguida de Random Forest con características y la regresión logística con características. 
-Estos valores muestran que los modelos son capaces de ordenar correctamente las probabilidades asociadas a las distintas clases incluso antes de aplicar los umbrales de decisión finales.
-
-Respecto al tipo de entrada, se observa una tendencia general a una ligera mejora en los resultados cuando se emplean características extraídas. 
-Este efecto es más notable en la red neuronal multicapa, mientras que en Random Forest y regresión logística es más moderado. 
-Esto sugiere que la reducción de dimensionalidad y la extracción de información relevante contribuyen a mejorar la capacidad predictiva del sistema, especialmente en modelos con mayor capacidad de aprendizaje.
-
 Desde el punto de vista de la generalización, el análisis de la diferencia entre el rendimiento en entrenamiento y test muestra que no existe un sobreajuste significativo en ninguno de los modelos evaluados. 
 La regresión logística presenta prácticamente el mismo rendimiento en ambos conjuntos, mientras que Random Forest muestra una ligera variación en función del tipo de entrada, aunque dentro de márgenes aceptables. 
 La red neuronal multicapa destaca por presentar diferencias muy reducidas entre entrenamiento y test, lo que indica una buena capacidad de generalización, favorecida por el uso de técnicas como dropout y batch normalization.
@@ -1798,10 +2074,6 @@ El uso de características extraídas mejora de forma consistente el rendimiento
 
 \subsection{Configuración 2: 12 derivaciones y clasificación binaria}
 
-\todo{cambio de numeros por el cambio de umbral}
-
-\todo{cambio de numeros con la eliminación del early stopping}
-
 La segunda configuración introduce un incremento en la complejidad del problema mediante el uso de las 12 derivaciones completas del ECG. 
 Este cambio permite disponer de una mejor representación de la señal cardíaca, lo que se traduce en una mejora general del rendimiento de los modelos en comparación con la configuración anterior.
 
@@ -1811,10 +2083,9 @@ En este contexto, se mantiene la misma estrategia experimental que en la configu
 
 La Tabla \ref{tab:config2_metrics_final} recoge los resultados globales obtenidos sobre el conjunto de test para los distintos modelos evaluados en la Configuración 2. 
 Además de la Hamming accuracy, se incluyen métricas de precisión, recall y F1-score calculadas tanto mediante promedio macro como micro. 
-A diferencia de la Configuración 1, donde el análisis se centró principalmente en comparar el comportamiento general de los modelos y se complementó posteriormente con un estudio detallado por superclases, en esta configuración se incorporan también las métricas micro para obtener una visión más completa del rendimiento global del sistema. 
+A diferencia de la Configuración 1, donde el análisis se centró principalmente en comparar el comportamiento general de los modelos y se complementará posteriormente con un estudio detallado por superclases, en esta configuración se incorporan también las métricas micro para obtener una visión más completa del rendimiento global del sistema. 
 Mientras que las métricas macro evalúan el comportamiento medio sobre cada superclase otorgando la misma importancia a todas ellas, las métricas micro agregan conjuntamente todas las predicciones realizadas y reflejan mejor el rendimiento global del modelo teniendo en cuenta la distribución real de las clases. 
 El uso combinado de ambas perspectivas permite analizar simultáneamente la capacidad de detección equilibrada entre patologías y el comportamiento global del sistema en condiciones más próximas a un escenario real de utilización.
-
 
 \begin{table}[H]
 	\centering
@@ -1836,6 +2107,32 @@ El uso combinado de ambas perspectivas permite analizar simultáneamente la capa
 	\label{tab:config2_metrics_final}
 \end{table}
 
+
+La incorporación de las doce derivaciones completas del ECG produce una mejora significativa del rendimiento respecto a la Configuración 1 en los tres modelos evaluados. 
+Este resultado confirma que la información adicional contenida en las distintas derivaciones aporta características relevantes para la identificación de las superclases consideradas, permitiendo una representación más completa de la actividad eléctrica cardíaca.
+
+Analizando los resultados globales, la red neuronal multicapa obtiene la mayor Hamming accuracy, superando claramente a la regresión logística y a Random Forest. 
+Esto indica que es el modelo que mejor clasifica las etiquetas individuales, lo que sugiere una mejor capacidad para explotar la información adicional disponible en las doce derivaciones.
+
+En términos de precisión, la red neuronal multicapa presenta también los mejores resultados tanto en la métrica macro como en la micro . 
+Estos valores reflejan que sus predicciones son considerablemente más fiables que las del resto de modelos, generando un menor número de falsos positivos. 
+Sin embargo, esta mejora en precisión viene acompañada de una reducción del recall, que alcanza únicamente 0.5342 en la métrica macro y 0.5977 en la micro. 
+Esto indica que el modelo adopta una estrategia más conservadora, priorizando la confianza de las predicciones frente a la detección exhaustiva de todas las patologías presentes.
+
+Por el contrario, la regresión logística presenta el comportamiento opuesto. Sus valores de recall son los más elevados de los tres modelos. 
+Esto demuestra una gran capacidad para detectar casos positivos, aunque a costa de una reducción significativa de la precisión, que apenas supera el 0.53 en ambas métricas. 
+En consecuencia, el modelo consigue identificar una mayor proporción de patologías presentes, pero genera también un número mayor de falsos positivos.
+
+Random Forest se sitúa en una posición intermedia entre ambos enfoques. 
+Aunque no alcanza los mejores resultados en ninguna de las métricas analizadas, presenta un compromiso razonable entre precisión y recall, obteniendo valores más equilibrados que los observados en la regresión logística y la red neuronal. 
+No obstante, este equilibrio no resulta suficiente para superar a ninguno de los otros modelos en términos de F1-score.
+
+La comparación de los valores de F1-score permite analizar conjuntamente precisión y recall. 
+En términos macro, la regresión logística obtiene el mejor resultado, ligeramente por encima de la red neuronal multicapa y de Random Forest.
+Esto indica que, considerando todas las superclases con la misma importancia, la regresión logística mantiene el mejor equilibrio global entre sensibilidad y precisión. 
+Sin embargo, cuando se considera la distribución real de las clases mediante el F1 micro, la red neuronal multicapa pasa a ocupar la primera posición, seguida de la regresión logística y Random Forest. 
+Este resultado sugiere que la red neuronal aprovecha mejor la información disponible en los casos más representativos del conjunto de datos y ofrece el mejor rendimiento global del sistema.
+
 La Tabla \ref{tab:config2_gap} recoge la Hamming accuracy obtenida en entrenamiento y test para cada modelo, junto con la diferencia entre ambas. Esta comparación permite evaluar la capacidad de generalización de los modelos y analizar la posible presencia de sobreajuste.
 
 \begin{table}[H]
@@ -1853,35 +2150,12 @@ La Tabla \ref{tab:config2_gap} recoge la Hamming accuracy obtenida en entrenamie
 	\label{tab:config2_gap}
 \end{table}
 
-La incorporación de las doce derivaciones completas del ECG produce una mejora significativa del rendimiento respecto a la Configuración 1 en los tres modelos evaluados. 
-Este resultado confirma que la información adicional contenida en las distintas derivaciones aporta características relevantes para la identificación de las superclases consideradas, permitiendo una representación más completa de la actividad eléctrica cardíaca.
-
-Analizando los resultados globales, la red neuronal multicapa obtiene la mayor Hamming accuracy, superando claramente a la regresión logística y a Random Forest. 
-Esto indica que es el modelo que clasifica correctamente un mayor porcentaje de etiquetas individuales, lo que sugiere una mejor capacidad para explotar la información adicional disponible en las doce derivaciones.
-
-En términos de precisión, la red neuronal multicapa presenta también los mejores resultados tanto en la métrica macro como en la micro . 
-Estos valores reflejan que sus predicciones son considerablemente más fiables que las del resto de modelos, generando un menor número de falsos positivos. 
-Sin embargo, esta mejora en precisión viene acompañada de una reducción del recall, que alcanza únicamente 0.5342 en la métrica macro y 0.5977 en la micro. 
-Esto indica que el modelo adopta una estrategia más conservadora, priorizando la confianza de las predicciones frente a la detección exhaustiva de todas las patologías presentes.
-
-Por el contrario, la regresión logística presenta el comportamiento opuesto. Sus valores de recall son los más elevados de los tres modelos. 
-Esto demuestra una gran capacidad para detectar casos positivos, aunque a costa de una reducción significativa de la precisión, que apenas supera el 0.53 en ambas métricas. 
-En consecuencia, el modelo consigue identificar una mayor proporción de patologías presentes, pero genera también un número considerablemente mayor de falsos positivos.
-
-Random Forest se sitúa en una posición intermedia entre ambos enfoques. 
-Aunque no alcanza los mejores resultados en ninguna de las métricas analizadas, presenta un compromiso razonable entre precisión y recall, obteniendo valores más equilibrados que los observados en la regresión logística y la red neuronal. 
-No obstante, este equilibrio no resulta suficiente para superar a ninguno de los otros modelos en términos de F1-score.
-
-La comparación de los valores de F1-score permite analizar conjuntamente precisión y recall. 
-En términos macro, la regresión logística obtiene el mejor resultado, ligeramente por encima de la red neuronal multicapa y de Random Forest.
-Esto indica que, considerando todas las superclases con la misma importancia, la regresión logística mantiene el mejor equilibrio global entre sensibilidad y precisión. 
-Sin embargo, cuando se considera la distribución real de las clases mediante el F1 micro, la red neuronal multicapa pasa a ocupar la primera posición, seguida de la regresión logística y Random Forest. 
-Este resultado sugiere que la red neuronal aprovecha mejor la información disponible en los casos más representativos del conjunto de datos y ofrece el mejor rendimiento global del sistema.
-
 En cuanto a la generalización de los modelos, los tres presentan una diferencia muy pequeña entre la hamming accuracy de train y test, lo que indica una ausencia de problemas graves de sobreajuste.
 La regresión logística muestra el menor gap, confirmando su elevada capacidad de generalización y la simplicidad de su estructura. 
 La red neuronal multicapa presenta un gap de 0.0259, manteniendo un buen equilibrio entre rendimiento y capacidad de generalización debido a las técnicas de regularización empleadas durante el entrenamiento. 
 Por su parte, Random Forest es el modelo que presenta la mayor diferencia entre entrenamiento y test, aunque este valor sigue siendo suficientemente bajo como para considerar que el modelo generaliza adecuadamente sobre datos no vistos.
+
+\vspace{0.5cm}
 
 En conjunto, los resultados obtenidos muestran que el incremento de información proporcionado por las doce derivaciones beneficia especialmente a la red neuronal multicapa, que consigue el mejor rendimiento global en términos de Hamming accuracy y F1 micro. 
 No obstante, la regresión logística continúa destacando por su elevada capacidad de detección, obteniendo los mejores valores de recall y F1 macro. 
@@ -1895,10 +2169,10 @@ En este caso, se trabaja con las 71 patologías originales y las 12 derivaciones
 Debido a la elevada dimensionalidad de los datos, los modelos se entrenan exclusivamente a partir de las características extraídas de las doce derivaciones del ECG. 
 Este escenario permite evaluar el comportamiento de los distintos enfoques en condiciones más próximas a un entorno clínico real, donde la complejidad diagnóstica es considerablemente mayor y las patologías presentan una distribución altamente desbalanceada.
 
-En esta configuración se analizan los modelos planteados inicialmente (Ridge Regression, Random Forest Regressor y Red Neuronal Multicapa) y los modelos incorporados durante el desarrollo experimental, con el objetivo de identificar las arquitecturas más adecuadas para abordar un problema de clasificación multietiqueta de alta complejidad.
+En esta configuración se analizan los modelos planteados inicialmente (Ridge Regression, Random Forest Regressor y Red Neuronal Multicapa) y los modelos incorporados durante el desarrollo experimental (ElasticNet y HistGradientBoosting Regressor), con el objetivo de identificar las arquitecturas más adecuadas para abordar un problema de clasificación multietiqueta de alta complejidad.
 
 Dado que el objetivo es evaluar la calidad de las predicciones probabilísticas y no únicamente las etiquetas finales, no se emplea la métrica de accuracy, ya que esta no resulta representativa en escenarios multietiqueta altamente desbalanceados.
-En su lugar, se utilizan métricas más informativas como el error absoluto medio (MAE), el error cuadrático medio (MSE), la log-loss y el AUC global.
+En su lugar, se utilizan métricas más informativas como el error absoluto medio (MAE), el error cuadrático medio (MSE), la log-loss, el coeficiente de correlación de Spearman y el AUC global.
 
 Las métricas incluidas en la Tabla \ref{tab:analisis-global-config3} se han seleccionado para ofrecer una evaluación completa del rendimiento de los modelos en un contexto de clasificación multietiqueta con salida probabilística. 
 El MAE y el MSE permiten cuantificar el error entre las probabilidades predichas y los valores reales, proporcionando una medida global de precisión, siendo el MSE más sensible a errores grandes.
@@ -1925,14 +2199,14 @@ Finalmente, el AUC global mide la capacidad del modelo para discriminar entre cl
 \end{table}
 
 En primer lugar, el HistGradientBoosting obtiene el mejor rendimiento en términos de error global, con el menor MAE  y el menor MSE, lo que indica una buena capacidad para aproximar las probabilidades reales. 
-No obstante, este bajo error debe interpretarse con cautela, ya que en un problema altamente desbalanceado como el planteado, donde la clase mayoritaria corresponde a la condición normal, es posible que el modelo esté ajustando mejor las probabilidades en dicha clase dominante, lo que reduce el error global sin implicar necesariamente un mejor rendimiento en la detección de patologías. 
+No obstante, este bajo error debe interpretarse con cuidado, ya que en un problema altamente desbalanceado como el planteado, donde la clase mayoritaria corresponde a la condición normal, es posible que el modelo esté ajustando mejor las probabilidades en dicha clase dominante, lo que reduce el error global sin implicar necesariamente un mejor rendimiento en la detección de patologías. 
 Esto puede explicar en parte la menor AUC obtenida por este modelo, que refleja una menor capacidad discriminativa.
 
 El Random Forest Regressor presenta el mejor AUC global, lo que lo convierte en el modelo con mayor capacidad para distinguir entre clases positivas y negativas. 
 Además, mantiene valores de error bajos, lo que indica un equilibrio entre precisión en las probabilidades y capacidad de discriminación.
 
 Los modelos lineales regularizados (Ridge y ElasticNet) muestran un comportamiento muy similar entre sí. 
-Ambos presentan un rendimiento intermedio, con AUCs en torno a 0.88–0.89 y errores ligeramente superiores a los modelos basados en árboles, lo que refleja su menor capacidad para capturar relaciones no lineales en los datos.
+Ambos presentan un rendimiento intermedio y errores ligeramente superiores a los modelos basados en árboles, lo que refleja su menor capacidad para capturar relaciones no lineales en los datos.
 
 Finalmente, la MLP Regressor destaca por obtener el menor MAE, lo que indica un ajuste muy preciso a nivel de predicción continua. Sin embargo, este resultado no se traduce en un mejor comportamiento global, ya que presenta el MSE más alto y una log-loss elevada, lo que sugiere cierta inestabilidad en las probabilidades estimadas. 
 Su AUC se sitúa en un nivel intermedio, por debajo de Random Forest pero por encima de los modelos lineales.
@@ -1950,7 +2224,7 @@ Este enfoque permite adaptar el equilibrio entre sensibilidad y precisión a las
 
 A continuación se analiza el comportamiento de cada modelo utilizando tanto la representación basada en el megavector de la señal ECG como el conjunto de características extraídas.
 
-\todo{añadir solo las matrices del umbral optimo el resto en anexos?}
+\todo{añadir solo las matrices del umbral optimo el resto en anexos}
 \subsection{Configuración 1}
 
 \subsubsection*{Regresión Logística}
@@ -1958,7 +2232,7 @@ A continuación se analiza el comportamiento de cada modelo utilizando tanto la 
 La regresión logística constituye el modelo de referencia más sencillo evaluado en esta configuración. 
 Debido a su naturaleza lineal, permite analizar hasta qué punto las distintas superclases pueden separarse mediante fronteras de decisión simples, así como evaluar el impacto de la representación de entrada sobre su capacidad discriminativa.
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \textbf{Megavector}
 
@@ -1993,7 +2267,7 @@ Por tanto, el F1 permite sintetizar en una única métrica el impacto real del a
 La clase STTC destaca como la superclase con mejor equilibrio global entre precisión y recall y con un F1-score relativamente alto, lo que sugiere que el modelo es capaz de identificar de forma relativamente estable los patrones asociados a estas patologías
 Este comportamiento se ve reforzado por su alta capacidad discriminativa, como se refleja posteriormente en las curvas ROC (ver Figura \ref{fig:roc-lr-mv}).
 
-En el caso de NORM, se observa un comportamiento relativamente equilibrado, con una precisión de 0.52, un recall de 0.60 y un F1-score de 0.56. 
+En el caso de NORM, se observa un comportamiento relativamente equilibrado. 
 El umbral utilizado para esta superclase es más restrictivo que en el resto debido a la importancia clínica de evitar que un paciente con alguna patología sea clasificado como sano. 
 Como consecuencia, el modelo adopta una estrategia más conservadora al asignar la etiqueta NORM, mejorando la precisión a costa de una reducción moderada del recall. 
 A pesar de ello, mantiene una capacidad razonable para identificar registros normales, obteniendo un equilibrio aceptable entre ambas métricas.
@@ -2098,7 +2372,7 @@ En comparación con la representación basada en megavector, se observa un incre
 En la clase NORM se obtiene una precisión de 0.54, un recall de 0.69 y un F1-score de 0.61. 
 Este comportamiento refleja una mejora en la capacidad del modelo para identificar correctamente registros normales respecto a la configuración anterior, aunque con un aumento moderado de falsos positivos, lo que sugiere una mayor sensibilidad del modelo a patrones cercanos a la normalidad.
 
-La clase STTC presenta un rendimiento sólido, con un recall de 0.88 y un F1-score de 0.76. 
+La clase STTC presenta un rendimiento sólido. 
 Este resultado indica que el modelo es capaz de detectar de forma consistente las alteraciones del segmento ST/T cuando se utilizan características estructuradas, lo que sugiere que este tipo de representación mejora la separabilidad de este tipo de patrones frente a la señal en crudo.
 
 En la clase CD se observa un recall elevado acompañado de una precisión más limitada, lo que se traduce en un F1-score moderado. 
@@ -2108,7 +2382,7 @@ En la clase MI destaca un recall muy alto frente a una precisión baja, lo que d
 Este resultado refleja un comportamiento claramente conservador desde el punto de vista clínico, donde el modelo prioriza la detección de posibles infartos, minimizando los falsos negativos incluso a costa de una elevada tasa de falsos positivos. 
 Este patrón es coherente con la relevancia clínica de esta patología.
 
-Finalmente, la clase HYP presenta un comportamiento intermedio, con un recall de 0.82 y una precisión de 0.34. 
+Finalmente, la clase HYP presenta un comportamiento intermedio. 
 Aunque el modelo consigue detectar la mayoría de los casos positivos, la precisión limitada indica una dificultad significativa para diferenciar esta clase de otras patologías con patrones electrocardiográficos similares.
 
 En conjunto, estos resultados confirman que el uso de características extraídas mejora de forma consistente la sensibilidad del modelo respecto a la representación en megavector, especialmente en clases patológicas. 
@@ -2116,7 +2390,7 @@ Sin embargo, este incremento en recall viene acompañado de una reducción gener
 
 \vspace{0.5cm}
 
-Las matrices de confusión correspondientes a la configuración basada en características, mostradas en la Figura \ref{fig:matrix-lr-feat}, permiten analizar con mayor detalle el comportamiento del modelo en términos de aciertos y errores por superclase. 
+Las matrices de confusión correspondientes a esta configuración, mostradas en la Figura \ref{fig:matrix-lr-feat}, permiten analizar con mayor detalle el comportamiento del modelo en términos de aciertos y errores por superclase. 
 En conjunto, se observa un patrón consistente con los resultados de las métricas anteriores, donde el modelo tiende a priorizar la detección de casos positivos a costa de un incremento en los falsos positivos en varias clases.
 
 \begin{figure}[H]
@@ -2146,9 +2420,6 @@ No obstante, esta mejora viene acompañada de un incremento significativo en fal
 Finalmente, la clase HYP presenta 617 verdaderos positivos, 1421 verdaderos negativos, 1219 falsos positivos y 140 falsos negativos. 
 El comportamiento es intermedio, con una sensibilidad elevada pero una precisión limitada, lo que sugiere que el modelo sigue teniendo dificultades para diferenciar esta clase de otras alteraciones con patrones electrocardiográficos similares.
 
-En conjunto, las matrices de confusión confirman el patrón observado en las métricas globales: el uso de características extraídas mejora la capacidad de detección de las clases patológicas, especialmente en términos de reducción de falsos negativos, aunque a costa de un aumento en falsos positivos. 
-Este comportamiento refleja el compromiso inherente entre sensibilidad y precisión en problemas clínicos desbalanceados, donde la prioridad se orienta hacia la detección de patologías relevantes.
-
 \vspace{0.5cm}
 
 En la Figura \ref{fig:roc-lr-feat} se observa el conjunto de curvas ROC para cada superclase en la configuración basada en características. 
@@ -2170,20 +2441,24 @@ A pesar de ello, el modelo mantiene una capacidad de ordenación de probabilidad
 Finalmente, la clase CD presenta el valor de AUC más bajo, lo que sugiere que es la superclase con mayor dificultad relativa de separación en este escenario. 
 Este resultado es coherente con el comportamiento observado en las matrices de confusión, donde se aprecia una mayor tasa de falsos positivos, indicando solapamiento con otras categorías del conjunto.
 
-En conjunto, el modelo posee una buena capacidad discriminativa general, especialmente teniendo en cuenta la naturaleza desbalanceada del problema y la complejidad de la señal ECG en crudo. 
-Estos resultados refuerzan las conclusiones obtenidas a partir de las métricas por clase, evidenciando un rendimiento consistente y clínicamente razonable.
+\vspace{0.5cm}
 
+En conjunto, los resultados confirman que el uso de características extraídas mejora de forma consistente la capacidad de detección del modelo, especialmente en clases patológicas, con una reducción clara de falsos negativos respecto a la representación en megavector. 
+Este avance se acompaña de una disminución en la precisión y un aumento de falsos positivos, lo que refleja el compromiso habitual entre sensibilidad y especificidad en problemas clínicos desbalanceados.
+
+Las matrices de confusión y las métricas globales muestran además una capacidad discriminativa general adecuada, coherente con la complejidad del ECG en crudo y el desbalance de clases. 
+En conjunto, el comportamiento observado es estable y clínicamente razonable, reforzando las conclusiones obtenidas a nivel por clase.
 
 \subsubsection*{Random Forest}
 
 En este apartado se estudia el rendimiento del modelo Random Forest empleando tanto el megavector de la señal ECG como las características extraídas. 
 El objetivo es analizar su capacidad para discriminar entre las distintas superclases y comparar el efecto de ambas representaciones sobre las métricas de clasificación, las matrices de confusión y las curvas ROC.
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \textbf{Megavector}
 
-Los resultados de la Tabla \ref{tab:metrics_clase_rf_mv} muestran el rendimiento del modelo Random Forest utilizando como entrada el megavector de la señal ECG en la configuración 1. 
+Los resultados de la Tabla \ref{tab:metrics_clase_rf_mv} muestran el rendimiento del modelo Random Forest utilizando como entrada el megavector de la señal ECG. 
 A diferencia de la regresión logística, este modelo presenta un comportamiento más desigual entre precisión y recall según la superclase, lo que indica una estrategia de decisión más conservadora en ciertas clases y más restrictiva en otras.
 
 \begin{table}[H]
@@ -2214,14 +2489,12 @@ Esto sugiere que el modelo encuentra patrones claros para esta clase, pero no lo
 En la clase CD se observa un equilibrio más estable entre precisión y recall, lo que indica una tendencia del modelo a priorizar la detección de la mayoría de los casos positivos, aunque con un número considerable de falsos positivos. 
 Este comportamiento es coherente con clases intermedias en complejidad, donde el modelo tiende a sobre-asignar la etiqueta para no perder sensibilidad.
 
-La clase MI presenta un recall muy elevado frente a una precisión muy baja, lo que refleja un comportamiento claramente orientado a la detección de infartos, minimizando falsos negativos a costa de generar un gran número de falsas alarmas. 
+La clase MI presenta un recall muy elevado frente a una precisión muy baja, lo que refleja un comportamiento claramente orientado a la detección de infartos, minimizando falsos negativos. 
 Desde el punto de vista clínico, este comportamiento es coherente con la importancia crítica de esta patología, aunque reduce la fiabilidad de las predicciones positivas.
 
-Finalmente, la clase HYP muestra un rendimiento intermedio, con un recall de 0.79 y una precisión de 0.36. 
+Finalmente, la clase HYP muestra un rendimiento intermedio. 
 Esto indica que el modelo consigue detectar una proporción elevada de casos positivos, aunque con dificultades para discriminar correctamente esta clase frente a otras patologías con patrones electrocardiográficos similares.
 
-En conjunto, Random Forest con entrada megavector muestra un comportamiento más sesgado hacia la sensibilidad en las clases patológicas críticas, especialmente MI y CD, mientras que reduce notablemente el recall en STTC. 
-Este patrón sugiere que el modelo tiende a construir fronteras de decisión más rígidas y segmentadas en el espacio de alta dimensionalidad del megavector, lo que mejora la precisión en algunas clases pero limita la generalización en otras.
 
 \vspace{0.5cm}
 
@@ -2238,7 +2511,7 @@ En conjunto, se observa un patrón más marcado de especialización del modelo, 
 En la clase NORM se obtienen 425 verdaderos positivos, 2283 verdaderos negativos, 280 falsos positivos y 409 falsos negativos. 
 Este resultado muestra un comportamiento más conservador respecto a la asignación de la clase normal, reduciendo de forma notable los falsos positivos en comparación con la regresión logística. 
 Sin embargo, esta mejora en precisión viene acompañada de un aumento de falsos negativos, lo que indica que el modelo tiende a clasificar como patológicos algunos registros que realmente son normales. 
-En este caso, el modelo prioriza evitar falsos diagnósticos de normalidad erróneos, pero pierde sensibilidad en esta clase.
+En este caso, el modelo prioriza evitar falsos diagnósticos de normalidad, pero pierde sensibilidad en esta clase.
 
 En la clase STTC se observan 682 verdaderos positivos, 1803 verdaderos negativos, 173 falsos positivos y 739 falsos negativos. 
 Aquí se aprecia uno de los puntos débiles del modelo, ya que el número de falsos negativos es elevado, lo que implica que una proporción importante de alteraciones del segmento ST/T no está siendo detectada. 
@@ -2260,7 +2533,7 @@ Este comportamiento refleja una mayor rigidez del modelo en el espacio de alta d
 
 \vspace{0.5cm}
 
-En la Figura \ref{fig:roc-rf-mv}, se observa que las curvas se sitúan claramente por encima de la diagonal de aleatoriedad, lo que indica que el modelo es capaz de diferenciar de manera consistente entre las distintas clases frente al resto, incluso en un problema multietiqueta desbalanceado.
+En la Figura \ref{fig:roc-rf-mv}, se observa que las curvas ROC se sitúan claramente por encima de la diagonal de aleatoriedad, lo que indica que el modelo es capaz de diferenciar de manera consistente entre las distintas clases frente al resto, incluso en un problema multietiqueta desbalanceado.
 
 \begin{figure}[H]
     \centering
@@ -2280,10 +2553,15 @@ En HYP, el comportamiento sugiere una separabilidad moderada, afectada probablem
 Finalmente, la clase CD presenta el valor de AUC más bajo, lo que indica que es la superclase con mayor dificultad relativa de separación en este escenario. 
 Este resultado es consistente con el comportamiento observado en las matrices de confusión, donde se aprecia una tendencia a la sobreasignación de la clase, reflejando solapamiento en el espacio de representación del megavector.
 
-En conjunto, Random Forest presenta una capacidad discriminativa sólida en este escenario, ligeramente superior a modelos lineales en términos globales, aunque con un comportamiento más desigual entre clases. 
-Esto sugiere que el modelo es capaz de capturar relaciones no lineales relevantes en la señal ECG, si bien su rendimiento varía de forma significativa dependiendo de la superclase analizada.
+\vspace{0.5cm}
 
-\vspace{1cm}
+En conjunto, Random Forest con entrada megavector presenta un rendimiento global sólido, aunque desigual entre clases. 
+Destaca por una mayor sensibilidad en patologías críticas como MI y CD, mientras que en STTC el recall disminuye de forma notable.
+
+Las matrices de confusión reflejan este comportamiento, con mejoras en especificidad frente a modelos lineales en NORM, pero mayor inestabilidad en la detección de algunas clases. 
+En general, el modelo muestra una buena capacidad discriminativa, aunque con variaciones significativas según la superclase analizada.
+
+\vspace{0.5cm}
 
 \textbf{Características}
 
@@ -2320,13 +2598,9 @@ Este comportamiento refleja que el modelo prioriza la detección de la mayoría 
 
 La clase MI presenta un recall muy alto y una precisión baja, manteniendo un F1-score reducido. 
 Este comportamiento confirma el enfoque conservador del modelo en esta patología, donde se prioriza claramente la detección de infartos frente a la reducción de falsas alarmas.
-Desde el punto de vista clínico, este comportamiento es coherente, ya que minimizar falsos negativos en MI es prioritario.
 
 Finalmente, la clase HYP muestra un comportamiento intermedio, con un recall de 0.76 y una precisión de 0.37. 
 Aunque el modelo es capaz de detectar una proporción significativa de casos positivos, la baja precisión indica dificultades para diferenciar esta clase de otras patologías con patrones electrocardiográficos similares.
-
-En conjunto, Random Forest con entrada basada en características muestra un comportamiento ligeramente más estable que con megavector en términos de equilibrio entre precisión y recall, aunque no se observan mejoras globales claras. 
-El modelo mantiene una fuerte orientación hacia la sensibilidad en las clases patológicas, especialmente MI y CD, lo que refleja una estrategia conservadora coherente con el contexto clínico del problema.
 
 \vspace{0.5cm}
 
@@ -2340,9 +2614,9 @@ Las matrices de la Figura \ref{fig:matrix-rf-feat} muestran un patrón consisten
 \end{figure}
 
 En la clase NORM se obtienen 470 verdaderos positivos, 2224 verdaderos negativos, 339 falsos positivos y 364 falsos negativos. 
-En este caso, se observa una reducción de falsos positivos respecto a la configuración con megavector, lo que indica una mejora en la capacidad del modelo para evitar clasificaciones erróneas de normalidad. 
-Sin embargo, el número de falsos negativos sigue siendo elevado, lo que refleja que una parte relevante de registros normales es clasificada como patológica. 
-Este comportamiento es coherente con una estrategia conservadora en la asignación de la clase NORM.
+Se observa una reducción de falsos positivos respecto a la configuración con megavector, lo que indica una mejora en la capacidad del modelo para evitar clasificaciones erróneas de normalidad. 
+El número de falsos negativos sigue siendo elevado, lo que refleja que una parte relevante de registros normales es clasificada como patológica. 
+Sin embargo, este comportamiento es coherente con una estrategia conservadora en la asignación de la clase NORM.
 
 En la clase STTC se observan 647 verdaderos positivos, 1863 verdaderos negativos, 113 falsos positivos y 774 falsos negativos. 
 Destaca especialmente el elevado número de falsos negativos, lo que indica una pérdida significativa de sensibilidad en esta clase. 
@@ -2352,15 +2626,12 @@ En la clase CD se obtienen 740 verdaderos positivos, 1377 verdaderos negativos, 
 El comportamiento muestra una tendencia clara a la sobreasignación de esta clase, reflejada en el elevado número de falsos positivos. 
 Esto indica que el modelo identifica patrones compatibles con CD en registros que pertenecen a otras superclases, lo que reduce la precisión aunque mantiene una sensibilidad relativamente alta.
 
-En la clase MI se observa un comportamiento especialmente relevante desde el punto de vista clínico, con 375 verdaderos positivos y únicamente 41 falsos negativos. 
+En la clase MI se observa un comportamiento especialmente relevante, con 375 verdaderos positivos y únicamente 41 falsos negativos. 
 Este resultado confirma una alta capacidad del modelo para detectar casos de infarto, priorizando claramente la sensibilidad. 
 No obstante, este comportamiento viene acompañado de un número elevado de falsos positivos, lo que indica una estrategia conservadora orientada a minimizar errores críticos de no detección.
 
 Finalmente, la clase HYP presenta 572 verdaderos positivos, 1654 verdaderos negativos, 986 falsos positivos y 185 falsos negativos. 
 El modelo muestra un comportamiento intermedio, con una sensibilidad aceptable pero con una precisión limitada, lo que sugiere dificultades para diferenciar esta clase frente a otras patologías con patrones electrocardiográficos similares.
-
-En conjunto, las matrices de confusión confirman que el uso de características extraídas mejora parcialmente la especificidad del modelo en comparación con el megavector, especialmente en NORM, pero no elimina la tendencia general a priorizar la sensibilidad en las clases patológicas. 
-Este comportamiento refleja el compromiso inherente del problema entre reducción de falsos negativos y control de falsas alarmas.
 
 \vspace{0.5cm}
 
@@ -2378,20 +2649,26 @@ En el caso de STTC, este valor confirma una buena capacidad del modelo para orde
 En NORM, el AUC elevado refleja una buena capacidad de separación global entre registros normales y patológicos, coherente con la reducción parcial de falsos positivos observada en las matrices de confusión.
 
 Las clases MI y HYP presentan valores de AUC intermedios, lo que indica una capacidad discriminativa razonable, aunque inferior a las clases más separables. 
-En el caso de MI, este resultado es especialmente relevante desde el punto de vista clínico, ya que confirma que el modelo es capaz de asignar puntuaciones de probabilidad adecuadas para diferenciar esta clase del resto, a pesar de la presencia de falsos positivos derivados del enfoque conservador del modelo. 
+En el caso de MI, este resultado es especialmente relevante, ya que confirma que el modelo es capaz de asignar puntuaciones de probabilidad adecuadas para diferenciar esta clase del resto, a pesar de la presencia de falsos positivos derivados del enfoque conservador del modelo. 
 En HYP, el comportamiento sugiere una separabilidad moderada, afectada por la similitud de patrones electrocardiográficos con otras alteraciones estructurales.
 
 Finalmente, la clase CD presenta el valor de AUC más bajo, lo que indica que sigue siendo la superclase con mayor dificultad relativa de separación en este escenario. 
 Este resultado es coherente con el comportamiento observado en las matrices de confusión, donde se aprecia una tendencia a la sobreasignación de la clase, reflejando solapamiento en el espacio de representación incluso con características extraídas.
 
-En conjunto, el modelo Random Forest con características presenta la mejor capacidad discriminativa global dentro de la configuración analizada, superando a la versión basada en megavector y reforzando la utilidad de las características extraídas para este problema.
+\vspace{0.5cm}
+
+En conjunto, Random Forest con características muestra un comportamiento ligeramente más equilibrado que con megavector en términos de precisión y recall, aunque sin mejoras globales claras. 
+Mantiene una fuerte orientación hacia la sensibilidad en clases patológicas como MI y CD, coherente con un enfoque clínicamente conservador.
+
+Las matrices de confusión indican una mejora parcial de la especificidad, especialmente en NORM, aunque persiste la tendencia a priorizar la detección de patologías. 
+En conjunto, este modelo presenta la mejor capacidad discriminativa dentro de la configuración analizada, lo que respalda el uso de características extraídas en este problema.
 
 \subsubsection*{Red Neuronal Multicapa}
 
 En este apartado se analiza el rendimiento de la red neuronal multicapa utilizando tanto el megavector de la señal ECG como las características extraídas. Debido a su capacidad para modelar relaciones no lineales complejas, este tipo de arquitectura puede capturar patrones difíciles de representar mediante modelos más simples. 
 El objetivo es evaluar hasta qué punto dicha capacidad se traduce en una mejora de la detección de las distintas superclases, así como estudiar el equilibrio alcanzado entre sensibilidad y precisión en cada una de ellas.
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \textbf{Megavector}
 
@@ -2420,20 +2697,19 @@ En conjunto, los resultados muestran un comportamiento desigual entre clases, co
 En la clase NORM se obtiene una precisión de 0.76 junto con un recall de 0.15, lo que indica que el modelo es capaz de identificar correctamente los casos normales cuando los predice, aunque presenta dificultades para detectarlos de forma consistente. 
 Este comportamiento sugiere una tendencia del modelo a ser conservador en la asignación de esta clase, probablemente debido a la similitud entre registros normales y ciertos patrones patológicos.
 
-La clase STTC presenta el mejor rendimiento global, con un recall de 0.85 y un F1-score de 0.77, lo que indica una buena capacidad de detección de alteraciones del segmento ST/T. 
+La clase STTC presenta el mejor rendimiento global, lo que indica una buena capacidad de detección de alteraciones del segmento ST/T. 
 Este resultado sugiere que esta clase presenta patrones suficientemente diferenciables en la representación del megavector, lo que facilita su identificación por parte del modelo.
 
 En el caso de CD y MI se observan precisiones elevadas, pero recalls bajos. 
 Esto indica que el modelo solo asigna estas etiquetas cuando existe una alta confianza, lo que reduce la aparición de falsos positivos, pero limita de forma importante la sensibilidad del sistema en estas patologías. 
 Este comportamiento es especialmente relevante en MI, donde la baja sensibilidad implica una menor capacidad de detección de eventos críticos.
 
-Finalmente, la clase HYP presenta un comportamiento intermedio, con una precisión de 0.87 y un recall de 0.34, lo que indica una capacidad de detección moderada, aunque todavía limitada en comparación con otras clases más fácilmente identificables.
+Finalmente, la clase HYP presenta un comportamiento intermedio, lo que indica una capacidad de detección moderada, aunque todavía limitada en comparación con otras clases más fácilmente identificables.
 
-En conjunto, la red neuronal multicapa con entrada basada en megavector muestra una fuerte dependencia de la separabilidad de las clases en el espacio de entrada, destacando especialmente en STTC, pero con limitaciones claras en la detección de varias patologías menos representadas o con patrones más solapados.
 
 \vspace{0.5cm}
 
-En la Figura \ref{fig:matrix-mlp-mv}, que muestras las matrices de confusión de la red neuronal con entrada megavector, se observa un patrón claramente desigual, donde el modelo muestra una buena capacidad de discriminación en STTC, mientras que presenta dificultades importantes en la detección del resto de patologías.
+En la Figura \ref{fig:matrix-mlp-mv}, que muestra las matrices de confusión de la red neuronal con entrada megavector, se observa un patrón claramente desigual, donde el modelo muestra una buena capacidad de discriminación en STTC, mientras que presenta dificultades importantes en la detección del resto de patologías.
 
 \begin{figure}[H]
     \centering
@@ -2461,12 +2737,9 @@ Aunque el número de falsos positivos es reducido, este comportamiento es proble
 Finalmente, la clase HYP presenta 257 verdaderos positivos, 2600 verdaderos negativos, 40 falsos positivos y 500 falsos negativos. 
 El modelo muestra una baja sensibilidad en esta clase, con un número elevado de falsos negativos, lo que indica dificultades claras para distinguirla de otras patologías con patrones electrocardiográficos similares.
 
-En conjunto, las matrices de confusión confirman el comportamiento observado en las métricas de clasificación: la red neuronal multicapa con entrada basada en megavector tiende a especializarse en la clase STTC, mientras que presenta una sensibilidad muy limitada en el resto de superclases. 
-Este comportamiento sugiere una fuerte dependencia de la representabilidad de las características implícitas en el megavector, que no resultan suficientemente discriminativas para varias de las patologías analizadas.
-
 \vspace{0.5cm}
 
-En conjunto, las curvas ROC (Figura \ref{fig:roc-mlp-mv}) se sitúan por encima de la diagonal de aleatoriedad en todas las superclases, lo que indica que el modelo es capaz de establecer una ordenación coherente de las probabilidades asignadas a cada clase, incluso cuando la decisión final de clasificación no es óptima.
+En conjunto, las curvas ROC (Figura \ref{fig:roc-mlp-mv}) se sitúan por encima de la diagonal de aleatoriedad en todas las superclases, lo que indica que el modelo es capaz de establecer una ordenación coherente de las probabilidades asignadas a cada clase.
 
 \begin{figure}[H]
     \centering
@@ -2486,10 +2759,15 @@ En HYP, el comportamiento refleja una separabilidad moderada, consistente con la
 Finalmente, la clase CD presenta el valor de AUC más bajo, lo que indica que es la superclase con mayor dificultad relativa de separación en este escenario. 
 Este resultado es coherente con el comportamiento observado en las matrices de confusión, donde se aprecia una baja capacidad de detección y un elevado número de falsos negativos.
 
-En conjunto, la red neuronal multicapa tiene una buena capacidad discriminativa global, aunque esta no se traduce directamente en un rendimiento equilibrado en términos de clasificación final. 
-Esto sugiere que las limitaciones del modelo no provienen únicamente de la representación del megavector, sino también de la calibración del proceso de decisión.
+\vspace{0.5cm}
 
-\vspace{1cm}
+En conjunto, la red neuronal multicapa con megavector depende fuertemente de la separabilidad de las clases, destacando en STTC pero con baja sensibilidad en el resto de superclases.
+
+Las matrices de confusión confirman esta especialización, evidenciando que el megavector no es suficientemente discriminativo para varias patologías.
+
+En conjunto, el modelo muestra buena capacidad global, aunque con un rendimiento claramente desequilibrado entre clases, condicionado tanto por la representación como por la toma de decisiones.
+
+\vspace{0.5cm}
 
 \textbf{Características}
 
@@ -2518,17 +2796,14 @@ En conjunto, los resultados muestran un patrón altamente conservador en la mayo
 En la clase NORM se obtiene una precisión de 0.80 junto con un recall de 0.05, lo que refleja una capacidad muy limitada para identificar correctamente registros normales. 
 Aunque las predicciones positivas de esta clase son altamente fiables, el modelo apenas las asigna, lo que implica una sensibilidad extremadamente baja.
 
-La clase STTC presenta el mejor rendimiento global, con un recall de 0.86 y un F1-score de 0.78, lo que indica una buena capacidad de detección de alteraciones del segmento ST/T. 
+La clase STTC presenta el mejor rendimiento global, lo que indica una buena capacidad de detección de alteraciones del segmento ST/T. 
 Este resultado sugiere que esta clase presenta patrones suficientemente diferenciables dentro del espacio de características extraídas, lo que facilita su identificación por parte del modelo.
 
 En el caso de CD y MI se observa un comportamiento especialmente restrictivo, con recalls muy bajos, a pesar de presentar precisiones elevadas. 
 Esto indica que el modelo solo asigna estas etiquetas en casos muy concretos, reduciendo los falsos positivos pero a costa de una pérdida importante de sensibilidad. 
 Este comportamiento es especialmente crítico en MI, donde la baja capacidad de detección implica una limitación importante desde el punto de vista clínico.
 
-Finalmente, la clase HYP presenta un comportamiento intermedio, con una precisión de 0.92 y un recall de 0.35, lo que refleja una mejora respecto a las clases más problemáticas, aunque todavía con una sensibilidad insuficiente para una detección completa.
-
-En conjunto, la red neuronal multicapa con entrada basada en características muestra un comportamiento más conservador que otros modelos, priorizando la precisión sobre la sensibilidad. 
-Esto se traduce en predicciones muy fiables cuando se activan, pero con una capacidad limitada para detectar la totalidad de los casos positivos en varias superclases.
+Finalmente, la clase HYP presenta un comportamiento intermedio, lo que refleja una mejora respecto a las clases más problemáticas, aunque todavía con una sensibilidad insuficiente para una detección completa.
 
 \vspace{0.5cm}
 
@@ -2559,9 +2834,6 @@ Este resultado indica una capacidad prácticamente nula de detección de infarto
 Finalmente, la clase HYP presenta 264 verdaderos positivos, 2618 verdaderos negativos, 22 falsos positivos y 493 falsos negativos. 
 Aunque el modelo reduce significativamente los falsos positivos en esta clase, la sensibilidad sigue siendo limitada, lo que indica dificultades para capturar completamente sus patrones característicos.
 
-En conjunto, las matrices de confusión confirman el comportamiento observado en las métricas de clasificación: la red neuronal multicapa con entrada basada en características prioriza fuertemente la precisión frente a la sensibilidad. 
-Este comportamiento produce predicciones muy fiables cuando el modelo activa una clase, pero una capacidad de detección insuficiente en la mayoría de las superclases, especialmente en aquellas de mayor relevancia clínica como MI o CD.
-
 \vspace{0.5cm}
 
 Las curvas ROC de la Figura \ref{fig:roc-mlp-feat} permiten evaluar la capacidad discriminativa de la red neuronal multicapa con entrada basada en características de forma independiente al umbral de decisión utilizado en la clasificación final. 
@@ -2588,13 +2860,17 @@ En el caso de MI, este resultado es especialmente relevante, ya que demuestra qu
 Por su parte, la clase CD obtiene el valor de AUC más reducido, lo que confirma que se trata de una de las superclases más difíciles de separar en este escenario. 
 Este comportamiento es consistente con las dificultades observadas previamente en las métricas por clase y en las matrices de confusión.
 
-En conjunto, la red neuronal multicapa posee una buena capacidad discriminativa cuando utiliza características extraídas como entrada. 
-De hecho, estos resultados sugieren que el modelo aprende representaciones útiles para diferenciar las distintas superclases, aunque dicha capacidad no se refleja completamente en las métricas finales de clasificación debido a la fuerte reducción del recall observada en varias categorías.
+\vspace{0.5cm}
+
+En conjunto, la red neuronal multicapa con características extraídas prioriza la precisión frente a la sensibilidad, generando predicciones fiables pero con menor capacidad para detectar todos los casos positivos.
+Las matrices de confusión confirman este patrón, especialmente en clases como MI y CD.
+
+En conjunto, el modelo muestra buena capacidad discriminativa, aunque con un recall limitado que condiciona su rendimiento final.
 
 \vspace{1cm}
 
 De forma global, los resultados obtenidos muestran que todos los modelos son capaces de discriminar adecuadamente entre las distintas superclases, alcanzando valores de AUC superiores a 0.8 en la mayoría de los casos. 
-Asimismo, se observa que el uso de características extraídas produce una mejora consistente respecto al uso directo del megavector, especialmente en términos de capacidad discriminativa.
+De esta forma, se observa que el uso de características extraídas produce una mejora consistente respecto al uso directo del megavector, especialmente en términos de capacidad discriminativa.
 
 La regresión logística presenta el rendimiento más limitado, aunque mantiene un comportamiento estable y mejora notablemente cuando se utilizan características extraídas. 
 Por su parte, la red neuronal multicapa obtiene los mayores valores de Hamming Accuracy y AUC global, pero muestra una tendencia a favorecer las clases mayoritarias, reduciendo significativamente el recall en varias patologías relevantes.
@@ -2650,22 +2926,21 @@ En esta configuración se observa una mejora generalizada del rendimiento respec
 En conjunto, se observa un incremento significativo en la sensibilidad del modelo en todas las clases, lo que indica que la incorporación de la información procedente de las doce derivaciones mejora la capacidad de detección de patrones patológicos. 
 Este comportamiento es especialmente relevante en un contexto clínico, donde la reducción de falsos negativos tiene un impacto directo en la seguridad del diagnóstico.
 
-La clase STTC presenta el mejor rendimiento global, con un recall de 0.92 y un F1-score de 0.83, lo que confirma que se trata de la superclase mejor representada por el modelo en esta configuración. 
+La clase STTC presenta el mejor rendimiento global, lo que confirma que se trata de la superclase mejor representada por el modelo en esta configuración. 
 Este resultado sugiere que los patrones asociados a alteraciones del segmento ST/T son claramente identificables cuando se dispone de información multiderivación completa.
 
-En el caso de NORM, se observa una mejora notable en comparación con la configuración anterior, alcanzando un recall de 0.80. 
+En el caso de NORM, se observa una mejora notable en comparación con la configuración anterior. 
 Esto indica una mayor capacidad del modelo para identificar correctamente registros normales, aunque la precisión se mantiene moderada, lo que sugiere cierta confusión residual con clases patológicas.
 
-La clase CD muestra una mejora significativa en recall, alcanzando 0.86, lo que indica una mayor sensibilidad en la detección de alteraciones de conducción. 
+La clase CD muestra una mejora significativa en recall, lo que indica una mayor sensibilidad en la detección de alteraciones de conducción. 
 Sin embargo, la precisión moderada refleja la persistencia de cierto solapamiento con otras clases, lo que afecta al equilibrio global de la métrica F1.
 
-Por otro lado, MI presenta una mejora especialmente relevante desde el punto de vista clínico, con un recall de 0.91. 
+Por otro lado, MI presenta una mejora especialmente relevante desde el punto de vista clínico. 
 Este resultado indica que el modelo es capaz de detectar la gran mayoría de los casos de infarto, reduciendo de forma importante el riesgo de falsos negativos, aunque a costa de una precisión más reducida.
 
 Finalmente, la clase HYP alcanza un recall de 0.84, mostrando también una mejora respecto a la configuración anterior. 
 Sin embargo, su precisión moderada indica que aún existe cierta dificultad para separar completamente esta clase del resto de patologías.
 
-En conjunto, estos resultados evidencian que la utilización de las doce derivaciones del ECG mejora de forma consistente la capacidad de detección del modelo lineal, especialmente en términos de sensibilidad, lo que resulta especialmente relevante en un contexto clínico donde los falsos negativos son críticos.
 
 \vspace{0.5cm}
 
@@ -2696,9 +2971,6 @@ El modelo es capaz de detectar prácticamente todos los casos de infarto, aunque
 Finalmente, la clase HYP presenta 635 verdaderos positivos, 2057 verdaderos negativos, 583 falsos positivos y 122 falsos negativos. 
 Se observa también una mejora importante en la detección de esta patología, con una reducción significativa de falsos negativos, aunque persiste cierta confusión con otras clases que incrementa el número de falsos positivos.
 
-En conjunto, las matrices de confusión confirman que la utilización de las doce derivaciones del ECG mejora de forma consistente la sensibilidad del modelo, especialmente en patologías críticas como MI, donde la reducción de falsos negativos resulta especialmente relevante. 
-Este comportamiento sugiere que la representación multiderivación permite capturar patrones electrocardiográficos más completos, aunque introduce cierto incremento en la confusión entre clases en términos de falsos positivos.
-
 \vspace{0.5cm}
 
 Las curvas ROC de la Figura \ref{fig:roc-lr-feat12} permiten evaluar la capacidad discriminativa de la regresión logística en la Configuración 2 de forma independiente al umbral de decisión utilizado en la clasificación final. 
@@ -2713,7 +2985,7 @@ Este análisis resulta especialmente relevante, ya que permite comprobar si las 
 
 En conjunto, las curvas ROC muestran un comportamiento claramente superior al de la configuración anterior, situándose todas las clases en valores próximos a la esquina superior izquierda del plano ROC, lo que indica una alta capacidad de discriminación entre superclases.
 
-La clase STTC obtiene el mejor resultado global, con un AUC de 0.9311, lo que confirma que el modelo es capaz de distinguir de forma muy robusta este tipo de alteraciones respecto al resto de clases. 
+La clase STTC obtiene el mejor resultado global, lo que confirma que el modelo es capaz de distinguir de forma muy robusta este tipo de alteraciones respecto al resto de clases. 
 Este resultado es coherente con el elevado recall y F1-score observados previamente, consolidando a STTC como la superclase mejor modelada en esta configuración.
 
 La clase NORM alcanza un AUC de 0.9072, lo que representa una mejora muy significativa respecto a la configuración anterior. 
@@ -2722,12 +2994,16 @@ Este resultado indica que el modelo es capaz de separar adecuadamente los regist
 Las clases MI y HYP presentan valores de AUC de 0.8962 en ambos casos, lo que refleja una capacidad discriminativa muy elevada. 
 En el caso de MI, este resultado es especialmente relevante desde el punto de vista clínico, ya que confirma que el modelo aprende a identificar patrones asociados al infarto de forma consistente, aunque la decisión final pueda verse afectada por la elección del umbral.
 
-Finalmente, la clase CD obtiene un AUC de 0.8569, el menor de entre las superclases, si bien sigue reflejando una capacidad discriminativa alta dentro del modelo.
+Finalmente, la clase CD obtiene un AUC de 0.8569, el menor de entre las superclases, aunque sigue reflejando una capacidad discriminativa alta dentro del modelo.
 Esto indica que, aunque sigue siendo la superclase más compleja, la incorporación de las doce derivaciones mejora de forma notable su separabilidad respecto a la configuración anterior.
 
-Con todo esto, se confirma una mejora sustancial en la capacidad discriminativa del modelo en esta configuración, lo que respalda los resultados observados tanto en las métricas por clase como en las matrices de confusión.
+\vspace{0.5cm}
 
+En conjunto, el uso de las doce derivaciones mejora de forma consistente la capacidad de detección del modelo lineal, especialmente la sensibilidad en patologías críticas como MI, lo que resulta clave en un contexto clínico donde los falsos negativos son especialmente relevantes.
 
+Las matrices de confusión confirman esta mejora, aunque acompañada de un ligero aumento de falsos positivos, lo que sugiere que la representación multiderivación captura mejor los patrones ECG a costa de cierta confusión entre clases.
+
+En conjunto, se observa una mejora clara en la capacidad discriminativa del modelo en esta configuración, coherente con las métricas obtenidas por clase.
 
 \subsubsection*{Random Forest}
 
@@ -2772,8 +3048,6 @@ Sin embargo, la baja precisión indica un elevado número de falsos positivos, l
 
 Finalmente, HYP muestra un comportamiento intermedio, lo que refleja una mejora en la capacidad de detección respecto a configuraciones anteriores, aunque todavía con cierta inestabilidad en la asignación de esta etiqueta.
 
-En conjunto, estos resultados confirman que la combinación de características extraídas y las doce derivaciones permite mejorar la capacidad de detección global del modelo, especialmente en términos de sensibilidad, aunque introduce un cierto desequilibrio en la precisión en algunas superclases críticas.
-
 \vspace{0.5cm}
 
 Las matrices de confusión de la Figura \ref{fig:matrix-rf-feat12} permiten analizar con mayor detalle el comportamiento de la regresión logística en la Configuración 2, basada en características extraídas junto con las doce derivaciones del ECG. 
@@ -2802,8 +3076,6 @@ No obstante, este comportamiento se acompaña de un elevado número de falsos po
 Finalmente, la clase HYP presenta 611 verdaderos positivos, 1983 verdaderos negativos, 657 falsos positivos y 146 falsos negativos. 
 El modelo muestra una capacidad de detección razonable, aunque con cierta confusión con otras clases, lo que se traduce en un equilibrio intermedio entre precisión y sensibilidad.
 
-En conjunto, las matrices de confusión confirman que esta configuración prioriza la reducción de falsos negativos en las clases patológicas más relevantes, especialmente en MI, a costa de un incremento en falsos positivos en varias superclases. 
-Este comportamiento es coherente con un enfoque clínico conservador, en el que se prioriza la detección de patologías frente a la exactitud estricta de la clasificación.
 
 \vspace{0.5cm}
 
@@ -2834,8 +3106,13 @@ Por su parte, la superclase HYP es ligeramente más complicada de diagnosticar, 
 Finalmente, la clase CD tiene la AUC con el valor más bajo, aunque sigue siendo elevada.
 Este resultado confirma que, a pesar de ser la clase más compleja en términos de separación, Random Forest es capaz de capturar parte de su estructura discriminativa.
 
-En resumen, el modelo Random Forest es capaz de manejar relaciones no lineales y mantiene un rendimiento estable entre clases.
+\vspace{0.5cm}
 
+En conjunto, la combinación de características extraídas y las doce derivaciones mejora la capacidad de detección del modelo, especialmente la sensibilidad, aunque introduce cierto desequilibrio en la precisión en algunas superclases.
+
+Las matrices de confusión confirman una reducción de falsos negativos en clases críticas como MI, a costa de un aumento de falsos positivos, en línea con un enfoque clínico conservador.
+
+En conjunto, Random Forest muestra un rendimiento estable y una buena capacidad para modelar relaciones no lineales entre clases.
 
 \subsubsection*{Red Neuronal Multicapa}
 
@@ -2879,15 +3156,13 @@ Aun así, el modelo consigue mantener una capacidad de detección aceptable.
 Finalmente, HYP muestra un comportamiento intermedio, con un rendimiento relativamente equilibrado, aunque ligeramente inferior a las clases más separables. 
 Esto sugiere que el modelo es capaz de capturar parte de sus características, pero aún existen solapamientos con otras patologías.
 
-En conjunto, estos resultados muestran que la red neuronal multicapa en esta configuración ofrece un comportamiento estable y coherente en todas las superclases, consolidándose como un modelo con buena capacidad de discriminación global dentro del problema de clasificación planteado.
-
 \vspace{0.5cm}
 
 Las matrices de confusión de la Figura \ref{fig:matrix-mlp-feat12} permiten analizar en detalle el comportamiento de la red neuronal multicapa en la Configuración 2, descomponiendo el rendimiento del modelo en términos de aciertos y errores para cada superclase.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{imagenes/matrix-mlp-feat12.png}
+    \includegraphics[width=\textwidth]{imagenes/matrix-mlp-feat12.png}
     \caption{Matrices de confusión de red neuronal de la configuración 2}
     \label{fig:matrix-mlp-feat12}
 \end{figure}
@@ -2899,16 +3174,14 @@ Esto indica que el modelo consigue diferenciar de forma adecuada entre patrones 
 En la clase STTC, el modelo muestra 1301 verdaderos positivos, 1608 verdaderos negativos, 368 falsos positivos y 120 falsos negativos. 
 Este resultado refleja uno de los mejores comportamientos globales, con una alta capacidad de detección y una baja tasa de error por omisión, lo que confirma la buena separabilidad de este tipo de alteraciones.
 
-En la clase CD, se observan 694 verdaderos positivos, 2125 verdaderos negativos, 380 falsos positivos y 198 falsos negativos. 
+En la clase CD se observan 694 verdaderos positivos, 2125 verdaderos negativos, 380 falsos positivos y 198 falsos negativos. 
 El modelo presenta una capacidad de detección adecuada, aunque con cierta presencia de falsos positivos, lo que sugiere solapamiento con otras superclases con patrones electrocardiográficos similares.
 
 En la clase MI, el modelo obtiene 296 verdaderos positivos, 2672 verdaderos negativos, 309 falsos positivos y 120 falsos negativos. 
 Este resultado es especialmente relevante desde el punto de vista clínico, ya que muestra una buena capacidad de detección de infartos, manteniendo una tasa de falsos negativos relativamente baja, aunque con cierto incremento de falsos positivos debido a la dificultad inherente de esta clase.
 
-En la clase HYP, se registran 607 verdaderos positivos, 2264 verdaderos negativos, 376 falsos positivos y 150 falsos negativos. 
+En la clase HYP se registran 607 verdaderos positivos, 2264 verdaderos negativos, 376 falsos positivos y 150 falsos negativos. 
 El comportamiento es intermedio, con una capacidad de detección razonable y un equilibrio aceptable entre errores, aunque todavía existe cierto solapamiento con otras patologías.
-
-En conjunto, las matrices de confusión reflejan un modelo robusto y equilibrado, con una tendencia general a priorizar la detección de patologías frente a la minimización de falsos positivos, lo cual es coherente con el enfoque clínico del problema.
 
 \vspace{0.5cm}
 
@@ -2937,7 +3210,13 @@ La clase MI obtiene un AUC de 0.9006, lo que refleja una muy buena capacidad del
 
 Finalmente, la clase CD presenta un AUC de 0.8986, siendo la más baja del conjunto, aunque sigue situándose en valores elevados. Esto indica que, pese a ser la clase más compleja en términos de separación, el modelo mantiene una capacidad discriminativa muy adecuada.
 
-En conjunto, la red neuronal multicapa presenta un buen rendimiento en esta configuración, destacando su capacidad para modelar relaciones no lineales complejas y mantener una separación consistente entre superclases.
+\vspace{0.5cm}
+
+En conjunto, la red neuronal multicapa muestra un comportamiento estable y coherente entre superclases, con una buena capacidad de discriminación global.
+
+Las matrices de confusión reflejan un modelo robusto, con una ligera tendencia a priorizar la detección de patologías frente a la reducción de falsos positivos, en línea con el objetivo clínico.
+
+En conjunto, el modelo destaca por su capacidad para capturar relaciones no lineales complejas y mantener una separación consistente entre clases.
 
 \vspace{1cm}
 
@@ -2961,14 +3240,14 @@ En conclusión, aunque la red neuronal gana en rendimiento global, Random Forest
 
 \subsection{Configuración 3}
 
-La Configuración 3 es el escenario más completo del sistema, en el que se utilizan las doce derivaciones del ECG junto con características extraídas de la señal. 
-El problema se formula como una salida probabilística sobre 71 patologías, en lugar de una clasificación por superclases.
+La Configuración 3 constituye el escenario más completo del sistema, al emplear las doce derivaciones del ECG junto con características extraídas de la señal. 
+En este caso, el problema se plantea como una estimación probabilística sobre 71 patologías, en lugar de una clasificación basada en superclases.
 
 Esto permite estimar la probabilidad de cada patología y capturar relaciones más complejas entre patrones electrocardiográficos, aumentando la riqueza de la información respecto a las configuraciones anteriores.
 
 Se evalúan cinco modelos: Ridge Regression, Elastic Net, Random Forest Regressor, HistGradient Boosting y MLP, lo que permite comparar enfoques lineales, de ensamblado y redes neuronales.
 
-Dado el número de clases, los resultados se presentan de forma resumida. En la tabla solo se incluyen patologías representativas seleccionadas por su relevancia clínica: alteraciones de conducción (CLBBB, CRBBB, LAFB), infarto e isquemia (IMI, ASMI), alteraciones generales del ECG (IVCD, NDT), y clases relevantes como NORM, LVH y PVC. Esto permite interpretar el comportamiento del modelo sin necesidad de mostrar las 71 clases.
+Dado el elevado número de clases, los resultados se presentan de forma resumida. En la tabla solo se incluyen patologías representativas seleccionadas por su relevancia clínica: alteraciones de conducción (CLBBB, CRBBB, LAFB), infarto e isquemia (IMI, ASMI), alteraciones generales del ECG (IVCD, NDT), y clases relevantes como NORM, LVH y PVC. Esto permite interpretar el comportamiento del modelo sin necesidad de mostrar las 71 clases.
 
 El objetivo es evaluar la capacidad de los modelos para estimar probabilidades coherentes en un problema altamente desbalanceado y de alta complejidad clínica.
 
@@ -3080,7 +3359,7 @@ Las alteraciones de conducción continúan siendo el grupo mejor identificado po
 Patologías como CLBBB, CRBBB y LAFB obtienen los valores de AUC más altos del conjunto, lo que sugiere que sus patrones electrocardiográficos resultan fácilmente distinguibles para el modelo. Además, los valores de MAE permanecen reducidos, reflejando una estimación probabilística estable.
 
 Por el contrario, las alteraciones generales del ECG presentan los resultados más modestos. 
-IVCD y NDT muestran los valores de AUC y Spearman más bajos entre las patologías analizadas, evidenciando una mayor dificultad para discriminar correctamente estas clases. 
+Estas patologías muestran los valores de AUC y Spearman más bajos entre las patologías analizadas, evidenciando una mayor dificultad para discriminar correctamente estas clases. 
 Este comportamiento es coherente con su naturaleza más heterogénea y con el solapamiento existente con otras alteraciones electrocardiográficas.
 
 Las patologías relacionadas con infarto e isquemia mantienen una buena capacidad discriminativa, aunque con errores de predicción superiores a los observados en las alteraciones de conducción. 
@@ -3147,7 +3426,7 @@ Aun así, el modelo mantiene una capacidad de discriminación aceptable, lo que 
 En el grupo de infarto e isquemia, el modelo muestra un comportamiento intermedio, con valores de AUC y correlación algo más moderados. 
 Esto puede explicarse por la mayor variabilidad morfológica de estas patologías en el ECG, lo que dificulta una predicción completamente estable.
 
-Finalmente, en las clases consideradas relevantes como hipertrofia ventricular izquierda y extrasístoles ventriculares, el modelo vuelve a mostrar un rendimiento sólido, con una buena capacidad de discriminación y correlación entre predicción y valor real.
+Finalmente, en las clases consideradas relevantes como hipertrofia ventricular izquierda (LVH) y extrasístoles ventriculares (PVC), el modelo vuelve a mostrar un rendimiento sólido, con una buena capacidad de discriminación y correlación entre predicción y valor real.
 
 En conjunto, Random Forest se posiciona como uno de los modelos más robustos de la configuración, destacando especialmente por su estabilidad en clases bien definidas, aunque con cierta variabilidad en patologías más heterogéneas.
 
@@ -3205,7 +3484,7 @@ Esto indica que el modelo no solo discrimina correctamente entre presencia y aus
 En el caso de las alteraciones generales del ECG y de las patologías de infarto e isquemia, el modelo mantiene un rendimiento elevado y más estable que en enfoques anteriores, reduciendo la variabilidad observada entre clases. 
 Esto sugiere una mejor capacidad de generalización ante patrones más heterogéneos.
 
-Finalmente, en las clases relevantes como hipertrofia ventricular izquierda y extrasístoles ventriculares, el modelo vuelve a mostrar valores altos tanto en AUC como en correlación, consolidando su comportamiento robusto en el conjunto del problema.
+Finalmente, en las clases relevantes como LVH y PVC, el modelo vuelve a mostrar valores altos tanto en AUC como en correlación, consolidando su comportamiento robusto en el conjunto del problema.
 
 En conjunto, HistGradientBoosting se posiciona como el modelo más equilibrado de la configuración, combinando alta capacidad discriminativa con una mejora notable en la calidad de la predicción probabilística.
 
@@ -3292,13 +3571,70 @@ Medidas como el MAE pueden resultar engañosas, ya que un error medio bajo no ga
 
 Además, la complejidad creciente del problema a lo largo de las configuraciones, especialmente en el caso de la formulación con 71 patologías, introduce un mayor grado de solapamiento entre clases, lo que dificulta la separación clara entre algunas patologías y genera variabilidad en el comportamiento de los modelos.
 
-Por último, la heterogeneidad inherente a ciertas clases clínicas limita la capacidad de generalización, provocando diferencias notables en el rendimiento dependiendo del tipo de patología.
-
+Por último, la heterogeneidad propia de algunas clases clínicas reduce la capacidad de generalización del modelo, generando variaciones significativas en el rendimiento según la patología analizada.
 % -------------------------------------------------
 % CAPÍTULO 7
 % -------------------------------------------------
 
 \chapter{Dashboard interactivo}
+
+\todo{Darle una vuelta a este capitulo porque parece que es algo que he dejado para el final y lo he hehco deprisa y corriendo}
+
+El sistema desarrollado se completa con un \textit{dashboard} interactivo cuyo objetivo es facilitar la visualización de señales electrocardiográficas, así como la interpretación de las predicciones generadas por el modelo final seleccionado en la Configuración 3. En este caso, el modelo integrado corresponde a la Red Neuronal Multicapa (MLP), al ser el que ofrece un mejor equilibrio entre capacidad discriminativa y coherencia en las predicciones probabilísticas.
+
+La herramienta permite la exploración individual de registros ECG. Una vez cargado un registro, el sistema organiza la información en varias secciones claramente diferenciadas que combinan representación de señal, análisis clínico y salida del modelo.
+
+\section{Resumen clínico del paciente}
+
+En primer lugar, se presenta un resumen clínico automático basado en características extraídas de la señal electrocardiográfica. Este bloque condensa información relevante para una interpretación rápida del estado del paciente:
+
+\begin{itemize}
+    \item \textbf{Frecuencia cardíaca (HR):} medida en latidos por minuto (bpm), calculada a partir de los intervalos RR medios. Permite evaluar si el ritmo se encuentra dentro de los rangos normales o presenta bradicardia o taquicardia.
+
+    \item \textbf{Intervalo RR medio:} expresado en segundos, representa el tiempo medio entre picos R consecutivos y proporciona información directa sobre la regularidad del ritmo cardíaco.
+
+    \item \textbf{Variabilidad cardíaca (HRV - SDNN):} desviación estándar de los intervalos RR, medida también en segundos. Es un indicador de la variabilidad del sistema autónomo, donde valores bajos pueden asociarse a alteraciones fisiológicas.
+
+    \item \textbf{Eje eléctrico cardíaco:} expresado en grados, describe la dirección promedio de la actividad eléctrica ventricular en el plano frontal. Desviaciones fuera del rango fisiológico pueden indicar bloqueos de conducción o hipertrofias. (ver Tabla \ref{tab:eje_cardiaco})
+
+    \item \textbf{Duración del QRS:} medida en número de muestras. Representa el tiempo de despolarización ventricular. Valores prolongados pueden asociarse a bloqueos de rama.
+
+    \item \textbf{Segmento ST:} variable de amplitud que describe el nivel medio del segmento ST. Su elevación o depresión puede estar relacionada con eventos isquémicos.
+
+    \item \textbf{Amplitud del pico R:} valor medio del pico R en cada latido, relacionado con la intensidad de la despolarización ventricular. Alteraciones pueden asociarse a hipertrofias o cambios de conducción.
+
+    \item \textbf{Número de latidos detectados:} conteo total de complejos QRS identificados en el registro, útil para evaluar la calidad de la señal y la consistencia del análisis.
+
+    \item \textbf{Edad y sexo:} variables demográficas incluidas como contexto clínico adicional para la interpretación del registro.
+\end{itemize}
+
+Este resumen permite ofrecer una visión global del paciente antes de analizar la señal completa o las predicciones del modelo, facilitando una interpretación más estructurada de los resultados.
+
+\section{Visualización del electrocardiograma}
+
+A continuación, el dashboard muestra el electrocardiograma completo en sus 12 derivaciones. Esta representación permite observar la actividad eléctrica del corazón desde diferentes perspectivas, lo que resulta esencial para la detección de anomalías específicas que pueden no ser visibles en una única derivación.
+
+La visualización está sincronizada entre derivaciones, lo que permite analizar la coherencia temporal de los eventos cardíacos y facilita la identificación de patrones característicos de distintas patologías.
+
+\section{Latidos segmentados por derivación}
+
+El sistema también incluye una representación de los latidos individuales segmentados por derivación. Esta vista permite aislar complejos QRS y analizar su morfología de forma independiente.
+
+Esta segmentación resulta especialmente útil para identificar variaciones en la forma del latido entre diferentes regiones del corazón, lo que puede aportar información relevante en patologías como bloqueos de rama, hipertrofias o alteraciones de la repolarización.
+
+\section{Predicción del modelo}
+
+Finalmente, el dashboard incorpora la salida del modelo de aprendizaje automático, basado en la Red Neuronal Multicapa de la Configuración 3. El sistema proporciona un diagnóstico probabilístico para las distintas patologías consideradas en el estudio.
+
+Esta salida permite interpretar el resultado no como una única clase, sino como un conjunto de probabilidades asociadas a cada patología, lo que resulta especialmente adecuado en un contexto clínico donde pueden coexistir múltiples alteraciones.
+
+La presentación de estas predicciones facilita la comprensión del comportamiento del modelo y su relación con las características extraídas del ECG.
+
+\section{Generación de informe}
+
+Como complemento final, el dashboard permite la generación y descarga de un informe estructurado en formato PDF. Este informe incluye la información del paciente, el resumen clínico, las visualizaciones del ECG y las predicciones del modelo.
+
+Este documento está diseñado para facilitar su uso como soporte de análisis, permitiendo conservar los resultados obtenidos de forma organizada y reutilizable fuera del entorno interactivo.
 
 % -------------------------------------------------
 % CAPÍTULO 8
@@ -3312,7 +3648,7 @@ Por último, la heterogeneidad inherente a ciertas clases clínicas limita la ca
 \begin{enumerate}
 	\item La clasificación automática de patologías cardíacas mediante aprendizaje automático es viable y clínicamente razonable. 
 	Los modelos desarrollados han demostrado capacidad para discriminar entre superclases de patologías y para estimar probabilidades sobre 71 condiciones cardíacas, obteniendo valores de AUC consistentemente altos. 
-	Esto confirma que el aprendizaje automático constituye una herramienta válida para el apoyo al diagnóstico electrocardiográfico, sin necesidad de recurrir a arquitecturas de gran complejidad computacional.
+	Esto confirma que el aprendizaje automático constituye una herramienta válida para el apoyo al diagnóstico electrocardiográfico, especialmente como sistema de análisis preliminar del ECG. Su objetivo no es sustituir al profesional médico, sino servir como apoyo en la detección temprana y priorización de posibles patologías.
 	\item El uso de las doce derivaciones es imprescindible para un rendimiento adecuado. 
 	Los experimentos de la Configuración 1 demuestran que limitar el sistema a una única derivación reduce significativamente la capacidad discriminativa de todos los modelos. 
 	La incorporación de las doce derivaciones en la Configuración 2 y 3 produce una mejora generalizada y consistente, confirmando que la información espacial del electrocardiograma es esencial para capturar la variedad de patrones asociados a las distintas patologías cardíacas.
@@ -3352,8 +3688,8 @@ A partir de los resultados obtenidos y las limitaciones identificadas a lo largo
 	Durante el desarrollo de este trabajo se inició una primera aproximación a su implementación, si bien no llegó a completarse ni a producir resultados evaluables dentro del alcance del proyecto. 
 	Como trabajo futuro, se propone retomar esta línea, completar el diseño de la arquitectura convolucional y comparar su rendimiento frente a los modelos desarrollados, con especial atención a las patologías con patrones morfológicos más complejos donde la extracción manual de características puede resultar insuficiente.
 	\item Optimización de umbrales de decisión por patología. 
-	A lo largo de las tres configuraciones, se ha utilizado un umbral de decisión personalizado para todas las clases, lo que no resulta óptimo dado el elevado desbalance existente entre patologías. 
-	Una línea natural de mejora consiste en optimizar el umbral de forma individual para cada clase, buscando maximizar métricas como el recall, sin penalizar en exceso la precisión. 
+	A lo largo de las tres configuraciones, se ha utilizado un umbral de decisión personalizado para todas las clases, lo que no resultó del todo óptimo dado el elevado desbalance existente entre patologías. 
+	Una línea natural de mejora consistiría en optimizar el umbral de forma individual para cada clase, buscando maximizar métricas como el recall, sin penalizar en exceso la precisión. 
 	En las Configuraciones 1 y 2 esto permitiría ajustar el criterio de clasificación por superclase, mientras que en la Configuración 3 aportaría una mayor granularidad al poder adaptar el umbral a cada una de las 71 patologías según su gravedad clínica y su representación en el conjunto de datos.
 	\item Soporte para señales ECG de longitud variable. 
 	El sistema actual requiere que los registros ECG tengan una longitud fija, lo que limita su aplicabilidad en entornos clínicos reales donde la duración del registro puede variar. 
@@ -3362,14 +3698,6 @@ A partir de los resultados obtenidos y las limitaciones identificadas a lo largo
 	Como línea final, se propone evolucionar el dashboard interactivo desarrollado hacia una herramienta clínica desplegable en entornos reales, con capacidad para recibir registros ECG directamente desde equipos de adquisición, generar informes automáticos con las probabilidades de cada patología y alertar al personal sanitario ante la detección de condiciones de alto riesgo. 
 	Este paso requeriría además una validación regulatoria y la colaboración con profesionales médicos para ajustar el sistema a los flujos de trabajo clínicos existentes.
 \end{enumerate}
-
-Red neuronal con early stopping
-
-cnn
-
-umbrales optimos 
-
-poder analizar cualquier longitud de latido
 
 % -------------------------------------------------
 % BIBLIOGRAFÍA
@@ -3383,5 +3711,20 @@ poder analizar cualquier longitud de latido
 % -------------------------------------------------
 % ANEXOS
 % -------------------------------------------------
-% Añadir anexos pertinentes
+% Añadir anexos ODS, tablas de configuración 3, matrices de los otros enfoques 
+
+\appendix
+\chapter*{Anexo I}
+
+Hablar de los ODS
+
+\chapter*{Anexo II}
+
+Todas significado de las patologías y tablas enteras de la configuración 3
+
+\chapter*{Anexo III}
+
+Análisis de las configuraciones 1 y 2 con los otros umbrales?? Igual son muchas páginas
+
+
 \end{document}

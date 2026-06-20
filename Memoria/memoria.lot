@@ -1,29 +1,29 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Interpretación del eje cardíaco según las derivaciones DI y aVF (\blx@tocontentsinit {0}\cite {prutkin_ecg_uptodate})}}{23}{table.caption.15}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Interpretación del eje cardíaco según las derivaciones DI y aVF (\blx@tocontentsinit {0}\cite {prutkin_ecg_uptodate})}}{36}{table.caption.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Resultados globales en test de la configuración 1}}{82}{table.caption.61}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Comparación del rendimiento entre train y test en la configuración 1}}{83}{table.caption.62}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Resultados globales de test de la configuración 2}}{85}{table.caption.63}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Comparación del rendimiento entre train y test en la Configuración 2}}{86}{table.caption.64}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Resultados globales de test de la configuración 3}}{88}{table.caption.65}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Resultados de regresión logística por clase (Megavector)}}{90}{table.caption.67}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Resultados de regresión logística por clase (Características)}}{95}{table.caption.70}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Resultados de random forest por clase (Megavector)}}{99}{table.caption.74}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces Resultados de random forest por clase (Características)}}{103}{table.caption.77}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces Resultados de red neuronal por clase (Megavector)}}{107}{table.caption.81}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces Resultados de red neuronal por clase (Características)}}{110}{table.caption.84}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces Resultados de regresión logística por clase (Configuración 2)}}{115}{table.caption.88}%
-\contentsline {table}{\numberline {6.13}{\ignorespaces Resultados de regresión logística por clase (Configuración 2)}}{119}{table.caption.92}%
-\contentsline {table}{\numberline {6.14}{\ignorespaces Resultados de red neuronal por clase (Configuración 2)}}{123}{table.caption.96}%
-\contentsline {table}{\numberline {6.15}{\ignorespaces Métricas de Ridge Regressor por patología agrupadas por tipo clínico}}{128}{table.caption.100}%
-\contentsline {table}{\numberline {6.16}{\ignorespaces Métricas de Elastic Net por patología agrupadas por tipo clínico}}{129}{table.caption.102}%
-\contentsline {table}{\numberline {6.17}{\ignorespaces Métricas de Random Forest Regressor por patología agrupadas por tipo clínico}}{131}{table.caption.104}%
-\contentsline {table}{\numberline {6.18}{\ignorespaces Métricas de HistGradientBoosting por patología agrupadas por tipo clínico}}{132}{table.caption.106}%
-\contentsline {table}{\numberline {6.19}{\ignorespaces Métricas de la Red Neuronal Multicapa por patología agrupadas por tipo clínico}}{133}{table.caption.108}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Resultados globales en test de la configuración 1}}{113}{table.caption.60}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Comparación del rendimiento entre train y test en la configuración 1}}{115}{table.caption.61}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Resultados globales de test de la configuración 2}}{117}{table.caption.62}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparación del rendimiento entre train y test en la Configuración 2}}{118}{table.caption.63}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Resultados globales de test de la configuración 3}}{121}{table.caption.64}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Resultados de regresión logística por clase (Megavector)}}{123}{table.caption.66}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Resultados de regresión logística por clase (Características)}}{128}{table.caption.69}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Resultados de random forest por clase (Megavector)}}{134}{table.caption.73}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Resultados de random forest por clase (Características)}}{139}{table.caption.76}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces Resultados de red neuronal por clase (Megavector)}}{144}{table.caption.80}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces Resultados de red neuronal por clase (Características)}}{148}{table.caption.83}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces Resultados de regresión logística por clase (Configuración 2)}}{154}{table.caption.87}%
+\contentsline {table}{\numberline {6.13}{\ignorespaces Resultados de regresión logística por clase (Configuración 2)}}{159}{table.caption.91}%
+\contentsline {table}{\numberline {6.14}{\ignorespaces Resultados de red neuronal por clase (Configuración 2)}}{164}{table.caption.95}%
+\contentsline {table}{\numberline {6.15}{\ignorespaces Métricas de Ridge Regressor por patología agrupadas por tipo clínico}}{170}{table.caption.99}%
+\contentsline {table}{\numberline {6.16}{\ignorespaces Métricas de Elastic Net por patología agrupadas por tipo clínico}}{172}{table.caption.101}%
+\contentsline {table}{\numberline {6.17}{\ignorespaces Métricas de Random Forest Regressor por patología agrupadas por tipo clínico}}{174}{table.caption.103}%
+\contentsline {table}{\numberline {6.18}{\ignorespaces Métricas de HistGradientBoosting por patología agrupadas por tipo clínico}}{175}{table.caption.105}%
+\contentsline {table}{\numberline {6.19}{\ignorespaces Métricas de la Red Neuronal Multicapa por patología agrupadas por tipo clínico}}{177}{table.caption.107}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

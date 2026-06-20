@@ -3071,61 +3071,93 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2" intorder="1">stanford_electrical_system</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">cigna_corazon_electrico</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">medlineplus_ecg_es</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">cvphysiology_ecg_leads</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">myekg_derivaciones_cardiacas</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">cardioteca_eje_cardiaco</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">repsol_machine_learning</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">ibm_confusion_matrix</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">ibm_confusion_matrix</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">encord_f1_score_ml</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">amit_classification_metrics</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">qlik_multiclass_scoring</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">chugh2020_regression_metrics</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">koshurai2024_log_loss</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">attal2026_roc_auc</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">vimal_sathish_ecg_rf</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">mitdb_physionet</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">hannun2019arrhythmia</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">wysokinski2024pe_ecg</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">esc_ai_ecg_diagnostics</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">bergquist2023ecg_leads</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">kalmady2024ecg_cv</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">ayano2022ecg_ml_review</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">prakash2025ecg_review</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">utah_ceg_machine_learning</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">ptbxl_dataset</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">salvavidas_genero_cardiopatias</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">talebi2025_fourier_wavelet</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">chauhan2021multilead_qrs</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">lera2025logistic_regression</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">ibm_logistic_regression</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">sklearn_ovr_classifier</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">ibm_random_forest</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">zou2022heartbeat_rf</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">ibm_neural_networks</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">codificandobits_activacion</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">pytorch_bcewithlogitsloss</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">pytorch_bcewithlogitsloss</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">duran2019_regularization_nn</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">ibm_ridge_regression</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">sklearn_ridge</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">interactivechaos_elasticnet</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">sklearn_elasticnet</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">geeksforgeeks_rf_regression_ml</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">prathik2025_rf_regressor</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">picard2024_hist_gbr</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">riaux2024_histgbm</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">sklearn_histgbr</bcf:citekey>
-    <bcf:citekey order="56" intorder="1" nocite="1">*</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 1 -->
+  <bcf:bibdata section="1">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bibliografia.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="1">
+    <bcf:citekey order="1" intorder="1" nocite="1">ptbxl_dataset</bcf:citekey>
+    <bcf:citekey order="2" intorder="2" nocite="1">hannun2019arrhythmia</bcf:citekey>
+    <bcf:citekey order="3" intorder="3" nocite="1">ayano2022ecg_ml_review</bcf:citekey>
+    <bcf:citekey order="4" intorder="4" nocite="1">kalmady2024ecg_cv</bcf:citekey>
+    <bcf:citekey order="5" intorder="5" nocite="1">esc_ai_ecg_diagnostics</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 2 -->
+  <bcf:bibdata section="2">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bibliografia.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="2">
+    <bcf:citekey order="1" intorder="1" nocite="1">ptbxl_dataset</bcf:citekey>
+    <bcf:citekey order="2" intorder="2" nocite="1">hannun2019arrhythmia</bcf:citekey>
+    <bcf:citekey order="3" intorder="3" nocite="1">ayano2022ecg_ml_review</bcf:citekey>
+    <bcf:citekey order="4" intorder="4" nocite="1">kalmady2024ecg_cv</bcf:citekey>
+    <bcf:citekey order="5" intorder="5" nocite="1">esc_ai_ecg_diagnostics</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+    <bcf:citekey order="3" intorder="1">stanford_electrical_system</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">cigna_corazon_electrico</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">cigna_corazon_electrico</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">cigna_corazon_electrico</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">medlineplus_ecg_es</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">cvphysiology_ecg_leads</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">myekg_derivaciones_cardiacas</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">cardioteca_eje_cardiaco</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">prutkin_ecg_uptodate</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">repsol_machine_learning</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">ibm_confusion_matrix</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">ibm_confusion_matrix</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">evidently_accuracy_precision_recall</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">encord_f1_score_ml</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">amit_classification_metrics</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">qlik_multiclass_scoring</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">chugh2020_regression_metrics</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">koshurai2024_log_loss</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">attal2026_roc_auc</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">wei2024_spearman</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">vimal_sathish_ecg_rf</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">mitdb_physionet</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">hannun2019arrhythmia</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">wysokinski2024pe_ecg</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">esc_ai_ecg_diagnostics</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">bergquist2023ecg_leads</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">kalmady2024ecg_cv</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">ayano2022ecg_ml_review</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">prakash2025ecg_review</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">utah_ceg_machine_learning</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">ptbxl_dataset</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">salvavidas_genero_cardiopatias</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">talebi2025_fourier_wavelet</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">chauhan2021multilead_qrs</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">lera2025logistic_regression</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">ibm_logistic_regression</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">sklearn_ovr_classifier</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">ibm_random_forest</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">zou2022heartbeat_rf</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">ibm_neural_networks</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">codificandobits_activacion</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">pytorch_bcewithlogitsloss</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">pytorch_bcewithlogitsloss</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">duran2019_regularization_nn</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">ibm_ridge_regression</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">sklearn_ridge</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">interactivechaos_elasticnet</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">sklearn_elasticnet</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">geeksforgeeks_rf_regression_ml</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">prathik2025_rf_regressor</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">picard2024_hist_gbr</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">riaux2024_histgbm</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">sklearn_histgbr</bcf:citekey>
+    <bcf:citekey order="61" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
@@ -3176,6 +3208,46 @@
                 type="entry"
                 sortingtemplatename="apa"
                 sortingnamekeytemplatename="apasortcite"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="1"
+                name="apa/apasortcite//global/global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="apasortcite"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="1"
+                name="apa/global//global/global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="2"
+                name="apa/apasortcite//global/global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="apasortcite"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="2"
+                name="apa/global//global/global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"
                 labelalphanametemplatename="global"
