@@ -30,6 +30,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
 
 \usepackage{xcolor}
 
@@ -72,6 +74,14 @@
     \renewcommand{\headrulewidth}{0pt}
 }
 
+\newcommand{\projectTitle}{Interpretación de electrocardiogramas con técnicas de aprendizaje automático aplicadas a la detección de patologías cardíacas}
+\newcommand{\Author}{Ana Arregui Beltrán}
+\newcommand{\Director}{Lucas Novales Peleato}
+\newcommand{\CoDirector}{}
+\newcommand{\BeginYear}{2025}
+\newcommand{\EndYear}{2026}
+
+\raggedbottom
 
 \begin{comment}
 \geometry{
@@ -115,8 +125,133 @@
 \end{titlepage}
 
 \cleardoublepage
+\begin{center}
+    \large \textbf{Declaraci\'on de originalidad}
+\end{center}
 
-\section*{Agradecimientos}
+{\fontsize{11}{15}\selectfont
+    Declaro, bajo mi responsabilidad, que el Proyecto presentado con el t\'itulo \textbf{\projectTitle} en la ETS de Ingenier\'ia - ICAI de la Universidad Pontificia Comillas en el curso acad\'emico \BeginYear/\EndYear\ es de mi autor\'ia, original e in\'edito y no ha sido presentado con anterioridad a otros efectos. El Proyecto no es plagio de otro, ni total ni parcialmente y la informaci\'on que ha sido tomada de otros documentos est\'a debidamente referenciada.
+    \vspace{5mm}
+
+    \begin{center}
+        {\large \textbf{Uso de Inteligencia Artificial}}\footnote{Esta declaraci\'on se refiere al uso de la Inteligencia Artificial generativa para realizar los documentos del Proyecto (Anexo B y Memoria). No aplica a Proyectos donde, por su naturaleza, deban emplear inteligencia artificial como parte de los mismos (aplicaci\'on de t\'ecnicas de aprendizaje autom\'atico, redes neuronales, an\'alisis de datos...).}
+    \end{center}
+
+    Declaro bajo mi responsabilidad que (indicar la opci\'on correcta):
+
+    \begin{itemize}
+        \item[$\square$] % Sustituye \square por \boxtimes para marcar esta opci\'on  
+        No he utilizado Inteligencia Artificial en la elaboraci\'on del presente documento.
+    
+        \item[$\boxtimes$] % Sustituye \square por \boxtimes para marcar esta opci\'on 
+        He utilizado Inteligencia Artificial en la elaboraci\'on del presente documento y/o del Anexo B siempre en las condiciones permitidas por la Universidad Pontificia Comillas, es decir, aplicando el Nivel 2 de la \href{https://aiassessmentscale.com/}{Escala de Evaluaci\'on de Perkins et al.\ (2024)}: \emph{``La IA puede utilizarse para actividades previas a la tarea, como la lluvia de ideas, la descripci\'on y la investigaci\'on inicial. Este nivel se centra en el uso de la IA para la planificaci\'on, las s\'intesis y la generaci\'on de ideas, pero las evaluaciones deben hacer hincapi\'e en la capacidad de desarrollar y refinar estas ideas de forma independiente''}. En concreto, la Inteligencia Artificial ha sido empleada para:
+    \end{itemize}
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{3}
+    \begin{tabular}{|p{\textwidth}|}
+    \hline
+    La inteligencia artificial se ha empleado como apoyo en la generación de ideas iniciales, en el uso de herramientas del proyecto y en la búsqueda de información, la cual ha sido siempre contrastada previamente a su utilización.
+    \vspace{4cm} \\
+    \hline
+    \end{tabular}
+    \end{center}
+    
+    \vspace{1.5em}
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|p{0.95\textwidth}|}
+    \hline
+    \begin{center}
+        %\vspace{5mm}
+        \includegraphics[width=0.25\textwidth]{imagenes/firma.jpg}
+    \end{center}
+    \\
+    \hline 
+    Fdo: \Author \\
+    \hline
+    Fecha: 21/06/\EndYear\\
+    \hline
+    \end{tabular}
+    \end{center}
+    
+    \begin{center}
+        \textbf{Autorizaci\'on para la entrega del Proyecto}
+    \end{center}
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|p{0.45\textwidth} |p{0.45\textwidth} |
+    }
+        \hline
+        \begin{center} \vspace{-8mm} El Director del Proyecto \end{center} &
+        \begin{center} \vspace{-8mm} El co-Director del Proyecto (si aplica) \end{center}\\
+        \hline
+        \begin{center}
+            \vspace{5mm}
+            (firma aqu\'i)
+        \end{center}
+        & 
+        \begin{center}
+            \vspace{5mm}
+            (firma aqu\'i)
+        \end{center}
+        \\
+        \hline
+        Fdo: \Director & Fdo: \CoDirector \\
+        \hline
+        Fecha: \textcolor{red}{XX}/\textcolor{red}{XX}/\EndYear 
+		& \\
+        \hline
+    \end{tabular}
+    \end{center} 
+}
+
+\begin{titlepage}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.4\textwidth]{imagenes/LogoUniversidadBN.pdf}
+		\end{figure}
+		\centering
+		\Large GRADO EN INGENIERÍA EN TECNOLOGÍAS DE TELECOMUNICACIÓN \\
+		\vspace*{2.5em} 
+		\centering
+		TRABAJO FIN DE GRADO\\ 
+		\vspace*{1em}
+		Interpretación de electrocardiogramas con técnicas de aprendizaje automático aplicadas a la detección de patologías cardíacas  
+		\\ \large
+		\vspace*{3em}
+		Autor \\ Ana Arregui Beltrán \\ 
+		\vspace*{1em}
+		Director \\ Lucas Novales Peleato \\
+		\vfill
+		Madrid \\
+		Junio 2026
+\end{titlepage}
+\setcounter{page}{6}
+
+\chapter*{Agradecimientos}
+
+Este Trabajo Fin de Grado supone el cierre de una etapa muy importante de mi vida, y no habría sido posible sin el cariño y el apoyo de muchas personas que me han acompañado a lo largo de este camino.
+
+Quiero agradecer a mi tutor del TFG, Lucas, por su guía, su paciencia y por haberme ayudado a desarrollar este proyecto.
+Gracias por su tiempo y disponibilidad incluso a 5000 km de distancia.
+
+A mis padres, por su esfuerzo, su apoyo incondicional y por haberme dado la oportunidad de estudiar esta carrera.
+Gracias por confiar en mí, incluso cuando yo misma dudaba, y por haber hecho posible que pudiera llegar hasta aquí.
+
+A mis hermanos, por acompañarme siempre, por su apoyo constante y por hacer que este camino haya sido más ligero y divertido.
+
+A mis amigas de toda la carrera, Cris, Eva y Paula, por estos años compartidos que han hecho el camino más fácil y divertido.
+Gracias por los laboratorios, las horas de estudio, los exámenes, las risas y también los momentos de agobio, que siempre se llevaron mejor con vosotras.
+
+A mis amigas de Boston, Alicia, Fernanda, Laura y Mencía, por una de las experiencias más especiales de mi etapa universitaria. 
+Gracias por convertir una ciudad desconocida en un hogar, por todas las horas compartidas en la cuarta planta del CDS con vistas al M.I.T., por los \textit{Hot Chocolate Deluxe}, las comentadas y por todas las tardes en las que tocaba \textit{tfgear}.
+
+Por último, gracias a todas las personas que, de una forma u otra, han formado parte de esta etapa y han contribuido a que llegue hasta aquí. 
+Este trabajo marca el final de unos años de aprendizaje, esfuerzo y crecimiento que recordaré siempre con mucho cariño.
+
 
 \newpage
 
@@ -198,7 +333,25 @@ En la segunda configuración, el uso de las 12 derivaciones mejora de forma cons
 En la tercera configuración se alcanzan los mejores resultados globales del sistema, con AUC de hasta 0,93 en superclases y 0,90 en la estimación probabilística de 71 patologías. 
 En este escenario, la MLP y Random Forest destacan como los modelos más robustos, mientras que la extracción de características mejora de forma consistente el rendimiento frente al uso de la señal en bruto.
 
-\todo{Que tabla de resultados pongo aquí?}
+En la Tabla \ref{tab:analisis-global-config3-resumen} se presentan los resultados globales obtenidos en la Configuración 3. 
+Estos resultados se muestran debido a que se trata del escenario más completo del estudio y el que más se aproxima a un entorno clínico real.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Modelo} & \textbf{MAE} & \textbf{MSE} & \textbf{Log-loss} & \textbf{AUC global} \\
+	\hline
+	Ridge Regression            & 0.0253 & 0.0097 & 0.0392 & 0.8808 \\
+	ElasticNet Regression       & 0.0242 & 0.0098 & 0.0373 & 0.8887 \\
+	Random Forest Regressor     & 0.0229 & 0.0098 & 0.0358 & 0.9002 \\
+	HistGradientBoosting        & 0.0188 & 0.0085 & 0.0330 & 0.8509 \\
+	MLP Regressor               & 0.0140 & 0.0112 & 0.0558 & 0.8835 \\
+	\hline
+	\end{tabular}
+	\caption{Resultados globales de test de la configuración 3}
+	\label{tab:analisis-global-config3-resumen}
+\end{table}
 
 \vspace{0.5cm}
 
@@ -294,7 +447,25 @@ In the second configuration, the use of 12 leads consistently improves all metri
 In the third configuration, the best overall results are obtained, reaching up to 0.93 AUC in superclass classification and 0.90 in probabilistic estimation of 71 pathologies. 
 In this scenario, MLP and Random Forest stand out as the most robust models, while feature extraction consistently improves performance compared to raw signal representation.
 
-\todo{Que tabla de resultados pongo aquí?}
+Table \ref{tab:analisis-global-config3-abstract} presents the overall results obtained in Configuration 3. 
+These results are included because this configuration corresponds to the most complete scenario of the study and the one that most closely resembles a real clinical setting.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Model} & \textbf{MAE} & \textbf{MSE} & \textbf{Log-loss} & \textbf{AUC global} \\
+	\hline
+	Ridge Regression            & 0.0253 & 0.0097 & 0.0392 & 0.8808 \\
+	ElasticNet Regression       & 0.0242 & 0.0098 & 0.0373 & 0.8887 \\
+	Random Forest Regressor     & 0.0229 & 0.0098 & 0.0358 & 0.9002 \\
+	HistGradientBoosting        & 0.0188 & 0.0085 & 0.0330 & 0.8509 \\
+	MLP Regressor               & 0.0140 & 0.0112 & 0.0558 & 0.8835 \\
+	\hline
+	\end{tabular}
+	\caption{Global test results for configuration 3}
+	\label{tab:analisis-global-config3-abstract}
+\end{table}
 
 \vspace{0.5cm}
 
@@ -402,8 +573,6 @@ Asimismo, el rendimiento de los modelos está condicionado por la distribución 
 
 \section{Estructura de la memoria}
 
-\todo{No me convence mucho esta sección}
-
 La memoria se organiza en ocho capítulos que recogen de forma progresiva el desarrollo del Trabajo Fin de Grado, desde la base teórica hasta la implementación y el análisis de resultados.
 
 Después de la introducción, en el Capítulo 2, se presentan los fundamentos teóricos y tecnológicos necesarios para comprender el trabajo. 
@@ -451,9 +620,6 @@ La anatomía eléctrica del corazón se muestra en la Figura \ref{fig:sistema-el
     \caption{Anatomía eléctrica del corazón. \cite{cigna_corazon_electrico}}
     \label{fig:sistema-electrico-corazon}
 \end{figure}
-
-\footnote{\cite{cigna_corazon_electrico}}
-
 
 \section{Electrocardiograma}
 
@@ -609,7 +775,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth]{imagenes/ecg-chest-leads.png}
-		\caption{Derivaciones precordiales.\todo{poner pie de pagina con la fuente}}
+		\caption{Derivaciones precordiales.}
 		\label{fig:chest_leads}
 	\end{figure}
 
@@ -925,13 +1091,6 @@ Por otro lado, la lectura y manipulación de los registros de electrocardiograma
 La implementación y validación de los modelos de aprendizaje automático se ha llevado a cabo utilizando Scikit-learn, que incluye una amplia variedad de algoritmos de clasificación, así como herramientas para la evaluación del rendimiento de los modelos y la validación de los resultados.
 
 Finalmente, para la visualización de datos y la creación de una interfaz interactiva se han utilizado la librerías Matplotlib, Dash y Plotly, que permiten generar gráficos y visualizaciones dinámicas, facilitando la interpretación de los resultados y la exploración de los datos.
-\todo{Revisar esto, porque ha día 24 de mayo está sin hacer el dashboard}
-
-
-\section{Problemas en clasificación médica}
-
-\todo{No creo que lo vaya a poner -- Opiniones?
-}
 
 % -------------------------------------------------
 % CAPÍTULO 3
@@ -1456,7 +1615,7 @@ La detección de los picos R se realiza mediante un algoritmo de búsqueda de m�
 Para ello, se utiliza un umbral adaptativo que permite identificar los latidos incluso en registros con variaciones de amplitud o presencia de ruido.
 Se define como la suma de la media de la envolvente y su desviación estándar, lo que permite ajustar el umbral de detección en función de las características específicas de cada registro.
 Este enfoque evita la necesidad de un umbral fijo y mejora la robustez frente a la variabilidad entre pacientes y niveles de ruido. 
-Adicionalmente, se impone una distancia mínima entre picos consecutivos con el fin de evitar la detección múltiple de un mismo latido y garantizar la coherencia fisiológica de los resultados. (\cite{chauhan2021multilead_qrs})\todo{esta referencia explica toda la deteccion de picos R. Donde la pongo?}
+Adicionalmente, se impone una distancia mínima entre picos consecutivos con el fin de evitar la detección múltiple de un mismo latido y garantizar la coherencia fisiológica de los resultados. (\cite{chauhan2021multilead_qrs})
 
 Como se observa en la Figura \ref{fig:picosR}, los picos R detectados se corresponden con los máximos de la envolvente, lo que confirma la eficacia del proceso de preprocesado para resaltar las características relevantes de la señal ECG y facilitar la identificación de los latidos cardíacos.
 
@@ -1895,7 +2054,6 @@ Asimismo, se ha fijado \texttt{max\_iter = 300}, que determina el número de ite
 Dado el desbalance presente en las distintas patologías, se ha establecido \texttt{min\_samples\_leaf = 20}, lo que ayuda a evitar divisiones demasiado específicas en clases poco representadas. 
 Además, se ha incluido una regularización L2 con \texttt{l2\_regularization = 0.1}, con el objetivo de mejorar la estabilidad del modelo y reducir el sobreajuste.
 Al igual que en los modelos anteriores, se utiliza \texttt{MultiOutputRegressor} para poder entrenar de forma independiente un modelo por cada una de las 71 patologías.
-\todo{arreglar desbordamiento de linea}
 
 Finalmente, las predicciones se recortan al intervalo [0, 1] para mantener una interpretación coherente como medida de asociación entre el paciente y cada patología.
 
@@ -1931,7 +2089,7 @@ En cuanto a la decisión final de clasificación, se utilizaron las tres opcione
 \subsection{Configuración 2}
 Esta segunda opción introduce un incremento en la complejidad del problema mediante el uso de las 12 derivaciones completas del ECG, pero manteniendo el enfoque de clasificación por superclases.
 
-Desde el punto de vista de la implementación, el principal cambio respecto a la Configuración 1 fue el aumento masivo del volumen de información disponible. El uso de las señales completas de las 12 derivaciones multiplicó considerablemente el tamaño de los datos de entrada \todo{explicar los números?}, haciendo inviable el entrenamiento de los modelos utilizando directamente la señal bruta debido al elevado coste computacional asociado. 
+Desde el punto de vista de la implementación, el principal cambio respecto a la Configuración 1 fue el aumento masivo del volumen de información disponible. El uso de las señales completas de las 12 derivaciones multiplicó considerablemente el tamaño de los datos de entrada, haciendo inviable el entrenamiento de los modelos utilizando directamente la señal bruta debido al elevado coste computacional asociado. 
 Por este motivo, se optó por trabajar exclusivamente con las características extraídas de cada latido, reduciendo drásticamente la dimensionalidad del problema sin perder la información más relevante desde el punto de vista clínico.
 
 Esta configuración permitió evaluar el impacto que tiene la incorporación de información procedente de todas las derivaciones del ECG sobre la capacidad predictiva de los modelos, manteniendo constante la estructura del problema de clasificación. 
@@ -1958,8 +2116,6 @@ De esta forma, fue posible comparar aproximaciones lineales, basadas en árboles
 % -------------------------------------------------
 
 \chapter{Análisis de Resultados}
-
-\todo{unificar pies de foto}
 
 Una vez realizado el desarrollo experimental del sistema, es necesario analizar los resultados obtenidos.
 El objetivo principal es evaluar el rendimiento de los distintos modelos implementados según las distintas configuraciones planteadas, así como estudiar su comportamiento en función del tipo de enfoque utilizado.
@@ -2214,6 +2370,7 @@ Su AUC se sitúa en un nivel intermedio, por debajo de Random Forest pero por en
 En conjunto, se observa que los modelos basados en árboles ofrecen el mejor compromiso global entre capacidad discriminativa y estabilidad en la predicción, destacando especialmente Random Forest como el más equilibrado en este escenario de alta dimensionalidad y fuerte desbalanceo.
 
 \section{Análisis por modelos y enfermedades}
+\label{sec:analisis-modelos-enfermedades}
 
 Con el objetivo de complementar las métricas globales presentadas anteriormente, en este apartado se analiza el rendimiento de los distintos modelos a nivel de superclase. 
 Para ello se estudian las métricas de precisión, recall y F1-score obtenidas para cada categoría, así como las matrices de confusión y las curvas ROC asociadas.
@@ -2224,7 +2381,6 @@ Este enfoque permite adaptar el equilibrio entre sensibilidad y precisión a las
 
 A continuación se analiza el comportamiento de cada modelo utilizando tanto la representación basada en el megavector de la señal ECG como el conjunto de características extraídas.
 
-\todo{añadir solo las matrices del umbral optimo el resto en anexos}
 \subsection{Configuración 1}
 
 \subsubsection*{Regresión Logística}
@@ -2332,7 +2488,7 @@ Este análisis complementa las métricas basadas en umbral fijo, ya que permite 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-mv.png}
-    \caption{Conjunto de ROCs de regresión logística de la configuración 1 (Megavector)}
+    \caption{Curvas ROC de regresión logística de la configuración 1 (Megavector)}
     \label{fig:roc-lr-mv}
 \end{figure}
 
@@ -2428,7 +2584,7 @@ De forma global, las curvas muestran un comportamiento consistente, situándose 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat.png}
-    \caption{Conjunto de ROCs de regresión logística de la configuración 1 (Características)}
+    \caption{Curvas ROC de regresión logística de la configuración 1 (Características)}
     \label{fig:roc-lr-feat}
 \end{figure}
 
@@ -2538,7 +2694,7 @@ En la Figura \ref{fig:roc-rf-mv}, se observa que las curvas ROC se sitúan clara
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{imagenes/roc-rf-mv.png}
-    \caption{Conjunto de ROCs de random forest de la configuración 1 (Megavector)}
+    \caption{Curvas ROC de random forest de la configuración 1 (Megavector)}
     \label{fig:roc-rf-mv}
 \end{figure}
 
@@ -2640,7 +2796,7 @@ Las curvas ROC de la Figura \ref{fig:roc-rf-feat} se sitúan claramente por enci
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-lr-feat.png}
-    \caption{Conjunto de ROCs de random forest de la configuración 1 (Características)}
+    \caption{Curvas ROC de random forest de la configuración 1 (Características)}
     \label{fig:roc-rf-feat}
 \end{figure}
 
@@ -2744,7 +2900,7 @@ En conjunto, las curvas ROC (Figura \ref{fig:roc-mlp-mv}) se sitúan por encima 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-mv.png}
-    \caption{Conjunto de ROCs de red neuronal de la configuración 1 (Megavector)}
+    \caption{Curvas ROC de red neuronal de la configuración 1 (Megavector)}
     \label{fig:roc-mlp-mv}
 \end{figure}
 
@@ -2842,7 +2998,7 @@ Este análisis resulta especialmente relevante en este caso, ya que las métrica
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/roc-mlp-feat.png}
-    \caption{Conjunto de ROCs de red neuronal de la configuración 1 (Características)}
+    \caption{Curvas ROC de red neuronal de la configuración 1 (Características)}
     \label{fig:roc-mlp-feat}
 \end{figure}
 
@@ -3578,37 +3734,29 @@ Por último, la heterogeneidad propia de algunas clases clínicas reduce la capa
 
 \chapter{Dashboard interactivo}
 
-\todo{Darle una vuelta a este capitulo porque parece que es algo que he dejado para el final y lo he hehco deprisa y corriendo}
+El sistema desarrollado se complementa con un \textit{dashboard} interactivo diseñado para facilitar la visualización de señales electrocardiográficas y la interpretación de las predicciones generadas por el modelo final seleccionado en la Configuración 3. 
+En este caso, el modelo integrado corresponde a la Red Neuronal Multicapa (MLP), al ser el que presenta el mejor equilibrio entre capacidad discriminativa y coherencia en las predicciones probabilísticas.
 
-El sistema desarrollado se completa con un \textit{dashboard} interactivo cuyo objetivo es facilitar la visualización de señales electrocardiográficas, así como la interpretación de las predicciones generadas por el modelo final seleccionado en la Configuración 3. En este caso, el modelo integrado corresponde a la Red Neuronal Multicapa (MLP), al ser el que ofrece un mejor equilibrio entre capacidad discriminativa y coherencia en las predicciones probabilísticas.
-
-La herramienta permite la exploración individual de registros ECG. Una vez cargado un registro, el sistema organiza la información en varias secciones claramente diferenciadas que combinan representación de señal, análisis clínico y salida del modelo.
+La herramienta permite la exploración individual de registros ECG de forma estructurada, organizando la información en distintas secciones que integran representación de la señal, análisis clínico y resultados del modelo, con el objetivo de facilitar su interpretación conjunta.
 
 \section{Resumen clínico del paciente}
 
-En primer lugar, se presenta un resumen clínico automático basado en características extraídas de la señal electrocardiográfica. Este bloque condensa información relevante para una interpretación rápida del estado del paciente:
+En primer lugar, el dashboard genera un resumen clínico automático a partir de características extraídas de la señal electrocardiográfica. 
+Este bloque permite una interpretación rápida del estado del paciente mediante variables relevantes desde el punto de vista fisiológico y clínico:
 
 \begin{itemize}
-    \item \textbf{Frecuencia cardíaca (HR):} medida en latidos por minuto (bpm), calculada a partir de los intervalos RR medios. Permite evaluar si el ritmo se encuentra dentro de los rangos normales o presenta bradicardia o taquicardia.
-
-    \item \textbf{Intervalo RR medio:} expresado en segundos, representa el tiempo medio entre picos R consecutivos y proporciona información directa sobre la regularidad del ritmo cardíaco.
-
-    \item \textbf{Variabilidad cardíaca (HRV - SDNN):} desviación estándar de los intervalos RR, medida también en segundos. Es un indicador de la variabilidad del sistema autónomo, donde valores bajos pueden asociarse a alteraciones fisiológicas.
-
-    \item \textbf{Eje eléctrico cardíaco:} expresado en grados, describe la dirección promedio de la actividad eléctrica ventricular en el plano frontal. Desviaciones fuera del rango fisiológico pueden indicar bloqueos de conducción o hipertrofias. (ver Tabla \ref{tab:eje_cardiaco})
-
-    \item \textbf{Duración del QRS:} medida en número de muestras. Representa el tiempo de despolarización ventricular. Valores prolongados pueden asociarse a bloqueos de rama.
-
-    \item \textbf{Segmento ST:} variable de amplitud que describe el nivel medio del segmento ST. Su elevación o depresión puede estar relacionada con eventos isquémicos.
-
-    \item \textbf{Amplitud del pico R:} valor medio del pico R en cada latido, relacionado con la intensidad de la despolarización ventricular. Alteraciones pueden asociarse a hipertrofias o cambios de conducción.
-
-    \item \textbf{Número de latidos detectados:} conteo total de complejos QRS identificados en el registro, útil para evaluar la calidad de la señal y la consistencia del análisis.
-
-    \item \textbf{Edad y sexo:} variables demográficas incluidas como contexto clínico adicional para la interpretación del registro.
+    \item \textbf{Frecuencia cardíaca (HR):} expresada en latidos por minuto (bpm), calculada a partir de los intervalos RR medios, permitiendo identificar situaciones de bradicardia o taquicardia.
+    \item \textbf{Intervalo RR medio:} medido en segundos, representa la distancia temporal entre picos R consecutivos y refleja la regularidad del ritmo cardíaco.
+    \item \textbf{Variabilidad cardíaca (HRV - SDNN):} desviación estándar de los intervalos RR, utilizada como indicador de la variabilidad del sistema nervioso autónomo.
+    \item \textbf{Eje eléctrico cardíaco:} expresado en grados, describe la orientación media de la actividad eléctrica ventricular, siendo útil para detectar desviaciones asociadas a alteraciones de conducción o hipertrofias.
+    \item \textbf{Duración del QRS:} medida en número de muestras, representa el tiempo de despolarización ventricular.
+    \item \textbf{Segmento ST:} variable de amplitud asociada a posibles alteraciones isquémicas cuando presenta elevación o depresión.
+    \item \textbf{Amplitud del pico R:} valor medio del pico R en cada latido, relacionado con la intensidad de la despolarización ventricular.
+    \item \textbf{Número de latidos detectados:} conteo de complejos QRS identificados, útil para evaluar la calidad del registro.
+    \item \textbf{Edad y sexo:} variables demográficas que aportan contexto clínico adicional.
 \end{itemize}
 
-Este resumen permite ofrecer una visión global del paciente antes de analizar la señal completa o las predicciones del modelo, facilitando una interpretación más estructurada de los resultados.
+Este resumen proporciona una visión general del paciente antes de analizar la señal completa o las predicciones del modelo.
 
 \section{Visualización del electrocardiograma}
 
@@ -3716,15 +3864,122 @@ A partir de los resultados obtenidos y las limitaciones identificadas a lo largo
 \appendix
 \chapter*{Anexo I}
 
-Hablar de los ODS
+El presente Trabajo Fin de Grado se alinea con varios de los Objetivos de Desarrollo Sostenible (ODS) establecidos por la Agenda 2030 de Naciones Unidas, principalmente debido a su aplicación en el ámbito de la salud cardiovascular mediante técnicas de aprendizaje automático. 
+A continuación, se detalla la contribución del proyecto a cada uno de los ODS identificados como relevantes.
+
+\section*{ODS 3: Salud y Bienestar \hfill \includegraphics[height=2.5em]{imagenes/ods3.png}}
+
+Este es el objetivo con el que el proyecto guarda una relación más directa. 
+Las enfermedades cardiovasculares constituyen una de las principales causas de mortalidad a nivel mundial, y su detección temprana es determinante para reducir complicaciones y mejorar el pronóstico de los pacientes. 
+El sistema desarrollado en este trabajo, capaz de analizar señales de electrocardiograma y estimar la presencia de distintas patologías cardíacas, contribuye directamente a la meta 3.4 de los ODS, orientada a reducir la mortalidad prematura por enfermedades no transmisibles mediante la prevención y el tratamiento. 
+Asimismo, al tratarse de una herramienta de apoyo al diagnóstico y no de sustitución del criterio médico, el proyecto refuerza la meta 3.8, relativa al acceso a servicios de salud de calidad, al facilitar al personal clínico una herramienta adicional para la interpretación de registros ECG.
+
+\section*{ODS 9: Industria, Innovación e Infraestructura \hfill \includegraphics[height=2.5em]{imagenes/ods9.png}}
+
+El trabajo aplica técnicas avanzadas de aprendizaje automático y procesamiento de señales a un problema biomédico real, lo que representa una contribución a la meta 9.5, centrada en el fomento de la investigación científica y la mejora de las capacidades tecnológicas en sectores industriales y de salud. 
+El desarrollo de un sistema automático de análisis de ECG, junto con una herramienta de visualización interactiva, supone una aportación a la infraestructura tecnológica disponible para el apoyo al diagnóstico clínico.
+
+\section*{ODS 10: Reducción de las Desigualdades \hfill \includegraphics[height=2.5em]{imagenes/ods10.jpg}}
+
+El electrocardiograma es una prueba no invasiva, de bajo coste y de fácil acceso, lo que la convierte en una de las herramientas diagnósticas más extendidas, incluso en entornos con recursos limitados. 
+Al automatizar parte de su interpretación, este trabajo contribuye potencialmente a reducir la dependencia de personal médico especializado para un primer análisis del ECG, lo que puede resultar especialmente valioso en sistemas sanitarios con escasez de cardiólogos o en zonas con menor acceso a atención especializada, favoreciendo así una mayor equidad en el acceso a herramientas de apoyo diagnóstico.
 
 \chapter*{Anexo II}
 
-Todas significado de las patologías y tablas enteras de la configuración 3
+Este anexo recoge la información completa relativa a la base de datos del sistema.
+Se incluye la correspondencia entre las siglas utilizadas para identificar las patologías y su significado clínico, agrupadas por superclases, con el objetivo de facilitar la interpretación de los resultados.
 
-\chapter*{Anexo III}
+De este modo, el anexo complementa el contenido del documento principal, proporcionando una referencia completa y estructurada de las patologías analizadas en la Configuración 3.
 
-Análisis de las configuraciones 1 y 2 con los otros umbrales?? Igual son muchas páginas
+
+
+\begin{longtable}{|c|c|}
+\caption{Descripción de las patologías agrupadas por superclases} \\
+\hline
+\textbf{Código} & \textbf{Descripción} \\ 
+\hline
+\endfirsthead
+
+\hline
+\textbf{Código} & \textbf{Descripción}\\ 
+\hline
+\endhead
+
+% ---------------- STTC ----------------
+\multicolumn{2}{|c|}{\textbf{Cambios del segmento ST-T (STTC)}} \\
+\hline
+NDT   & Anomalías de la onda T no diagnósticas \\
+NST\_ & Cambios del segmento ST no específicos \\
+DIG   & Efecto digitálico  \\
+LNGQT & Intervalo QT prolongado \\
+ISC\_ & Isquemia no específica  \\
+ISCAL & Isquemia en derivaciones anterolaterales \\
+ISCIN & Isquemia en derivaciones inferiores \\
+ISCIL & Isquemia en derivaciones inferolaterales \\
+ISCAS & Isquemia en derivaciones anteroseptales \\
+ISCAN & Isquemia en derivaciones anteriores \\
+ANEUR & Cambios compatibles con aneurisma ventricular \\
+EL    & Alteración electrolítica o farmacológica \\
+STD\_ & Depresión del segmento ST no específica \\
+STE\_ & Elevación del segmento ST no específica \\
+TAB\_ & Alteración de la onda T \\
+LOWT  & Ondas T de baja amplitud \\
+NT\_  & Cambios inespecíficos de la onda T \\
+INVT  & Inversión de la onda T \\
+
+\hline
+% ---------------- CD ----------------
+\multicolumn{2}{|c|}{\textbf{Alteraciones de conducción (CD)}} \\
+\hline
+LAFB  & Bloqueo fascicular anterior izquierdo \\
+IRBBB & Bloqueo incompleto de rama derecha \\
+1AVB  & Bloqueo AV de primer grado \\
+IVCD  & Trastorno inespecífico de conducción intraventricular \\
+CRBBB & Bloqueo completo de rama derecha \\
+CLBBB & Bloqueo completo de rama izquierda \\
+WPW   & Síndrome de Wolff-Parkinson-White \\
+ILBBB & Bloqueo incompleto de rama izquierda \\
+LPFB  & Bloqueo fascicular posterior izquierdo \\
+3AVB  & Bloqueo AV de tercer grado \\
+2AVB  & Bloqueo AV de segundo grado \\
+
+\hline
+% ---------------- MI ----------------
+\multicolumn{2}{|c|}{\textbf{Infarto de miocardio (MI)}} \\
+\hline
+IMI   & Infarto de miocardio inferior \\
+ASMI  & Infarto anteroseptal \\
+ILMI  & Infarto inferolateral \\
+AMI   & Infarto anterior \\
+ALMI  & Infarto anterolateral \\
+INJAS & Lesión subendocárdica anteroseptal \\
+LMI   & Infarto lateral \\
+IPLMI & Infarto inferoposterolateral \\
+IPMI  & Infarto inferoposterior \\
+INJIN & Lesión subendocárdica inferior \\
+INJLA & Lesión subendocárdica lateral \\
+PMI   & Infarto posterior \\
+INJIL & Lesión subendocárdica inferolateral \\
+
+\hline
+% ---------------- HYP ----------------
+\multicolumn{2}{|c|}{\textbf{Hipertrofias y sobrecargas (HYP)}} \\
+\hline
+LVH     & Hipertrofia ventricular izquierda \\
+LAO/LAE & Sobrecarga auricular izquierda \\
+RVH     & Hipertrofia ventricular derecha \\
+RAO/RAE & Sobrecarga auricular derecha \\
+SEHYP   & Hipertrofia septal \\
+
+\hline
+% ---------------- NORM ----------------
+\multicolumn{2}{|c|}{\textbf{Normal}} \\
+\hline
+NORM & Electrocardiograma normal \\
+
+\hline
+	
+\end{longtable}
 
 
 \end{document}

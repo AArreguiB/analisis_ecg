@@ -1,50 +1,50 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Flujo a seguir del proyecto}}{6}{figure.caption.3}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Project's pipeline}}{10}{figure.caption.4}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Flujo a seguir del proyecto}}{10}{figure.caption.4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Project's pipeline}}{14}{figure.caption.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Anatomía eléctrica del corazón. \blx@tocontentsinit {0}\cite {cigna_corazon_electrico}}}{30}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Triángulo de Einthoven.}}{32}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Eje de las derivaciones bipolares en el plano frontal}}{34}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Eje de las derivaciones aumentadas de las extremidades en el plano frontal}}{34}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Sistema hexaxial}}{35}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Derivaciones precordiales.\textcolor {red}{[poner pie de pagina con la fuente]}}}{37}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Esquema de un ciclo cardíaco típico del ECG}}{41}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Matriz de confusión.}}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Anatomía eléctrica del corazón. \blx@tocontentsinit {0}\cite {cigna_corazon_electrico}}}{34}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Triángulo de Einthoven.}}{36}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Eje de las derivaciones bipolares en el plano frontal}}{38}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Eje de las derivaciones aumentadas de las extremidades en el plano frontal}}{38}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Sistema hexaxial}}{39}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Derivaciones precordiales.}}{41}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Esquema de un ciclo cardíaco típico del ECG}}{45}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Matriz de confusión.}}{49}{figure.caption.31}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pipeline general del sistema. Elaboración propia.}}{72}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Distribución de los pacientes por edad}}{73}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Distribución de los pacientes por sexo}}{74}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Distribución de los pacientes por edad y sexo}}{74}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Distribución de las patologías más frecuentes en el conjunto de datos.}}{75}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Distribución de las patologías por superclases.}}{76}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Matriz de co-ocurrencia de las 20 clases más frecuentes.}}{77}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Distribución del número de patologías por paciente.}}{79}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Morfología de la wavelet db6.}}{80}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Señal original y señal reconstruida a partir de los coeficientes d4 y d5}}{81}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Envolvente de la señal reconstruida a partir de los coeficientes d4 y d5.}}{82}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Picos R detectados en la envolvente.}}{83}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Latidos cardíacos segmentados.}}{84}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pipeline general del sistema. Elaboración propia.}}{76}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Distribución de los pacientes por edad}}{77}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Distribución de los pacientes por sexo}}{78}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Distribución de los pacientes por edad y sexo}}{78}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Distribución de las patologías más frecuentes en el conjunto de datos.}}{79}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Distribución de las patologías por superclases.}}{80}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Matriz de co-ocurrencia de las 20 clases más frecuentes.}}{81}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Distribución del número de patologías por paciente.}}{83}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Morfología de la wavelet db6.}}{84}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Señal original y señal reconstruida a partir de los coeficientes d4 y d5}}{85}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Envolvente de la señal reconstruida a partir de los coeficientes d4 y d5.}}{86}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Picos R detectados en la envolvente.}}{87}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Latidos cardíacos segmentados.}}{88}{figure.caption.54}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Megavector)}}{125}{figure.caption.67}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Conjunto de ROCs de regresión logística de la configuración 1 (Megavector)}}{127}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Características)}}{130}{figure.caption.70}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Conjunto de ROCs de regresión logística de la configuración 1 (Características)}}{132}{figure.caption.71}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Matrices de confusión de random forest de la configuración 1 (Megavector)}}{135}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Conjunto de ROCs de random forest de la configuración 1 (Megavector)}}{137}{figure.caption.75}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Matrices de confusión de random forest de la configuración 1 (Características)}}{140}{figure.caption.77}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Conjunto de ROCs de random forest de la configuración 1 (Características)}}{142}{figure.caption.78}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Megavector)}}{145}{figure.caption.81}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Conjunto de ROCs de red neuronal de la configuración 1 (Megavector)}}{147}{figure.caption.82}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Características)}}{149}{figure.caption.84}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Conjunto de ROCs de red neuronal de la configuración 1 (Características)}}{151}{figure.caption.85}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Matrices de confusión de regresión logística de la configuración 2}}{156}{figure.caption.88}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Curvas ROC de regresión logística de la configuración 2}}{157}{figure.caption.89}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Matrices de confusión de random forest de la configuración 2}}{161}{figure.caption.92}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Curvas ROC de random forest de la configuración 2}}{162}{figure.caption.93}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Matrices de confusión de red neuronal de la configuración 2}}{165}{figure.caption.96}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Curvas ROC de red neuronal de la configuración 2}}{167}{figure.caption.97}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Megavector)}}{129}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Curvas ROC de regresión logística de la configuración 1 (Megavector)}}{131}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Matrices de confusión de regresión logística de la configuración 1 (Características)}}{134}{figure.caption.73}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Curvas ROC de regresión logística de la configuración 1 (Características)}}{136}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Matrices de confusión de random forest de la configuración 1 (Megavector)}}{139}{figure.caption.77}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Curvas ROC de random forest de la configuración 1 (Megavector)}}{141}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Matrices de confusión de random forest de la configuración 1 (Características)}}{144}{figure.caption.80}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Curvas ROC de random forest de la configuración 1 (Características)}}{146}{figure.caption.81}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Megavector)}}{149}{figure.caption.84}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Curvas ROC de red neuronal de la configuración 1 (Megavector)}}{151}{figure.caption.85}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Matrices de confusión de red neuronal de la configuración 1 (Características)}}{153}{figure.caption.87}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Curvas ROC de red neuronal de la configuración 1 (Características)}}{155}{figure.caption.88}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Matrices de confusión de regresión logística de la configuración 2}}{160}{figure.caption.91}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Curvas ROC de regresión logística de la configuración 2}}{161}{figure.caption.92}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Matrices de confusión de random forest de la configuración 2}}{165}{figure.caption.95}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Curvas ROC de random forest de la configuración 2}}{166}{figure.caption.96}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Matrices de confusión de red neuronal de la configuración 2}}{169}{figure.caption.99}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Curvas ROC de red neuronal de la configuración 2}}{171}{figure.caption.100}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
