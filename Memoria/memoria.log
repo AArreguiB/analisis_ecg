@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  22 JUN 2026 00:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  22 JUN 2026 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,10 +688,15 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count479
 \c@LT@chunks=\count480
 \LT@p@ftn=\toks33
+) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen263
+\c@nlinenum=\count481
+\TeXr@lab=\toks34
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen263
-\pgfutil@tempdimb=\dimen264
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen264
+\pgfutil@tempdimb=\dimen265
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box66
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -701,31 +706,31 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen265
-\pgf@y=\dimen266
-\pgf@xa=\dimen267
-\pgf@ya=\dimen268
-\pgf@xb=\dimen269
-\pgf@yb=\dimen270
-\pgf@xc=\dimen271
-\pgf@yc=\dimen272
-\pgf@xd=\dimen273
-\pgf@yd=\dimen274
+\pgf@x=\dimen266
+\pgf@y=\dimen267
+\pgf@xa=\dimen268
+\pgf@ya=\dimen269
+\pgf@xb=\dimen270
+\pgf@yb=\dimen271
+\pgf@xc=\dimen272
+\pgf@yc=\dimen273
+\pgf@xd=\dimen274
+\pgf@yd=\dimen275
 \w@pgf@writea=\write5
 \r@pgf@reada=\read4
-\c@pgf@counta=\count481
-\c@pgf@countb=\count482
-\c@pgf@countc=\count483
-\c@pgf@countd=\count484
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
-\pgf@sys@id@count=\count485
+\c@pgf@counta=\count482
+\c@pgf@countb=\count483
+\c@pgf@countc=\count484
+\c@pgf@countd=\count485
+\t@pgf@toka=\toks39
+\t@pgf@tokb=\toks40
+\t@pgf@tokc=\toks41
+\pgf@sys@id@count=\count486
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -736,59 +741,59 @@ File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count486
-\pgfsyssoftpath@bigbuffer@items=\count487
+\pgfsyssoftpath@smallbuffer@items=\count487
+\pgfsyssoftpath@bigbuffer@items=\count488
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen275
-\pgfmath@count=\count488
+\pgfmath@dimen=\dimen276
+\pgfmath@count=\count489
 \pgfmath@box=\box67
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count489
+\c@pgfmathroundto@lastzeros=\count490
 )) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen276
-\pgf@picmaxx=\dimen277
-\pgf@picminy=\dimen278
-\pgf@picmaxy=\dimen279
-\pgf@pathminx=\dimen280
-\pgf@pathmaxx=\dimen281
-\pgf@pathminy=\dimen282
-\pgf@pathmaxy=\dimen283
-\pgf@xx=\dimen284
-\pgf@xy=\dimen285
-\pgf@yx=\dimen286
-\pgf@yy=\dimen287
-\pgf@zx=\dimen288
-\pgf@zy=\dimen289
+\pgf@picminx=\dimen277
+\pgf@picmaxx=\dimen278
+\pgf@picminy=\dimen279
+\pgf@picmaxy=\dimen280
+\pgf@pathminx=\dimen281
+\pgf@pathmaxx=\dimen282
+\pgf@pathminy=\dimen283
+\pgf@pathmaxy=\dimen284
+\pgf@xx=\dimen285
+\pgf@xy=\dimen286
+\pgf@yx=\dimen287
+\pgf@yy=\dimen288
+\pgf@zx=\dimen289
+\pgf@zy=\dimen290
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen290
-\pgf@path@lasty=\dimen291
+\pgf@path@lastx=\dimen291
+\pgf@path@lasty=\dimen292
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen292
-\pgf@shorten@start@additional=\dimen293
+\pgf@shorten@end@additional=\dimen293
+\pgf@shorten@start@additional=\dimen294
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box68
 \pgf@hbox=\box69
 \pgf@layerbox@main=\box70
-\pgf@picture@serial@count=\count490
+\pgf@picture@serial@count=\count491
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen294
+\pgflinewidth=\dimen295
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen295
-\pgf@pt@y=\dimen296
-\pgf@pt@temp=\dimen297
+\pgf@pt@x=\dimen296
+\pgf@pt@y=\dimen297
+\pgf@pt@temp=\dimen298
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -797,12 +802,12 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen298
+\pgfarrowsep=\dimen299
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen299
-\pgf@sys@shading@range@num=\count491
-\pgf@shadingcount=\count492
+\pgf@max=\dimen300
+\pgf@sys@shading@range@num=\count492
+\pgf@shadingcount=\count493
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
@@ -823,46 +828,46 @@ File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen300
-\pgf@nodesepend=\dimen301
+\pgf@nodesepstart=\dimen301
+\pgf@nodesepend=\dimen302
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen302
-\pgffor@skip=\dimen303
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@iter=\dimen303
+\pgffor@skip=\dimen304
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 )) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count493
-\pgfplotmarksize=\dimen304
+\pgf@plot@mark@count=\count494
+\pgfplotmarksize=\dimen305
 )
-\tikz@lastx=\dimen305
-\tikz@lasty=\dimen306
-\tikz@lastxsaved=\dimen307
-\tikz@lastysaved=\dimen308
-\tikz@lastmovetox=\dimen309
-\tikz@lastmovetoy=\dimen310
-\tikzleveldistance=\dimen311
-\tikzsiblingdistance=\dimen312
+\tikz@lastx=\dimen306
+\tikz@lasty=\dimen307
+\tikz@lastxsaved=\dimen308
+\tikz@lastysaved=\dimen309
+\tikz@lastmovetox=\dimen310
+\tikz@lastmovetoy=\dimen311
+\tikzleveldistance=\dimen312
+\tikzsiblingdistance=\dimen313
 \tikz@figbox=\box73
 \tikz@figbox@bg=\box74
 \tikz@tempbox=\box75
 \tikz@tempbox@bg=\box76
-\tikztreelevel=\count494
-\tikznumberofchildren=\count495
-\tikznumberofcurrentchild=\count496
-\tikz@fig@count=\count497
+\tikztreelevel=\count495
+\tikznumberofchildren=\count496
+\tikznumberofcurrentchild=\count497
+\tikz@fig@count=\count498
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count498
-\pgfmatrixcurrentcolumn=\count499
-\pgf@matrix@numberofcolumns=\count500
+\pgfmatrixcurrentrow=\count499
+\pgfmatrixcurrentcolumn=\count500
+\pgf@matrix@numberofcolumns=\count501
 )
-\tikz@expandcount=\count501
+\tikz@expandcount=\count502
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
@@ -871,13 +876,14 @@ File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen313
-\pgfarrowlength=\dimen314
-\pgfarrowwidth=\dimen315
-\pgfarrowlinewidth=\dimen316
+\pgfarrowinset=\dimen314
+\pgfarrowlength=\dimen315
+\pgfarrowwidth=\dimen316
+\pgfarrowlinewidth=\dimen317
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+)
+(C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip85
 \f@nch@offset@elh=\skip86
@@ -893,7 +899,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip96
 \f@nch@widthC=\skip97
 \f@nch@widthR=\skip98
-\@temptokenb=\toks46
+\@temptokenb=\toks47
 ) Excluding 'comment' comment.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -907,40 +913,39 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
-
-(C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
+ (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count502
-\scratchdimen=\dimen317
+\scratchcounter=\count503
+\scratchdimen=\dimen318
 \scratchbox=\box77
-\nofMPsegments=\count503
-\nofMParguments=\count504
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count505
-\MPscratchDim=\dimen318
-\MPnumerator=\count506
-\makeMPintoPDFobject=\count507
-\everyMPtoPDFconversion=\toks48
+\nofMPsegments=\count504
+\nofMParguments=\count505
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count506
+\MPscratchDim=\dimen319
+\MPnumerator=\count507
+\makeMPintoPDFobject=\count508
+\everyMPtoPDFconversion=\toks49
 ) (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -990,8 +995,8 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count508
-Package hyperref Info: Link coloring OFF on input line 99.
+\c@lstlisting=\count509
+Package hyperref Info: Link coloring OFF on input line 100.
 (memoria.out) (memoria.out)
 \@outlinefile=\write6
 \openout6 = `memoria.out'.
@@ -1018,12 +1023,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'memoria.bbl' found.
  (memoria.bbl)
-Package biblatex Info: Reference section=0 on input line 99.
-Package biblatex Info: Reference segment=0 on input line 99.
+Package biblatex Info: Reference section=0 on input line 100.
+Package biblatex Info: Reference segment=0 on input line 100.
 <imagenes/LogoUniversidadBN.pdf, id=306, 304.85693pt x 276.25308pt>
 File: imagenes/LogoUniversidadBN.pdf Graphic file (type pdf)
 <use imagenes/LogoUniversidadBN.pdf>
-Package pdftex.def Info: imagenes/LogoUniversidadBN.pdf  used on input line 108.
+Package pdftex.def Info: imagenes/LogoUniversidadBN.pdf  used on input line 109.
 (pdftex.def)             Requested size: 167.2989pt x 151.60664pt.
  [1
 
@@ -1031,29 +1036,29 @@ Package pdftex.def Info: imagenes/LogoUniversidadBN.pdf  used on input line 108.
 {C:/Users/Ana/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./imagenes/LogoUniversidadBN.pdf>] [2
 
 ]
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 137.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 138.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 137.
+(Font)              size <5> substituted on input line 138.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 137.
+(Font)              size <5> substituted on input line 138.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 137.
+(Font)              size <5> substituted on input line 138.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 138.
 (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 138.
  (C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 152--158
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 153--159
  [] 
  []
 
@@ -1061,18 +1066,18 @@ Overfull \hbox (12.79999pt too wide) in paragraph at lines 152--158
 <imagenes/firma.jpg, id=340, 604.50844pt x 411.03563pt>
 File: imagenes/firma.jpg Graphic file (type jpg)
 <use imagenes/firma.jpg>
-Package pdftex.def Info: imagenes/firma.jpg  used on input line 168.
+Package pdftex.def Info: imagenes/firma.jpg  used on input line 169.
 (pdftex.def)             Requested size: 104.56342pt x 71.09814pt.
  [4 <./imagenes/firma.jpg>]
 File: imagenes/LogoUniversidadBN.pdf Graphic file (type pdf)
 <use imagenes/LogoUniversidadBN.pdf>
-Package pdftex.def Info: imagenes/LogoUniversidadBN.pdf  used on input line 214.
+Package pdftex.def Info: imagenes/LogoUniversidadBN.pdf  used on input line 215.
 (pdftex.def)             Requested size: 167.2989pt x 151.60664pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.231 \end{titlepage}
+l.232 \end{titlepage}
                       [1
 
 ] [6
@@ -1080,7 +1085,7 @@ l.231 \end{titlepage}
 ] [7] [8
 
 ]
-Overfull \hbox (2.65773pt too wide) in paragraph at lines 287--288
+Overfull \hbox (2.65773pt too wide) in paragraph at lines 288--289
 []\T1/cmr/bx/n/14.4 Palabras cla-ve: \T1/cmr/m/n/14.4 Elec-tro-car-dio-gra-ma, Apren-di-za-je au-to-má-ti-co, Cla-
  []
 
@@ -1090,40 +1095,35 @@ pdfTeX warning: pdflatex (file ./imagenes/diagrama.pdf): PDF inclusion: found PD
 <imagenes/diagrama.pdf, id=370, 963.6pt x 542.025pt>
 File: imagenes/diagrama.pdf Graphic file (type pdf)
 <use imagenes/diagrama.pdf>
-Package pdftex.def Info: imagenes/diagrama.pdf  used on input line 320.
+Package pdftex.def Info: imagenes/diagrama.pdf  used on input line 321.
 (pdftex.def)             Requested size: 376.42575pt x 142.73596pt.
 [10 <./imagenes/diagrama.pdf>] [11]
-\blx@maxsegment@1=\count509
-\blx@sectionciteorder@1=\count510
-Package biblatex Info: Reference section=1 on input line 371.
-Package biblatex Info: Setting label 'refsection:1' on input line 371.
-Package biblatex Info: Reference section=0 on input line 376.
+\blx@maxsegment@1=\count510
+\blx@sectionciteorder@1=\count511
+Package biblatex Info: Reference section=1 on input line 372.
+Package biblatex Info: Setting label 'refsection:1' on input line 372.
+Package biblatex Info: Reference section=0 on input line 377.
  [12] [13]
 
 pdfTeX warning: pdflatex (file ./imagenes/diagrama_en.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <imagenes/diagrama_en.pdf, id=415, 963.6pt x 542.025pt>
 File: imagenes/diagrama_en.pdf Graphic file (type pdf)
 <use imagenes/diagrama_en.pdf>
-Package pdftex.def Info: imagenes/diagrama_en.pdf  used on input line 434.
+Package pdftex.def Info: imagenes/diagrama_en.pdf  used on input line 435.
 (pdftex.def)             Requested size: 376.42575pt x 142.73596pt.
 [14 <./imagenes/diagrama_en.pdf>] [15]
-\blx@maxsegment@2=\count511
-\blx@sectionciteorder@2=\count512
-Package biblatex Info: Reference section=2 on input line 485.
-Package biblatex Info: Setting label 'refsection:2' on input line 485.
-Package biblatex Info: Reference section=0 on input line 490.
+\blx@maxsegment@2=\count512
+\blx@sectionciteorder@2=\count513
+Package biblatex Info: Reference section=2 on input line 486.
+Package biblatex Info: Setting label 'refsection:2' on input line 486.
+Package biblatex Info: Reference section=0 on input line 491.
  [16] (memoria.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [17
 
-] [18]
-Overfull \hbox (1.27695pt too wide) in paragraph at lines 61--61
- [][] [][]\T1/cmr/m/n/14.4 Configuración 3: 12 de-ri-va-ción y cla-si-fi-ca-ción pro- 
- []
-
-)
+] [18])
 \tf@toc=\write7
 \openout7 = `memoria.toc'.
 
@@ -1160,57 +1160,57 @@ Cap\'{\i }tulo 1.
 
 ]
 Cap\'{\i }tulo 2.
-<imagenes/sistema-electrico-corazon.png, id=771, 127.677pt x 127.677pt>
+<imagenes/sistema-electrico-corazon.png, id=783, 127.677pt x 127.677pt>
 File: imagenes/sistema-electrico-corazon.png Graphic file (type png)
 <use imagenes/sistema-electrico-corazon.png>
-Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 619.
+Package pdftex.def Info: imagenes/sistema-electrico-corazon.png  used on input line 620.
 (pdftex.def)             Requested size: 167.2989pt x 167.30484pt.
 [33] [34 <./imagenes/sistema-electrico-corazon.png>] [35]
-<imagenes/einthoven-triangle.png, id=796, 1074.0125pt x 1202.4925pt>
+<imagenes/einthoven-triangle.png, id=808, 1074.0125pt x 1202.4925pt>
 File: imagenes/einthoven-triangle.png Graphic file (type png)
 <use imagenes/einthoven-triangle.png>
-Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 672.
+Package pdftex.def Info: imagenes/einthoven-triangle.png  used on input line 673.
 (pdftex.def)             Requested size: 125.47737pt x 140.47638pt.
  [36 <./imagenes/einthoven-triangle.png>]
-<imagenes/ecg-bipolar-limb-lead-axis.png, id=808, 1088.065pt x 1218.5525pt>
+<imagenes/ecg-bipolar-limb-lead-axis.png, id=822, 1088.065pt x 1218.5525pt>
 File: imagenes/ecg-bipolar-limb-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-bipolar-limb-lead-axis.png>
-Package pdftex.def Info: imagenes/ecg-bipolar-limb-lead-axis.png  used on input line 705.
+Package pdftex.def Info: imagenes/ecg-bipolar-limb-lead-axis.png  used on input line 706.
 (pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
  [37]
-<imagenes/ecg-augmented-lead-axis.png, id=816, 1088.065pt x 1218.5525pt>
+<imagenes/ecg-augmented-lead-axis.png, id=832, 1088.065pt x 1218.5525pt>
 File: imagenes/ecg-augmented-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-augmented-lead-axis.png>
-Package pdftex.def Info: imagenes/ecg-augmented-lead-axis.png  used on input line 721.
+Package pdftex.def Info: imagenes/ecg-augmented-lead-axis.png  used on input line 722.
 (pdftex.def)             Requested size: 125.47737pt x 140.51175pt.
  [38 <./imagenes/ecg-bipolar-limb-lead-axis.png> <./imagenes/ecg-augmented-lead-axis.png>]
-<imagenes/ecg-6-limb-lead-axis.png, id=824, 992.70876pt x 794.97pt>
+<imagenes/ecg-6-limb-lead-axis.png, id=842, 992.70876pt x 794.97pt>
 File: imagenes/ecg-6-limb-lead-axis.png Graphic file (type png)
 <use imagenes/ecg-6-limb-lead-axis.png>
-Package pdftex.def Info: imagenes/ecg-6-limb-lead-axis.png  used on input line 730.
+Package pdftex.def Info: imagenes/ecg-6-limb-lead-axis.png  used on input line 731.
 (pdftex.def)             Requested size: 125.47737pt x 100.47485pt.
 
-Overfull \hbox (24.47142pt too wide) in paragraph at lines 747--760
+Overfull \hbox (24.47142pt too wide) in paragraph at lines 748--761
  [][] 
  []
 
 [39 <./imagenes/ecg-6-limb-lead-axis.png>]
-<imagenes/ecg-chest-leads.png, id=837, 468.24937pt x 602.25pt>
+<imagenes/ecg-chest-leads.png, id=857, 468.24937pt x 602.25pt>
 File: imagenes/ecg-chest-leads.png Graphic file (type png)
 <use imagenes/ecg-chest-leads.png>
-Package pdftex.def Info: imagenes/ecg-chest-leads.png  used on input line 777.
+Package pdftex.def Info: imagenes/ecg-chest-leads.png  used on input line 778.
 (pdftex.def)             Requested size: 125.47737pt x 161.38745pt.
  [40] [41 <./imagenes/ecg-chest-leads.png>] [42] [43]
-<imagenes/partes_ecg.png, id=867, 501.875pt x 306.14375pt>
+<imagenes/partes_ecg.png, id=889, 501.875pt x 306.14375pt>
 File: imagenes/partes_ecg.png Graphic file (type png)
 <use imagenes/partes_ecg.png>
-Package pdftex.def Info: imagenes/partes_ecg.png  used on input line 857.
+Package pdftex.def Info: imagenes/partes_ecg.png  used on input line 860.
 (pdftex.def)             Requested size: 209.12683pt x 127.57047pt.
  [44] [45 <./imagenes/partes_ecg.png>] [46] [47] [48]
-<imagenes/confusion_matrix.png, id=898, 474.77374pt x 342.27875pt>
+<imagenes/confusion_matrix.png, id=922, 474.77374pt x 342.27875pt>
 File: imagenes/confusion_matrix.png Graphic file (type png)
 <use imagenes/confusion_matrix.png>
-Package pdftex.def Info: imagenes/confusion_matrix.png  used on input line 961.
+Package pdftex.def Info: imagenes/confusion_matrix.png  used on input line 967.
 (pdftex.def)             Requested size: 209.12683pt x 150.765pt.
  [49 <./imagenes/confusion_matrix.png>] [50] [51] [52] [53] [54] [55] [56]
 Cap\'{\i }tulo 3.
@@ -1225,91 +1225,86 @@ Cap\'{\i }tulo 5.
 [75
 
 ] [76]
-<imagenes/distribucion_edad.png, id=1077, 508.7808pt x 340.3917pt>
+<imagenes/distribucion_edad.png, id=1102, 508.7808pt x 340.3917pt>
 File: imagenes/distribucion_edad.png Graphic file (type png)
 <use imagenes/distribucion_edad.png>
-Package pdftex.def Info: imagenes/distribucion_edad.png  used on input line 1472.
+Package pdftex.def Info: imagenes/distribucion_edad.png  used on input line 1478.
 (pdftex.def)             Requested size: 209.12683pt x 139.91467pt.
  [77 <./imagenes/distribucion_edad.png>]
-<imagenes/distribucion_sexo.png, id=1085, 403.2666pt x 280.4076pt>
+<imagenes/distribucion_sexo.png, id=1110, 403.2666pt x 280.4076pt>
 File: imagenes/distribucion_sexo.png Graphic file (type png)
 <use imagenes/distribucion_sexo.png>
-Package pdftex.def Info: imagenes/distribucion_sexo.png  used on input line 1483.
+Package pdftex.def Info: imagenes/distribucion_sexo.png  used on input line 1489.
 (pdftex.def)             Requested size: 209.12683pt x 145.41914pt.
-<imagenes/distribucion_edad_sexo.png, id=1087, 715.473pt x 286.1892pt>
+<imagenes/distribucion_edad_sexo.png, id=1112, 715.473pt x 286.1892pt>
 File: imagenes/distribucion_edad_sexo.png Graphic file (type png)
 <use imagenes/distribucion_edad_sexo.png>
-Package pdftex.def Info: imagenes/distribucion_edad_sexo.png  used on input line 1493.
+Package pdftex.def Info: imagenes/distribucion_edad_sexo.png  used on input line 1499.
 (pdftex.def)             Requested size: 292.77629pt x 117.10687pt.
  [78 <./imagenes/distribucion_sexo.png> <./imagenes/distribucion_edad_sexo.png>]
-<imagenes/distribucion_clases_top10.png, id=1096, 714.7503pt x 354.123pt>
+<imagenes/distribucion_clases_top10.png, id=1121, 714.7503pt x 354.123pt>
 File: imagenes/distribucion_clases_top10.png Graphic file (type png)
 <use imagenes/distribucion_clases_top10.png>
-Package pdftex.def Info: imagenes/distribucion_clases_top10.png  used on input line 1508.
+Package pdftex.def Info: imagenes/distribucion_clases_top10.png  used on input line 1514.
 (pdftex.def)             Requested size: 292.77629pt x 145.06168pt.
-<imagenes/distribucion_superclases.png, id=1098, 570.933pt x 354.123pt>
+<imagenes/distribucion_superclases.png, id=1123, 570.933pt x 354.123pt>
 File: imagenes/distribucion_superclases.png Graphic file (type png)
 <use imagenes/distribucion_superclases.png>
-Package pdftex.def Info: imagenes/distribucion_superclases.png  used on input line 1518.
+Package pdftex.def Info: imagenes/distribucion_superclases.png  used on input line 1524.
 (pdftex.def)             Requested size: 292.77629pt x 181.59998pt.
  [79 <./imagenes/distribucion_clases_top10.png>]
-<imagenes/co-ocurrencia_top20.png, id=1105, 655.4889pt x 570.933pt>
+<imagenes/co-ocurrencia_top20.png, id=1130, 655.4889pt x 570.933pt>
 File: imagenes/co-ocurrencia_top20.png Graphic file (type png)
 <use imagenes/co-ocurrencia_top20.png>
-Package pdftex.def Info: imagenes/co-ocurrencia_top20.png  used on input line 1532.
+Package pdftex.def Info: imagenes/co-ocurrencia_top20.png  used on input line 1538.
 (pdftex.def)             Requested size: 292.77629pt x 255.0096pt.
  [80 <./imagenes/distribucion_superclases.png>] [81 <./imagenes/co-ocurrencia_top20.png>]
-<imagenes/num_patologias.png, id=1118, 570.933pt x 354.123pt>
+<imagenes/num_patologias.png, id=1143, 570.933pt x 354.123pt>
 File: imagenes/num_patologias.png Graphic file (type png)
 <use imagenes/num_patologias.png>
-Package pdftex.def Info: imagenes/num_patologias.png  used on input line 1556.
+Package pdftex.def Info: imagenes/num_patologias.png  used on input line 1562.
 (pdftex.def)             Requested size: 292.77629pt x 181.59998pt.
  [82] [83 <./imagenes/num_patologias.png>]
-<imagenes/wavelet-db6.png, id=1130, 605.6226pt x 325.9377pt>
+<imagenes/wavelet-db6.png, id=1155, 605.6226pt x 325.9377pt>
 File: imagenes/wavelet-db6.png Graphic file (type png)
 <use imagenes/wavelet-db6.png>
-Package pdftex.def Info: imagenes/wavelet-db6.png  used on input line 1579.
+Package pdftex.def Info: imagenes/wavelet-db6.png  used on input line 1585.
 (pdftex.def)             Requested size: 167.2989pt x 90.03847pt.
  [84 <./imagenes/wavelet-db6.png>]
-<imagenes/wavelet-recostruida-pac10.png, id=1138, 731.3724pt x 284.0211pt>
+<imagenes/wavelet-recostruida-pac10.png, id=1163, 731.3724pt x 284.0211pt>
 File: imagenes/wavelet-recostruida-pac10.png Graphic file (type png)
 <use imagenes/wavelet-recostruida-pac10.png>
-Package pdftex.def Info: imagenes/wavelet-recostruida-pac10.png  used on input line 1596.
+Package pdftex.def Info: imagenes/wavelet-recostruida-pac10.png  used on input line 1602.
 (pdftex.def)             Requested size: 292.77629pt x 113.69743pt.
-<imagenes/envolvente-pac10.png, id=1140, 731.3724pt x 284.0211pt>
+<imagenes/envolvente-pac10.png, id=1165, 731.3724pt x 284.0211pt>
 File: imagenes/envolvente-pac10.png Graphic file (type png)
 <use imagenes/envolvente-pac10.png>
-Package pdftex.def Info: imagenes/envolvente-pac10.png  used on input line 1609.
+Package pdftex.def Info: imagenes/envolvente-pac10.png  used on input line 1615.
 (pdftex.def)             Requested size: 292.77629pt x 113.69743pt.
  [85 <./imagenes/wavelet-recostruida-pac10.png>]
-<imagenes/picosR-pac10.png, id=1149, 731.3724pt x 284.7438pt>
+<imagenes/picosR-pac10.png, id=1174, 731.3724pt x 284.7438pt>
 File: imagenes/picosR-pac10.png Graphic file (type png)
 <use imagenes/picosR-pac10.png>
-Package pdftex.def Info: imagenes/picosR-pac10.png  used on input line 1624.
+Package pdftex.def Info: imagenes/picosR-pac10.png  used on input line 1630.
 (pdftex.def)             Requested size: 292.77629pt x 113.98674pt.
  [86 <./imagenes/envolvente-pac10.png>]
-<imagenes/latidos_pac10.png, id=1157, 619.3539pt x 395.3169pt>
+<imagenes/latidos_pac10.png, id=1182, 619.3539pt x 395.3169pt>
 File: imagenes/latidos_pac10.png Graphic file (type png)
 <use imagenes/latidos_pac10.png>
-Package pdftex.def Info: imagenes/latidos_pac10.png  used on input line 1643.
+Package pdftex.def Info: imagenes/latidos_pac10.png  used on input line 1649.
 (pdftex.def)             Requested size: 292.77629pt x 186.87267pt.
  [87 <./imagenes/picosR-pac10.png>] [88 <./imagenes/latidos_pac10.png>]
-Overfull \hbox (2.08403pt too wide) in paragraph at lines 1668--1669
+Overfull \hbox (2.08403pt too wide) in paragraph at lines 1674--1675
 []\T1/cmr/bx/n/14.4 Características tem-po-ra-les: \T1/cmr/m/n/14.4 in-clu-yen me-di-das re-la-cio-na-das con
  []
 
 [89] [90] [91] [92] [93] [94] [95]
-Overfull \hbox (2.97147pt too wide) in paragraph at lines 1803--1803
+Overfull \hbox (2.97147pt too wide) in paragraph at lines 1809--1809
 []\T1/cmr/bx/n/17.28 Desarrollo ex-pe-ri-men-tal y op-ti-mi-za-ción del sis-
  []
 
-[96] [97] [98]
-Overfull \hbox (38.77371pt too wide) in paragraph at lines 1845--1847
-[]\T1/cmr/m/n/14.4 Por otro la-do, se ha in-cor-po-ra-do el pa-rá-me-tro \T1/cmtt/m/n/14.4 class_weight="balanced"\T1/cmr/m/n/14.4 ,
- []
-
-[99]
-Overfull \hbox (2.9885pt too wide) in paragraph at lines 1876--1879
+[96] [97] [98] [99]
+Overfull \hbox (2.9885pt too wide) in paragraph at lines 1882--1885
 []\T1/cmr/m/n/14.4 Por otro la-do, se in-cor-po-ró el pa-rá-me-tro \T1/cmtt/m/n/14.4 class_weight="balanced"
  []
 
@@ -1318,135 +1313,135 @@ Cap\'{\i }tulo 6.
 [115
 
 ]
-Overfull \hbox (33.01129pt too wide) in paragraph at lines 2154--2167
- []|  [] 
+Overfull \hbox (43.0452pt too wide) in paragraph at lines 2161--2180
+ [][] 
  []
 
 [116] [117]
-Overfull \hbox (35.72966pt too wide) in paragraph at lines 2203--2219
+Overfull \hbox (35.72966pt too wide) in paragraph at lines 2216--2232
  [][] 
  []
 
 [118] [119]
-Overfull \hbox (79.09323pt too wide) in paragraph at lines 2250--2262
- []|  [] 
+Overfull \hbox (54.84944pt too wide) in paragraph at lines 2264--2282
+ [][] 
  []
 
 [120] [121] [122] [123] [124] [125] [126] [127] [128]
-<imagenes/matrix-lr-mv.png, id=1393, 1438.173pt x 294.8616pt>
+<imagenes/matrix-lr-mv.png, id=1418, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-lr-mv.png Graphic file (type png)
 <use imagenes/matrix-lr-mv.png>
-Package pdftex.def Info: imagenes/matrix-lr-mv.png  used on input line 2449.
+Package pdftex.def Info: imagenes/matrix-lr-mv.png  used on input line 2469.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
  [129 <./imagenes/matrix-lr-mv.png>] [130]
-<imagenes/roc-lr-mv.png, id=1404, 570.933pt x 426.393pt>
+<imagenes/roc-lr-mv.png, id=1429, 570.933pt x 426.393pt>
 File: imagenes/roc-lr-mv.png Graphic file (type png)
 <use imagenes/roc-lr-mv.png>
-Package pdftex.def Info: imagenes/roc-lr-mv.png  used on input line 2490.
+Package pdftex.def Info: imagenes/roc-lr-mv.png  used on input line 2510.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [131 <./imagenes/roc-lr-mv.png>] [132] [133]
-<imagenes/matrix-lr-feat.png, id=1421, 1438.173pt x 294.8616pt>
+ [131] [132 <./imagenes/roc-lr-mv.png>] [133]
+<imagenes/matrix-lr-feat.png, id=1446, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-lr-feat.png Graphic file (type png)
 <use imagenes/matrix-lr-feat.png>
-Package pdftex.def Info: imagenes/matrix-lr-feat.png  used on input line 2554.
+Package pdftex.def Info: imagenes/matrix-lr-feat.png  used on input line 2574.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [134 <./imagenes/matrix-lr-feat.png>]
-<imagenes/roc-lr-feat.png, id=1428, 570.933pt x 426.393pt>
+ [134] [135 <./imagenes/matrix-lr-feat.png>]
+<imagenes/roc-lr-feat.png, id=1457, 570.933pt x 426.393pt>
 File: imagenes/roc-lr-feat.png Graphic file (type png)
 <use imagenes/roc-lr-feat.png>
-Package pdftex.def Info: imagenes/roc-lr-feat.png  used on input line 2586.
+Package pdftex.def Info: imagenes/roc-lr-feat.png  used on input line 2606.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [135] [136 <./imagenes/roc-lr-feat.png>] [137] [138]
-<imagenes/matrix-rf-mv.png, id=1449, 1438.173pt x 294.8616pt>
+ [136 <./imagenes/roc-lr-feat.png>] [137] [138]
+<imagenes/matrix-rf-mv.png, id=1474, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-rf-mv.png Graphic file (type png)
 <use imagenes/matrix-rf-mv.png>
-Package pdftex.def Info: imagenes/matrix-rf-mv.png  used on input line 2662.
+Package pdftex.def Info: imagenes/matrix-rf-mv.png  used on input line 2682.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [139 <./imagenes/matrix-rf-mv.png>] [140]
-<imagenes/roc-rf-mv.png, id=1461, 498.663pt x 426.393pt>
+ [139] [140 <./imagenes/matrix-rf-mv.png>]
+<imagenes/roc-rf-mv.png, id=1486, 498.663pt x 426.393pt>
 File: imagenes/roc-rf-mv.png Graphic file (type png)
 <use imagenes/roc-rf-mv.png>
-Package pdftex.def Info: imagenes/roc-rf-mv.png  used on input line 2696.
+Package pdftex.def Info: imagenes/roc-rf-mv.png  used on input line 2716.
 (pdftex.def)             Requested size: 209.12683pt x 178.81708pt.
- [141 <./imagenes/roc-rf-mv.png>] [142] [143]
-<imagenes/matrix-rf-feat.png, id=1477, 1438.173pt x 294.8616pt>
+ [141] [142 <./imagenes/roc-rf-mv.png>] [143]
+<imagenes/matrix-rf-feat.png, id=1502, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-rf-feat.png Graphic file (type png)
 <use imagenes/matrix-rf-feat.png>
-Package pdftex.def Info: imagenes/matrix-rf-feat.png  used on input line 2767.
+Package pdftex.def Info: imagenes/matrix-rf-feat.png  used on input line 2787.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [144 <./imagenes/matrix-rf-feat.png>]
+ [144] [145 <./imagenes/matrix-rf-feat.png>]
 File: imagenes/roc-lr-feat.png Graphic file (type png)
 <use imagenes/roc-lr-feat.png>
-Package pdftex.def Info: imagenes/roc-lr-feat.png  used on input line 2798.
+Package pdftex.def Info: imagenes/roc-lr-feat.png  used on input line 2818.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [145] [146] [147] [148]
-<imagenes/matrix-mlp-mv.png, id=1504, 1438.173pt x 294.8616pt>
+ [146] [147] [148]
+<imagenes/matrix-mlp-mv.png, id=1529, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-mlp-mv.png Graphic file (type png)
 <use imagenes/matrix-mlp-mv.png>
-Package pdftex.def Info: imagenes/matrix-mlp-mv.png  used on input line 2872.
+Package pdftex.def Info: imagenes/matrix-mlp-mv.png  used on input line 2892.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [149 <./imagenes/matrix-mlp-mv.png>]
-<imagenes/roc-mlp-mv.png, id=1511, 570.933pt x 426.393pt>
+ [149 <./imagenes/matrix-mlp-mv.png>] [150]
+<imagenes/roc-mlp-mv.png, id=1540, 570.933pt x 426.393pt>
 File: imagenes/roc-mlp-mv.png Graphic file (type png)
 <use imagenes/roc-mlp-mv.png>
-Package pdftex.def Info: imagenes/roc-mlp-mv.png  used on input line 2902.
+Package pdftex.def Info: imagenes/roc-mlp-mv.png  used on input line 2922.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [150] [151 <./imagenes/roc-mlp-mv.png>] [152]
-<imagenes/matrix-mlp-feat.png, id=1528, 1438.173pt x 294.8616pt>
+ [151 <./imagenes/roc-mlp-mv.png>] [152]
+<imagenes/matrix-mlp-feat.png, id=1553, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-mlp-feat.png Graphic file (type png)
 <use imagenes/matrix-mlp-feat.png>
-Package pdftex.def Info: imagenes/matrix-mlp-feat.png  used on input line 2970.
+Package pdftex.def Info: imagenes/matrix-mlp-feat.png  used on input line 2990.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [153 <./imagenes/matrix-mlp-feat.png>] [154]
-<imagenes/roc-mlp-feat.png, id=1539, 570.933pt x 426.393pt>
+ [153] [154 <./imagenes/matrix-mlp-feat.png>]
+<imagenes/roc-mlp-feat.png, id=1564, 570.933pt x 426.393pt>
 File: imagenes/roc-mlp-feat.png Graphic file (type png)
 <use imagenes/roc-mlp-feat.png>
-Package pdftex.def Info: imagenes/roc-mlp-feat.png  used on input line 3000.
+Package pdftex.def Info: imagenes/roc-mlp-feat.png  used on input line 3020.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
  [155 <./imagenes/roc-mlp-feat.png>] [156] [157] [158] [159]
-<imagenes/matrix-lr-feat12.png, id=1566, 1438.173pt x 294.8616pt>
+<imagenes/matrix-lr-feat12.png, id=1591, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-lr-feat12.png Graphic file (type png)
 <use imagenes/matrix-lr-feat12.png>
-Package pdftex.def Info: imagenes/matrix-lr-feat12.png  used on input line 3108.
+Package pdftex.def Info: imagenes/matrix-lr-feat12.png  used on input line 3128.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
  [160 <./imagenes/matrix-lr-feat12.png>]
-<imagenes/roc-lr-feat12.png, id=1573, 570.933pt x 426.393pt>
+<imagenes/roc-lr-feat12.png, id=1598, 570.933pt x 426.393pt>
 File: imagenes/roc-lr-feat12.png Graphic file (type png)
 <use imagenes/roc-lr-feat12.png>
-Package pdftex.def Info: imagenes/roc-lr-feat12.png  used on input line 3137.
+Package pdftex.def Info: imagenes/roc-lr-feat12.png  used on input line 3157.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [161 <./imagenes/roc-lr-feat12.png>] [162] [163]
-<imagenes/matrix-rf-feat12.png, id=1591, 1438.173pt x 294.8616pt>
+ [161] [162 <./imagenes/roc-lr-feat12.png>] [163] [164]
+<imagenes/matrix-rf-feat12.png, id=1620, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-rf-feat12.png Graphic file (type png)
 <use imagenes/matrix-rf-feat12.png>
-Package pdftex.def Info: imagenes/matrix-rf-feat12.png  used on input line 3214.
+Package pdftex.def Info: imagenes/matrix-rf-feat12.png  used on input line 3234.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [164] [165 <./imagenes/matrix-rf-feat12.png>]
-<imagenes/roc-rf-feat12.png, id=1602, 570.933pt x 426.393pt>
+ [165 <./imagenes/matrix-rf-feat12.png>]
+<imagenes/roc-rf-feat12.png, id=1627, 570.933pt x 426.393pt>
 File: imagenes/roc-rf-feat12.png Graphic file (type png)
 <use imagenes/roc-rf-feat12.png>
-Package pdftex.def Info: imagenes/roc-rf-feat12.png  used on input line 3243.
+Package pdftex.def Info: imagenes/roc-rf-feat12.png  used on input line 3263.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [166 <./imagenes/roc-rf-feat12.png>] [167] [168]
-<imagenes/matrix-mlp-feat12.png, id=1619, 1438.173pt x 294.8616pt>
+ [166] [167 <./imagenes/roc-rf-feat12.png>] [168] [169]
+<imagenes/matrix-mlp-feat12.png, id=1649, 1438.173pt x 294.8616pt>
 File: imagenes/matrix-mlp-feat12.png Graphic file (type png)
 <use imagenes/matrix-mlp-feat12.png>
-Package pdftex.def Info: imagenes/matrix-mlp-feat12.png  used on input line 3321.
+Package pdftex.def Info: imagenes/matrix-mlp-feat12.png  used on input line 3341.
 (pdftex.def)             Requested size: 418.25368pt x 85.75063pt.
- [169 <./imagenes/matrix-mlp-feat12.png>]
-<imagenes/roc-mlp-feat12.png, id=1627, 570.933pt x 426.393pt>
+ [170 <./imagenes/matrix-mlp-feat12.png>]
+<imagenes/roc-mlp-feat12.png, id=1656, 570.933pt x 426.393pt>
 File: imagenes/roc-mlp-feat12.png Graphic file (type png)
 <use imagenes/roc-mlp-feat12.png>
-Package pdftex.def Info: imagenes/roc-mlp-feat12.png  used on input line 3349.
+Package pdftex.def Info: imagenes/roc-mlp-feat12.png  used on input line 3369.
 (pdftex.def)             Requested size: 250.95476pt x 187.4248pt.
- [170] [171 <./imagenes/roc-mlp-feat12.png>] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184
-
-]
+ [171 <./imagenes/roc-mlp-feat12.png>] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184]
 Cap\'{\i }tulo 7.
-[185] [186] [187] [188]
+[185
+
+] [186] [187] [188]
 Cap\'{\i }tulo 8.
 
-Overfull \hbox (7.07484pt too wide) in paragraph at lines 3797--3800
+Overfull \hbox (7.07484pt too wide) in paragraph at lines 3817--3820
 []\T1/cmr/m/n/14.4 La cla-si-fi-ca-ción au-to-má-ti-ca de pa-to-lo-gías car-día-cas me-dian-te apren-
  []
 
@@ -1455,71 +1450,71 @@ Overfull \hbox (7.07484pt too wide) in paragraph at lines 3797--3800
 ] [190] [191] [192] [193] [194
 
 ]
-Overfull \hbox (2.05347pt too wide) in paragraph at lines 3863--3863
+Overfull \hbox (2.05347pt too wide) in paragraph at lines 3883--3883
 \T1/cmr/m/n/12 medium . com / analytics -[] vidhya / mae -[] mse -[] rmse -[] coe^^^cient -[] of -[] determination -[]
  []
 
 [195
 
 ]
-Overfull \hbox (4.8651pt too wide) in paragraph at lines 3863--3863
+Overfull \hbox (4.8651pt too wide) in paragraph at lines 3883--3883
 \T1/cmr/m/n/12 regularizaci % C3 % B3n -[] b % C3 % A1sicas -[] para -[] redes -[] neuronales -[] b48f396924d4$[] 
  []
 
 
-Overfull \hbox (10.69482pt too wide) in paragraph at lines 3863--3863
+Overfull \hbox (10.69482pt too wide) in paragraph at lines 3883--3883
 [][]\T1/cmr/m/n/12 Interactive Chaos. (s.f.). Elas-tic Net [Ac-ce-di-do: 2026-05-16]. []$https : / / interactivechaos .
  []
 
 [196]
-Overfull \hbox (8.51064pt too wide) in paragraph at lines 3863--3863
+Overfull \hbox (8.51064pt too wide) in paragraph at lines 3883--3883
 [][]\T1/cmr/m/n/12 MedlinePlus. (s.f.). Elec-tro-car-dio-gra-ma [Ac-ce-di-do: 2025-11-06]. []$https : / / medlineplus .
  []
 
-
-Overfull \hbox (14.72577pt too wide) in paragraph at lines 3863--3863
+[197]
+Overfull \hbox (14.72577pt too wide) in paragraph at lines 3883--3883
 []$\T1/cmr/m/n/12 https : / / docs . pytorch . org / docs / 2 . 12 / generated / torch . nn . BCEWithLogitsLoss .
  []
 
-[197]
-Overfull \hbox (50.24496pt too wide) in paragraph at lines 3863--3863
+
+Overfull \hbox (50.24496pt too wide) in paragraph at lines 3883--3883
 \T1/cmr/m/n/12 / / scikit -[] learn . org / stable / modules / generated / sklearn . multiclass . OneVsRestClassi^^\er .
  []
 
-
-Overfull \hbox (9.72339pt too wide) in paragraph at lines 3863--3863
+[198]
+Overfull \hbox (9.72339pt too wide) in paragraph at lines 3883--3883
 \T1/cmr/m/n/12 zón y qué es una arrit-mia [Ac-ce-di-do: 2026-01-15]. []$https : / / www . sociedadsadec .
  []
 
-[198] [199] [200
+[199] [200
 
 ]
-<imagenes/ods3.png, id=1905, 556.0775pt x 556.0775pt>
+<imagenes/ods3.png, id=1931, 556.0775pt x 556.0775pt>
 File: imagenes/ods3.png Graphic file (type png)
 <use imagenes/ods3.png>
-Package pdftex.def Info: imagenes/ods3.png  used on input line 3870.
+Package pdftex.def Info: imagenes/ods3.png  used on input line 3890.
 (pdftex.def)             Requested size: 46.60837pt x 46.60881pt.
-<imagenes/ods9.png, id=1906, 722.7pt x 722.7pt>
+<imagenes/ods9.png, id=1932, 722.7pt x 722.7pt>
 File: imagenes/ods9.png Graphic file (type png)
 <use imagenes/ods9.png>
-Package pdftex.def Info: imagenes/ods9.png  used on input line 3877.
+Package pdftex.def Info: imagenes/ods9.png  used on input line 3897.
 (pdftex.def)             Requested size: 46.6022pt x 46.60881pt.
 
-Overfull \hbox (5.51445pt too wide) in paragraph at lines 3877--3877
+Overfull \hbox (5.51445pt too wide) in paragraph at lines 3897--3897
 [][]\T1/cmr/bx/n/17.28 ODS 9: In-dus-tria, In-no-va-ción e In-fra-es-truc-tu-ra  [] 
  []
 
 [201 <./imagenes/ods3.png>]
-<imagenes/ods10.jpg, id=1914, 903.375pt x 903.375pt>
+<imagenes/ods10.jpg, id=1940, 903.375pt x 903.375pt>
 File: imagenes/ods10.jpg Graphic file (type jpg)
 <use imagenes/ods10.jpg>
-Package pdftex.def Info: imagenes/ods10.jpg  used on input line 3882.
+Package pdftex.def Info: imagenes/ods10.jpg  used on input line 3902.
 (pdftex.def)             Requested size: 46.60497pt x 46.60881pt.
  [202 <./imagenes/ods9.png> <./imagenes/ods10.jpg>]
-c:/Users/Ana/Documents/4Âº GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex:3982: ignored error: Infinite glue shrinkage found in box being split [203
+c:/Users/Ana/Documents/4Âº GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex:4002: ignored error: Infinite glue shrinkage found in box being split [203
 
 ]
-c:/Users/Ana/Documents/4Âº GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex:3982: ignored error: Infinite glue shrinkage found in box being split [204] [205] (memoria.aux
+c:/Users/Ana/Documents/4Âº GITT+BA (2025-2026)/TFG/TFG/Memoria/memoria.tex:4002: ignored error: Infinite glue shrinkage found in box being split [204] [205] (memoria.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1534,23 +1529,23 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 343AA2ACC9ADFB7FC45EC16B8CEE477B;15111.
+(rerunfilecheck)             Checksum: 2018E060E24F0B957CBAA64B4A40BD1B;15121.
 Package logreq Info: Writing requests to 'memoria.run.xml'.
 \openout1 = `memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36797 strings out of 467871
- 707083 string characters out of 5419344
- 1614995 words of memory out of 5000000
- 64684 multiletter control sequences out of 15000+600000
- 651812 words of font info for 105 fonts, out of 8000000 for 9000
+ 36980 strings out of 467871
+ 710231 string characters out of 5419344
+ 1617430 words of memory out of 5000000
+ 64858 multiletter control sequences out of 15000+600000
+ 651879 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,94p,1249b,3179s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on memoria.pdf (205 pages, 3344062 bytes).
+ 84i,15n,94p,1249b,3237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Ana\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ana/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on memoria.pdf (205 pages, 3345465 bytes).
 PDF statistics:
- 2908 PDF objects out of 2984 (max. 8388607)
- 483 named destinations out of 1000 (max. 500000)
+ 2928 PDF objects out of 2984 (max. 8388607)
+ 487 named destinations out of 1000 (max. 500000)
  845 words of extra memory for PDF output out of 10000 (max. 10000000)
 

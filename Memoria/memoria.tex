@@ -32,6 +32,7 @@
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{makecell}
 
 \usepackage{xcolor}
 
@@ -201,7 +202,7 @@
         \hline
         Fdo: \Director & Fdo: \CoDirector \\
         \hline
-        Fecha: \textcolor{red}{XX}/\textcolor{red}{XX}/\EndYear 
+        Fecha: 
 		& \\
         \hline
     \end{tabular}
@@ -349,7 +350,7 @@ Estos resultados se muestran debido a que se trata del escenario más completo d
 	MLP Regressor               & 0.0140 & 0.0112 & 0.0558 & 0.8835 \\
 	\hline
 	\end{tabular}
-	\caption{Resultados globales de test de la configuración 3}
+	\caption{Resultados globales en test de la configuración 3}
 	\label{tab:analisis-global-config3-resumen}
 \end{table}
 
@@ -606,7 +607,7 @@ Esta acción de bombeo está regulada por un sistema eléctrico, encargado de co
 El latido se genera en la aurícula derecha, donde se encuentra el nodo sinoauricular (SA) que actúa como marcapasos natural del corazón. 
 El nodo SA envía pulsos eléctricos que se propagan a través de las aurículas derecha e izquierda, llegando al nodo auriculoventricular (AV). 
 En este nodo, el impulso se frena brevemente, permitiendo que las aurículas se contraigan antes que los ventrículos. 
-Así, la sangre se vacía de la aurículas a los ventrículos antes de su contracción.
+Así, la sangre se vacía de las aurículas a los ventrículos antes de su contracción.
 
 Después de pasar por el nodo AV, la corriente eléctrica desciende por el Haz de His hasta los ventrículos. 
 Esta vía se divide en dos ramas, derecha e izquierda, conocidas como ramas de His. 
@@ -617,13 +618,13 @@ La anatomía eléctrica del corazón se muestra en la Figura \ref{fig:sistema-el
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{imagenes/sistema-electrico-corazon.png}
-    \caption{Anatomía eléctrica del corazón. \cite{cigna_corazon_electrico}}
+    \caption{Anatomía eléctrica del corazón. (\cite{cigna_corazon_electrico})}
     \label{fig:sistema-electrico-corazon}
 \end{figure}
 
 \section{Electrocardiograma}
 
-\subsection{¿Que es un ECG?}
+\subsection{¿Qué es un ECG?}
 
 El electrocardiograma (ECG) es la representación gráfica de la actividad eléctrica del corazón. 
 Se trata de una prueba no invasiva, de bajo coste y fácil de realizar. 
@@ -670,7 +671,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth]{imagenes/einthoven-triangle.png}
-		\caption{Triángulo de Einthoven.}
+		\caption{Triángulo de Einthoven.(\cite{klabunde_ecg_limb_leads})}
 		\label{fig:einthoven-triangle}
 	\end{figure}
 
@@ -703,7 +704,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth]{imagenes/ecg-bipolar-limb-lead-axis.png}
-		\caption{Eje de las derivaciones bipolares en el plano frontal}
+		\caption{Eje de las derivaciones bipolares en el plano frontal. (\cite{klabunde_ecg_limb_leads})}
 		\label{fig:bipolar-limb-lead-axis}
 	\end{figure}
 
@@ -719,7 +720,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth]{imagenes/ecg-augmented-lead-axis.png}
-		\caption{Eje de las derivaciones aumentadas de las extremidades en el plano frontal}
+		\caption{Eje de las derivaciones aumentadas de las extremidades en el plano frontal. (\cite{klabunde_ecg_augmented_limb_leads})}
 		\label{fig:augmented-limb-lead-axis}
 	\end{figure}
 
@@ -728,7 +729,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth]{imagenes/ecg-6-limb-lead-axis.png}
-		\caption{Sistema hexaxial}
+		\caption{Sistema hexaxial. (\cite{klabunde_ecg_augmented_limb_leads})}
 		\label{fig:sistema-hexaxial}
 	\end{figure}
 	
@@ -748,11 +749,11 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\hline
 	\textbf{DI} & \textbf{aVF} & \textbf{Cuadrante} & \textbf{Rango del eje} & \textbf{Interpretación} \\ \hline
 
-	+ & + & Inferior izquierdo & $-30^\circ$ a $+90^\circ$ & Eje normal \\ \hline
+	+ & + & Inferior izquierdo & $-30^\circ$ a $+90^\circ$ & Eje normal \\ 
 
-	+ & - & Superior izquierdo & $-30^\circ$ a $-90^\circ$ & Desviación izquierda del eje \\ \hline
+	+ & - & Superior izquierdo & $-30^\circ$ a $-90^\circ$ & Desviación izquierda del eje \\ 
 
-	- & + & Inferior derecho & $+90^\circ$ a $+180^\circ$ & Desviación derecha del eje \\ \hline
+	- & + & Inferior derecho & $+90^\circ$ a $+180^\circ$ & Desviación derecha del eje \\
 
 	- & + & Superior derecho & $-90^\circ$ a $-180^\circ$ & Eje extremo derecho o izquierdo \\ \hline
 
@@ -775,7 +776,7 @@ Las doce derivaciones se agrupan en tres categorías según su ubicación: las d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth]{imagenes/ecg-chest-leads.png}
-		\caption{Derivaciones precordiales.}
+		\caption{Derivaciones precordiales. (\cite{klabunde_ecg_chest_leads})}
 		\label{fig:chest_leads}
 	\end{figure}
 
@@ -788,12 +789,13 @@ Un ciclo cardíaco típico en el ECG está compuesto por varias ondas y segmento
 
 \subsubsection*{Onda P}
 
-La onda P representa la despolarización de las auriculas. Morfológicamente, presenta una onda suave y amplitud baja, siendo positiva en la mayoría de las derivaciones, salvo en aVR. 
+La onda P representa la despolarización de las aurículas. 
+Morfológicamente, presenta una onda suave y amplitud baja, siendo positiva en la mayoría de las derivaciones, salvo en aVR. 
 
 La aurícula derecha se despolariza primero, seguida de la aurícula izquierda, por lo que esta onda puede presentar una muesca en algunas derivaciones de las extremidades, o ser bifásica en V1. 
 En esta derivación, la parte inicial de la onda P corresponde a la despolarización de la aurícula derecha, mientras que la parte final corresponde a la aurícula izquierda.
 
-La repolarización auricular ocurre simultaneamente a la despolarización ventricular, por que lo que suele quedar oculta por el complejo QRS, por lo que no suele ser visible.
+La repolarización auricular ocurre simultáneamente a la despolarización ventricular, por que lo que suele quedar oculta por el complejo QRS, por lo que no suele ser visible.
 
 \subsubsection*{Intervalo PR}
 
@@ -809,7 +811,8 @@ Una alteración en la duración del intervalo PR puede indicar bloqueos o cambio
 El complejo QRS representa la despolarización ventricular, que es el proceso eléctrico más potente del corazón.
 Su análisis es fundamental para la interpretación del ECG, ya que proporciona información sobre la conducción eléctrica ventricular, el tamaño y la posición de los ventrículos, así como la presencia de bloqueos o alteraciones en la conducción.
 
-Es una onda de corta duración, lo que indica que la despolarización ventricular es un proceso rápido. Una larga duración del QRS puede indicar alteraciones en la conducción, como bloquos de rama o ritmos originados fuera del sistema de conducción normal.
+Es una onda de corta duración, lo que indica que la despolarización ventricular es un proceso rápido. 
+Una larga duración del QRS puede indicar alteraciones en la conducción, como bloqueos de rama o ritmos originados fuera del sistema de conducción normal.
 
 El complejo QRS está compuesto por las siguientes deflexiones:
 \begin{itemize}
@@ -855,7 +858,7 @@ Puede hacerse más evidente en ciertas situaciones, como la hipopotasemia o la b
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{imagenes/partes_ecg.png}
-		\caption{Esquema de un ciclo cardíaco típico del ECG}
+		\caption{Esquema de un ciclo cardíaco típico del ECG. (\cite{adetiba2017_ecg_athletes})}
 		\label{fig:partes-ecg}
 \end{figure}
 
@@ -866,9 +869,11 @@ Constituyen la base de la interpretación clínica del ECG, permitiendo identifi
 
 \subsubsection*{Alteraciones del ritmo cardíaco}
 
-Se producen cuando se modifica la generación normal del impulso eléctrico. En condiciones normales, el nodo SA actúa como marcapasos natural, estableciendo un ritmo regular.
+Se producen cuando se modifica la generación normal del impulso eléctrico. 
+En condiciones normales, el nodo SA actúa como marcapasos natural, estableciendo un ritmo regular.
 
-Si este mecanismo falla, aparecen las arritmias, que pueden manifestarse como cambios en la frecuencia o en la regularidad del ritmo. Las más comunes son la bradicardia (frecuencia cardíaca baja), la taquicardia (frecuencia cardíaca alta) y ritmos irregulares, como la fibrilación auricular.
+Si este mecanismo falla, aparecen las arritmias, que pueden manifestarse como cambios en la frecuencia o en la regularidad del ritmo. 
+Las más comunes son la bradicardia (frecuencia cardíaca baja), la taquicardia (frecuencia cardíaca alta) y ritmos irregulares, como la fibrilación auricular.
 
 \subsubsection*{Alteraciones de la conducción eléctrica}
 
@@ -880,7 +885,7 @@ Pueden localizarse a nivel del nodo AV o del sistema His-Purkinje. Entre las pri
 
 Correponden a cambios en la forma de las ondas, segmentos o intervalos del ECG. 
 
-Destacan las alteraciones del segmento ST, que pueden aparecer elevado o deprimido y se asocian frecuentemente a procesos isquémicos. También es relevante la inversión de la onda T, relacionada con alteraciones en la repolarización ventricular, así como las modificaciones del intervalo QT, que pueden indicar cambios en la duración global de la actividad eléctrica ventricular.
+Destacan las alteraciones del segmento ST, que puede aparecer elevado o deprimido y se asocia frecuentemente a procesos isquémicos. También es relevante la inversión de la onda T, relacionada con alteraciones en la repolarización ventricular, así como las modificaciones del intervalo QT, que pueden indicar cambios en la duración global de la actividad eléctrica ventricular.
 
 \section{Patologías estudiadas}
 \label{sec:patologias_estudiadas}
@@ -954,7 +959,8 @@ Es un método de visualización para los resultados de clasificación. Es la bas
 	\item \textbf{Falsos Negativos (FN)}: Número de muestras incorrectamente clasificadas como negativas.
 \end{itemize}
 
-En la Figura \ref{fig:confusion-matrix} se muestra la estructura general de una matriz de confusión para un problema de calsificación binaria. En problemas multilabel, se puede construir una matriz de confusión para cada clase. Esta matriz es fundamental para calcular otras métricas de evaluación, como la precisión, la sensibilidad o el F1-score, que se definen a partir de los valores de TP, FP, TN y FN.
+En la Figura \ref{fig:confusion-matrix} se muestra la estructura general de una matriz de confusión para un problema de clasificación binaria. 
+En problemas multilabel, se puede construir una matriz de confusión para cada clase. Esta matriz es fundamental para calcular otras métricas de evaluación, como la precisión, la sensibilidad o el F1-score, que se definen a partir de los valores de TP, FP, TN y FN.
 
 \begin{figure}[H]
 		\centering
@@ -974,13 +980,13 @@ Se calcula utilizando la siguiente fórmula:
 Esta métrica proporciona una visión global del rendimiento del modelo, indicando con qué frecuencia el sistema clasifica correctamente las muestras. 
 Sin embargo, en problemas con clases desbalanceadas o en problemas multilabel, la accuracy puede ser poco representativa, ya que no refleja adecuadamente el rendimiento en cada clase. (\cite{ibm_confusion_matrix})
 
-\subsubsection*{Precision}
+\subsubsection*{\textit{Precision}}
 
 La precisión o \textit{precision} es una métrica que mide la proporción de predicciones positivas que son correctas. 
 Indica que porcentaje de los casos clasificados como positivos por el modelo realmente pertenecen a la clase positiva.
 Se calcula como:
 \begin{equation*}
-	\text{Precision} = \frac{TP}{TP + FP}
+	\text{Precisión} = \frac{TP}{TP + FP}
 \end{equation*}
 
 Esta métrica permite evaluar la fiabilidad de las predicciones positivas del modelo. (\cite{evidently_accuracy_precision_recall})
@@ -1079,7 +1085,7 @@ En resumen, Spearman mide hasta qué punto el modelo respeta la estructura de or
 
 \section{Tecnologías y librerías utilizadas}
 
-En este trabajo se ha empleado principalmente Pyhton como lenguaje de programación, debido a su amplio número de librerías orientadas al análisis de datos, el procesamiento de señales y el desarrollo de modelos de Machine Learning.
+En este trabajo se ha empleado principalmente Python como lenguaje de programación, debido a su amplio número de librerías orientadas al análisis de datos, el procesamiento de señales y el desarrollo de modelos de Machine Learning.
 
 En el procesamiento y manipulación de datos se han utilizado las librerias Pandas y NumPy. 
 NumPy ha permitido trabajar con arrays multidimensionales de forma eficiente, mientras que Pandas ha facilitado la gestión de datos tabulares, permitiendo realizar operaciones de limpieza, transformación y análisis de manera sencilla, especialmente en lo relativo a las etiquetas y características de los pacientes.
@@ -1225,7 +1231,7 @@ Estas limitaciones justifican la necesidad de desarrollar enfoques más completo
 
 A partir de las limitaciones analizadas en el estado del arte, el presente trabajo plantea un análisis comparativo de distintos escenarios de clasificación de señales ECG, evaluando el impacto que tienen distintos factores sobre el rendimiento de los modelos de aprendizaje automático.
 Se analiza la influencia del número de derivaciones utilizadas, comparando los resultados obtenidos con una sola derivación frente a los obtenidos utilizando el ECG completo de 12 derivaciones.
-Del mismo modo, se comparan distintos formas de representar la información, desde la señal ECG en bruto hasta la extracción de características diseñadas manuealmente o estadísticas, con el objetivo de evaluar su impacto en el rendimiento de los modelos. 
+Del mismo modo, se comparan distintos formas de representar la información, desde la señal ECG en bruto hasta la extracción de características diseñadas manualmente o estadísticas, con el objetivo de evaluar su impacto en el rendimiento de los modelos. 
 
 El trabajo utiliza distintos enfoques del problema de clasificación. Se considera un enfoque binario que detecta grupos generales de patologías y otro enfoque más complejo basado en múltiples enfermedades y salidas probabilísticas. 
 Permite analizar escenarios más próximos a la realidad clínica, donde un mismo registro puede puede presentar varias alteraciones simultáneamente y donde el nivel de confianza asociado a cada predicción puede resultar relevante desde el punto de vista médico.
@@ -1298,7 +1304,7 @@ Finalmente, aunque la base de datos es un referente en el ámbito del análisis 
 
 \section{Agrupación de patologías}
 
-La base de datos utilizada en este trabajo contiene un total de 71 patologías diferentes, definidas mediante el sistema de anotación SCP-ECG. /todo{donde explico el sistema?}
+La base de datos utilizada en este trabajo contiene un total de 71 patologías diferentes, definidas mediante el sistema de anotación SCP-ECG.
 Este nivel de precisión introduce una elevada complejidad en el problema de clasificación, especialmente en escenarios multilabel y con distribución desbalanceada de clases.
 
 Con el objetivo de simplificar el problema y estructurar el análisis, en este trabajo se emplea una agrupación de las patologías en cinco superclases clínicas generales, previamente definidas en el apartado \ref{sec:patologias_estudiadas}. 
@@ -1373,7 +1379,7 @@ Antes de comenzar con la limpieza y preprocesado de las señales se eliminaron t
 
 Posteriormente, las señales pasan por un proceso de preprocesado con el objetivo de detectar los ciclos cardíacos principales, identificando los picos R como referencia dentro del ECG. 
 A partir de esta información, se eliminan los registros que contienen menos de 10 latidos, y de los restantes se seleccionan únicamente los 10 primeros latidos para cada paciente.
-Tras este filtrado, el conjunto final queda compuesto por X pacientes.
+Tras este filtrado, el conjunto final queda compuesto por 16984 pacientes.
 Se segmenta la señal en latidos individuales, lo que permite estrucutrar los datos de forma homogénea. 
 
 A partir de esta representación, se consideran distintas formas de entrada para los modelos. 
@@ -1384,7 +1390,6 @@ Una vez preparados los datos, se procede al entrenamiento de los distintos model
 
 Finalmente, la evaluación de los resultados se realiza mediante métricas adecuadas a cada escenario experimental, permitiendo comparar de forma consistente el rendimiento de los modelos. 
 Adicionalmente, se ha desarrollado una herramienta de visualización tipo dashboard con el objetivo de facilitar el análisis de los resultados obtenidos. 
-Esta herramienta permite explorar las predicciones de los modelos y la información asociada a los registros electrocardiográficos de forma más intuitiva, contribuyendo a la interpretación global del comportamiento del sistema.
 
 % -------------------------------------------------
 % CAPÍTULO 5
@@ -1464,7 +1469,8 @@ Finalmente, las predicciones obtenidas son evaluadas mediante distintas métrica
 En este apartado se realiza un análisis exploratorio de los datos de la bases de datos utilizada, con el objetivo de comprender la estructura del conjunto utilizado, así como las caracterísitcas demográficas de la población estudiada.
 Este análisis permite contextualizar los datos antes de su utilización en los modelos de aprendizaje automático y detectar posibles patrones relevantes o desbalances en la población.
 
-En primer lugar, se analiza la distribución de los pacientes por edad en el conjunto de datos. La Figura \ref{fig:distribucion-edad} muetra el histograma de edades correspondiente, que revela una distribución relativamente equilibrada entre los distintos grupos de edad, con una ligera predominancia de pacientes en el rango de 50 a 70 años, lo que es consistente con la prevalencia de patologías cardiovasculares en la población adulta.
+En primer lugar, se analiza la distribución de los pacientes por edad en el conjunto de datos. 
+La Figura \ref{fig:distribucion-edad} muestra el histograma de edades correspondiente, que revela una distribución relativamente equilibrada entre los distintos grupos de edad, con una ligera predominancia de pacientes en el rango de 50 a 70 años, lo que es consistente con la prevalencia de patologías cardiovasculares en la población adulta.
 Como se ha mencionado anteriormente, se han eliminado los registros de pacientes menores de 18 años y mayores de 89 años, por lo que en el gráfico solo se muestran los pacientes comprendidos en este rango de edad.
 
 \begin{figure}[H]
@@ -1540,7 +1546,7 @@ Estas asociaciones reflejan la frecuente coexistencia entre alteraciones estruct
 
 De igual forma, se observan co-ocurrencias relevantes entre patologías isquémicas como ISC\_ (isquemia general), ISCAL (isquemia anterolateral) e ISCIN (isquemia inferior) y eventos como IMI, lo que pone de manifiesto la superposición de manifestaciones electrocardiográficas en distintos estadios de enfermedad coronaria.
 
-Por otro lado, patologías como LVH (hipertrofia ventricular izquierda) presentan múltiples asociaciones con distintas clases, especialmente con ISC\_ y con alteraciones de conducción como IVCD (trastorno inespecífico de conducción intraventricular),lo que sugiere que aparece frecuentemente asociada a otras patologías dentro del conjunto de datos.
+Por otro lado, patologías como LVH (hipertrofia ventricular izquierda) presentan múltiples asociaciones con distintas clases, especialmente con ISC\_ y con alteraciones de conducción como IVCD (trastorno inespecífico de conducción intraventricular), lo que sugiere que aparece frecuentemente asociada a otras patologías dentro del conjunto de datos.
 También se identifican combinaciones poco frecuentes entre determinadas patologías, especialmente en el caso de arritmias aisladas, lo que refleja la heterogeneidad del dataset y el marcado desbalance entre clases.
 
 Estos factores justifican la necesidad de enfoques de modelado capaces de manejar múltiples etiquetas y capturar relaciones entre clases, aspectos que se abordarán en las siguientes secciones del trabajo.
@@ -1565,7 +1571,7 @@ Para la elaboración de este gráfico se ha considerado que un paciente tuviese 
 El preprocesado de datos es esencial para mejorar la calidad de las señales ECG y facilitar el aprendizaje de los modelos de clasificación.
 Permite reducir la influencia de registros poco representativos, homogeneizar las entradas del sistema y facilitar la extracción de patrones relevantes para el diagnóstico automático de patologías cardíacas.
 
-En este trabajo, el preprocesado de las señales se centra en la detección de los ciclo cardíacos principales, utilizando los picos R como referencia para segmentar la señal en latidos individuales.
+En este trabajo, el preprocesado de las señales se centra en la detección de los ciclos cardíacos principales, utilizando los picos R como referencia para segmentar la señal en latidos individuales.
 
 Antes de proceder a la detección de los picos R, se aplican distintas etapas de procesamiento sobre la señal ECG con el objetivo de resaltar las características asociadas a los complejos QRS y facilitar su identificación. 
 Estas operaciones permiten reducir la influencia del ruido y mejorar la precisión del algoritmo de detección, especialmente en registros con variaciones de amplitud o interferencias.
@@ -1764,7 +1770,7 @@ Aunque individualmente pueden parecer menos interpretables desde un punto de vis
 Las características frecuenciales permiten analizar la señal en el dominio tiempo-frecuencia, capturando información que no es directamente observable en el dominio temporal. 
 Se emplea la transformada wavelet discreta, ya que es especialmente adecuada para señales no estacionarias como el ECG.
 
-Para obtener estas características se utiliza de nuevo la transformada wavelet discreta utilzando la wavelet db6 y una profundidad de 8 niveles.
+Para obtener estas características se utiliza de nuevo la transformada wavelet discreta utilizando la wavelet db6 y una profundidad de 8 niveles.
 A partir de los coeficientes obtenidos se calcula la energía asociada a diferentes bandas de frecuencia. 
 
 En concreto, se consideran los coeficientes d4, d5 y d6, que se corresponden con diferentes rangos de frecuencia asociados a la actividad eléctrica cardíaca. 
@@ -1842,7 +1848,7 @@ En este problema, la regresión logística se adapta a un escenario multietiquet
 Consiste en descomponer el problema original, que involucra múltiples clases, en varios problemas de clasificación binaria independientes, uno por cada superclase.
 Cada modelo aprende modelos específicos asociados a una condición concreta sin verse condicionado por la presencia de otras patologías, lo que permite una mayor flexibilidad en la interpretación de los resultados. (\cite{sklearn_ovr_classifier})
 
-Por otro lado, se ha incorporado el parámetro \texttt{class\_weight="balanced"}, que ajusta automáticamente el peso de cada clase de acuerdo con su frecuencia en el conjunto de entrenamiento. 
+Por otro lado, se ha incorporado el parámetro \texttt{class\_weight = "balanced"}, que ajusta automáticamente el peso de cada clase de acuerdo con su frecuencia en el conjunto de entrenamiento. 
 Este mecanismo es especialmente relevante en el contexto de datos clínicos, donde existe un fuerte desbalance entre clases, como se ve en la Figura \ref{fig:distribucion-superclases}, ya que permite mejorar la capacidad del modelo para detectar clases minoritarias sin sacrificar excesivamente la precisión en las clases mayoritarias.
 
 Sin este ajuste, el modelo tendería a favorecer las clases mayoritarias, obteniendo buenos resultados globales pero con un rendimiento pobre en las patologías minoritarias, que son precisamente las de mayor interés clínico. 
@@ -1857,7 +1863,7 @@ De esta forma, en lugar de depender de un único árbol, que podría producir ov
 Una de las principales ventajas del Random Forest es su capacidad para modelar relaciones complejas y no lineales entre las variables de entrada y las clases objetivo. 
 Esta característica resulta especialmente interesante en el análisis de señales ECG, donde las relaciones entre las características temporales, morfológicas y frecuenciales y la presencia de una determinada patología suelen ser altamente complejas y difíciles de describir mediante modelos lineales. (\cite{zou2022heartbeat_rf})
 
-A diferencia de la regresión logística, que requiere una adaptación explícita para manejar problemas multietiqueta, Random Forest admite directamente mútiples variables objetivo.
+A diferencia de la regresión logística, que requiere una adaptación explícita para manejar problemas multietiqueta, Random Forest admite directamente múltiples variables objetivo.
 El modelo recibe directamente la matriz de etiquetas de entrenamiento, donde cada columna corresponde a una superclase diferente.
 De esta forma, el clasificador aprende simultáneamente a predecir la presencia o ausencia de cada una de ellas, permitiendo que un mismo paciente pueda presentar varias patologías de forma simultánea.
 
@@ -1870,7 +1876,7 @@ Esta restricción impide que los árboles memorizen los patrones del conjunto de
 Se aumentó el número mínimo de muestras por hoja hasta 10.
 Este parámetro impide que los árboles generen ramas muy específicas para casos individuales, lo que reduce la influencia de ruido y mejora el comportamiento sobre el conjunto de prueba.
 
-También se utilizó la configuración \texttt{max\_features="sqrt"}, que limita el número de características consideradas en cada división a la raíz cuadrada del total de características disponibles.
+También se utilizó la configuración \texttt{max\_features = "sqrt"}, que limita el número de características consideradas en cada división a la raíz cuadrada del total de características disponibles.
 Esta estrategia introduce una mayor aleatoriedad en la construcción de los árboles, lo que contribuye a mejorar la diversidad del conjunto y, por tanto, su capacidad de generalización.
 
 Por otro lado, se incorporó el parámetro \texttt{class\_weight="balanced"} para compensar el desbalance entre clases, de forma similar al planteamiento de la regresión logística.
@@ -2026,7 +2032,7 @@ Sin embargo, esta configuración no pudo evaluarse completamente debido al eleva
 
 Además, se ha limitado la profundidad máxima de los árboles a 10 niveles (\texttt{max\_depth = 10}) para evitar sobreajuste y controlar la complejidad del modelo. 
 También se ha fijado un mínimo de 10 muestras por hoja (\texttt{min\_samples\_leaf = 10}), lo que ayuda a suavizar las predicciones y reducir la sensibilidad al ruido presente en los datos. 
-Por otro lado, se utiliza \texttt{max\_features = 'sqrt'}, lo que implica que cada árbol considera únicamente una selección aleatoria de variables en cada división, reduciendo la correlación entre árboles y mejorando la capacidad de generalización del modelo.
+Por otro lado, se utiliza \texttt{max\_features = "sqrt"}, lo que implica que cada árbol considera únicamente una selección aleatoria de variables en cada división, reduciendo la correlación entre árboles y mejorando la capacidad de generalización del modelo.
 
 Además, en la fase de diseño se planteó el uso del criterio de división \texttt{squared\_error}, con la intención de mejorar la precisión en la reducción del error cuadrático. 
 Sin embargo, esta configuración incrementaba de forma notable el tiempo de ejecución, por lo que se descartó en favor de la configuración por defecto, que ofrecía un compromiso más adecuado entre rendimiento y coste computacional.
@@ -2149,19 +2155,26 @@ En la Tabla \ref{tab:resultados-globales-1} se observan los resultados obtenidos
 
 \begin{table}[H]
 	\centering
-	\small
+	%\small
 	%\setlength{\tabcolsep}{1pt}
-	\hspace*{-2cm}
+	%\hspace*{-2cm}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
-	\textbf{Modelo} & \textbf{Entrada} & \textbf{Hamming Acc} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{AUC global}\\ \hline
-	Regresión Logística & Megavector & 0.7215 & 0.4064 & 0.7789 & 0.5074 & 0.7656\\ \hline
-	Regresión Logística & Features & 0.7426 & 0.4153 & 0.8417 & 0.5330 & 0.8091 \\ \hline
+	\makecell{\textbf{Modelo}} &
+	\makecell{\textbf{Entrada}} &
+	\makecell{\textbf{Hamming}\\\textbf{Acc.}} &
+	\makecell{\textbf{Precision}} &
+	\makecell{\textbf{Recall}} &
+	\makecell{\textbf{F1-}\\\textbf{score}} &
+	\makecell{\textbf{AUC}\\\textbf{global}} \\
+	\hline
+	Regresión Logística & Megavector & 0.7215 & 0.4064 & 0.7789 & 0.5074 & 0.7656\\ 
+	Regresión Logística & Features & 0.7426 & 0.4153 & 0.8417 & 0.5330 & 0.8091 \\ 
 
-	Random Forest & Megavector & 0.7684 & 0.4665 & 0.6931 & 0.4956 & 0.8011 \\ \hline
-	Random Forest & Features & 0.7714 & 0.4767 & 0.7011 & 0.5013 & 0.8153 \\ \hline
+	Random Forest & Megavector & 0.7684 & 0.4665 & 0.6931 & 0.4956 & 0.8011 \\
+	Random Forest & Features & 0.7714 & 0.4767 & 0.7011 & 0.5013 & 0.8153 \\ 
 
-	MLP & Megavector & 0.8127 & 0.7677 & 0.3327 & 0.4051 & 0.8137 \\ \hline
+	MLP & Megavector & 0.8127 & 0.7677 & 0.3327 & 0.4051 & 0.8137 \\
 	MLP & Features & 0.8121 & 0.8060 & 0.3020 & 0.3610 & 0.8296\\ \hline
 	\end{tabular}
 	\caption{Resultados globales en test de la configuración 1}
@@ -2245,12 +2258,19 @@ El uso combinado de ambas perspectivas permite analizar simultáneamente la capa
 
 \begin{table}[H]
 	\centering
-	\small
-	\setlength{\tabcolsep}{1pt}
-	\hspace*{-2cm}
+	%\small
+	%\setlength{\tabcolsep}{1pt}
+	%\hspace*{-2cm}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	\textbf{Modelo} & \textbf{Hamming Acc.} & \textbf{Prec. Macro} & \textbf{Rec. Macro} & \textbf{F1 Macro} & \textbf{Prec. Micro} & \textbf{Rec. Micro} & \textbf{F1 Micro} \\
+	\textbf{Modelo} &
+	\makecell{\textbf{Hamming}\\\textbf{Acc.}} &
+	\makecell{\textbf{Prec.}\\\textbf{Macro}} &
+	\makecell{\textbf{Rec.}\\\textbf{Macro}} &
+	\makecell{\textbf{F1}\\\textbf{Macro}} &
+	\makecell{\textbf{Prec.}\\\textbf{Micro}} &
+	\makecell{\textbf{Rec.}\\\textbf{Micro}} &
+	\makecell{\textbf{F1}\\\textbf{Micro}} \\
 	\hline
 
 	Logistic Regression & 0.8324 & 0.5409 & 0.8660 & 0.6513 & 0.5501 & 0.8699 & 0.6740 \\
@@ -2259,7 +2279,7 @@ El uso combinado de ambas perspectivas permite analizar simultáneamente la capa
 
 	\hline
 	\end{tabular}
-	\caption{Resultados globales de test de la configuración 2}
+	\caption{Resultados globales en test de la configuración 2}
 	\label{tab:config2_metrics_final}
 \end{table}
 
@@ -2317,7 +2337,7 @@ En conjunto, los resultados obtenidos muestran que el incremento de información
 No obstante, la regresión logística continúa destacando por su elevada capacidad de detección, obteniendo los mejores valores de recall y F1 macro. 
 Estos resultados ponen de manifiesto que la elección del modelo óptimo depende en gran medida del objetivo clínico: maximizar la detección de patologías o reducir el número de falsas alarmas manteniendo un elevado rendimiento global.
 
-\subsection{Configuración 3: 12 derivación y clasificación probabilística}
+\subsection{Configuración 3: 12 derivaciones y clasificación probabilística}
 
 La tercera configuración corresponde con el escenario más exigente. 
 En este caso, se trabaja con las 71 patologías originales y las 12 derivaciones completas del ECG.
@@ -2350,7 +2370,7 @@ Finalmente, el AUC global mide la capacidad del modelo para discriminar entre cl
 	MLP Regressor               & 0.0140 & 0.0112 & 0.0558 & 0.8835 \\
 	\hline
 	\end{tabular}
-	\caption{Resultados globales de test de la configuración 3}
+	\caption{Resultados globales en test de la configuración 3}
 	\label{tab:analisis-global-config3}
 \end{table}
 
@@ -3422,23 +3442,23 @@ Los resultados de la Tabla \ref{tab:metrics_grouped_rr} muestran diferencias cla
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones de conducción}} \\\hline
-	CLBBB & 0.995 & 0.025 & 0.293 \\ \hline
-	CRBBB & 0.998 & 0.027 & 0.277 \\ \hline
+	CLBBB & 0.995 & 0.025 & 0.293 \\ 
+	CRBBB & 0.998 & 0.027 & 0.277 \\ 
 	LAFB  & 0.982 & 0.074 & 0.458 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Infarto e isquemia}}\\ \hline
-	IMI   & 0.904 & 0.109 & 0.448 \\ \hline
+	IMI   & 0.904 & 0.109 & 0.448 \\ 
 	ASMI  & 0.918 & 0.119 & 0.462 \\ 
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones generales ECG}} \\ \hline
-	IVCD  & 0.805 & 0.069 & 0.187 \\ \hline
+	IVCD  & 0.805 & 0.069 & 0.187 \\
 	NDT   & 0.844 & 0.155 & 0.343 \\ 
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Otras clases relevantes}}  \\ \hline
-	LVH   & 0.942 & 0.088 & 0.474 \\ \hline
+	LVH   & 0.942 & 0.088 & 0.474 \\
 	PVC   & 0.969 & 0.059 & 0.383 \\
 	\hline
 
@@ -3483,26 +3503,26 @@ La clase NORM alcanza valores elevados tanto de AUC como de correlación, lo que
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones de conducción}} \\
 	\hline
-	CLBBB & 0.997 & 0.026 & 0.296 \\ \hline
-	CRBBB & 0.998 & 0.027 & 0.278 \\ \hline
+	CLBBB & 0.997 & 0.026 & 0.296 \\ 
+	CRBBB & 0.998 & 0.027 & 0.278 \\ 
 	LAFB  & 0.983 & 0.074 & 0.460 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones generales ECG}} \\
 	\hline
-	IVCD  & 0.825 & 0.066 & 0.199 \\ \hline
+	IVCD  & 0.825 & 0.066 & 0.199 \\ 
 	NDT   & 0.845 & 0.154 & 0.344 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
 	\hline
-	IMI   & 0.904 & 0.110 & 0.449 \\ \hline
+	IMI   & 0.904 & 0.110 & 0.449 \\ 
 	ASMI  & 0.919 & 0.119 & 0.461 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
 	\hline
-	PVC   & 0.971 & 0.059 & 0.382 \\ \hline
+	PVC   & 0.971 & 0.059 & 0.382 \\
 	LVH   & 0.946 & 0.088 & 0.477 \\
 	\hline
 
@@ -3544,27 +3564,27 @@ El modelo Random Forest Regressor, cuyos resultados se observan en la Tabla \ref
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones en la conducción}} \\
 	\hline
-	CLBBB & 0.998 & 0.020 & 0.277 \\ \hline
-	CRBBB & 0.998 & 0.028 & 0.261 \\ \hline
+	CLBBB & 0.998 & 0.020 & 0.277 \\
+	CRBBB & 0.998 & 0.028 & 0.261 \\
 	LAFB  & 0.984 & 0.075 & 0.443 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones generales de ECG}} \\
 	\hline
-	IVCD & 0.799 & 0.064 & 0.182 \\ \hline
+	IVCD & 0.799 & 0.064 & 0.182 \\ 
 	NDT  & 0.874 & 0.143 & 0.371 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
 	\hline
-	IMI  & 0.879 & 0.113 & 0.395 \\ \hline
+	IMI  & 0.879 & 0.113 & 0.395 \\ 
 	ASMI & 0.923 & 0.118 & 0.459 \\
 	\hline
 
 
 	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
 	\hline
-	LVH & 0.952 & 0.080 & 0.467 \\ \hline
+	LVH & 0.952 & 0.080 & 0.467 \\ 
 	PVC & 0.978 & 0.064 & 0.373 \\
 	\hline
 
@@ -3661,26 +3681,26 @@ Se observa que el modelo alcanza un rendimiento global consistente en el conjunt
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones de conducción}} \\
 	\hline
-	CLBBB & 0.991 & 0.012 & 0.305 \\ \hline
-	CRBBB & 0.997 & 0.021 & 0.289 \\ \hline
+	CLBBB & 0.991 & 0.012 & 0.305 \\ 
+	CRBBB & 0.997 & 0.021 & 0.289 \\ 
 	LAFB  & 0.985 & 0.053 & 0.445 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Alteraciones generales ECG}} \\
 	\hline
-	IVCD & 0.790 & 0.033 & 0.177 \\ \hline
+	IVCD & 0.790 & 0.033 & 0.177 \\ 
 	NDT  & 0.883 & 0.096 & 0.380 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Infarto / Isquemia}} \\
 	\hline
-	IMI  & 0.913 & 0.073 & 0.453 \\ \hline
+	IMI  & 0.913 & 0.073 & 0.453 \\ 
 	ASMI & 0.941 & 0.078 & 0.481 \\
 	\hline
 
 	\multicolumn{4}{|c|}{\textbf{Clases relevantes}} \\
 	\hline
-	PVC & 0.969 & 0.045 & 0.366 \\ \hline
+	PVC & 0.969 & 0.045 & 0.366 \\ 
 	LVH & 0.933 & 0.056 & 0.448 \\
 	\hline
 

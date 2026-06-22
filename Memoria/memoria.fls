@@ -202,6 +202,8 @@ INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\makecell\makecell.sty
+INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\makecell\makecell.sty
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
@@ -509,6 +511,7 @@ INPUT .\imagenes\confusion_matrix.png
 INPUT .\imagenes\confusion_matrix.png
 INPUT .\imagenes\confusion_matrix.png
 INPUT .\imagenes\confusion_matrix.png
+INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbi1200.tfm
 INPUT .\imagenes\distribucion_edad.png
 INPUT .\imagenes\distribucion_edad.png
 INPUT .\imagenes\distribucion_edad.png
@@ -594,9 +597,6 @@ INPUT .\imagenes\latidos_pac10.png
 INPUT .\imagenes\latidos_pac10.png
 INPUT .\imagenes\latidos_pac10.png
 INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1440.tfm
-INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Ana\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT .\imagenes\matrix-lr-mv.png
 INPUT .\imagenes\matrix-lr-mv.png
 INPUT .\imagenes\matrix-lr-mv.png
@@ -748,6 +748,8 @@ INPUT memoria.run.xml
 OUTPUT memoria.run.xml
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1440.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1440.pk
+INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk
+INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk
 INPUT C:\Users\Ana\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1440.pk

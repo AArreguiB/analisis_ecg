@@ -19,6 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{adetiba2017_ecg_athletes}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=faebbd4aa4574ad12077fcc12bb6d744}{%
+           family={Adetiba},
+           familyi={A\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d1a5434864d83882a64a2507a16368f}{%
+           family={Iweanya},
+           familyi={I\bibinitperiod},
+           given={Veronica\bibnamedelima C.},
+           giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=559911f30de89b5bac429d396b2a1b5c}{%
+           family={Popoola},
+           familyi={P\bibinitperiod},
+           given={Segun\bibnamedelima I.},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=284f92642a1c3e0a42d11cdd5d4a43ad}{%
+           family={Adetiba},
+           familyi={A\bibinitperiod},
+           given={Joy\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86bf66a7688f8a8c07f2ab1507453ae3}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1205d18e65eb071413dd848cd05298c5}
+      \strng{fullhash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{fullhashraw}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{bibnamehash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{authorbibnamehash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{authornamehash}{1205d18e65eb071413dd848cd05298c5}
+      \strng{authorfullhash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{authorfullhashraw}{3f329b8e37ed60e3017af5835f1309a4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cogent Engineering}
+      \field{note}{Accedido: 2025-11-07}
+      \field{number}{1}
+      \field{title}{Automated detection of heart defects in athletes based on electrocardiography and artificial neural network}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{pages}{1411220}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1080/23311916.2017.1411220
+      \endverb
+    \endentry
     \entry{amit_classification_metrics}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=26ec69d10805df92ebbfcd7e57ed8a46}{%
@@ -840,6 +900,111 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1038/s41746-024-01133-?
+      \endverb
+    \endentry
+    \entry{klabunde_ecg_augmented_limb_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd20785bd5f07a138955fc9ecb416634}{%
+           family={Klabunde},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{bibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorbibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authornamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cardiovascular Physiology Concepts}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Augmented Limb Leads (Unipolar)}
+      \verb{urlraw}
+      \verb https://cvphysiology.com/arrhythmias/a013b
+      \endverb
+      \verb{url}
+      \verb https://cvphysiology.com/arrhythmias/a013b
+      \endverb
+    \endentry
+    \entry{klabunde_ecg_chest_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd20785bd5f07a138955fc9ecb416634}{%
+           family={Klabunde},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{bibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorbibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authornamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cardiovascular Physiology Concepts}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Chest Leads (Unipolar)}
+      \verb{urlraw}
+      \verb https://cvphysiology.com/arrhythmias/a013c
+      \endverb
+      \verb{url}
+      \verb https://cvphysiology.com/arrhythmias/a013c
+      \endverb
+    \endentry
+    \entry{klabunde_ecg_limb_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd20785bd5f07a138955fc9ecb416634}{%
+           family={Klabunde},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{bibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorbibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authornamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cardiovascular Physiology Concepts}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Standard Limb Leads (Bipolar)}
+      \verb{urlraw}
+      \verb https://cvphysiology.com/arrhythmias/a013a
+      \endverb
+      \verb{url}
+      \verb https://cvphysiology.com/arrhythmias/a013a
       \endverb
     \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
@@ -2280,6 +2445,66 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
+    \entry{adetiba2017_ecg_athletes}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=faebbd4aa4574ad12077fcc12bb6d744}{%
+           family={Adetiba},
+           familyi={A\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d1a5434864d83882a64a2507a16368f}{%
+           family={Iweanya},
+           familyi={I\bibinitperiod},
+           given={Veronica\bibnamedelima C.},
+           giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=559911f30de89b5bac429d396b2a1b5c}{%
+           family={Popoola},
+           familyi={P\bibinitperiod},
+           given={Segun\bibnamedelima I.},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=284f92642a1c3e0a42d11cdd5d4a43ad}{%
+           family={Adetiba},
+           familyi={A\bibinitperiod},
+           given={Joy\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86bf66a7688f8a8c07f2ab1507453ae3}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1205d18e65eb071413dd848cd05298c5}
+      \strng{fullhash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{fullhashraw}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{bibnamehash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{authorbibnamehash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{authornamehash}{1205d18e65eb071413dd848cd05298c5}
+      \strng{authorfullhash}{3f329b8e37ed60e3017af5835f1309a4}
+      \strng{authorfullhashraw}{3f329b8e37ed60e3017af5835f1309a4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cogent Engineering}
+      \field{note}{Accedido: 2025-11-07}
+      \field{number}{1}
+      \field{title}{Automated detection of heart defects in athletes based on electrocardiography and artificial neural network}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{pages}{1411220}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1080/23311916.2017.1411220
+      \endverb
+    \endentry
     \entry{amit_classification_metrics}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=26ec69d10805df92ebbfcd7e57ed8a46}{%
@@ -3101,6 +3326,111 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1038/s41746-024-01133-?
+      \endverb
+    \endentry
+    \entry{klabunde_ecg_augmented_limb_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd20785bd5f07a138955fc9ecb416634}{%
+           family={Klabunde},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{bibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorbibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authornamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cardiovascular Physiology Concepts}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Augmented Limb Leads (Unipolar)}
+      \verb{urlraw}
+      \verb https://cvphysiology.com/arrhythmias/a013b
+      \endverb
+      \verb{url}
+      \verb https://cvphysiology.com/arrhythmias/a013b
+      \endverb
+    \endentry
+    \entry{klabunde_ecg_chest_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd20785bd5f07a138955fc9ecb416634}{%
+           family={Klabunde},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{bibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorbibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authornamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cardiovascular Physiology Concepts}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Chest Leads (Unipolar)}
+      \verb{urlraw}
+      \verb https://cvphysiology.com/arrhythmias/a013c
+      \endverb
+      \verb{url}
+      \verb https://cvphysiology.com/arrhythmias/a013c
+      \endverb
+    \endentry
+    \entry{klabunde_ecg_limb_leads}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd20785bd5f07a138955fc9ecb416634}{%
+           family={Klabunde},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{fullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{bibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorbibnamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authornamehash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhash}{fd20785bd5f07a138955fc9ecb416634}
+      \strng{authorfullhashraw}{fd20785bd5f07a138955fc9ecb416634}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cardiovascular Physiology Concepts}
+      \field{note}{Accedido: 2025-11-07}
+      \field{title}{Electrocardiogram Standard Limb Leads (Bipolar)}
+      \verb{urlraw}
+      \verb https://cvphysiology.com/arrhythmias/a013a
+      \endverb
+      \verb{url}
+      \verb https://cvphysiology.com/arrhythmias/a013a
       \endverb
     \endentry
     \entry{cvphysiology_ecg_leads}{misc}{}{}
